@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en"><!-- specify language: http://www.w3.org/TR/html401/struct/dirlang.html#h-8.1 -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>UL UI/UX Boilerplate</title>
+    <!-- meta tags for description and keywords if needed -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1"><!-- specify viewport: https://developers.google.com/speed/docs/insights/ConfigureViewport -->
+    <!-- favicon.ico and apple-touch-icon(s) in the root directory -->
+
+    <!-- stylesheets here; concate/minified for production -->
+</head>
+<body>
+    <header role="banner">
+        <a href="/" rel="home" title="to homepage">
+            <!-- link to home: http://microformats.org/wiki/rel-home -->
+            <h1>
+                <img alt="UL Common UI/UX"
+                     src="logo.svg">
+                <!-- vector image with bitmap fallback: https://twitter.com/scottjehl/status/369190249437483008 -->
+                <!-- specify image dimensions for performance: http://www.feedthebot.com/pagespeed/image-dimensions.html -->
+            </h1>
+        </a>
+
+        <!-- Quick menu (skipnav) to directly jump to specific sections: http://www.jimthatcher.com/skipnav.htm -->
+        <nav>
+            <ul>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+            </ul>
+        </nav>
+
+        <!-- Mark search controls for enhanced a11y: http://www.w3.org/TR/wai-aria/roles#search -->
+        <div role="search">
+            <form method="GET" action="https://www.example.com/search" class="search-menu-form">
+                <label>
+                    Keywords
+                    <input type="search" name="q" placeholder="keyword(s)" />
+                </label>
+                <button>
+                    <span>Search</span>
+                </button>
+            </form>
+        </div>
+
+        <img alt="UL" src="/assets/images/ul-white.svg">
+
+    </header>
+
+    <main role="main" tabindex="-1">
+    </main>
+
+    <footer role="contentinfo">
+    </footer>
+
+    <!-- scripts here. Concate/minify for production -->
+</body>
+</html>
