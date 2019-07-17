@@ -18,21 +18,15 @@
         <a href="/" rel="home" title="to homepage">
             <!-- link to home: http://microformats.org/wiki/rel-home -->
             <h1>
-                <img alt="UL Common UI/UX"
-                     src="logo.svg">
-                <!-- vector image with bitmap fallback: https://twitter.com/scottjehl/status/369190249437483008 -->
-                <!-- specify image dimensions for performance: http://www.feedthebot.com/pagespeed/image-dimensions.html -->
+                <img alt="UL Common UI/UX" src="logo.svg">
             </h1>
         </a>
 
         <!-- Quick menu (skipnav) to directly jump to specific sections: http://www.jimthatcher.com/skipnav.htm -->
         <nav>
-            <ul>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
+            <ul role="menubar" aria-label="Application User Menu">
+                <li><a href="#" role="menuitem">Account</a></li>
+                <li><a href="#" role="menuitem">Dashboard Switch</a></li>
             </ul>
         </nav>
 
@@ -57,6 +51,33 @@
     </main>
 
     <footer role="contentinfo">
+      <section>
+        <h3>Help and/or Contact Us</h3>
+        <!-- links to documentation, FAQs, help, etc, MAY be but not necessarily a nav element -->
+      </section>
+
+      <section>
+        <nav>
+            <ul role="menubar" aria-label="About Application Menu">
+                <li><a href="#" role="menuitem">About</a></li>
+                <li><a href="#" role="menuitem">Application Relevant Links</a></li>
+            </ul>
+        </nav>
+      </section>
+
+      <section>
+        <img alt="UL" src="/assets/images/ul-white.svg">
+
+        <div>UL and the UL logo are trademarks of UL LLC © 2019. All rights reserved.</div>
+
+        <nav>
+            <ul role="menubar" aria-label="Legal Menu">
+                <li><a href="#" role="menuitem">Terms & Conditions</a></li>
+                <li><a href="#" role="menuitem">Privacy Policy</a></li>
+                <li><a href="#" role="menuitem">Cookies & Personal Data</a></li>
+            </ul>
+        </nav>
+      </section>
     </footer>
 
     <!-- scripts here. Concate/minify for production -->
