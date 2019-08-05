@@ -15,7 +15,7 @@
 
     <!-- stylesheets here; concate/minified for production -->
     <link href="/assets/css/normalize.css" rel="stylesheet" type="text/css">
-    <link href="/assets/css/site-cssgrid.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/site-cssgrid-withsearch.css" rel="stylesheet" type="text/css">
 </head>
 <body>
     <header role="banner">
@@ -32,28 +32,26 @@
               <li><a href="#" role="menuitem">App Link</a></li>
               <li><a href="#" role="menuitem">App Link</a></li>
               <li><a href="#" role="menuitem">Contact Us</a></li>
-
-              <!-- NOTE: small screen account link/menu not wired to work -->
-              <li><a href="#" role="menuitem" aria-expanded="false" class="account menu-icon hide-md hide-sm" 
-                  data-class-toggle="true" data-target=".submenu" data-class="open"><img
-                  alt="Your Account" src="/SVG/user-icon-sh.svg"></a><a href="#"
-                  role="menuitem" aria-expanded="false" class="show-md show-sm">Account</a>
-
-                
-              </li>
-
-
+              <li><a href="#" role="menuitem" aria-expanded="false" class="account menu-icon"
+                  data-target=".submenu" data-class="open"><img alt="Your Account" src="/SVG/user-icon-sh.svg"></a></li>
             </ul>
         </nav>
 
+        <!-- Mark search controls for enhanced a11y: http://www.w3.org/TR/wai-aria/roles#search -->
+        <div role="search">
+            <form method="GET" action="https://www.example.com/search" class="search-menu-form">
+                <label class="input with-icon">
+                    <input type="search" name="q" placeholder="Search UL Sites" />
+                    <!-- NOTE: THIS img WOULD BE REPLACED BY FONT AWESOME IN  MOST SITUATIONS -->
+                    <img src="/assets/images/search-icon.svg" alt="Search UL Sites" class="icon">
+                </label>
+            </form>
+        </div>
+
+
         <div id="ul-section">
-          <img alt="UL" src="/assets/images/ul-white.svg" id="ul-header-logo" class="hide-sm hide-md">
-          <a href="#" data-class-toggle="true" data-target="header" data-class="ham-is-active"
-            class="hamburger hamburger--slider js-hamburger show-sm-flex show-md-flex">
-            <div class="hamburger-box">
-              <div class="hamburger-inner"></div>
-            </div>
-          </a>
+          <a href="#" class="dashboard menu-icon"><img alt="UL Dashboard" src="/assets/images/dashboard-icon.svg" id="dashboard"></a>
+          <img alt="UL" src="/assets/images/ul-white.svg" id="ul-header-logo">
         </div>
 
     </header>
@@ -197,6 +195,7 @@
     <!-- scripts here. Concate/minify for production -->
   <script>
     var appspace = {
+      menuOpener: null,
       toggleClass: function(target,klass,ev){
         document.querySelector(target).classList.toggle(klass);
 
@@ -209,9 +208,8 @@
       }
     };
     
-    document.querySelectorAll("[data-class-toggle]").forEach(function(t,i) {
-        t.addEventListener('click',appspace.toggleClass.bind(t,t.getAttribute("data-target"),t.getAttribute("data-class")),false);
-    });
+    appspace.menuOpener = document.querySelector('.account.menu-icon');
+    appspace.menuOpener.addEventListener('click',appspace.toggleClass.bind(appspace.menuOpener,appspace.menuOpener.getAttribute("data-target"),appspace.menuOpener.getAttribute("data-class")),false);
 
   </script>
 </body>
