@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+<!-- specify language: http://www.w3.org/TR/html401/struct/dirlang.html#h-8.1 -->
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>UL UI/UX Boilerplate</title>
+  <!-- meta tags for description and keywords if needed -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- specify viewport: https://developers.google.com/speed/docs/insights/ConfigureViewport -->
+  <!-- favicon.ico and apple-touch-icon(s) in the root directory -->
+
+  <!-- stylesheets here; concate/minified for production -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
+
+  <!-- stylesheets here; concate/minified for production -->
+  <link href="assets/css/normalize.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="assets/css/site-flexbox.css" type="text/css" />
+</head>
+
+<body>
+  <header role="banner">
+    <div class="main-logo">
+      <a href="/" rel="home" title="to homepage">
+        <!-- link to home: http://microformats.org/wiki/rel-home -->
+        <img alt="UL Common UI/UX" src="assets/images/logo.svg">
+      </a>
+    </div>
+
+    <!-- Quick menu (skipnav) to directly jump to specific sections: http://www.jimthatcher.com/skipnav.htm -->
+    <nav>
+      <ul role="menubar" aria-label="Application User Menu">
+        <li><a href="#" role="menuitem">App Link</a></li>
+        <li><a href="#" role="menuitem">App Link</a></li>
+        <li><a href="#" role="menuitem">Contact Us</a></li>
+
+        <!-- NOTE: small screen account link/menu not wired to work -->
+        <li><a href="#" role="menuitem" aria-expanded="false" class="account menu-icon hide-md hide-sm" data-class-toggle="true" data-target=".submenu" data-class="open"><img alt="Your Account" src="/assets/images/user-icon-sh.svg"></a><a href="#"
+            role="menuitem" aria-expanded="false" class="show-md show-sm">Account</a>
+
+
+        </li>
+
+
+      </ul>
+    </nav>
+
+    <div id="ul-section">
+      <img alt="UL" src="/assets/images/ul-white.svg" id="ul-header-logo" class="hide-sm hide-md">
+      <a href="#" data-class-toggle="true" data-target="header" data-class="ham-is-active" class="hamburger hamburger--slider js-hamburger show-sm-flex show-md-flex">
+        <div class="hamburger-box">
+          <div class="hamburger-inner"></div>
+        </div>
+      </a>
+    </div>
+
+  </header>
+  <nav class="submenu">
+    <div class="col">
+      <div class="sub-label">Session</div>
+
+      <ul class="unstyled" role="menu" aria-label="Session Menu">
+
+        <li role="menuitem">
+          Industry: <strong>Graphic Arts &amp; Inks</strong>
+
+
+          <ul class="sub-submenu unstyled" role="menu" aria-label="Choose Industry">
+            <li><a href="#" role="menuitem">Adhesives &amp; Sealants</a></li>
+            <li><a href="#" role="menuitem">Food, Beverage &amp; Nutrition</a></li>
+            <li class="disabled" role="menuitem"><a href="#">Graphic Arts &amp; Inks</a></li>
+            <li><a href="#" role="menuitem">Household, Industrial &amp; Institutional Cleaners</a></li>
+            <li><a href="#" role="menuitem">Lubricant &amp; Metalworking Fluids</a></li>
+            <li><a href="#" role="menuitem">Paint &amp; Coatings</a></li>
+            <li><a href="#" role="menuitem">Personal Care &amp; Cosmetics</a></li>
+            <li><a href="#" role="menuitem">Plastics &amp; Elastomers</a></li>
+          </ul>
+        </li>
+
+        <li role="menuitem">Region: <strong>North America</strong></li>
+      </ul>
+    </div>
+
+    <div class="col">
+      <div class="sub-label">My Stuff</div>
+
+      <ul class="unstyled" role="menu" aria-label="User Saved Items">
+        <li role="menuitem"><a href="#">My Tags</a></li>
+        <li role="menuitem"><a href="#">My Bookmarks</a></li>
+        <li role="menuitem"><a href="#">Saved Searches</a></li>
+        <li role="menuitem"><a href="#">Sample History</a></li>
+      </ul>
+
+    </div>
+
+    <div class="col">
+      <div class="sub-label">Account</div>
+
+      <ul class="unstyled" role="menu" aria-label="Account Menu">
+        <li><a href="#" role="menuitem">Account Settings</a></li>
+        <li><a href="#" role="menuitem">Sign Out</a></li>
+      </ul>
+    </div>
+
+  </nav>
+
+
+
+
+  <main role="main" tabindex="-1">
+    <!--
+    <h1>Lorem Ipsum Dolor Sit Amet</h1>
+    <h2>Donec Ac Massa Fermentum Tincidunt</h2>
+    <h3>Cras Eu Odio Ut Magna</h3>
+    <h4>Cras Imperdiet Varius Porttitor. Nulla.</h4>
+    <h5>Duis Scelerisque Lobortis Eros Id</h5>
+    <h6>Mauris Pulvinar, Tortor Ut Viverra</h6>
+
+    <p>
+    Donec quis tellus magna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
+    turpis egestas. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
+    himenaeos. Phasellus nulla lorem, faucibus id pulvinar vitae, sagittis et metus. Aliquam ut orci
+    maximus, pharetra libero id, vestibulum mi. Sed nulla erat, fringilla eget mauris et, molestie
+    placerat sem. Aliquam rutrum viverra varius.</p>
+
+
+    <section>
+      <h2>Contact information</h2>
+      <fieldset>
+        <legend>Title</legend>
+        <ul>
+            <li>
+              <label for="title_1">
+                <input type="radio" id="title_1" name="title" value="M." >
+                Mister
+              </label>
+            </li>
+            <li>
+              <label for="title_2">
+                <input type="radio" id="title_2" name="title" value="Ms.">
+                Miss
+              </label>
+            </li>
+        </ul>
+      </fieldset>
+      <p>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="username">
+      </p>
+      <p>
+        <label for="mail">E-mail:</label>
+        <input type="email" id="mail" name="usermail">
+      </p>
+      <p>
+        <label for="pwd">Password:</label>
+        <input type="password" id="pwd" name="password">
+      </p>
+    </section>
+    -->
+  </main>
+
+  <footer role="contentinfo">
+    <section class="help">
+      <h3>Help and/or Contact Us</h3>
+      <!-- links to documentation, FAQs, help, etc, MAY be but not necessarily a nav element -->
+    </section>
+
+    <section class="application-links">
+      <h6>Application Links</h6>
+      <nav>
+          <ul role="menubar" aria-label="About Application Menu">
+              <li><a href="#" role="menuitem">About</a></li>
+              <li><a href="#" role="menuitem">Application Links</a></li>
+          </ul>
+
+          <ul role="menubar" aria-label="Other About Application Menu">
+              <li><a href="#" role="menuitem">Application Links</a></li>
+              <li><a href="#" role="menuitem">Application Links</a></li>
+          </ul>
+      </nav>
+    </section>
+
+    <section class="copyright">
+      <img alt="UL" src="/assets/images/ul-white.svg" id="footer-logo">
+
+      <div>UL and the UL logo are trademarks of UL LLC © 2019. All rights reserved.</div>
+
+      <nav>
+          <ul role="menubar" aria-label="Legal Menu">
+              <li><a href="#" role="menuitem">Terms & Conditions</a></li>
+              <li><a href="#" role="menuitem">Privacy Policy</a></li>
+              <li><a href="#" role="menuitem">Cookies & Personal Data</a></li>
+          </ul>
+      </nav>
+    </section>
+  </footer>
+
+  <!-- scripts here. Concate/minify for production -->
+  <script>
+    var appspace = {
+      toggleClass: function(target,klass,ev){
+        document.querySelector(target).classList.toggle(klass);
+
+        var toggleExpanded = this.getAttribute("aria-expanded");
+        if("undefined" != typeof toggleExpanded)
+        {
+          var ten = toggleExpanded == "false" ? "true" : "false";
+          this.setAttribute("aria-expanded",ten);
+        }
+      }
+    };
+
+    document.querySelectorAll("[data-class-toggle]").forEach(function(t,i) {
+        t.addEventListener('click',appspace.toggleClass.bind(t,t.getAttribute("data-target"),t.getAttribute("data-class")),false);
+    });
+
+  </script>
+</body>
+
+</html>
