@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+<!-- specify language: http://www.w3.org/TR/html401/struct/dirlang.html#h-8.1 -->
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>UL UI/UX Boilerplate</title>
+    <!-- meta tags for description and keywords if needed -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- specify viewport: https://developers.google.com/speed/docs/insights/ConfigureViewport -->
+    <!-- favicon.ico and apple-touch-icon(s) in the root directory -->
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,600,700" rel="stylesheet">
+
+    <!-- stylesheets here; concate/minified for production -->
+    <link href="assets/css/normalize.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/site-cssgrid.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/styles.css" rel="stylesheet" type="text/css">
+
+    <script src="https://kit.fontawesome.com/ff07333570.js"></script>
+</head>
+<main role="main" tabindex="-1">
+    <div class="ul-ui container">
+        <h1>Buttons &amp; Anchors</h1>
+        <!-- Anchors -->
+        <h4>Anchors</h4>
+        <p>This is just <a href="#">a random link</a> in the grand scheme of things.</p>
+        <p><a class="block" href="#">This is some linked block of text.</a></p>
+        <p><a href="#">Here are a few</a> <a href="#">linked text items</a> <a href="#">in a row.</a></p>
+        <!-- Bulleted list -->
+        <h4>Bulleted list</h4>
+        <ul>
+            <li><a href="#">one</a></li>
+            <li><a href="#">Two</a></li>
+            <li><a href="#">Three</a></li>
+        </ul>
+        <!-- Buttons -->
+        <h4>Buttons</h4>
+        <button class="ul-ui button">
+            As button
+        </button>
+        <div class="ul-ui button" tabindex="0">
+            As Div
+        </div>
+        <a href="#" class="ul-ui button">As Link</a>
+        <button class="ul-ui outlined button">
+            Outlined
+        </button>
+        </br>
+        </br>
+        <div class="ul-ui hovered button" tabindex="0">
+            Hover
+        </div>
+        <div class="ul-ui focused button" tabindex="0">
+            Focused
+        </div>
+        <div class="ul-ui active button" tabindex="0">
+            Active
+        </div>
+        <div class="ul-ui disabled button" tabindex="0">
+            Disabled
+        </div>
+        <h5>Groups</h5>
+        <div class="ul-ui buttons">
+            <button class="ul-ui button">One</button>
+            <button class="ul-ui button">Two</button>
+            <button class="ul-ui button">Three</button>
+        </div>
+        <div class="ul-ui buttons">
+            <button class="ul-ui red button">One</button>
+            <button class="ul-ui blue button">Two</button>
+            <button class="ul-ui green button">Three</button>
+        </div>
+        <div class="ul-ui buttons">
+            <button class="ul-ui outlined red button">One</button>
+            <button class="ul-ui outlined blue button">Two</button>
+            <button class="ul-ui outlined green button">Three</button>
+        </div>
+        <h5>Attached</h5>
+        <button class="ul-ui left attached button">Left</button>
+        <button class="right attached ul-ui button">Right</button>
+        <h5>Vertical</h5>
+        <div class="ul-ui vertical buttons">
+            <button class="ul-ui button">Feed</button>
+            <button class="ul-ui button">Messages</button>
+            <button class="ul-ui button">Events</button>
+        </div>
+        <div class="ul-ui vertical buttons">
+            <button class="ul-ui red button">Feed</button>
+            <button class="ul-ui blue button">Messages</button>
+            <button class="ul-ui green button">Events</button>
+        </div>
+        <div class="ul-ui vertical buttons">
+            <button class="ul-ui outlined red button">Feed</button>
+            <button class="ul-ui outlined blue button">Messages</button>
+            <button class="ul-ui outlined green button">Events</button>
+        </div>
+        <h5>Loading</h5>
+        <button class="ul-ui loading button">Loading</button>
+        <button class="ul-ui loading red button">Loading</button>
+        <button class="ul-ui loading blue button">Loading</button>
+        <h5>Icon</h5>
+        <button class="ul-ui icon button">
+            <i class="fas fa-allergies icon"></i>
+        </button>
+        <button class="ul-ui icon red button">
+            <i class="fas fa-exclamation-triangle icon"></i>
+        </button>
+        <button class="ul-ui icon blue button">
+            <i class="fas fa-cloud icon"></i>
+        </button>
+        <button class="ul-ui icon green button">
+            <i class="fas fa-check icon"></i>
+        </button>
+        <div class="ul-ui icon buttons">
+            <button class="ul-ui button">
+                <i class="fas fa-play icon"></i>
+            </button>
+            <button class="ul-ui button">
+                <i class="fas fa-pause icon"></i>
+            </button>
+            <button class="ul-ui button">
+                <i class="fas fa-fast-forward icon"></i>
+            </button>
+        </div>
+    <div class="ul-ui black icon buttons">
+            <button class="ul-ui button">
+                <i class="fas fa-play icon"></i>
+            </button>
+            <button class="ul-ui button">
+                <i class="fas fa-pause icon"></i>
+            </button>
+            <button class="ul-ui button">
+                <i class="fas fa-fast-forward icon"></i>
+            </button>
+        </div>
+        <h5>Circular</h5>
+        <button class="circular ul-ui icon button">
+            <i class="fas fa-cog icon"></i>
+        </button>
+        <button class="circular ul-ui icon red button">
+            <i class="fas fa-heart icon"></i>
+        </button>
+        <button class="circular ul-ui icon blue button">
+            <i class="fas fa-cloud icon"></i>
+        </button>
+        <button class="circular ul-ui icon green button">
+            <i class="fas fa-check icon"></i>
+        </button>
+        <h5>Animated</h5>
+        <div class="ul-ui animated button" tabindex="0">
+            <div class="visible content">Next</div>
+            <div class="hidden content">
+                <i class="fas fa-arrow-right"></i>
+            </div>
+        </div>
+        <div class="ul-ui vertical animated button" tabindex="0">
+            <div class="hidden content">Shop</div>
+            <div class="visible content">
+                <i class="fas fa-shopping-cart"></i>
+            </div>
+        </div>
+        <div class="ul-ui vertical animated button" tabindex="0">
+            <div class="visible content">Sign-up for a Pro account</div>
+            <div class="hidden content">
+                $12.99 a month
+            </div>
+        </div>
+
+        <h5>Conditional</h5>
+        <div class="ul-ui buttons">
+            <button class="ul-ui red button">Cancel</button>
+            <div class="or"></div>
+            <button class="ul-ui green button">Save</button>
+        </div>
+        <h5>Sizes</h5>
+        <button class="xxsm ul-ui button">
+            XXSmall
+        </button>
+        <button class="xsm ul-ui button">
+            Xsmall
+        </button>
+        <button class="small ul-ui button">
+            Small
+        </button>
+        <button class="base ul-ui button">
+            Base
+        </button>
+        <button class="medium ul-ui button">
+            Medium
+        </button>
+        <button class="large ul-ui button">
+            Large
+        </button>
+        <h5>Fluid</h5>
+        <button class="fluid ul-ui button">Fits container</button>
+        <h5>Solid</h5>
+        <div class="example">
+            <button class="ul-ui red button">
+                Red
+            </button>
+            <button class="ul-ui orange button">
+                Orange
+            </button>
+            <button class="ul-ui yellow button">
+                Yellow
+            </button>
+            <button class="ul-ui green button">
+                Green
+            </button>
+            <button class="ul-ui teal button">
+                Teal
+            </button>
+            <button class="ul-ui blue button">
+                Blue
+            </button>
+            <button class="ul-ui brown button">
+                Brown
+            </button>
+            <button class="ul-ui grey button">
+                grey
+            </button>
+            <button class="ul-ui black button">
+                Black
+            </button>
+        </div>
+    <h5>Outlined</h5>
+        <div class="example">
+            <button class="ul-ui outlined red button">
+                Red
+            </button>
+            <button class="ul-ui outlined orange button">
+                Orange
+            </button>
+            <button class="ul-ui outlined yellow button">
+                Yellow
+            </button>
+            <button class="ul-ui outlined green button">
+                Green
+            </button>
+            <button class="ul-ui outlined teal button">
+                Teal
+            </button>
+            <button class="ul-ui outlined blue button">
+                Blue
+            </button>
+            <button class="ul-ui outlined brown button">
+                Brown
+            </button>
+            <button class="ul-ui outlined grey button">
+                grey
+            </button>
+            <button class="ul-ui outlined black button">
+                Black
+            </button>
+        </div>
+    <h5>Inverted</h5>
+        <div class="example" style="background-color:black;padding:10px 10px 0 10px;">
+            <button class="ul-ui inverted red button">
+                Red
+            </button>
+            <button class="ul-ui inverted orange button">
+                Orange
+            </button>
+            <button class="ul-ui inverted yellow button">
+                Yellow
+            </button>
+            <button class="ul-ui inverted green button">
+                Green
+            </button>
+            <button class="ul-ui inverted teal button">
+                Teal
+            </button>
+            <button class="ul-ui inverted blue button">
+                Blue
+            </button>
+            <button class="ul-ui inverted brown button">
+                Brown
+            </button>
+            <button class="ul-ui inverted grey button">
+                grey
+            </button>
+            <button class="ul-ui inverted black button">
+                Black
+            </button>
+        </div>
+<h5>Inverted Outlined</h5>
+        <div class="example" style="background-color:black;padding:10px 10px 0 10px;">
+            <button class="ul-ui outlined inverted red button">
+                Red
+            </button>
+            <button class="ul-ui outlined inverted orange button">
+                Orange
+            </button>
+            <button class="ul-ui outlined inverted yellow button">
+                Yellow
+            </button>
+            <button class="ul-ui outlined inverted green button">
+                Green
+            </button>
+            <button class="ul-ui outlined inverted teal button">
+                Teal
+            </button>
+            <button class="ul-ui outlined inverted blue button">
+                Blue
+            </button>
+            <button class="ul-ui outlined inverted brown button">
+                Brown
+            </button>
+            <button class="ul-ui outlined inverted grey button">
+                grey
+            </button>
+            <button class="ul-ui outlined inverted black button">
+                Black
+            </button>
+        </div>
+
+    </div>
+</main>
+
+<footer role="contentinfo">
+</footer>
+
+</body>
+
+</html>

@@ -1,0 +1,310 @@
+
+/*******************************
+            Alerts
+*******************************/
+.ul-ui.alert {
+  position: relative;
+  min-height: 1em;
+  margin: 1em 0em;
+  background: #e1e2e2;
+  padding: 1em 1.25em;
+  line-height: 1.25em;
+  color: #444444;
+}
+.ul-ui.alert:first-child {
+  margin-top: 0em;
+}
+.ul-ui.alert:last-child {
+  margin-bottom: 0em;
+}
+/* Header */
+.ul-ui.alert .header {
+  display: block;
+}
+/* Default font size */
+.ul-ui.alert .header:not(.ul-ui) {
+  font-size: 1em;
+}
+/* Paragraph */
+.ul-ui.alert p {
+  opacity: 0.8;
+}
+.ul-ui.alert p:first-child {
+  margin-top: 0em;
+}
+.ul-ui.alert p:last-child {
+  margin-bottom: 0em;
+}
+.ul-ui.alert .header + p {
+  margin-top: 0.512em;
+}
+/* List */
+.ul-ui.alert .list:not(.ul-ui) {
+  text-align: left;
+  padding: 0em;
+  opacity: 0.8;
+  list-style-position: inside;
+  margin: 0.512em 0em 0em;
+}
+.ul-ui.alert .list:not(.ul-ui):first-child {
+  margin-top: 0em;
+}
+.ul-ui.alert .list:not(.ul-ui):last-child {
+  margin-bottom: 0em;
+}
+.ul-ui.alert .list:not(.ul-ui) li {
+  position: relative;
+  list-style-type: none;
+  margin: 0em 0em 0.3em 1em;
+  padding: 0em;
+}
+.ul-ui.alert .list:not(.ul-ui) li:before {
+  position: absolute;
+  content: '•';
+  left: -1em;
+  height: 100%;
+  vertical-align: baseline;
+}
+.ul-ui.alert .list:not(.ul-ui) li:last-child {
+  margin-bottom: 0em;
+}
+/* Close Icon */
+.ul-ui.alert > .close.icon {
+  cursor: pointer;
+  position: absolute;
+  margin: 0em;
+  top: 1em;
+  right: 1em;
+  opacity: 0.7;
+  -webkit-transition: opacity 0.1s ease;
+  transition: opacity 0.1s ease;
+}
+.ul-ui.alert > .close.icon:hover {
+  opacity: 1;
+}
+/* First / Last Element */
+.ul-ui.alert > :first-child {
+  margin-top: 0em;
+}
+.ul-ui.alert > :last-child {
+  margin-bottom: 0em;
+}
+/*--------------
+    Visible
+---------------*/
+.ul-ui.visible.visible.visible.visible.alert {
+  display: block;
+}
+.ul-ui.icon.visible.visible.visible.visible.alert {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+/*--------------
+     Hidden
+---------------*/
+.ul-ui.hidden.hidden.hidden.hidden.alert {
+  display: none;
+}
+/*--------------
+    Compact
+---------------*/
+.ul-ui.compact.alert {
+  display: inline-block;
+}
+.ul-ui.compact.icon.alert {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+/*--------------
+      Icon
+---------------*/
+.ul-ui.icon.alert {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /*width: 100%;*/
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.ul-ui.icon.alert > .icon:not(.close) {
+  display: block;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  width: auto;
+  line-height: 1;
+  vertical-align: middle;
+  font-size: 1.563em;
+  opacity: 0.8;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  padding: 0.512em;
+  background-color: #e1e2e2;
+}
+.ul-ui.icon.alert > .content {
+  display: block;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  vertical-align: middle;
+}
+.ul-ui.icon.alert .icon:not(.close) + .content {
+  padding-left: 2.441em;
+}
+.ul-ui.icon.alert .circular.icon {
+  width: 1em;
+}
+/*--------------
+    Floating
+---------------*/
+.ul-ui.floating.alert {
+  -webkit-box-shadow: 0px 0px 0px 1px rgba(34, 36, 38, 0.22) inset, 0px 2px 4px 0px rgba(34, 36, 38, 0.12), 0px 2px 10px 0px #f5f5f5;
+  box-shadow: 0px 0px 0px 1px rgba(34, 36, 38, 0.22) inset, 0px 2px 4px 0px rgba(34, 36, 38, 0.12), 0px 2px 10px 0px #f5f5f5;
+}
+/*--------------
+     Colors
+---------------*/
+/*---------RED------------*/
+.ul-ui.red.alert {
+  background-color: #882534;
+  color: white;
+}
+.ul-ui.red.icon.alert > .icon:not(.close) {
+  background-color: #be2236 !important;
+  color: white;
+  opacity: 1;
+}
+.ul-ui.red.light.alert {
+  background-color: #fae5e7;
+  color: #651a29;
+}
+/*--------ORANGE-------------*/
+.ul-ui.orange.alert {
+  background-color: #cf5f28;
+  color: white;
+}
+.ul-ui.orange.icon.alert > .icon:not(.close) {
+  background-color: #f18a21 !important;
+  color: white;
+  opacity: 1;
+}
+.ul-ui.orange.light.alert {
+  background-color: #fce2c9;
+  color: #8d4921;
+}
+/*--------YELLOW-------------*/
+.ul-ui.yellow.alert {
+  background-color: #d0922a;
+  color: white;
+}
+.ul-ui.yellow.icon.alert > .icon:not(.close) {
+  background-color: #ffc62f !important;
+  color: white;
+  opacity: 1;
+}
+.ul-ui.yellow.light.alert {
+  background-color: #fff0c8;
+  color: #a96d29;
+}
+/*---------GREEN------------*/
+.ul-ui.green.alert {
+  background-color: #4c9e45;
+  color: white;
+}
+.ul-ui.green.icon.alert > .icon:not(.close) {
+  background-color: #92c83e !important;
+  color: white;
+  opacity: 1;
+}
+.ul-ui.green.light.alert {
+  background-color: #e0f0c9;
+  color: #1e5632;
+}
+/*-------TEAL--------------*/
+.ul-ui.teal.alert {
+  background-color: #007584;
+  color: white;
+}
+.ul-ui.teal.icon.alert > .icon:not(.close) {
+  background-color: #59b7b3 !important;
+  color: white;
+  opacity: 1;
+}
+.ul-ui.teal.light.alert {
+  background-color: #d6edec;
+  color: #204b5a;
+}
+/*---------BLUE------------*/
+.ul-ui.blue.alert {
+  background-color: #00518a;
+  color: white;
+}
+.ul-ui.blue.icon.alert > .icon:not(.close) {
+  background-color: #67b1e2 !important;
+  color: white;
+  opacity: 1;
+}
+.ul-ui.blue.light.alert {
+  background-color: #d2e8f6;
+  color: #0b3c61;
+}
+/*-------BROWN--------------*/
+.ul-ui.brown.alert {
+  background-color: #a39382;
+  color: white;
+}
+.ul-ui.brown.icon.alert > .icon:not(.close) {
+  background-color: #c4b8aa !important;
+  color: white;
+  opacity: 1;
+}
+.ul-ui.brown.light.alert {
+  background-color: #e3ded7;
+  color: #65503e;
+}
+/*--------BLACK-------------*/
+.ul-ui.black.alert {
+  background-color: #444444;
+  color: white;
+}
+.ul-ui.black.icon.alert > .icon:not(.close) {
+  background-color: #666666 !important;
+  color: white;
+  opacity: 1;
+}
+.ul-ui.black.light.alert {
+  background-color: #e6e6e6;
+  color: #000000;
+}
+/*--------------
+     Sizes
+---------------*/
+.ul-ui.mini.alert {
+  font-size: 0.78571429em;
+}
+.ul-ui.tiny.alert {
+  font-size: 0.85714286em;
+}
+.ul-ui.small.alert {
+  font-size: 0.92857143em;
+}
+.ul-ui.alert {
+  font-size: 1em;
+}
+.ul-ui.large.alert {
+  font-size: 1.14285714em;
+}
+.ul-ui.big.alert {
+  font-size: 1.28571429em;
+}
+.ul-ui.huge.alert {
+  font-size: 1.42857143em;
+}
+.ul-ui.massive.alert {
+  font-size: 1.71428571em;
+}

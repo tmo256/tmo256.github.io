@@ -1,0 +1,30 @@
+/*--------------
+    Loading
+---------------*/
+
+i.icon.loading {
+  height: 1em;
+  line-height: 1;
+  -webkit-animation: icon-loading 2s linear infinite;
+          animation: icon-loading 2s linear infinite;
+}
+@-webkit-keyframes icon-loading {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes icon-loading {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
