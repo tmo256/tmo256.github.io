@@ -1,5 +1,5 @@
 .example .button {
-    margin-bottom: 10px;
+    margin-bottom: 10px !important;
 }
 .ul-ui.container.example {
     padding-left: 0;
