@@ -1,0 +1,251 @@
+// out: ../../css/components/typography.css
+
+@import "../variables";
+
+/*******************************
+            Header
+*******************************/
+
+
+/*--------------
+     Page
+---------------*/
+
+h1 {
+    min-height: 1em;
+    font-size: @xxlg;
+}
+
+h2 {
+    font-size: @xlg;
+}
+
+h3 {
+    font-size: @lg;
+}
+
+h4 {
+    font-size: @md;
+}
+
+h5 {
+    font-size: @base;
+}
+
+
+/*--------------
+     Content
+---------------*/
+
+h1.ul-ui.header {
+    font-size: @xxlg;
+}
+
+h2.ul-ui.header {
+    font-size: @xlg;
+}
+
+h3.ul-ui.header {
+    font-size: @lg;
+}
+
+h4.ul-ui.header {
+    font-size: @md;
+}
+
+h5.ul-ui.header {
+    font-size: @base;
+}
+
+
+/* Content Sub Header */
+
+h1.ul-ui.header .sub.header {
+    font-size: @xsm;
+}
+
+h2.ul-ui.header .sub.header {
+    font-size: @sm;
+}
+
+h3.ul-ui.header .sub.header {
+    font-size: @sm;
+}
+
+h4.ul-ui.header .sub.header {
+    font-size: @sm;
+}
+
+h5.ul-ui.header .sub.header {
+    font-size: @xsm;
+}
+
+
+/*-------------------
+      Dividing
+--------------------*/
+
+.ul-ui.dividing.header {
+    padding-bottom: 0.2em;
+    border-bottom: 1px solid darken(@gray-md,10%);
+}
+
+.ul-ui.dividing.header .sub.header {
+    padding-bottom: 0.2em;
+}
+/* Colors */
+.ul-ui.dividing.red.header {
+    color: @red-lt;
+    border-bottom: 1px solid @red-lt;
+}
+.ul-ui.dividing.orange.header {
+    color: @orange-lt;
+    border-bottom: 1px solid @orange-lt;
+}
+.ul-ui.dividing.yellow.header {
+    color: @yellow-lt;
+    border-bottom: 1px solid @yellow-lt;
+}
+.ul-ui.dividing.green.header {
+    color: @green-lt;
+    border-bottom: 1px solid @green-lt;
+}
+.ul-ui.dividing.teal.header {
+    color: @teal-lt;
+    border-bottom: 1px solid @teal-lt;
+}
+.ul-ui.dividing.blue.header {
+    color: @blue-lt;
+    border-bottom: 1px solid @blue-lt;
+}
+.ul-ui.dividing.brown.header {
+    color: @brown-lt;
+    border-bottom: 1px solid @brown-lt;
+}
+.ul-ui.dividing.gray.header {
+    color: @gray-lt;
+    border-bottom: 1px solid @gray-lt;
+}
+.ul-ui.dividing.black.header {
+    color: @black-lt;
+    border-bottom: 1px solid @black-lt;
+}
+.ul-ui.dividing.white.header {
+    color: #fff;
+    border-bottom: 1px solid #fff;
+}
+
+/*-------------------
+       Disabled
+--------------------*/
+
+.ul-ui.disabled.header {
+    opacity: 0.45;
+}
+
+
+/*-------------------
+        Block
+--------------------*/
+
+.ul-ui.block.header {
+    background: @gray-lt;
+    padding: @sm;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: 1px solid #D4D4D5;
+    border-radius: 0.2em;
+}
+
+
+/*-------------------
+       Aligned
+--------------------*/
+
+.ul-ui.left.aligned.header {
+    text-align: left;
+}
+
+.ul-ui.right.aligned.header {
+    text-align: right;
+}
+
+.ul-ui.centered.header,
+.ul-ui.center.aligned.header {
+    text-align: center;
+}
+
+.ul-ui.justified.header {
+    text-align: justify;
+}
+
+.ul-ui.justified.header:after {
+    display: inline-block;
+    content: '';
+    width: 100%;
+}
+
+
+/*--------------
+ Emphasis and color
+---------------*/
+
+.ul-ui.small.text {
+    font-size: @sm;
+}
+
+.ul-ui.xsmall.text {
+    font-size: @xsm;
+    text-transform: uppercase;
+}
+
+.ul-ui.semi-strong.text {
+    font-weight: 500;
+}
+
+.ul-ui.strong.text {
+    font-weight: 600;
+}
+
+.ul-ui.normal.text {
+    font-weight: 400;
+}
+
+.ul-ui.red.text {
+    color: @red-lt;
+}
+
+.ul-ui.orange.text {
+    color: @orange-lt;
+}
+
+.ul-ui.yellow.text {
+    color: @yellow-lt;
+}
+
+.ul-ui.green.text {
+    color: @green-lt;
+}
+
+.ul-ui.teal.text {
+    color: @teal-lt;
+}
+
+.ul-ui.blue.text {
+    color: @blue-lt;
+}
+
+.ul-ui.brown.text {
+    color: @brown-lt;
+}
+
+.ul-ui.gray.text {
+    color: @gray-lt;
+}
+
+.ul-ui.black.text {
+    color: @black-lt;
+}
+.ul-ui.white.text {
+    color: #fff;
+}
