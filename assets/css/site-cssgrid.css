@@ -734,7 +734,7 @@ ul.unstyled, ol.unstyled
 {
   margin-top: 0;
 }
-
+/* START Marlon: Moved to typography.css - Delete
 .strong.text
 {
   font-weight: 600;
@@ -754,7 +754,7 @@ ul.unstyled, ol.unstyled
 {
   color: #fff;
 }
-
+END Marlon */
 @media screen and (min-width: 992px)
 {
   .show-md, .show-sm, .show-md-flex, .show-sm-flex {
