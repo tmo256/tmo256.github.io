@@ -17,6 +17,7 @@
 @import "icon.css";
 @import "buttons.css";
 @import "typography.css";
+@import "list.css";
 @import "example.css";
 body {
   color: #444444;
@@ -27,7 +28,7 @@ h3,
 h4,
 h5 {
   line-height: 1.28571429em;
-  margin: calc(1.85714286rem) 0 1rem;
+  margin: calc(0.85714286em) 0 1em;
   padding: 0;
 }
 h1 {
@@ -79,6 +80,7 @@ a:visited:hover:after {
 a.block,
 a:visited.block {
   padding: 0.5em;
+  display: block;
 }
 a.block:hover,
 a:visited.block:hover {
