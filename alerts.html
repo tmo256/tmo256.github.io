@@ -26,7 +26,7 @@
 
 <body>
     <main role="main" tabindex="-1">
-        <div class="ul-ui container">
+        <div class="ul-ui container example toc open">
             <h1>Alerts</h1>
             <h4>Simple</h4>
             <!-- Simple alert -->
@@ -245,11 +245,20 @@
         </div>
 
         </div>
-    </main>
+    
+    <article></article>
+</main>
 
-    <footer role="contentinfo">
-    </footer>
-
+<footer role="contentinfo">
+</footer>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+<script src="assets/js/toc.js"></script>
+    <script>
+    // Fpr example only
+setTimeout(function(){
+    $("#alerts").addClass("active");
+},100);
+</script>
 </body>
 
 </html>

@@ -24,7 +24,7 @@
     <script src="https://kit.fontawesome.com/ff07333570.js"></script>
 </head>
 <main role="main" tabindex="-1">
-    <div class="ul-ui container">
+    <div class="ul-ui container example toc open">
         <h1>Typography</h1>
         <h4>Page</h4>
         <h1>H1</h1>
@@ -40,13 +40,13 @@
         <h3 class="ul-ui header">H3 Header lg<div class="sub header">Sub Header (@sm)</div></h3>
         <h4 class="ul-ui header">H4 Header md<div class="sub header">Sub Header (@sm)</div></h4>
         <h5 class="ul-ui header">H5 Header base<div class="sub header">Sub Header (@xsm)</div></h5>
-        
+
         <h4>Dividing Header</h4>
         <h3 class="ul-ui dividing header">This header has a line divider</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vel tincidunt eros, nec venenatis ipsum. Nulla hendrerit urna ex, id sagittis mi scelerisque vitae.</p>
         <h3 class="ul-ui dividing red header">This red header has a line divider</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vel tincidunt eros, nec venenatis ipsum. Nulla hendrerit urna ex, id sagittis mi scelerisque vitae.</p>
-        
+
         <h4>Disabled</h4>
         <h3 class="ul-ui disabled header">Disabled Header</h3>
 
@@ -77,11 +77,19 @@
         <p class="ul-ui gray text"> I am gray text</p>
         <p class="ul-ui black text"> I am black text</p>
     </div>
+    <article></article>
 </main>
 
 <footer role="contentinfo">
 </footer>
-
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+<script src="assets/js/toc.js"></script>
+    <script>
+    // Fpr example only
+setTimeout(function(){
+    $("#typography").addClass("active");
+},100);
+</script>
 </body>
 
 </html>
