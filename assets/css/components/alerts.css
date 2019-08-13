@@ -184,16 +184,16 @@
      Colors
 ---------------*/
 .ul-ui.red.alert {
-  background-color: #882534;
+  background-color: #892433;
   color: white;
 }
 .ul-ui.red.icon.alert > .icon:not(.close) {
-  background-color: #be2236 !important;
+  background-color: #c02032 !important;
   color: white;
   opacity: 1;
 }
 .ul-ui.red.light.alert {
-  background-color: #fae5e7;
+  background-color: #fbe4e7;
   color: #651a29;
 }
 /*---------------------*/

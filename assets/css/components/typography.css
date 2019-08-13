@@ -81,8 +81,8 @@ h5.ul-ui.header .sub.header {
 }
 /* Colors */
 .ul-ui.dividing.red.header {
-  color: #be2236;
-  border-bottom: 1px solid #be2236;
+  color: #c02032;
+  border-bottom: 1px solid #c02032;
 }
 .ul-ui.dividing.orange.header {
   color: #f18a21;
@@ -178,7 +178,7 @@ h5.ul-ui.header .sub.header {
   font-weight: 400;
 }
 .ul-ui.red.text {
-  color: #be2236;
+  color: #c02032;
 }
 .ul-ui.orange.text {
   color: #f18a21;

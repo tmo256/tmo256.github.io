@@ -1566,36 +1566,36 @@
     --------------*/
 .ul-ui.red.buttons .button,
 .ul-ui.red.button {
-  background-color: #be2236;
+  background-color: #c02032;
   color: #FFFFFF;
 }
 /* hover */
 .ul-ui.red.buttons .button:hover,
 .ul-ui.red.button:hover {
-  background-color: #882534;
+  background-color: #892433;
 }
 /* focus */
 .ul-ui.red.buttons .button:focus,
 .ul-ui.red.button:focus {
-  background-color: #74202c;
+  background-color: #751f2b;
 }
 /* active */
 .ul-ui.red.buttons .button:active,
 .ul-ui.red.button:active {
-  background-color: #601a25;
+  background-color: #611924;
 }
 .ul-ui.red.buttons .active.button,
 .ul-ui.red.buttons .active.button:active,
 .ul-ui.red.active.button,
 .ul-ui.red.button .active.button:active {
-  background-color: #601a25;
+  background-color: #611924;
 }
 /* -------------------------- Red outlined */
 .ul-ui.outlined.red.buttons .button,
 .ul-ui.outlined.red.button {
-  -webkit-box-shadow: 0px 0px 0px 1px #be2236 inset !important;
-  box-shadow: 0px 0px 0px 1px #be2236 inset !important;
-  color: #be2236 !important;
+  -webkit-box-shadow: 0px 0px 0px 1px #c02032 inset !important;
+  box-shadow: 0px 0px 0px 1px #c02032 inset !important;
+  color: #c02032 !important;
 }
 /* hover */
 .ul-ui.outlined.red.buttons .button:hover,
@@ -1610,11 +1610,11 @@
 /* active */
 .ul-ui.outlined.red.buttons .active.button,
 .ul-ui.outlined.red.active.button {
-  background: rgba(136, 37, 52, 0.1) !important;
+  background: rgba(137, 36, 51, 0.1) !important;
 }
 .ul-ui.outlined.red.buttons .button:active,
 .ul-ui.outlined.red.button:active {
-  background: rgba(136, 37, 52, 0.1) !important;
+  background: rgba(137, 36, 51, 0.1) !important;
 }
 .ul-ui.buttons:not(.vertical) > .outlined.red.button:not(:first-child) {
   margin-left: -1px;
@@ -1623,9 +1623,9 @@
 .ul-ui.inverted.red.buttons .button,
 .ul-ui.inverted.red.button {
   background-color: transparent;
-  -webkit-box-shadow: 0px 0px 0px 2px #be2236 inset !important;
-  box-shadow: 0px 0px 0px 2px #be2236 inset !important;
-  color: #be2236;
+  -webkit-box-shadow: 0px 0px 0px 2px #c02032 inset !important;
+  box-shadow: 0px 0px 0px 2px #c02032 inset !important;
+  color: #c02032;
 }
 /* hover */
 .ul-ui.inverted.red.buttons .button:hover,
@@ -1642,21 +1642,21 @@
 }
 .ul-ui.inverted.red.buttons .button:hover,
 .ul-ui.inverted.red.button:hover {
-  background-color: #882534;
+  background-color: #892433;
 }
 /* focus */
 .ul-ui.inverted.red.buttons .button:focus,
 .ul-ui.inverted.red.button:focus {
-  background-color: #74202c;
+  background-color: #751f2b;
 }
 /* active */
 .ul-ui.inverted.red.buttons .active.button,
 .ul-ui.inverted.red.active.button {
-  background-color: #601a25;
+  background-color: #611924;
 }
 .ul-ui.inverted.red.buttons .button:active,
 .ul-ui.inverted.red.button:active {
-  background-color: #601a25;
+  background-color: #611924;
 }
 /* --------------------------- Red Inverted outlined */
 .ul-ui.inverted.red.outlined.buttons .button,
@@ -1672,33 +1672,33 @@
 .ul-ui.inverted.red.buttons .outlined.button:hover,
 .ul-ui.inverted.red.outlined.button:hover {
   background-color: transparent !important;
-  -webkit-box-shadow: 0px 0px 0px 2px #882534 inset !important;
-  box-shadow: 0px 0px 0px 2px #882534 inset !important;
-  color: #882534 !important;
+  -webkit-box-shadow: 0px 0px 0px 2px #892433 inset !important;
+  box-shadow: 0px 0px 0px 2px #892433 inset !important;
+  color: #892433 !important;
 }
 /* focus */
 .ul-ui.inverted.red.outlined.buttons .button:focus,
 .ul-ui.inverted.red.outlined.buttons .button:focus,
 .ul-ui.inverted.red.outlined.button:focus {
   background-color: transparent !important;
-  -webkit-box-shadow: 0px 0px 0px 2px #882534 inset !important;
-  box-shadow: 0px 0px 0px 2px #882534 inset !important;
-  color: #882534 !important;
+  -webkit-box-shadow: 0px 0px 0px 2px #892433 inset !important;
+  box-shadow: 0px 0px 0px 2px #892433 inset !important;
+  color: #892433 !important;
 }
 /* active */
 .ul-ui.inverted.red.outlined.buttons .active.button,
 .ul-ui.inverted.red.buttons .outlined.active.button,
 .ul-ui.inverted.red.outlined.active.button {
-  -webkit-box-shadow: 0px 0px 0px 2px #be2236 inset !important;
-  box-shadow: 0px 0px 0px 2px #be2236 inset !important;
-  color: #be2236 !important;
+  -webkit-box-shadow: 0px 0px 0px 2px #c02032 inset !important;
+  box-shadow: 0px 0px 0px 2px #c02032 inset !important;
+  color: #c02032 !important;
 }
 .ul-ui.inverted.red.outlined.buttons .button:active,
 .ul-ui.inverted.red.buttons .outlined.button:active,
 .ul-ui.inverted.red.outlined.button:active {
-  -webkit-box-shadow: 0px 0px 0px 2px #be2236 inset !important;
-  box-shadow: 0px 0px 0px 2px #be2236 inset !important;
-  color: #be2236 !important;
+  -webkit-box-shadow: 0px 0px 0px 2px #c02032 inset !important;
+  box-shadow: 0px 0px 0px 2px #c02032 inset !important;
+  color: #c02032 !important;
 }
 /*-------------
         Teal 

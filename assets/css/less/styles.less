@@ -1,0 +1,96 @@
+// out: ../css/styles.css
+
+@import "variables";
+@import "components/alerts.css";
+@import "components/icon.css";
+@import "components/buttons.css";
+@import "components/typography.css";
+@import "components/list.css";
+@import "example.css";
+
+
+body {
+    color: @black-md;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    line-height: 1.28571429em;
+    margin: calc(1em - .14285714em) 0 1em;
+    padding: 0;
+}
+
+h1 {
+    min-height: 1em;
+    font-size: @xxlg;
+}
+
+h2 {
+    font-size: @xlg;
+}
+
+h3 {
+    font-size: @lg;
+}
+
+h4 {
+    font-size: @md;
+}
+
+h5 {
+    font-size: @base;
+}
+
+/*.ul-ui {
+    &.container {
+        padding: @xlg;
+    }
+}*/
+
+/* ======================================== ANCHORS */
+
+a,
+a:visited {
+    text-decoration: none;
+    position: relative;
+    color: @red-lt;
+    cursor: pointer;
+}
+
+a:hover,
+a:active {
+    color: @black-lt !important;
+}
+
+a:after,
+a:visited:after {
+    content: '';
+    height: 1px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    background: lighten(@red-lt, 30%);
+    transition: 0.2s;
+}
+
+a:hover:after,
+a:visited:hover:after {
+    width: 100%;
+}
+
+a.block,
+a:visited.block {
+    padding: 0.5em;
+    display: block;
+}
+a.block.active {
+    background: @gray-lt;
+}
+a.block:hover,
+a:visited.block:hover {
+    background: @gray-lt;
+}
