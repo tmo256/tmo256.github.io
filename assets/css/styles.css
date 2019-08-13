@@ -47,9 +47,11 @@ h4 {
 h5 {
   font-size: 1em;
 }
-.ul-ui.container {
-  padding: 1.953em;
-}
+/*.ul-ui {
+    &.container {
+        padding: @xlg;
+    }
+}*/
 /* ======================================== ANCHORS */
 a,
 a:visited {
@@ -81,6 +83,9 @@ a.block,
 a:visited.block {
   padding: 0.5em;
   display: block;
+}
+a.block.active {
+  background: #f5f5f5;
 }
 a.block:hover,
 a:visited.block:hover {
