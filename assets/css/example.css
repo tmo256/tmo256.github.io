@@ -41,7 +41,7 @@
 .example.left.nav .ul-ui.list .item {
     padding: 17px 15px 17px 75px;
 }
-.example.left.nav .ul-ui.list .item:hover {
+.example.left.nav .ul-ui.list .item:hover, .example.left.nav .ul-ui.list .item.active {
     color: #c02032;
     background-color: white;
     border-right: 4px solid #c02032;
@@ -70,9 +70,10 @@
     background-size: 34px;
     background-position: 15px 15px
 }
-#order:hover {
+#orders:hover, #orders.active {
     background-image: url(../images/i03_r.jpg);
 }
+
 #documents {
     background-image: url(../images/i04.jpg);
     background-repeat: no-repeat;
