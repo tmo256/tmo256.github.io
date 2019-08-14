@@ -1,14 +1,12 @@
 // out: ../css/styles.css
-
 @import "variables";
 @import "components/alerts.css";
 @import "components/icon.css";
 @import "components/buttons.css";
 @import "components/typography.css";
 @import "components/list.css";
+@import "components/image.css";
 @import "example.css";
-
-
 body {
     color: @black-md;
 }
@@ -44,11 +42,13 @@ h5 {
     font-size: @base;
 }
 
+
 /*.ul-ui {
     &.container {
         padding: @xlg;
     }
 }*/
+
 
 /* ======================================== ANCHORS */
 
@@ -87,10 +87,33 @@ a:visited.block {
     padding: 0.5em;
     display: block;
 }
+
 a.block.active {
     background: @gray-lt;
 }
+
 a.block:hover,
 a:visited.block:hover {
     background: @gray-lt;
+}
+
+
+/* ------------
+    Utilities  
+---------------*/
+
+.lg-shadow {
+    -webkit-box-shadow: 10px 10px 40px -12px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 40px -12px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 40px -12px rgba(0, 0, 0, 0.75);
+}
+.shadow {
+    -webkit-box-shadow: 10px 10px 20px -12px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 20px -12px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 20px -12px rgba(0, 0, 0, 0.75);
+}
+.sm-shadow {
+    -webkit-box-shadow: 10px 10px 10px -12px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 10px -12px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 10px -12px rgba(0, 0, 0, 0.75);
 }
