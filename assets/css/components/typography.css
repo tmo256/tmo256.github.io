@@ -163,10 +163,12 @@ h5.ul-ui.header .sub.header {
 ---------------*/
 .ul-ui.small.text {
   font-size: 0.8em;
+  margin: 0;
 }
 .ul-ui.xsmall.text {
   font-size: 0.64em;
   text-transform: uppercase;
+  margin: 0;
 }
 .ul-ui.semi-strong.text {
   font-weight: 500;
