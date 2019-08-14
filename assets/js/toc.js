@@ -28,6 +28,7 @@ $(document).ready(function () {
         "<a id='typography' class='item block' href='typography.html'>Typography</a>" +
         "<a id='alerts' class='item block' href='alerts.html'>Alerts</a>" +
         "<a id='buttons' class='item block' href='buttons.html'>Anchors &amp; Buttons</a>" +
+        "<a id='lists' class='item block' href='lists.html'>Lists</a>" +
         "</div>" +
         "</div>" +
         "</div>" +
