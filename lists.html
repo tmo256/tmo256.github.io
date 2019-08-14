@@ -24,7 +24,7 @@
     <script src="https://kit.fontawesome.com/ff07333570.js"></script>
 </head>
 <main role="main" tabindex="-1">
-    <divv class="ul-ui container example toc open">
+    <div class="ul-ui container example toc open right rail">
         <h1>Lists</h1>
         <h3>Simple</h3>
         <div class="ul-ui list">
@@ -43,7 +43,7 @@
                     <div class="item">Items</div>
                 </div>
             </div>
-            <div class="item">Good Bye</div>
+            <div class="item">Warranty</div>
         </div>
 
         <h3>Horizontal bulleted</h3>
@@ -52,29 +52,29 @@
             <a class="item">Sitemap</a>
             <a class="item">Contact</a>
         </div>
-        
+
         <h3>Ordered</h3>
         <div class="ul-ui ordered list">
+            <a class="item">Getting Started</a>
             <a class="item">Introduction</a>
-            <a class="item">Common Foundation</a>
             <div class="item">
-                <a>Component Library</a>
+                <a>Languages</a>
                 <div class="list">
-                    <a class="item">Typography</a>
-                    <a class="item">Alerts</a>
-                    <a class="item">Buttons</a>
+                    <a class="item">HTML</a>
+                    <a class="item">Javascript</a>
+                    <a class="item">CSS</a>
                 </div>
             </div>
-            <a class="item">Style Guide</a>
+            <a class="item">Review</a>
         </div>
 
         <h3>Divided</h3>
         <div class="ul-ui divided list">
-            <div class="item">HTML</div>
-            <div class="item">CSS</div>
-            <div class="item">JavaScript</div>
+            <div class="item">Apples</div>
+            <div class="item">Pears</div>
+            <div class="item">Oranges</div>
         </div>
-        
+
         <h3>Celled</h3>
         <div class="ul-ui celled list">
             <div class="item">Cats</div>
@@ -87,14 +87,14 @@
                 </div>
             </div>
         </div>
-        
+
         <h3>Horizontal Celled</h3>
         <div class="ul-ui celled horizontal list">
             <div class="item">About Us</div>
             <div class="item">Contact</div>
             <div class="item">Support</div>
         </div>
-        
+
         <h3>Selection</h3>
         <div class="ul-ui middle aligned selection list">
             <div class="item">
@@ -116,7 +116,7 @@
                 </div>
             </div>
         </div>
-        
+
         <h3>Alignment</h3>
         <div class="ul-ui list">
             <div class="item">
@@ -138,7 +138,7 @@
                 </div>
             </div>
         </div>
-        
+
         <h3>With meta description</h3>
         <div class="ul-ui relaxed divided list">
             <div class="item">
@@ -188,7 +188,7 @@
                 </div>
             </div>
         </div>
-        
+
         <h3>Vertical with image</h3>
         <div class="ul-ui list">
             <div class="item">
@@ -213,7 +213,7 @@
                 </div>
             </div>
         </div>
-        
+
         <h3>Tree</h3>
         <div class="ul-ui list">
             <div class="item">
@@ -286,21 +286,54 @@
                 </div>
             </div>
         </div>
-
+    </div>
+    <article></article>
+    
+    <!-- START left nav example -->
+    <div class="example right rail">
+        <div class="example left nav">
+            <div class="example ul-ui divided middle aligned selection list shadow">
+                <div class="item" id="dashboard">
+                    <div class="content">
+                        <div class="header">Dashboard</div>
+                    </div>
+                </div>
+                <div class="item" id="quotes">
+                    <div class="content">
+                        <div class="header">Quotes</div>
+                    </div>
+                </div>
+                <div class="item" id="orders">
+                    <div class="content" id="orders">
+                        <div class="header">Orders</div>
+                    </div>
+                </div>
+                <div class="item" id="documents">
+                    <div class="content" id="socuments">
+                        <div class="header">Documents</div>
+                    </div>
+                </div>
+                <div class="item" id="payments">
+                    <div class="content" id="payments">
+                        <div class="header">Payments</div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <article></article>
-        </main>
+    </div>
+    <!-- END left nav example -->
+</main>
 
-        <footer role="contentinfo">
-        </footer>
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
-        <script src="assets/js/toc.js"></script>
-        <script>
-            // Fpr example only
-            setTimeout(function () {
-                $("#lists").addClass("active");
-            }, 300);
-        </script>
-        </body>
+<footer role="contentinfo">
+</footer>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+<script src="assets/js/toc.js"></script>
+<script>
+    // Fpr example only
+    setTimeout(function () {
+        $("#lists").addClass("active");
+    }, 300);
+</script>
+</body>
 
 </html>
