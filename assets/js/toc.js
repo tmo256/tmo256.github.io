@@ -29,6 +29,7 @@ $(document).ready(function () {
         "<a id='alerts' class='item block' href='alerts.html'>Alerts</a>" +
         "<a id='buttons' class='item block' href='buttons.html'>Anchors &amp; Buttons</a>" +
         "<a id='lists' class='item block' href='lists.html'>Lists</a>" +
+        "<a id='menu' class='item block' href='menu.html'>Menus</a>" +
         "</div>" +
         "</div>" +
         "</div>" +
