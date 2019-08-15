@@ -13,12 +13,15 @@
 /*---------------------*/
 /*---------------------*/
 /*---------------------*/
+@import "components/segment-noless.css";
 @import "components/alerts.css";
 @import "components/icon.css";
 @import "components/buttons.css";
 @import "components/typography.css";
 @import "components/list.css";
 @import "components/image.css";
+@import "components/menu.css";
+@import "components/tab.css";
 @import "example.css";
 body {
   color: #444444;
@@ -73,7 +76,7 @@ a:visited:after {
   bottom: 0;
   left: 0;
   width: 0%;
-  background: #ec8d98;
+  background: #e56170;
   transition: 0.2s;
 }
 a:hover:after,
