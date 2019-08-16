@@ -1,828 +1,819 @@
 <html>
 
 <head>
-<meta http-equiv=Content-Type content="text/html; charset=utf-8">
-<meta name=Generator content="Microsoft Word 15 (filtered)">
+  <meta http-equiv=Content-Type content="text/html; charset=utf-8">
+  <link rel="stylesheet" href="assets/css/doc.css">
 </head>
 
 <body>
 
-<h1>UI / UX Architectural Document</h1>
+  <header>
+    <h1>UI / UX Architectural Document</h1>
+    <p>2019-June-28</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#_Toc12614042">Introduction</a></li>
+      <li><a href="#_Toc12614043">Common Foundation</a></li>
+      <li><a href="#_Toc12614044">Style Guide</a>
+        <ul>
+          <li><a href="#_Toc12614045">Web Standards</a></li>
+          <li><a href="#_Toc12614046">Internationalization (i18n)</a></li>
+          <li><a href="#_Toc12614047">Common Terminology</a></li>
+          <li><a href="#_Toc12614048">Typography</a></li>
+          <li><a href="#_Toc12614049">Colors</a>
+            <ul><li><a href="#_Toc12614050">Accessibility</a></li></ul>
+          </li>
+          <li><a href="#_Toc12614051">Icons</a></li>
+          <li><a href="#_Toc12614052">Responsiveness</a></li>
+          <li><a href="#_Toc12614053">Layout</a>
+            <ul>
+              <li><a href="#_Toc12614054">Header/Navigation</a></li>
+              <li><a href="#_Toc12614055">Footer</a></li>
+            </ul>
+          </li>
+          <li><a href="#_Toc12614056">Accessibility</a>
+            <ul>
+              <li><a href="#_Toc12614057">Coding General HTML Elements</a></li>
+              <li><a href="#_Toc12614058">Images</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="#_Toc12614059">Component Library</a>
+        <ul>
+          <li><a href="#_Toc12614060">Alerts</a></li>
+            <ul>
+              <li><a href="#_Toc12614061">Accessibility</a>
+            </ul>
+          </li>
+          <li><a href="#_Toc12614062">Anchors &amp; Buttons</a>
+            <ul>
+              <li><a href="#_Toc12614063">Buttons: Coding</a></li>
+              <li><a href="#_Toc12614064">Buttons: Styling</a></li>
+              <li><a href="#_Toc12614065">Buttons: Responsiveness</a></li>
+              <li><a href="#_Toc12614066">Buttons: Usability</a></li>
+              <li><a href="#_Toc12614067">Anchors: Coding</a></li>
+              <li><a href="#_Toc12614068">Anchors: Styling</a></li>
+              <li><a href="#_Toc12614069">Input/Submits</a></li>
+              <li><a href="#_Toc12614070">Other Cases</a></li>
+            </ul>
+          </li>
+          <li><a href="#_Toc12614071">Confirmation Dialogs</a></li>
+          <li><a href="#_Toc12614072">Forms</a>
+            <ul>
+              <li><a href="#_Toc12614073">Input Types</a></li>
+              <li><a href="#_Toc12614074">Buttons and Links (Again)</a></li>
+              <li><a href="#_Toc12614075">Submit Events</a></li>
+              <li><a href="#_Toc12614076">JavaScript Validations</a></li>
+              <li><a href="#_Toc12614077">Success &amp; Error Handling</a></li>
+            </ul>
+          </li>
+          <li><a href="#_Toc12614078">Images</a>
+            <ul>
+              <li><a href="#_Toc12614079">Responsive Images</a></li>
+              <li><a href="#_Toc12614080">Image Sizing and Resolution</a></li>
+              <li><a href="#_Toc12614081">Image File Formats</a></li>
+              <li><a href="#_Toc12614082">Image Optimization</a></li>
+            </ul>
+          </li>
+          <li><a href="#_Toc12614083">Modals</a></li>
+          <li><a href="#_Toc12614084">Tables</a>
+            <ul>
+              <li><a href="#_Toc12614085">Responsive Tables</a></li>
+              <li><a href="#_Toc12614086">Sorting</a></li>
+            </ul>
+          </li>
+          <li><a href="#_Toc12614087">Tabs</a></li>
+          <li><a href="#_Toc12614088">Tooltips &amp; Popovers</a>
+            <ul><li><a href="#_Toc12614089">Accessibility</a></li></ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+  <main>
+    
+
+    <article>
+      <h2><a name="_Toc12614042">Introduction</a></h2>
+
+      <p><span><span>The goal of this document is to facilitate the creation of a common UI / UX experience for all UL external-facing web applications; it provides a set of common rules that can be applied to all existing and new </span></span><span>applications and features. It is not intended to be comprehensive or to answer every possible question that might arise in developing an application. Designers and devs are encouraged to apply common sense and good judgement! </span></p>
+
+      <p><span>By providing goals, citation and context wherever possible, this document seeks to explain the reasoning behind each suggested rule, which by extension should help application producers understand when and why to disregard them. However, items that are highlighted in <span style='background:aqua'>teal</span> should generally be adhered to unless there are very strong reasons to disregard.</span></p>
+
+
+      <p><span>This document is intended to be technology agnostic and provide common guidelines whether the underlying implementation is SASS or LESS, Bootstrap or Semantic UI, React or Angular, etc.</span></p>
+
+      <h1><a name="_Toc12614043">Common Foundation</a></h1>
+
+      <p><span>&nbsp;Implementing the common foundation&nbsp;in an application&nbsp;will accomplish 80% of a common look and should&nbsp;(and is intended to) be&nbsp;able to be accomplished quickly.</span>&nbsp;</p>
 
-<p>2019-June-28</p>
+      <p><span style='background:aqua'>·<span></span></span><span style='background:aqua'>Header color and UL logo. UL red header is preferred but for historical / persona reasons&nbsp;other choices are&nbsp;acceptable- Good Guide, for example, serves an entirely different persona from what is more typical for other&nbsp;UL&nbsp;apps.</span></p>
 
-<h2>Table of Contents</h2>
+      <p><span style='background:aqua'>·<span></span></span><span style='line-height:115%;color:black;background:aqua'>Footer color. Dark grey, common link styles and elements (copyright, etc.) where possible.</span></p>
 
-<p><a href="#_Toc12614042">Introduction</a></p>
+      <p><span style='background:aqua'>·<span></span></span><span style='line-height:115%;color:black;background:aqua'>Font: Adopt&nbsp;Open&nbsp;Sans for headers at minimum.</span><span style='line-height: 115%;background:aqua'>&nbsp;</span></p>
 
-<p><a href="#_Toc12614043">Common Foundation</a></p>
+      <p><span style='background:aqua'>·<span></span></span><span style='line-height:115%;color:black;background:aqua'>Icons: font awesome&nbsp;(there is some cost associated with this).</span></p>
 
-<p><a href="#_Toc12614044">Style Guide</a></p>
+      <p><span style='background:aqua'>·<span></span></span><span style='background:aqua'>Button styles: Padding /&nbsp;border&nbsp;radius, shape, border, shadow, mouseovers&nbsp;(transitions, relative lightness/brightness).&nbsp;Not necessary, color or typography.</span></p>
 
-<p><a href="#_Toc12614045">Web Standards<span </span></a></p>
+      <h1><a name="_Toc12614044">Style Guide</a></h1>
 
-<p><a href="#_Toc12614046">Internationalization (i18n)</a></p>
+      <h2><a name="_Toc12614045">Web Standards</a></h2>
 
-<p><a href="#_Toc12614047">Common Terminology</a></p>
+      <p>The principles and code fragments below assume modern browsers, which includes the latest (desktop and mobile) versions of Chrome, Safari and Firefox, as well as IE 11+. Target MS Edge only where your user adoption makes it relevant, as Microsoft plans to phase out support for this browser. Support of other, older browser versions may be required where audience usage warrants, which may lead to the need to disregard some style guidelines. </p>
 
-<p><a href="#_Toc12614048">Typography</a></p>
+      <p><span>Prefer graceful CSS fallbacks to polyfills where possible and employ tools such as </span><a href="https://modernizr.com/"><span style='line-height:107%'>Modernizr</span></a><span style='line-height:107%'> to help detect and create these fallback styles. When writing JavaScript, use ECMA6 syntax with caution, as some features of the new script version have been adopted more widely than others.</span></p>
 
-<p><a href="#_Toc12614049">Colors</a></p>
+      <p><span>If in doubt, </span><a href="https://caniuse.com/"><span style='line-height:107%'>Can I Use</span></a><span style='line-height:107%'> in combination</span><span style='line-height:107%'> with your audience analytics can provide guidance on what browser features are reasonable to employ for your application. Post-processor tools like </span><a href="https://postcss.org/"><span style='line-height:107%'>PostCSS</span></a><span style='line-height:107%'> can be integrated into automated builds to support next gen CSS functions and prefixed styles (such as prefixed flex rules to support flex in IE 10) to stretch limitations.</span></p>
 
-<p><a href="#_Toc12614050">Accessibility</a></p>
+      <p><span>In general, prefer</span></p>
 
-<p><a href="#_Toc12614051">Icons</a></p>
+      <p><span'>·<span></span></span><span>HTML5.</span></p>
 
-<p><a href="#_Toc12614052">Responsiveness</a></p>
+      <p><span'>·<span></span></span><span>CSS3 and new CSS modules with adequate browser adoption.</span></p>
 
-<p><a href="#_Toc12614053">Layout</a></p>
+      <p><span'>·<span></span></span><span>ECMA5 and ECMA6 features with
+      adequate adoption (or lightweight polyfills). </span></p>
 
-<p><a href="#_Toc12614054">Header/Navigation</a></p>
+      <h2><a name="_Toc12614046">Internationalization (i18n)</a></h2>
 
-<p><a href="#_Toc12614055">Footer</a></p>
+      <p><span>UL
+      is a global company operating in many international markets. Consequently,
+      designers and developers should plan for localization, internationalization and
+      translations. If your application has been designed responsively, you will most
+      likely be able to accommodate the variations of text length resulting from
+      these processes. </span></p>
 
-<p><a href="#_Toc12614056">Accessibility</a></p>
+      <p><span>For
+      proper text display:</span></p>
 
-<p><a href="#_Toc12614057">Coding General HTML Elements</a></p>
+      <p><span
+      style='line-height:107%;font-family:Symbol;background:aqua'>·<span
+      style='font:7.0pt "Times New Roman"'></span></span><span
+      style='background:aqua'>add the </span><span class=InlineCode><span
+      style='border:none;background:aqua'><span>lang</span></span></span><span
+      style='background:aqua'> attribute to your root </span><span
+      class=InlineCode><span style='border:none;background:aqua'><span
+      style='border:none'>html</span></span></span><span style='line-height:107%;
+      background:aqua'> tag. Prefer </span><span class=InlineCode><span
+      style='border:none;background:aqua'><span>html</span></span></span><span
+      style='background:aqua'> to </span><span class=InlineCode><span
+      style='border:none;background:aqua'><span>body</span></span></span><span
+      style='background:aqua'> to accommodate localized meta tags.</span></p>
+
+      <p><span
+      style='line-height:107%;font-family:Symbol;background:aqua'>·<span
+      style='font:7.0pt "Times New Roman"'></span></span><span
+      style='background:aqua'>include a </span><span
+      class=InlineCode><span style='border:none;background:aqua'><span
+      style='border:none'>meta</span></span></span><span style='line-height:107%;
+      background:aqua'> tag with a </span><span class=InlineCode><span
+      style='border:none;background:aqua'><span>charset</span></span></span><span
+      style='background:aqua'> of UTF-8 or UTF-16, depending on the language
+      you’re displaying.</span></p>
 
-<p><a href="#_Toc12614058">Images</a></p>
+      <p><span>Without
+      preparation, i18n can affect any HTML element. Look to accommodate for text
+      wrap and horizontal overflow. Pay particular attention to:</span></p>
 
-<p><a href="#_Toc12614059">Component Library</a></p>
+      <p><span
+      style='line-height:107%;font-family:Symbol'>·<span>&nbsp;&nbsp;&nbsp;&nbsp;
+      </span></span><span>navigation and menus. </span></p>
 
-<p><a href="#_Toc12614060">Alerts</a></p>
+      <p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in;line-height:107%'><span
+      style='line-height:107%;font-family:Symbol'>·<span>&nbsp;&nbsp;&nbsp;&nbsp;
+      </span></span><span>tab labels.</span></p>
 
-<p><a href="#_Toc12614061">Accessibility</a></p>
+      <p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in;line-height:107%'><span
+      style='line-height:107%;font-family:Symbol'>·<span>&nbsp;&nbsp;&nbsp;&nbsp;
+      </span></span><span>button text.</span></p>
 
-<p><a href="#_Toc12614062">Anchors &amp; Buttons</a></p>
+      <p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in;line-height:107%'><span
+      style='line-height:107%;font-family:Symbol'>·<span>&nbsp;&nbsp;&nbsp;&nbsp;
+      </span></span><span>table column headers.</span></p>
 
-<p><a href="#_Toc12614063">Buttons: Coding</a></p>
+      <p><span
+      style='line-height:107%;font-family:Symbol'>·<span>&nbsp;&nbsp;&nbsp;&nbsp;
+      </span></span><span>any element content with specified
+      heights.</span></p>
 
-<p><a href="#_Toc12614064">Buttons: Styling</a></p>
+      <p><span>In general, assume that text will be longer in German, Spanish and French, and much shorter in Asiatic languages. </span></p>
 
-<p><a href="#_Toc12614065">Buttons: Responsiveness</a></p>
+      <p><span>Also consider ISO formatting in form input fields. Be sure to accommodate a variety of date, price, zip/province code and telephone formats.</span></p>
 
-<p><a href="#_Toc12614066">Buttons: Usability</a></p>
+      <h2><a name="_Toc12614047">Common Terminology</a></h2>
 
-<p><a href="#_Toc12614067">Anchors: Coding</a></p>
+      <p>Use common language for common features both within and between different applications.</p>
 
-<p><a href="#_Toc12614068">Anchors: Styling</a></p>
+      <p><span>·<span></span></span><i><span style='background:aqua'>Sign in</span></i><span style='background:aqua'> to refer to the process of authenticating to gain access to the application.</span></p>
 
-<p><a href="#_Toc12614069">Input/Submits</a></p>
+      <p><span>·<span></span></span><i><span style='background:aqua'>Sign out</span></i><span style='background:aqua'> to refer to removing the authenticated state and leaving the application.</span></p>
 
-<p><a href="#_Toc12614070">Other Cases</a></p>
+      <p><span>·<span></span></span><i><span style='background:aqua'>Account</span></i><span style='background:aqua'> to refer to user profile settings.</span></p>
 
-<p><a href="#_Toc12614071">Confirmation Dialogs</a></p>
+      <h2><a name="_Toc12614048">Typography</a></h2>
 
-<p><a href="#_Toc12614072">Forms</a></p>
+      <p><span>UL has standardized on the Open Sans font family for web sites and applications. If Open Sans is unavailable, use Arial as a substitute. </span></p>
 
-<p><a href="#_Toc12614073">Input Types</a></p>
+      <p><span>In order to create a visual hierarchy and provide visual contrast and rest for the eyes, use Segoe and Helvetica Neue as the base body copy; these fonts will be available on the vast majority of operating systems and offer a variety of font weights and variants.</span></p>
 
-<p><a href="#_Toc12614074">Buttons and Links (Again)</a></p>
+      <p><span style='background:aqua'>For accessibility, set body font size to 100%, which respects individual users’ text preferences</span>.  Browsers typically default font size to 16px, so the majority of users will experience the site as envisaged, while those with disabilities will have their preferences respected.</p>
 
-<p><a href="#_Toc12614075">Submit Events</a></p>
+      <p><span>The typography specifics below are based on the concept of typographic modular ratios. The CSS included was created using the Major Third scale (which is similar to the UL marketing typography). NOTE: For more information on the concept of a typographic modular scale, see </span><a href="https://alistapart.com/article/more-meaningful-typography/"><span style='line-height:115%'>More Meaningful Typography</span></a><span style='line-height:115%'>. For the scale calculator, see </span><a href="https://type-scale.com"><span style='line-height:115%'>type-scale.com</span></a><span
+      style='line-height:115%'>.</span></p>
 
-<p><a href="#_Toc12614076">JavaScript Validations</a></p>
+      <table>
+       <tr>
+        <td valign=top align=left style='padding-top:0in;padding-right:0in;
+        padding-bottom:0in;padding-left:0in'>
+        <div style='border:solid #EFEEF1 6.0pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;
+        background:#EFEEF1'>
+        <p class=Code><code><span style='line-height:150%'>html {font-size: 100%}</span></code></p>
+        <p class=Code><code><span style='line-height:150%'>/* as a result of this
+        rule, in most browsers 1rem = 16px */</span></code></p>
+        <p class=Code><code><span style='line-height:150%'>body {  </span></code></p>
+        <p class=Code><code><span style='line-height:150%'>  font-family: &quot;Segoe
+        UI&quot;,&quot;Helvetica Neue&quot;,sans-serif;</span></code></p>
+        <p class=Code><code><span style='line-height:150%'>  font-weight: 400;</span></code></p>
+        <p class=Code><code><span style='line-height:150%'>  line-height: 1.45;  </span></code></p>
+        <p class=Code><code><span style='line-height:150%'>  color: #333;</span></code></p>
+        <p class=Code><code><span style='line-height:150%'>}</span></code></p>
+        <p class=Code><code><span style='line-height:150%'>p {margin-bottom: 1.25em;}</span></code></p>
+        <p class=Code><code><span style='line-height:150%'>h1, h2, h3, h4, h5 {  </span></code></p>
+        <p class=Code><code><span style='line-height:150%'>  margin: 2.75rem 0 1rem;</span></code></p>
+        <p class=Code><code><span style='line-height:150%'>  font-family: 'Open
+        Sans', sans-serif;</span></code></p>
+        <p class=Code><code><span style='line-height:150%'>  font-weight: 300;
+        /*correlates to Open Sans Light*/   </span></code></p>
+        <p class=Code><code><span style='line-height:150%'>  line-height: 1.15;</span></code></p>
+        <p class=Code><code><span style='line-height:150%'>}</span></code></p>
+        <p class=Code><code><span style='line-height:150%'>h1 {</span></code></p>
+        <p class=Code><code><span style='line-height:150%'>  margin-top: 0;</span></code></p>
+        <p class=Code><code><span style='line-height:150%'>  font-size: 3.052rem;</span></code></p>
+        <p class=Code><code><span style='line-height:150%'>}</span></code></p>
+        <p class=Code><code><span style='line-height:150%'>h2 {font-size: 2.441rem;}</span></code></p>
+        <p class=Code><code><span style='line-height:150%'>h3 {font-size: 1.953rem;}</span></code></p>
+        <p class=Code><code><span style='line-height:150%'>h4 {font-size: 1.563rem;}</span></code></p>
+        <p class=Code><code><span style='line-height:150%'>h5 {font-size: 1.25rem;}</span></code></p>
+        <p class=Code>small, .text_small {font-size: 0.8em;}</p>
+        </div>
+        </td>
+       </tr>
+      </table>
 
-<p><a href="#_Toc12614077">Success &amp; Error Handling</a></p>
+      <p><span>Note: Header font sizes are listed in </span><span class=InlineCode><span><span>rems</span></span></span><span style='line-height:115%'> to avoid unintended outcomes in nested elements, while </span><span class=InlineCode><span><span>.</span></span></span><span class=InlineCode><span><span>small</span></span></span><span style='line-height:115%'> is defined in </span><span class=InlineCode><span><span>ems</span></span></span><span style='line-height:115%'> in order to be relative to the size of the parent element. Carefully consider the intended consequences of nested elements when defining styles in </span><span class=InlineCode><span><span>ems</span></span></span><span style='line-height:115%'> and </span><span class=InlineCode><span><span style='border: none'>rems</span></span></span><span style='line-height:115%'>. </span></p>
 
-<p><a href="#_Toc12614078">Images</a></p>
+      <h2><a name="_Toc12614049">Colors</a></h2>
 
-<p><a href="#_Toc12614079">Responsive Images</a></p>
 
-<p><a href="#_Toc12614080">Image Sizing and Resolution</a></p>
+      <p><span>UL’s primary brand colors are
+      as follows:</span></p>
 
-<p><a href="#_Toc12614081">Image File Formats</a></p>
+      <p><span>·<span></span></span><span>UL Red: </span><span class=InlineCode><span><span>#C02032</span></span></span></p>
 
-<p><a href="#_Toc12614082">Image Optimization</a></p>
+      <p><span>·<span></span></span><span>UL Black: </span><span class=InlineCode><span><span>#000000</span></span></span></p>
 
-<p><a href="#_Toc12614083">Modals</a></p>
+      <p><span>·<span></span></span><span>UL White: </span><span class=InlineCode><span><span>#FFFFFF</span></span></span></p>
 
-<p><a href="#_Toc12614084">Tables</a></p>
+      <p><span>These colors should be preferred as described in the Common Foundation section. Other approved UL colors can be found on the </span><a href="https://hub.ul.com/"><span style='line-height:115%'>brandhub</span></a><span style='line-height:115%'> site maintained by the corporate marketing team.</span></p> 
 
-<p><a href="#_Toc12614085">Responsive Tables</a></p>
+      <h3><a name="_Toc12614050">Accessibility</a></h3>
 
-<p><a href="#_Toc12614086">Sorting</a></p>
+      <p><span>Note, in certain circumstances UL’s red brand color can present challenges to users with color blindness. At a minimum,</span></p>
 
-<p><a href="#_Toc12614087">Tabs</a></p>
+      <p><span'>·<span></span></span><span>avoid combining red and green text/backgrounds/juxtapositions; </span></p>
 
-<p><a href="#_Toc12614088">Tooltips &amp; Popovers</a></p>
+      <p><span>·<span></span></span>when using color to convey meaning (such as red text for error messages, green for success, etc.), also use symbols and words to convey that meaning.</p>
 
-<p><a href="#_Toc12614089">Accessibility</a></p>
+      <p>In general, all text should be readable by measuring a contrast ratio of at least 4.5:1 (as low as 3.0 is acceptable in some circumstances) between text and background. A number of contrast checker online tools are available; Chrome developer tools also provides a tool to do this (<a href="https://webdesign.tutsplus.com/articles/how-to-use-the-contrast-checker-in-chrome-devtools--cms-31504">tutorial</a>).  Best practice is to make sure that the information is conveyed other than just
+      by color.</p>
 
 
-<h2><a name="_Toc12614042">Introduction</a></h2>
+      <h2><a name="_Toc12614051">Icons</a></h2>
 
-<p><span><span>The goal of this document is to facilitate the creation of a common UI / UX experience for all UL external-facing web applications; it provides a set of common rules that can be applied to all existing and new </span></span><span>applications and features. It is not intended to be comprehensive or to answer every possible question that might arise in developing an application. Designers and devs are encouraged to apply common sense and good judgement! </span></p>
+      <p><span>Icons should be used as accents to support the topic and ideas being presented. As noted above, a combination of color, text and icons will convey the message best.</span></p>
 
-<p><span>By providing goals, citation and context wherever possible, this document seeks to explain the reasoning behind each suggested rule, which by extension should help application producers understand when and why to disregard them. However, items that are highlighted in <span style='background:aqua'>teal</span> should generally be adhered to unless there are very strong reasons to disregard.</span></p>
+      <p><span style='background:aqua'>Use </span><a href="https://fontawesome.com"><span style='background:aqua'>Font Awesome</span></a><span style='background:aqua'> </span><span style='background:aqua'>wherever possible for icons</span><span style='background:aqua'>. Use the Light version, available to Pro users, when possible.</span></p>
 
+      <p><span>Font Awesome icons can be rendered as a vector image in any size of browser and don’t require any extra downloads or server resources; the library includes a large number of icons covering a wide gamut of objects.</span></p>
 
-<p><span>This document is intended to be technology agnostic and provide common guidelines whether the underlying implementation is SASS or LESS, Bootstrap or Semantic UI, React or Angular, etc.</span></p>
+      <p><span>On occasion, you may need to develop custom icons for special cases. Implement these icons in the code as SVGs, which allows for smooth and responsive resizing. </span></p>
 
-<h1><a name="_Toc12614043">Common Foundation</a></h1>
+      <h2><a name="_Toc12614052">Responsiveness</a></h2>
 
-<p><span>&nbsp;Implementing the common foundation&nbsp;in an application&nbsp;will accomplish 80% of a common look and should&nbsp;(and is intended to) be&nbsp;able to be accomplished quickly.</span>&nbsp;</p>
+      <p><span>Sites and web applications should be responsive if at all possible. A common set of break points will provide a consistent experience for those that switch between devices on a mobile device.</span></p>
 
-<p><span style='background:aqua'>·<span></span></span><span style='background:aqua'>Header color and UL logo. UL red header is preferred but for historical / persona reasons&nbsp;other choices are&nbsp;acceptable- Good Guide, for example, serves an entirely different persona from what is more typical for other&nbsp;UL&nbsp;apps.</span></p>
+      <p><span style='background:aqua'>·<span></span></span><span style='background:aqua'>576px max – Small</span></p>
 
-<p><span style='background:aqua'>·<span></span></span><span style='line-height:115%;color:black;background:aqua'>Footer color. Dark grey, common link styles and elements (copyright, etc.) where possible.</span></p>
+      <p><span style='background:aqua'>·<span></span></span><span style='background:aqua'>768px max – Medium</span></p>
 
-<p><span style='background:aqua'>·<span></span></span><span style='line-height:115%;color:black;background:aqua'>Font: Adopt&nbsp;Open&nbsp;Sans for headers at minimum.</span><span style='line-height: 115%;background:aqua'>&nbsp;</span></p>
+      <p><span style='background:aqua'>·<span></span></span><span style='background:aqua'>992px max – Large</span></p>
 
-<p><span style='background:aqua'>·<span></span></span><span style='line-height:115%;color:black;background:aqua'>Icons: font awesome&nbsp;(there is some cost associated with this).</span></p>
+      <p><span style='background:aqua'>·<span></span></span><span style='background:aqua'>1200px max – Extra large</span></p>
 
-<p><span style='background:aqua'>·<span></span></span><span style='background:aqua'>Button styles: Padding /&nbsp;border&nbsp;radius, shape, border, shadow, mouseovers&nbsp;(transitions, relative lightness/brightness).&nbsp;Not necessary, color or typography.</span></p>
+      <p><span style='background:aqua'>·<span></span></span><span style='background:aqua'>1600px max – Double extra large</span></p>
 
-<h1><a name="_Toc12614044">Style Guide</a></h1>
+      <p><span style='background:aqua'>Prefer fluid layouts to fixed width</span><span> if the content will support it. When displaying paragraphs of text in fluid layouts, you may need to limit (via media queries) container widths for readability.  Conventionally, this will be 34 to 36ems, but use good judgement. </span></p>
 
-<h2><a name="_Toc12614045">Web Standards</a></h2>
+      <p><span>See “Components” section below for specific responsive-related guidelines. </span></p>
 
-<p>The principles and code fragments below assume modern browsers, which includes the latest (desktop and mobile) versions of Chrome, Safari and Firefox, as well as IE 11+. Target MS Edge only where your user adoption makes it relevant, as Microsoft plans to phase out support for this browser. Support of other, older browser versions may be required where audience usage warrants, which may lead to the need to disregard some style guidelines. </p>
+      <h2><a name="_Toc12614053">Layout</a></h2>
 
-<p><span>Prefer graceful CSS fallbacks to polyfills where possible and employ tools such as </span><a href="https://modernizr.com/"><span style='line-height:107%'>Modernizr</span></a><span style='line-height:107%'> to help detect and create these fallback styles. When writing JavaScript, use ECMA6 syntax with caution, as some features of the new script version have been adopted more widely than others.</span></p>
+      <p><span>Where possible, use semantic html to describe your HTML structure. General layout includes:</span></p>
 
-<p><span>If in doubt, </span><a href="https://caniuse.com/"><span style='line-height:107%'>Can I Use</span></a><span style='line-height:107%'> in combination</span><span style='line-height:107%'> with your audience analytics can provide guidance on what browser features are reasonable to employ for your application. Post-processor tools like </span><a href="https://postcss.org/"><span style='line-height:107%'>PostCSS</span></a><span style='line-height:107%'> can be integrated into automated builds to support next gen CSS functions and prefixed styles (such as prefixed flex rules to support flex in IE 10) to stretch limitations.</span></p>
+      <p><span style='background:aqua'>·<span></span></span><span style='background:aqua'>Top fixed header navigation. See
+      “Navigation” section for more details.</span></p>
 
-<p><span>In general, prefer</span></p>
+      <p><span style='background:aqua'>·<span></span></span><span style='background:aqua'>Bottom “sticky” footer. See the
+      “Footer” section for more details.</span></p>
 
-<p><span'>·<span></span></span><span>HTML5.</span></p>
+      <p><span style='line-height:115%;font-family:"Courier New";background:aqua'>o></span><span style='background:aqua'>Prefer the flex method of creating a sticky footer, assuming modern browser standards.</span></p>
 
-<p><span'>·<span></span></span><span>CSS3 and new CSS modules with adequate browser adoption.</span></p>
+      <p><span>·<span></span></span><span> Main content should be semantically coded with a “main” tag and include the “role” and ARIA attributes. See “Accessibility” section for more guidelines on how to use these attributes.</span></p>
 
-<p><span'>·<span></span></span><span>ECMA5 and ECMA6 features with
-adequate adoption (or lightweight polyfills). </span></p>
+      <h3><a name="_Toc12614054">Header/Navigation</a></h3>
 
-<h2><a name="_Toc12614046">Internationalization (i18n)</a></h2>
+      <p><span style='background:aqua'>Prefer a top bar navigation with the product name on the left and the UL logo as the last element to the right</span><span>, along with whatever other minimal navigation elements are required between the logo and the product name. An account icon should always be present to support at least sign out functionality, as well as settings where available, and other app-specific user features.</span></p>
 
-<p><span>UL
-is a global company operating in many international markets. Consequently,
-designers and developers should plan for localization, internationalization and
-translations. If your application has been designed responsively, you will most
-likely be able to accommodate the variations of text length resulting from
-these processes. </span></p>
+      <p><span>Applications participating in the UL platform will have an icon with a mechanism to switch to the other applications on the platform; this should be in a common location on the right, next to the UL logo. This will be similar in spirit to this functionality in Office 365 or Google and will be further defined as the platform takes shape.</span></p>
 
-<p><span>For
-proper text display:</span></p>
+      <p><span style='background:aqua'>In responsive sites, suppress the UL logo and turn additional navigation elements into a “hamburger” style icon as the right most element at medium (and below) breakpoints</span><span>.</span></p>
 
-<p><span
-style='line-height:107%;font-family:Symbol;background:aqua'>·<span
-style='font:7.0pt "Times New Roman"'></span></span><span
-style='background:aqua'>add the </span><span class=InlineCode><span
-style='border:none;background:aqua'><span>lang</span></span></span><span
-style='background:aqua'> attribute to your root </span><span
-class=InlineCode><span style='border:none;background:aqua'><span
-style='border:none'>html</span></span></span><span style='line-height:107%;
-background:aqua'> tag. Prefer </span><span class=InlineCode><span
-style='border:none;background:aqua'><span>html</span></span></span><span
-style='background:aqua'> to </span><span class=InlineCode><span
-style='border:none;background:aqua'><span>body</span></span></span><span
-style='background:aqua'> to accommodate localized meta tags.</span></p>
+      <p>The code fragment below details a 60px high header with elements vertically centered. The HTML semantically describes the elements included in the header by surrounding the navigation with <span class=InlineCode><span><span>nav</span></span></span> tag. (Further specifications of header navigation elements (font, case, sizing,
+      spacing, etc.) to be added at a later date.)</p>
 
-<p><span
-style='line-height:107%;font-family:Symbol;background:aqua'>·<span
-style='font:7.0pt "Times New Roman"'></span></span><span
-style='background:aqua'>include a </span><span
-class=InlineCode><span style='border:none;background:aqua'><span
-style='border:none'>meta</span></span></span><span style='line-height:107%;
-background:aqua'> tag with a </span><span class=InlineCode><span
-style='border:none;background:aqua'><span>charset</span></span></span><span
-style='background:aqua'> of UTF-8 or UTF-16, depending on the language
-you’re displaying.</span></p>
+      <table>
+       <tr>
+        <td valign=top align=left style='padding-top:0in;padding-right:0in;
+        padding-bottom:0in;padding-left:0in'>
+        <div style='border:solid #EFEEF1 6.0pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;
+        background:#EFEEF1'>
+        <p class=Code>&lt;header role=&quot;header&quot;
+        aria-label=&quot;header&quot;&gt;</p>
+        <p class=Code>...</p>
+        <p class=Code>&lt;nav role=&quot;navigation&quot;
+        aria-label=&quot;navigation&quot;&gt;</p>
+        <p class=Code>&lt;ul&gt;</p>
+        <p class=Code>&lt;li&gt;&lt;a&gt;...&lt;/a&gt;</p>
+        <p class=Code>...</p>
+        <p class=Code>&lt;/ul&gt;</p>
+        <p class=Code>&lt;/nav&gt;</p>
+        <p class=Code>&lt;/h<span style='color:#4472C4'>eader&gt;</span></p>
+        <p class=Code>&nbsp;</p>
+        <p class=Code>header {</p>
+        <p class=Code>  align-items: center;</p>
+        <p class=Code>  display: flex;</p>
+        <p class=Code>  flex-direction: row;</p>
+        <p class=Code>  height: 60px;</p>
+        <p class=Code>  position: fixed;</p>
+        <p class=Code>  width: 100%;</p>
+        <p class=Code>}</p>
+        </div>
+        </td>
+       </tr>
+      </table>
 
-<p><span>Without
-preparation, i18n can affect any HTML element. Look to accommodate for text
-wrap and horizontal overflow. Pay particular attention to:</span></p>
 
-<p><span
-style='line-height:107%;font-family:Symbol'>·<span>&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span>navigation and menus. </span></p>
+      <h3><a name="_Toc12614055">Footer</a></h3>
 
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in;line-height:107%'><span
-style='line-height:107%;font-family:Symbol'>·<span>&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span>tab labels.</span></p>
+      <p><span style='background:aqua'>Use the semantic </span><span class=InlineCode><span style='border:none;background: aqua'><span>footer</span></span></span><span style='background:aqua'> tag to designate a sticky footer (“sticky” refers to the concept of anchoring the footer to the bottom of the view if the content of the page does not push the footer beyond the bottom of the screen).</span>></p>
 
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in;line-height:107%'><span
-style='line-height:107%;font-family:Symbol'>·<span>&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span>button text.</span></p>
+      <p><span>The coding example below specifies a dark gray with white text, which should also apply any links within the section. More details on anchor and text styles may be forthcoming. </span></p> <p><span style='line-height:115%'>In the footer, include common elements:</span></p>
 
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in;line-height:107%'><span
-style='line-height:107%;font-family:Symbol'>·<span>&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span>table column headers.</span></p>
+      <p><span style='background:aqua'>·<span></span></span><span style='background:aqua'>the UL logo.</span></p>
 
-<p><span
-style='line-height:107%;font-family:Symbol'>·<span>&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span>any element content with specified
-heights.</span></p>
+      <p><span style='background:aqua'>·<span></span></span><span style='background:aqua'>a copyright claim for the site
+      content.</span></p>
 
-<p><span>In general, assume that text will be longer in German, Spanish and French, and much shorter in Asiatic languages. </span></p>
+      <p><span;background:aqua'>·<span></span></span><span style='background:aqua'>links to help, contact, about and other informational navigational elements not required for regular application usage. </span></p>
 
-<p><span>Also consider ISO formatting in form input fields. Be sure to accommodate a variety of date, price, zip/province code and telephone formats.</span></p>
+      <table>
+       <tr>
+        <td valign=top align=left style='padding-top:0in;padding-right:0in;
+        padding-bottom:0in;padding-left:0in'>
+        <div style='border:solid #EFEEF1 6.0pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;
+        background:#EFEEF1'>
+        <p class=Code>&lt;footer role=&quot;header&quot;
+        aria-label=&quot;header&quot;&gt;...&lt;/footer&gt;</p>
+        <p class=Code>&nbsp;</p>
+        <p class=Code>footer {</p>
+        <p class=Code>  background-color: #3d3d3d;</p>
+        <p class=Code>  color: #ffffff;</p>
+        <p class=Code>}</p>
+        </div>
+        </td>
+       </tr>
+      </table>
 
-<h2><a name="_Toc12614047">Common Terminology</a></h2>
+      <h2><a name="_Toc12614056">Accessibility</a></h2>
 
-<p>Use common language for common features both within and between different applications.</p>
+      <p><span>In addition to the accessibility guidelines specified in other sections, <span style='background: aqua'>employ general best practices when coding to accommodate ADA and general accessibility</span>. Employing these elements will not only benefit the user, it will improve SEO on your apps. The WCAG, a W3 working group, offers extensive </span><a href="https://www.w3.org/WAI/tutorials/"><span style='line-height:115%'>tutorials</span></a><span style='line-height:115%'> on
+      accessibility.</span></p>
 
-<p><span>·<span></span></span><i><span style='background:aqua'>Sign in</span></i><span style='background:aqua'> to refer to the process of authenticating to gain access to the application.</span></p>
+      <p><span>ARIA attributes play a significant role in achieving accessibility. </span></p>
 
-<p><span>·<span></span></span><i><span style='background:aqua'>Sign out</span></i><span style='background:aqua'> to refer to removing the authenticated state and leaving the application.</span></p>
+      <p>ARIA (<a href="http://www.w3.org/TR/wai-aria/"><span style='color:#4472C4;text-decoration:none'>WAI-ARIA</span></a>&nbsp;if you want to be formal) is a set of attributes that you can add to&nbsp;<a href="http://www.w3.org/html/wg/drafts/html/master/dom.html#elements"><span style='color:#4472C4;text-decoration:none'>HTML elements</span></a>.</p>
 
-<p><span>·<span></span></span><i><span style='background:aqua'>Account</span></i><span style='background:aqua'> to refer to user profile settings.</span></p>
+      <p>These attributes communicate role, state and property semantics to&nbsp;<a href="http://en.wikipedia.org/wiki/Assistive_technology"><span style='color:#4472C4;text-decoration:none'>assistive technologies</span></a>&nbsp;via the&nbsp;<a href="http://www.w3.org/WAI/PF/aria-implementation/#def_accessibility_api"><span style='color:#4472C4;text-decoration:none'>accessibility APIs</span></a>&nbsp;implemented
+      in browsers.&nbsp;</p>
 
-<h2><a name="_Toc12614048">Typography</a></h2>
+      <h3><a name="_Toc12614057">Coding General HTML Elements</a></h3>
 
-<p><span>UL has standardized on the Open Sans font family for web sites and applications. If Open Sans is unavailable, use Arial as a substitute. </span></p>
+      <p><span>Accessibility should be implemented by conforming to semantic HTML practices, as well as using ARIA attributes/labels. See individual component and layout sections for suggested implementation of semantic HTML. </span></p>
 
-<p><span>In order to create a visual hierarchy and provide visual contrast and rest for the eyes, use Segoe and Helvetica Neue as the base body copy; these fonts will be available on the vast majority of operating systems and offer a variety of font weights and variants.</span></p>
+      <p><span>Using ARIA is particularly important in forms and inputs, while “role” attributes are particularly useful in elements (like buttons) that perform crucial functions but do not semantically indicate their uses. Refer to the </span><a href="https://www.w3.org/TR/wai-aria-practices"><span style='line-height:115%'>WCAG documentation</span></a><span style='line-height:115%'> for use in specific HTML elements and common components (such as tooltips).</span></p>
 
-<p><span style='background:aqua'>For accessibility, set body font size to 100%, which respects individual users’ text preferences</span>.  Browsers typically default font size to 16px, so the majority of users will experience the site as envisaged, while those with disabilities will have their preferences respected.</p>
+      <h3><a name="_Toc12614058">Images</a></h3>
 
-<p><span>The typography specifics below are based on the concept of typographic modular ratios. The CSS included was created using the Major Third scale (which is similar to the UL marketing typography). NOTE: For more information on the concept of a typographic modular scale, see </span><a href="https://alistapart.com/article/more-meaningful-typography/"><span style='line-height:115%'>More Meaningful Typography</span></a><span style='line-height:115%'>. For the scale calculator, see </span><a href="https://type-scale.com"><span style='line-height:115%'>type-scale.com</span></a><span
-style='line-height:115%'>.</span></p>
+      <p>Google’s Lighthouse and Page Speed tools take special interest in image accessibility. Be sure to <span style='background:aqua'>include </span><span class=InlineCode><span style='border:none;background:aqua'><span>alt</span></span></span><span style='background:aqua'> text on all </span><span class=InlineCode><span style='border:none;background:aqua'><span>img</span></span></span><span style='background:aqua'> tags</span>, as its absence is detrimental to your audit results and SEO.  <span style='background:aqua'>The </span><span style='line-height:107%;font-family:Consolas;color:#7030A0;background:aqua'>alt</span><span style='background:aqua'> text should description should provide the same level of understanding that a visual user would have.</span> Where at all possible, <span style='background:aqua'>do not use images for buttons, navigation or significant text</span>. Minimize text in images in general; if text is present in images, use that text as the <span class=InlineCode><span style='border: none'><span>alt</span></span></span> value.</p>
 
-<table>
- <tr>
-  <td valign=top align=left style='padding-top:0in;padding-right:0in;
-  padding-bottom:0in;padding-left:0in'>
-  <div style='border:solid #EFEEF1 6.0pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;
-  background:#EFEEF1'>
-  <p class=Code><code><span style='line-height:150%'>html {font-size: 100%}</span></code></p>
-  <p class=Code><code><span style='line-height:150%'>/* as a result of this
-  rule, in most browsers 1rem = 16px */</span></code></p>
-  <p class=Code><code><span style='line-height:150%'>body {  </span></code></p>
-  <p class=Code><code><span style='line-height:150%'>  font-family: &quot;Segoe
-  UI&quot;,&quot;Helvetica Neue&quot;,sans-serif;</span></code></p>
-  <p class=Code><code><span style='line-height:150%'>  font-weight: 400;</span></code></p>
-  <p class=Code><code><span style='line-height:150%'>  line-height: 1.45;  </span></code></p>
-  <p class=Code><code><span style='line-height:150%'>  color: #333;</span></code></p>
-  <p class=Code><code><span style='line-height:150%'>}</span></code></p>
-  <p class=Code><code><span style='line-height:150%'>p {margin-bottom: 1.25em;}</span></code></p>
-  <p class=Code><code><span style='line-height:150%'>h1, h2, h3, h4, h5 {  </span></code></p>
-  <p class=Code><code><span style='line-height:150%'>  margin: 2.75rem 0 1rem;</span></code></p>
-  <p class=Code><code><span style='line-height:150%'>  font-family: 'Open
-  Sans', sans-serif;</span></code></p>
-  <p class=Code><code><span style='line-height:150%'>  font-weight: 300;
-  /*correlates to Open Sans Light*/   </span></code></p>
-  <p class=Code><code><span style='line-height:150%'>  line-height: 1.15;</span></code></p>
-  <p class=Code><code><span style='line-height:150%'>}</span></code></p>
-  <p class=Code><code><span style='line-height:150%'>h1 {</span></code></p>
-  <p class=Code><code><span style='line-height:150%'>  margin-top: 0;</span></code></p>
-  <p class=Code><code><span style='line-height:150%'>  font-size: 3.052rem;</span></code></p>
-  <p class=Code><code><span style='line-height:150%'>}</span></code></p>
-  <p class=Code><code><span style='line-height:150%'>h2 {font-size: 2.441rem;}</span></code></p>
-  <p class=Code><code><span style='line-height:150%'>h3 {font-size: 1.953rem;}</span></code></p>
-  <p class=Code><code><span style='line-height:150%'>h4 {font-size: 1.563rem;}</span></code></p>
-  <p class=Code><code><span style='line-height:150%'>h5 {font-size: 1.25rem;}</span></code></p>
-  <p class=Code>small, .text_small {font-size: 0.8em;}</p>
-  </div>
-  </td>
- </tr>
-</table>
+      <h1><a name="_Toc12614059">Component Library</a></h1>
 
-<p><span>Note: Header font sizes are listed in </span><span class=InlineCode><span><span>rems</span></span></span><span style='line-height:115%'> to avoid unintended outcomes in nested elements, while </span><span class=InlineCode><span><span>.</span></span></span><span class=InlineCode><span><span>small</span></span></span><span style='line-height:115%'> is defined in </span><span class=InlineCode><span><span>ems</span></span></span><span style='line-height:115%'> in order to be relative to the size of the parent element. Carefully consider the intended consequences of nested elements when defining styles in </span><span class=InlineCode><span><span>ems</span></span></span><span style='line-height:115%'> and </span><span class=InlineCode><span><span style='border: none'>rems</span></span></span><span style='line-height:115%'>. </span></p>
+      <p><span>This section contains common components used by web applications with a rational for when and why they should be used. It is not intended to be comprehensive.</span></p>
 
-<h2><a name="_Toc12614049">Colors</a></h2>
+      <h2><a name="_Toc12614060">Alerts</a></h2>
 
+      <p><span>Use an alert to implement notices of success or failure for a persistence action (i.e. form submit). On a full-page view, these notices should fall in a consistent position from page to page; for example, directly beneath the main page title or the page lead text. If an alert message appears within a modal window, the alert should be prepended as the first element the modal content, in general (though specific layouts may require a modified implementation).</span></p>
 
-<p><span>UL’s primary brand colors are
-as follows:</span></p>
+      <p><span>Where the alert is a direct result of an action by the user, the alert should have a dismissible option (close button). In other circumstances, alerts may be used to provide help text or other notices, and these elements should not include a close button.</span></p>
 
-<p><span>·<span></span></span><span>UL Red: </span><span class=InlineCode><span><span>#C02032</span></span></span></p>
+      <h3><a name="_Toc12614061">Accessibility</a></h3>
 
-<p><span>·<span></span></span><span>UL Black: </span><span class=InlineCode><span><span>#000000</span></span></span></p>
+      <p><span>·<span></span></span>For a time-sensitive alert, use ARIA <span class=InlineCode><span><span>role='alert'</span></span></span>.</p>
 
-<p><span>·<span></span></span><span>UL White: </span><span class=InlineCode><span><span>#FFFFFF</span></span></span></p>
+      <p><span>·<span></span></span>For an alert that is not time-sensitive but that contains an important prompt or piece of information for the user, use ARIA <span class=InlineCode><span><span>role='alertdialog'</span></span></span>.  (The definition of the ARIA <span class=InlineCode><span><span>role='dialog'</span></span></span> is: “an application window that is designed to interrupt the current processing of an application in order to prompt the user to enter information or require a response”).</p>
 
-<p><span>These colors should be preferred as described in the Common Foundation section. Other approved UL colors can be found on the </span><a href="https://hub.ul.com/"><span style='line-height:115%'>brandhub</span></a><span style='line-height:115%'> site maintained by the corporate marketing team.</span></p> 
+      <p><span>·<span></span></span>Alerts should not be visually hidden if they are not being used.  If you do not want a screen reader to pick up an alert, use the <span class=InlineCode><span><span>aria-hidden='true'</span></span></span> HTML attribute and/or <span class=InlineCode><span><span>display: none</span></span></span> in your CSS.</p>
 
-<h3><a name="_Toc12614050">Accessibility</a></h3>
+      <h2><a name="_Toc12614062">Anchors &amp; Buttons</a></h2>
 
-<p><span>Note, in certain circumstances UL’s red brand color can present challenges to users with color blindness. At a minimum,</span></p>
+      <p><span>The guidelines below describe usage and styling of button and anchor elements. See “Forms” for specific uses within the context of a form.</span></p>
 
-<p><span'>·<span></span></span><span>avoid combining red and green text/backgrounds/juxtapositions; </span></p>
+      <h3><a name="_Toc12614063">Buttons: Coding</a></h3>
 
-<p><span>·<span></span></span>when using color to convey meaning (such as red text for error messages, green for success, etc.), also use symbols and words to convey that meaning.</p>
+      <p><span style='font-size: 10.0pt;line-height:115%;font-family:Symbol;color:#111111'>·<span></span></span><span>Use a </span><span class=InlineCode><span><span>button</span></span></span><span style='color:#111111'> element to trigger any JavaScript function that does not use a URL. Basically, instead of using an </span><span class=InlineCode><span><span>a</span></span></span><span style='color:#111111'> tag with an </span><span class=InlineCode><span><span>href=&quot;Javascript:void(0)&quot;</span></span></span><span style='color:#111111'>, or </span><span class=InlineCode><span><span>href=&quot;#&quot;</span></span></span><span class=InlineCode><span><span>,</span></span></span><span style='color:#111111'> use a </span><span class=InlineCode><span><span>button</span></span></span><span style='color:#111111'> element. If the user can open a reference via a right-click or 3D touch, use an </span><span class=InlineCode><span><span>anchor</span></span></span><span style='color:#111111'>.</span></p>
 
-<p>In general, all text should be readable by measuring a contrast ratio of at least 4.5:1 (as low as 3.0 is acceptable in some circumstances) between text and background. A number of contrast checker online tools are available; Chrome developer tools also provides a tool to do this (<a href="https://webdesign.tutsplus.com/articles/how-to-use-the-contrast-checker-in-chrome-devtools--cms-31504">tutorial</a>).  Best practice is to make sure that the information is conveyed other than just
-by color.</p>
+      <p><span>This might include:</span></p>
 
+      <p><span>o</span><span>non-AJAX modal triggers.</span></p>
 
-<h2><a name="_Toc12614051">Icons</a></h2>
+      <p><span>o<span>
+      </span></span><span>popover triggers.</span></p>
 
-<p><span>Icons should be used as accents to support the topic and ideas being presented. As noted above, a combination of color, text and icons will convey the message best.</span></p>
+      <p><span>o<span>
+      </span></span><span>tooltip elements.</span></p>
 
-<p><span style='background:aqua'>Use </span><a href="https://fontawesome.com"><span style='background:aqua'>Font Awesome</span></a><span style='background:aqua'> </span><span style='background:aqua'>wherever possible for icons</span><span style='background:aqua'>. Use the Light version, available to Pro users, when possible.</span></p>
+      <p><span>o<span>
+      </span></span><span>dismissing buttons in modals and
+      alerts.</span></p>
 
-<p><span>Font Awesome icons can be rendered as a vector image in any size of browser and don’t require any extra downloads or server resources; the library includes a large number of icons covering a wide gamut of objects.</span></p>
+      <p><span>o<span>
+      </span></span><span>opening and closing/expanding
+      hidden text.</span></p>
 
-<p><span>On occasion, you may need to develop custom icons for special cases. Implement these icons in the code as SVGs, which allows for smooth and responsive resizing. </span></p>
+      <p><span>·<span></span></span><span>In many of the cases (such as some listed above), the button may appear to the user to be an inline link. Use CSS to modify the button to look like a link.</span></p>
 
-<h2><a name="_Toc12614052">Responsiveness</a></h2>
+      <p><span>·<span></span></span><b><span>Always use the </span></b><span class=InlineCode><span><span>type=&quot;button&quot;</span></span></span><b><span style='line-height:115%;color:#111111'> attribute-value to ensure a button does not inadvertently act as a form submit.</span></b><span style='line-height: 115%;color:#111111'> Safari, Chrome and other browsers treat </span><span class=InlineCode><span><span>button</span></span></span><span style='line-height:115%;font-family:Consolas;color:#4472C4'> </span><span style='line-height:115%;color:#111111'>elements as submit tags when nested in forms.</span></p>
 
-<p><span>Sites and web applications should be responsive if at all possible. A common set of break points will provide a consistent experience for those that switch between devices on a mobile device.</span></p>
+      <h3><a name="_Toc12614064">Buttons: Styling</a></h3>
 
-<p><span style='background:aqua'>·<span></span></span><span style='background:aqua'>576px max – Small</span></p>
+      <p><span>As noted, button elements may be styled to appear as either buttons or as links, depending on their conceptual use.</span></p>
 
-<p><span style='background:aqua'>·<span></span></span><span style='background:aqua'>768px max – Medium</span></p>
+      <p><span>Style elements as a button when:</span></p>
 
-<p><span style='background:aqua'>·<span></span></span><span style='background:aqua'>992px max – Large</span></p>
+      <p><span>·<span></span></span><span>indicating persistence or as a step in a process leading to persistence. This includes actions such as save, save and move forward or back (“next” and “previous” step), submit, delete, update.</span></p>
 
-<p><span style='background:aqua'>·<span></span></span><span style='background:aqua'>1200px max – Extra large</span></p>
+      <p><span>·<span></span></span><span>creating call to action (CTA). The number of CTAs should be limited on a view and should strongly indicate to the user what their next action should be.</span></p>
 
-<p><span style='background:aqua'>·<span></span></span><span style='background:aqua'>1600px max – Double extra large</span></p>
+      <p><span>Unless noted elsewhere in this document, style the button as a link in most other situations.</span></p>
 
-<p><span style='background:aqua'>Prefer fluid layouts to fixed width</span><span> if the content will support it. When displaying paragraphs of text in fluid layouts, you may need to limit (via media queries) container widths for readability.  Conventionally, this will be 34 to 36ems, but use good judgement. </span></p>
+      <h3><a name="_Toc12614065">Buttons: Responsiveness</a></h3>
 
-<p><span>See “Components” section below for specific responsive-related guidelines. </span></p>
+      <p><span style='line-height:115%;color:#1B1B1B'>In most circumstances, elements styled as buttons should become block elements in medium and smaller viewports in order to accommodate touch behavior; the exception to this rule might be for “Next” and “Previous” buttons. Be sure to create adequate spacing and padding to allow all users to use your buttons on a
+      touchscreen.</span></p>
 
-<h2><a name="_Toc12614053">Layout</a></h2>
+      <h3><a name="_Toc12614066">Buttons: Usability</a></h3>
 
-<p><span>Where possible, use semantic html to describe your HTML structure. General layout includes:</span></p>
+      <p><span style='color:#1B1B1B'>·<span></span></span><span style='line-height:115%;color:#1B1B1B;background:aqua'>Use sentence case for button labels</span><span style='line-height:115%;color:#1B1B1B'>.</span></p>
 
-<p><span style='background:aqua'>·<span></span></span><span style='background:aqua'>Top fixed header navigation. See
-“Navigation” section for more details.</span></p>
+      <p><span style='color:#1B1B1B'>·<span></span></span><span style='line-height:115%;color:#1B1B1B;background:aqua'>Limit characters.</span><span style='line-height:115%;color:#1B1B1B'> Button text should be as short as possible with action words that clearly explain what the button does (Create Account, Save, Search). </span></p>
 
-<p><span style='background:aqua'>·<span></span></span><span style='background:aqua'>Bottom “sticky” footer. See the
-“Footer” section for more details.</span></p>
+      <p><span style='color:#1B1B1B'>·<span></span></span><span style='line-height:115%;color:#1B1B1B'>Be consistent in this terminology across the application, such as “Save” vs “Submit”.</span></p>
 
-<p><span style='line-height:115%;font-family:"Courier New";background:aqua'>o></span><span style='background:aqua'>Prefer the flex method of creating a sticky footer, assuming modern browser standards.</span></p>
+      <p><span style='color:#1B1B1B'>·<span></span></span><span style='line-height:115%;color:#1B1B1B;background:aqua'>Lead with a verb where possible</span><span style='line-height:115%;color:#1B1B1B'>. For example, “Create Account” not “Account Creation”. </span></p>
 
-<p><span>·<span></span></span><span> Main content should be semantically coded with a “main” tag and include the “role” and ARIA attributes. See “Accessibility” section for more guidelines on how to use these attributes.</span></p>
+      <p><span style='color:#1B1B1B'>·<span></span></span><span style='color:#1B1B1B'>Icons can also be helpful. At times, consider adding an icon to signal specific actions (Download, Open in a new window, etc.).</span></p>
 
-<h3><a name="_Toc12614054">Header/Navigation</a></h3>
+      <p><span style='color:#1B1B1B'>·<span></span></span><span style='line-height:115%;color:#1B1B1B'>Use consistent class variations to distinguish types and convey meaning. For example, “Next” and “Previous” button steps should use a default or plain button class, while a submit or CTA button would implement a special primary.</span></p>
 
-<p><span style='background:aqua'>Prefer a top bar navigation with the product name on the left and the UL logo as the last element to the right</span><span>, along with whatever other minimal navigation elements are required between the logo and the product name. An account icon should always be present to support at least sign out functionality, as well as settings where available, and other app-specific user features.</span></p>
+      <h3><a name="_Toc12614067">Anchors: Coding</a></h3>
 
-<p><span>Applications participating in the UL platform will have an icon with a mechanism to switch to the other applications on the platform; this should be in a common location on the right, next to the UL logo. This will be similar in spirit to this functionality in Office 365 or Google and will be further defined as the platform takes shape.</span></p>
+      <p><span>·<span></span></span><span>Whenever an element uses a URL or in-page navigation, use an </span><span class=InlineCode><span><span>anchor</span></span></span><span style='line-height:115%; font-family:Consolas;color:#4472C4'> </span><span style='line-height:115%; color:#111111'>tag. This includes</span></p>
 
-<p><span style='background:aqua'>In responsive sites, suppress the UL logo and turn additional navigation elements into a “hamburger” style icon as the right most element at medium (and below) breakpoints</span><span>.</span></p>
+      <p><span>o</span><span>standard inline links.</span></p>
 
-<p>The code fragment below details a 60px high header with elements vertically centered. The HTML semantically describes the elements included in the header by surrounding the navigation with <span class=InlineCode><span><span>nav</span></span></span> tag. (Further specifications of header navigation elements (font, case, sizing,
-spacing, etc.) to be added at a later date.)</p>
+      <p><span>o</span><span>jump nav links (</span><span class=InlineCode><span><span>href=#element-id</span></span></span><span style='line-height:115%;color:#111111'>).</span></p>
 
-<table>
- <tr>
-  <td valign=top align=left style='padding-top:0in;padding-right:0in;
-  padding-bottom:0in;padding-left:0in'>
-  <div style='border:solid #EFEEF1 6.0pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;
-  background:#EFEEF1'>
-  <p class=Code>&lt;header role=&quot;header&quot;
-  aria-label=&quot;header&quot;&gt;</p>
-  <p class=Code>...</p>
-  <p class=Code>&lt;nav role=&quot;navigation&quot;
-  aria-label=&quot;navigation&quot;&gt;</p>
-  <p class=Code>&lt;ul&gt;</p>
-  <p class=Code>&lt;li&gt;&lt;a&gt;...&lt;/a&gt;</p>
-  <p class=Code>...</p>
-  <p class=Code>&lt;/ul&gt;</p>
-  <p class=Code>&lt;/nav&gt;</p>
-  <p class=Code>&lt;/h<span style='color:#4472C4'>eader&gt;</span></p>
-  <p class=Code>&nbsp;</p>
-  <p class=Code>header {</p>
-  <p class=Code>  align-items: center;</p>
-  <p class=Code>  display: flex;</p>
-  <p class=Code>  flex-direction: row;</p>
-  <p class=Code>  height: 60px;</p>
-  <p class=Code>  position: fixed;</p>
-  <p class=Code>  width: 100%;</p>
-  <p class=Code>}</p>
-  </div>
-  </td>
- </tr>
-</table>
+      <p><span>o</span><span>AJAX modal triggers, where the user can also open content in a new tab (by right-click or 3D touch).</span></p>
 
+      <p><span>o</span><span>all cases described in “Forms”.</span></p>
 
-<h3><a name="_Toc12614055">Footer</a></h3>
+      <p><span>o</span><span>when in doubt, prefer an anchor tag.</span></p>
 
-<p><span style='background:aqua'>Use the semantic </span><span class=InlineCode><span style='border:none;background: aqua'><span>footer</span></span></span><span style='background:aqua'> tag to designate a sticky footer (“sticky” refers to the concept of anchoring the footer to the bottom of the view if the content of the page does not push the footer beyond the bottom of the screen).</span>></p>
+      <p><span>·<span></span></span><span>As noted above, a trigger for a modal may appear either as a link or a button, depending on circumstances. If the request is made using the URL in the </span><span class=InlineCode><span><span>href</span></span></span><span style='line-height:115%;font-family:Consolas;color:#4472C4'> </span><span style='line-height:115%;color:#111111'>attribute, use an anchor.</span></p>
 
-<p><span>The coding example below specifies a dark gray with white text, which should also apply any links within the section. More details on anchor and text styles may be forthcoming. </span></p> <p><span style='line-height:115%'>In the footer, include common elements:</span></p>
+      <p><span style='font-family:Symbol;color:#111111'>·<span></span></span><span>When using an anchor tag as a button, include the</span><span style='font-family:Consolas;color:#4472C4'> </span><span class=InlineCode><span><span>role=&quot;button&quot;</span></span></span><span style='color:#111111'> attribute.</span></p>
 
-<p><span style='background:aqua'>·<span></span></span><span style='background:aqua'>the UL logo.</span></p>
+      <h3><a name="_Toc12614068">Anchors: Styling</a></h3>
 
-<p><span style='background:aqua'>·<span></span></span><span style='background:aqua'>a copyright claim for the site
-content.</span></p>
+      <p><span style='background:aqua'>Inline anchor style should use standard body font family and size, line height, etc, and, by default, an underline (</span><span class=InlineCode><span style='border:none;background:aqua'><span>text-decoration</span></span></span><span style='line-height:115%;color:#111111;background:aqua'>) to indicate a link to the user</span><span>. This allows the designer to use colored text as a design element in headers or banners without creating confusion for the user; <b>users should be able to identify links by
+      more than color alone</b>.</span></p>
 
-<p><span;background:aqua'>·<span></span></span><span style='background:aqua'>links to help, contact, about and other informational navigational elements not required for regular application usage. </span></p>
+      <p><span>In some cases, the context of the link will provide the user with the indication of clickability; for instance, within a standard navigation in the header, or within a drop-down submenu. In those cases, underlines or other indicators may not be required.</span></p>
 
-<table>
- <tr>
-  <td valign=top align=left style='padding-top:0in;padding-right:0in;
-  padding-bottom:0in;padding-left:0in'>
-  <div style='border:solid #EFEEF1 6.0pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;
-  background:#EFEEF1'>
-  <p class=Code>&lt;footer role=&quot;header&quot;
-  aria-label=&quot;header&quot;&gt;...&lt;/footer&gt;</p>
-  <p class=Code>&nbsp;</p>
-  <p class=Code>footer {</p>
-  <p class=Code>  background-color: #3d3d3d;</p>
-  <p class=Code>  color: #ffffff;</p>
-  <p class=Code>}</p>
-  </div>
-  </td>
- </tr>
-</table>
+      <p><span>Where an interactive link reveals (expands or creates) text, include an indicator of further content, such as an angle or caret icon. Ideally, this indicator would change orientation (animated) to indicate open and closed.</span></p>
 
-<h2><a name="_Toc12614056">Accessibility</a></h2>
+      <p><span style='color:#111111;background:aqua'>When designing for touch display, make sure to provide adequate space around every link</span><span>, just as with buttons. Pay specific attention to lists and menus. </span></p>
 
-<p><span>In addition to the accessibility guidelines specified in other sections, <span style='background: aqua'>employ general best practices when coding to accommodate ADA and general accessibility</span>. Employing these elements will not only benefit the user, it will improve SEO on your apps. The WCAG, a W3 working group, offers extensive </span><a href="https://www.w3.org/WAI/tutorials/"><span style='line-height:115%'>tutorials</span></a><span style='line-height:115%'> on
-accessibility.</span></p>
+      <h3><a name="_Toc12614069">Input/Submits</a></h3>
 
-<p><span>ARIA attributes play a significant role in achieving accessibility. </span></p>
+      <p><span style='line-height:115%;color:#333333'>Use styling described in the “Buttons: Styling” and “Buttons: Usability” sections.</span></p>
 
-<p>ARIA (<a href="http://www.w3.org/TR/wai-aria/"><span style='color:#4472C4;text-decoration:none'>WAI-ARIA</span></a>&nbsp;if you want to be formal) is a set of attributes that you can add to&nbsp;<a href="http://www.w3.org/html/wg/drafts/html/master/dom.html#elements"><span style='color:#4472C4;text-decoration:none'>HTML elements</span></a>.</p>
+      <p><span>·<span></span></span><span style='background:aqua'>Where possible, submit a form using </span><span class=InlineCode><span style='border:none;background:aqua'><span>input type=&quot;submit&quot;</span></span></span><span style='line-height:115%; color:#111111;background:aqua'>.</span></p>
 
-<p>These attributes communicate role, state and property semantics to&nbsp;<a href="http://en.wikipedia.org/wiki/Assistive_technology"><span style='color:#4472C4;text-decoration:none'>assistive technologies</span></a>&nbsp;via the&nbsp;<a href="http://www.w3.org/WAI/PF/aria-implementation/#def_accessibility_api"><span style='color:#4472C4;text-decoration:none'>accessibility APIs</span></a>&nbsp;implemented
-in browsers.&nbsp;</p>
+      <p><span>·<span></span></span><span>As noted in “Forms”, attach any validation or pre-processing to the </span><span class=InlineCode><span><span>submit</span></span></span><span style='color:#111111'> event for forms rather than </span><span class=InlineCode><span><span>click</span></span></span><span style='color:#111111'> events on these elements. This will enable the use of the submit button, as well as ensure that submission by using the</span><span> “Return” key or by assistive technology software will always execute the required JavaScript</span><span style='color:#111111'>.</span></p>
 
-<h3><a name="_Toc12614057">Coding General HTML Elements</a></h3>
+      <h3><a name="_Toc12614070">Other Cases</a></h3>
 
-<p><span>Accessibility should be implemented by conforming to semantic HTML practices, as well as using ARIA attributes/labels. See individual component and layout sections for suggested implementation of semantic HTML. </span></p>
+      <p><span>In addition to the cases noted above (primarily buttons that trigger JavaScript</span><span> functions), buttons may be styled as links or vice versa.</span></p>
 
-<p><span>Using ARIA is particularly important in forms and inputs, while “role” attributes are particularly useful in elements (like buttons) that perform crucial functions but do not semantically indicate their uses. Refer to the </span><a href="https://www.w3.org/TR/wai-aria-practices"><span style='line-height:115%'>WCAG documentation</span></a><span style='line-height:115%'> for use in specific HTML elements and common components (such as tooltips).</span></p>
+      <p><span>·<span></span></span><span>All elements in an “Action” table cell should appear to the user to be links. The actions may be a mix of regular anchor tags, such as an anchor link to “Edit;” buttons, such as a confirmation modal triggered for a delete; or a submit button, as when submitting a form to make a saved search an alert.</span></p>
 
-<h3><a name="_Toc12614058">Images</a></h3>
+      <p><span>·<span></span></span><span>Regular anchors may be styled as buttons for an extraordinary or analogous call to action, such as “Registration” links.</span></p>
 
-<p>Google’s Lighthouse and Page Speed tools take special interest in image accessibility. Be sure to <span style='background:aqua'>include </span><span class=InlineCode><span style='border:none;background:aqua'><span>alt</span></span></span><span style='background:aqua'> text on all </span><span class=InlineCode><span style='border:none;background:aqua'><span>img</span></span></span><span style='background:aqua'> tags</span>, as its absence is detrimental to your audit results and SEO.  <span style='background:aqua'>The </span><span style='line-height:107%;font-family:Consolas;color:#7030A0;background:aqua'>alt</span><span style='background:aqua'> text should description should provide the same level of understanding that a visual user would have.</span> Where at all possible, <span style='background:aqua'>do not use images for buttons, navigation or significant text</span>. Minimize text in images in general; if text is present in images, use that text as the <span class=InlineCode><span style='border: none'><span>alt</span></span></span> value.</p>
+      <p><span>·<span></span></span><span>Where a mix of form submit and anchor elements should be viewed as siblings of equal importance, be consistent in displaying each element as either buttons or links.</span></p>
 
-<h1><a name="_Toc12614059">Component Library</a></h1>
+      <h2><a name="_Toc12614071">Confirmation Dialogs</a></h2>
 
-<p><span>This section contains common components used by web applications with a rational for when and why they should be used. It is not intended to be comprehensive.</span></p>
+      <p>Use a confirmation dialog to confirm a process or persistence that cannot be easily undone or recreated; or, to confirm data persistence where the user may not be aware that persistence is about to occur (form inputs are not visible, for example). Most commonly, use this type of dialog when deleting or removing items. The dialog should interrupt the process to the point that the action cannot complete without explicit input (e.g., button click) from the user.</p>
 
-<h2><a name="_Toc12614060">Alerts</a></h2>
+      <h2><a name="_Toc12614072">Forms</a></h2>
 
-<p><span>Use an alert to implement notices of success or failure for a persistence action (i.e. form submit). On a full-page view, these notices should fall in a consistent position from page to page; for example, directly beneath the main page title or the page lead text. If an alert message appears within a modal window, the alert should be prepended as the first element the modal content, in general (though specific layouts may require a modified implementation).</span></p>
+      <h3><a name="_Toc12614073">Input Types</a></h3>
 
-<p><span>Where the alert is a direct result of an action by the user, the alert should have a dismissible option (close button). In other circumstances, alerts may be used to provide help text or other notices, and these elements should not include a close button.</span></p>
+      <p><span>Where appropriate, use HTML5 input types to ensure ease of use on touch devices. This includes, but is not limited to:</span></p>
 
-<h3><a name="_Toc12614061">Accessibility</a></h3>
+      <p><span class=InlineCode><span style='font-size:10.0pt;line-height:115%;font-family: Symbol;border:none'>·<span></span></span></span><span class=InlineCode><span><span>email</span></span></span></p>
 
-<p><span>·<span></span></span>For a time-sensitive alert, use ARIA <span class=InlineCode><span><span>role='alert'</span></span></span>.</p>
+      <p><span class=InlineCode><span style='font-size:10.0pt;line-height:115%;font-family: Symbol;border:none'>·<span></span></span></span><span class=InlineCode><span><span>range</span></span></span></p>
 
-<p><span>·<span></span></span>For an alert that is not time-sensitive but that contains an important prompt or piece of information for the user, use ARIA <span class=InlineCode><span><span>role='alertdialog'</span></span></span>.  (The definition of the ARIA <span class=InlineCode><span><span>role='dialog'</span></span></span> is: “an application window that is designed to interrupt the current processing of an application in order to prompt the user to enter information or require a response”).</p>
+      <p><span class=InlineCode><span style='font-size:10.0pt;line-height:115%;font-family: Symbol;border:none'>·<span></span></span></span><span class=InlineCode><span><span>search</span></span></span></p>
 
-<p><span>·<span></span></span>Alerts should not be visually hidden if they are not being used.  If you do not want a screen reader to pick up an alert, use the <span class=InlineCode><span><span>aria-hidden='true'</span></span></span> HTML attribute and/or <span class=InlineCode><span><span>display: none</span></span></span> in your CSS.</p>
+      <p><span class=InlineCode><span style='font-size:10.0pt;line-height:115%;font-family: Symbol;border:none'>·<span></span></span></span><span class=InlineCode><span><span>tel*</span></span></span></p>
 
-<h2><a name="_Toc12614062">Anchors &amp; Buttons</a></h2>
+      <p><span>·<span></span></span><span class=InlineCode><span><span>url</span></span></span></p>
 
-<p><span>The guidelines below describe usage and styling of button and anchor elements. See “Forms” for specific uses within the context of a form.</span></p>
+      <p><i><span>*Note: On mobile devices, </span></i><span class=InlineCode><span><span>tel</span></span></span><i><span style='line-height:115%; color:#111111'> type puts the user into the number keypad rather than the regular keyboard. Use </span></i><span class=InlineCode><span style='border: none'><span>tel</span></span></span><i><span style='line-height:115%;color:#111111'> as the preferred </span></i><span class=InlineCode><span><span>type</span></span></span><i><span style='line-height:115%;color:#111111'> when coding a numbers-only input.</span></i></p>
 
-<h3><a name="_Toc12614063">Buttons: Coding</a></h3>
+      <p><span>Do not use the following types, as the implementation in some (or all) browsers may be confusing</span><br> <span style='line-height:115%;color:#111111'>(“number” input, for example) or plugins implement the feature:</span></p>
 
-<p><span style='font-size: 10.0pt;line-height:115%;font-family:Symbol;color:#111111'>·<span></span></span><span>Use a </span><span class=InlineCode><span><span>button</span></span></span><span style='color:#111111'> element to trigger any JavaScript function that does not use a URL. Basically, instead of using an </span><span class=InlineCode><span><span>a</span></span></span><span style='color:#111111'> tag with an </span><span class=InlineCode><span><span>href=&quot;Javascript:void(0)&quot;</span></span></span><span style='color:#111111'>, or </span><span class=InlineCode><span><span>href=&quot;#&quot;</span></span></span><span class=InlineCode><span><span>,</span></span></span><span style='color:#111111'> use a </span><span class=InlineCode><span><span>button</span></span></span><span style='color:#111111'> element. If the user can open a reference via a right-click or 3D touch, use an </span><span class=InlineCode><span><span>anchor</span></span></span><span style='color:#111111'>.</span></p>
+      <p><span class=InlineCode><span style='font-size:10.0pt;line-height:115%;font-family: Symbol;border:none'>·<span></span></span></span><span class=InlineCode><span><span>number</span></span></span></p>
 
-<p><span>This might include:</span></p>
+      <p><span class=InlineCode><span style='font-size:10.0pt;line-height:115%;font-family: Symbol;border:none'>·<span></span></span></span><span class=InlineCode><span><span>month</span></span></span></p>
 
-<p><span>o</span><span>non-AJAX modal triggers.</span></p>
+      <p><span class=InlineCode><span style='font-size:10.0pt;line-height:115%;font-family: Symbol;border:none'>·<span></span></span></span><span class=InlineCode><span><span>color</span></span></span></p>
 
-<p><span>o<span>
-</span></span><span>popover triggers.</span></p>
+      <p><span
+      class=InlineCode><span style='font-size:10.0pt;line-height:115%;font-family:
+      Symbol;border:none'>·<span>&nbsp;&nbsp;&nbsp;&nbsp;
+      </span></span></span><span class=InlineCode><span><span
+      style='border:none'>date</span></span></span></p>
 
-<p><span>o<span>
-</span></span><span>tooltip elements.</span></p>
+      <p><span class=InlineCode><span style='font-size:10.0pt;line-height:115%;font-family: Symbol;border:none'>·<span></span></span></span><span class=InlineCode><span><span>datetime</span></span></span></p>
 
-<p><span>o<span>
-</span></span><span>dismissing buttons in modals and
-alerts.</span></p>
+      <p><span class=InlineCode><span style='font-size:10.0pt;line-height:115%;font-family: Symbol;border:none'>·<span></span></span></span><span class=InlineCode><span><span>datetime-local</span></span></span></p>
 
-<p><span>o<span>
-</span></span><span>opening and closing/expanding
-hidden text.</span></p>
+      <p><span class=InlineCode><span style='font-size:10.0pt;line-height:115%;font-family: Symbol;border:none'>·<span></span></span></span><span class=InlineCode><span><span>time</span></span></span></p>
 
-<p><span>·<span></span></span><span>In many of the cases (such as some listed above), the button may appear to the user to be an inline link. Use CSS to modify the button to look like a link.</span></p>
+      <p><span class=InlineCode><span style='font-size:10.0pt;line-height:115%;font-family: Symbol;border:none'>·<span></span></span></span><span class=InlineCode><span><span>week</span></span></span></p>
 
-<p><span>·<span></span></span><b><span>Always use the </span></b><span class=InlineCode><span><span>type=&quot;button&quot;</span></span></span><b><span style='line-height:115%;color:#111111'> attribute-value to ensure a button does not inadvertently act as a form submit.</span></b><span style='line-height: 115%;color:#111111'> Safari, Chrome and other browsers treat </span><span class=InlineCode><span><span>button</span></span></span><span style='line-height:115%;font-family:Consolas;color:#4472C4'> </span><span style='line-height:115%;color:#111111'>elements as submit tags when nested in forms.</span></p>
+      <h3><a name="_Toc12614074">Buttons and Links (Again)</a></h3>
 
-<h3><a name="_Toc12614064">Buttons: Styling</a></h3>
+      <p><span>Forms commonly require actions other than a simple submit. In some cases, these actions should be performed by buttons and sometimes by links.</span></p>
 
-<p><span>As noted, button elements may be styled to appear as either buttons or as links, depending on their conceptual use.</span></p>
+      <p><span>Note that although the rules below refer to buttons and links, the elements need not specifically be input, button or anchor tags; rather, we refer to the styling of the element (see “Anchors and Buttons” for more information on how to style these elements). For the vast majority of instances in the context of forms, however, links should be anchor tags and submit buttons input elements of type “submit” (see “Anchors and Buttons” for details on when to use each type of element).</span></p>
 
-<p><span>Style elements as a button when:</span></p>
+      <p><span>Use the general guideline of the necessity of a URL to differentiate between using an anchor or a button.</span></p>
 
-<p><span>·<span></span></span><span>indicating persistence or as a step in a process leading to persistence. This includes actions such as save, save and move forward or back (“next” and “previous” step), submit, delete, update.</span></p>
+      <h4><span style='background:aqua'>Buttons</span></h4>
 
-<p><span>·<span></span></span><span>creating call to action (CTA). The number of CTAs should be limited on a view and should strongly indicate to the user what their next action should be.</span></p>
+      <p><span>·<span></span></span><span style='background:aqua'>Submit (Create/Update)</span></p>
 
-<p><span>Unless noted elsewhere in this document, style the button as a link in most other situations.</span></p>
+      <p><span>·<span></span></span><span style='background:aqua'>Delete</span></p>
 
-<h3><a name="_Toc12614065">Buttons: Responsiveness</a></h3>
+      <p><span>·<span></span></span><span style='background:aqua'>Reset*</span></p>
 
-<p><span style='line-height:115%;color:#1B1B1B'>In most circumstances, elements styled as buttons should become block elements in medium and smaller viewports in order to accommodate touch behavior; the exception to this rule might be for “Next” and “Previous” buttons. Be sure to create adequate spacing and padding to allow all users to use your buttons on a
-touchscreen.</span></p>
+      <p><span style='background:aqua'>·<span></span></span><span style='background:aqua'>Any action that initiates a data transaction</span></p>
 
-<h3><a name="_Toc12614066">Buttons: Usability</a></h3>
+      <h4>Links</h4>
 
-<p><span style='color:#1B1B1B'>·<span></span></span><span style='line-height:115%;color:#1B1B1B;background:aqua'>Use sentence case for button labels</span><span style='line-height:115%;color:#1B1B1B'>.</span></p>
+      <p><span>·<span></span></span><span style='background:aqua'>Cancel*</span></p>
 
-<p><span style='color:#1B1B1B'>·<span></span></span><span style='line-height:115%;color:#1B1B1B;background:aqua'>Limit characters.</span><span style='line-height:115%;color:#1B1B1B'> Button text should be as short as possible with action words that clearly explain what the button does (Create Account, Save, Search). </span></p>
+      <p><span>·<span></span></span><span style='background:aqua'>Forgot Password</span></p>
 
-<p><span style='color:#1B1B1B'>·<span></span></span><span style='line-height:115%;color:#1B1B1B'>Be consistent in this terminology across the application, such as “Save” vs “Submit”.</span></p>
+      <p><span>·<span></span></span><span style='background:aqua'>Actions within tables </span><span>(e.g. “Remove” link in a list, which performs a form submit)* . <i>Note this represents a case where the element appears to the user to be a link but should actually be a button.</i></span></p>
 
-<p><span style='color:#1B1B1B'>·<span></span></span><span style='line-height:115%;color:#1B1B1B;background:aqua'>Lead with a verb where possible</span><span style='line-height:115%;color:#1B1B1B'>. For example, “Create Account” not “Account Creation”. </span></p>
+      <p><span>·<span></span></span><span style='background:aqua'>Any other action that does not initiate a data transaction</span></p>
 
-<p><span style='color:#1B1B1B'>·<span></span></span><span style='color:#1B1B1B'>Icons can also be helpful. At times, consider adding an icon to signal specific actions (Download, Open in a new window, etc.).</span></p>
+      <p><span>*Note: “Reset” is a native action that resets the data in an HTML form to its state upon page load; once clicked, the user will stay on the current page. “Cancel” will abandon the form by sending the user to another page, removing the form element, et al. Where sensible, prefer Cancel to Reset, and both may be used. For example, a calculator form would require a reset, where a new item create form is better served by cancel.</span></p>
 
-<p><span style='color:#1B1B1B'>·<span></span></span><span style='line-height:115%;color:#1B1B1B'>Use consistent class variations to distinguish types and convey meaning. For example, “Next” and “Previous” button steps should use a default or plain button class, while a submit or CTA button would implement a special primary.</span></p>
+      <h3><a name="_Toc12614075">Submit Events</a></h3>
 
-<h3><a name="_Toc12614067">Anchors: Coding</a></h3>
+      <p><span>As discussed above, although buttons and links do not necessarily need to correspond to their native HTML element tags, forms should generally be executed with input elements of type “submit.” Use a </span><span class=InlineCode><span><span>submit</span></span></span><span style='line-height:115%;color:#111111'> input instead of input of </span><span class=InlineCode><span><span>type</span></span></span><span class=InlineCode><span><span>=”</span></span></span><span class=InlineCode><span><span>button”</span></span></span><span style='line-height:115%;color:#111111'>. (See “Anchors and Buttons” for more information on when to use alternative element types.)</span></p>
 
-<p><span>·<span></span></span><span>Whenever an element uses a URL or in-page navigation, use an </span><span class=InlineCode><span><span>anchor</span></span></span><span style='line-height:115%; font-family:Consolas;color:#4472C4'> </span><span style='line-height:115%; color:#111111'>tag. This includes</span></p>
+      <p><b><span>Any JavaScript in need of execution upon form submission should be attached to the form’s submit event, rather than attached to a click event of a button or link</span></b><span style='color:#111111'>. Additionally, users will be able to submit forms by using the “Return/Enter” key, within a touch device keyboard, or by other methods (especially those used by accessibility browsers); attaching events to form submits circumvents all these issues.</span></p>
 
-<p><span>o</span><span>standard inline links.</span></p>
+      <h3><a name="_Toc12614076">JavaScript Validations</a></h3>
 
-<p><span>o</span><span>jump nav links (</span><span class=InlineCode><span><span>href=#element-id</span></span></span><span style='line-height:115%;color:#111111'>).</span></p>
+      <p><span>In most cases, JavaScript</span><span> validations are not necessary.  Some situations may make client-side validation more useful to the user, however. </span></p>
 
-<p><span>o</span><span>AJAX modal triggers, where the user can also open content in a new tab (by right-click or 3D touch).</span></p>
+      <p><span style='line-height:115%;color:#333333'>Use client-side validations when:</span></p>
 
-<p><span>o</span><span>all cases described in “Forms”.</span></p>
+      <p><span>·<span></span></span><span>the form is submitted via Ajax.  Generally, this will make action flow more fluidly for the user.</span></p>
+       
+      <p><span>·<span></span></span><span>the form contains a file upload input.  Because of security issues, uploaded files are detached on page load, which makes round-trip validation poor UX (as the user is forced to reattach the file).</span><br>
 
-<p><span>o</span><span>when in doubt, prefer an anchor tag.</span></p>
+      <span>(Note that some browsers expose more attributes of uploaded files than others, making specific validations relating to file size, type, etc., inconsistent across browsers.)</span></p>
 
-<p><span>·<span></span></span><span>As noted above, a trigger for a modal may appear either as a link or a button, depending on circumstances. If the request is made using the URL in the </span><span class=InlineCode><span><span>href</span></span></span><span style='line-height:115%;font-family:Consolas;color:#4472C4'> </span><span style='line-height:115%;color:#111111'>attribute, use an anchor.</span></p>
+      <p><span>·<span></span></span><span>the form contains typeahead inputs that might be lost upon reload. </span></p>
 
-<p><span style='font-family:Symbol;color:#111111'>·<span></span></span><span>When using an anchor tag as a button, include the</span><span style='font-family:Consolas;color:#4472C4'> </span><span class=InlineCode><span><span>role=&quot;button&quot;</span></span></span><span style='color:#111111'> attribute.</span></p>
+      <p><i><span style='line-height:115%;color:#333333'>Best Practices</span></i></p>
 
-<h3><a name="_Toc12614068">Anchors: Styling</a></h3>
+      <p><span>·<span></span></span><span>Implement the same error styling to the elements as the user would see from a server-side validation.</span></p>
 
-<p><span style='background:aqua'>Inline anchor style should use standard body font family and size, line height, etc, and, by default, an underline (</span><span class=InlineCode><span style='border:none;background:aqua'><span>text-decoration</span></span></span><span style='line-height:115%;color:#111111;background:aqua'>) to indicate a link to the user</span><span>. This allows the designer to use colored text as a design element in headers or banners without creating confusion for the user; <b>users should be able to identify links by
-more than color alone</b>.</span></p>
+      <p><span>·<span></span></span><span>Validate on form on submit rather than on input. However, a multistep input, such as typeahead field, may be validated on value select for better interaction flow.</span></p>
 
-<p><span>In some cases, the context of the link will provide the user with the indication of clickability; for instance, within a standard navigation in the header, or within a drop-down submenu. In those cases, underlines or other indicators may not be required.</span></p>
+      <p><span style='font-size:10.0pt;line-height:115%;font-family:Symbol'>·<span></span></span><span>Clear errors on re-validation. Depending on the input type, as in the case of password field, clearing the error on field change may be more helpful to the user.</span></p>
 
-<p><span>Where an interactive link reveals (expands or creates) text, include an indicator of further content, such as an angle or caret icon. Ideally, this indicator would change orientation (animated) to indicate open and closed.</span></p>
+      <h3><a name="_Toc12614077">Success &amp; Error Handling</a></h3>
 
-<p><span style='color:#111111;background:aqua'>When designing for touch display, make sure to provide adequate space around every link</span><span>, just as with buttons. Pay specific attention to lists and menus. </span></p>
+      <p><span>As described in the “Alert” section, indicate success by including a visual alert in the resulting view. This alert should be dismissible (it is not necessary to programmatically close the alert after a set period of time)<i>.</i></span></p>
 
-<h3><a name="_Toc12614069">Input/Submits</a></h3>
+      <p><span>When a view includes a form with error fields, an alert should be visible at the top of the view with a generic error message, such as “Please correct the input errors.” Do not list individual field errors in this message. Specify these errors by styling each invalid input. </span></p>
 
-<p><span style='line-height:115%;color:#333333'>Use styling described in the “Buttons: Styling” and “Buttons: Usability” sections.</span></p>
+      <h2><a name="_Toc12614078">Image</a>s</h2>
 
-<p><span>·<span></span></span><span style='background:aqua'>Where possible, submit a form using </span><span class=InlineCode><span style='border:none;background:aqua'><span>input type=&quot;submit&quot;</span></span></span><span style='line-height:115%; color:#111111;background:aqua'>.</span></p>
+      <h3><a name="_Toc12614079">Responsive Images</a></h3>
 
-<p><span>·<span></span></span><span>As noted in “Forms”, attach any validation or pre-processing to the </span><span class=InlineCode><span><span>submit</span></span></span><span style='color:#111111'> event for forms rather than </span><span class=InlineCode><span><span>click</span></span></span><span style='color:#111111'> events on these elements. This will enable the use of the submit button, as well as ensure that submission by using the</span><span> “Return” key or by assistive technology software will always execute the required JavaScript</span><span style='color:#111111'>.</span></p>
+      <p><span>HTML5 provides </span><span class=InlineCode><span><span>srcset</span></span></span><span style='line-height:115%'>, an attribute designed to deliver the optimal file for the viewport size of each specific device requesting an image. When specified, the browser determines the smallest (file size) image to download based on its resolution and element’s dimensions. </span></p>
 
-<h3><a name="_Toc12614070">Other Cases</a></h3>
+      <table cellspacing=0 cellpadding=0 hspace=0 vspace=0 align=left>
+       <tr>
+        <td valign=top align=left style='padding-top:0in;padding-right:0in;
+        padding-bottom:0in;padding-left:0in'>
+        <div style='border:solid #EFEEF1 6.0pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;
+        background:#EFEEF1'>
+        <p class=Code>&lt;img src=&quot;small.jpg&quot; srcset=&quot;medium.jpg
+        1000w, large.jpg 2000w&quot; alt=&quot;yah&quot;&gt;</p>
+        </div>
+        </td>
+       </tr>
+      </table>
 
-<p><span>In addition to the cases noted above (primarily buttons that trigger JavaScript</span><span> functions), buttons may be styled as links or vice versa.</span></p>
+      <p><span>For details on how to use </span><span class=InlineCode><span><span>srcset</span></span></span><span style='line-height:115%'> to deliver responsive images, see </span><a href="https://css-tricks.com/responsive-images-youre-just-changing-resolutions-use-srcset/"><span style='line-height:115%'>this article</span></a><span style='line-height:115%'>.  Note that IE 11 does not support the </span><span class=InlineCode><span><span>srcset</span></span></span><span style='line-height:115%'> attribute, so you may wish to use the desktop size version of the image as the </span><span class=InlineCode><span><span>src</span></span></span><span style='line-height:115%;font-family:Consolas;color:#4472C4'> </span><span style='line-height:115%'>attribute value where your audience browser usage indicates.</span></p>
 
-<p><span>·<span></span></span><span>All elements in an “Action” table cell should appear to the user to be links. The actions may be a mix of regular anchor tags, such as an anchor link to “Edit;” buttons, such as a confirmation modal triggered for a delete; or a submit button, as when submitting a form to make a saved search an alert.</span></p>
+      <p><span>When displaying images, it’s important to remember the largest version should be formatted for viewing across all viewport sizes. To ensure proper display, give the image a</span><span style='color:#4472C4'> </span><span class=InlineCode><span><span>max-width</span></span></span><span style='color:#4472C4'> </span><span style='color:#111111'>property of 100%. However, in some instances, including the max-width may not be enough. While it is always important to test views in multiple browser sizes, images may require more specific adjustments to responsive layouts than any other page element. In many frameworks, layout becomes liquid at specific viewport sizes (i.e. at &lt; 768px all sizing is based on percentage rather than specific pixel sizes). With a broad variety of sizes for small touch devices, be sure to test images thoroughly.</span></p>
 
-<p><span>·<span></span></span><span>Regular anchors may be styled as buttons for an extraordinary or analogous call to action, such as “Registration” links.</span></p>
+      <h3><a name="_Toc12614080">Image Sizing and Resolution</a></h3>
 
-<p><span>·<span></span></span><span>Where a mix of form submit and anchor elements should be viewed as siblings of equal importance, be consistent in displaying each element as either buttons or links.</span></p>
+      <p><span style='background:aqua'>Images should display at the correct resolution for all types of screen resolutions</span><span>. Historically, images delivered to screens have required resolution of no more than 72ppi. However, with the advent of Retina and other high-resolution screens, resolutions have increased to 144+ppi. Unfortunately, most web file formats can only be saved as 72ppi and do not display crisply on high resolution screens in their native size.</span></p>
 
-<h2><a name="_Toc12614071">Confirmation Dialogs</a></h2>
+      <p><span>To address this problem, you will need to <b>create at least one version of the image at twice the maximum size it will appear within the site, and then use CSS styling to adjust dimensions to half its native size</b>. For instance, if you have an image that needs to be displayed at 100×50, then you should save the image at 200×100 and use height and width properties in display. </span></p>
 
-<p>Use a confirmation dialog to confirm a process or persistence that cannot be easily undone or recreated; or, to confirm data persistence where the user may not be aware that persistence is about to occur (form inputs are not visible, for example). Most commonly, use this type of dialog when deleting or removing items. The dialog should interrupt the process to the point that the action cannot complete without explicit input (e.g., button click) from the user.</p>
+      <p><span>It is important to recognize that <b>the largest display of an image size may not correspond to the largest media screen size</b>. This means that an image may actually display larger in mobile or tablet view than in desktop, depending on the page layout at each responsive break. Again, responsive testing is vital in ensuring the image displays crisply and responsively in all formats.</span></p>
 
-<h2><a name="_Toc12614072">Forms</a></h2>
+      <p><span>Using </span><span class=InlineCode><span><span>srcset</span></span></span><span style='line-height:115%;font-family:Consolas;color:#4472C4'> </span><span style='line-height:115%;color:#111111'>to deliver responsive images means you should determine the largest display size as outlined above, and then make smaller versions of this image as well. Use the devices your analytics indicate to determine your target sizes or use an online tool, such as the </span><a href="https://www.responsivebreakpoints.com/"><span>Responsive Image Breakpoints Generator</span></a><span style='line-height:115%;color:#111111'>, to create a subset of images.</span></p>
 
-<h3><a name="_Toc12614073">Input Types</a></h3>
+      <h3><a name="_Toc12614081">Image File Formats</a></h3>
 
-<p><span>Where appropriate, use HTML5 input types to ensure ease of use on touch devices. This includes, but is not limited to:</span></p>
+      <p><span>Because of high resolution proliferation, PNG formats will best serve your web collateral.  Consider indexed or 8-bit PNG format for illustrative images, rather than the full 24-bit resolution. Much like indexed GIF images, this lower bit-per-pixel display will have a considerably smaller file size. Larger photographic images will be better saved as JPGs to reduce delivery size. As noted below, always use a tool to optimize these images for maximum compression, as client-side auditors will penalize even the most diligently saved file.</span></p>
 
-<p><span class=InlineCode><span style='font-size:10.0pt;line-height:115%;font-family: Symbol;border:none'>·<span></span></span></span><span class=InlineCode><span><span>email</span></span></span></p>
+      <p><span>Save vector graphics as native SVG files. For instance, your application logo, which may use a custom font and be displayed in a variety of sizes and colors, could be implemented as an SVG image. If you believe an image may be suited for this type of display, also consider the cons, including rendering time and processing. The object implementation of SVG files with external CSS is the optimal implementation. For more information, see </span><a href="https://css-tricks.com/using-svg/">css-tricks.com</a><span style='line-height:115%;color:#111111'>.</span></p>
 
-<p><span class=InlineCode><span style='font-size:10.0pt;line-height:115%;font-family: Symbol;border:none'>·<span></span></span></span><span class=InlineCode><span><span>range</span></span></span></p>
+      <h3><a name="_Toc12614082">Image Optimization</a></h3>
 
-<p><span class=InlineCode><span style='font-size:10.0pt;line-height:115%;font-family: Symbol;border:none'>·<span></span></span></span><span class=InlineCode><span><span>search</span></span></span></p>
+      <p><span>As noted above, non-optimized, uncompressed images can be quite large in terms of file size and this can have an outsize effect in high network latency situations like cellular networks for mobile devices or even just browsers that are a long way from your data center. I.e. in China.</span></p>
 
-<p><span class=InlineCode><span style='font-size:10.0pt;line-height:115%;font-family: Symbol;border:none'>·<span></span></span></span><span class=InlineCode><span><span>tel*</span></span></span></p>
+      <p><span>It is critical to use proper tools and techniques to <span style='background:aqua'>fully optimize image formats </span>to reduce file size and then at as high a rate of lossy compression as is tolerable while still maintaining required image quality.  While it is possible to accomplish a good file size optimization in your image editor, there are many freely available tools on the web that make this easy; again, even highly optimized images may trip a penalty from auditing tools.  Online image processors for optimization include:</span></p>
 
-<p><span>·<span></span></span><span class=InlineCode><span><span>url</span></span></span></p>
+      <p><span>·<span></span></span><span>Optimizilla at </span><a href="https://imagecompressor.com"><span style='line-height:115%'>https://imagecompressor.com</span></a><span style='line-height:115%'> makes fine-tuning images exceptionally easy.</span></p>
 
-<p><i><span>*Note: On mobile devices, </span></i><span class=InlineCode><span><span>tel</span></span></span><i><span style='line-height:115%; color:#111111'> type puts the user into the number keypad rather than the regular keyboard. Use </span></i><span class=InlineCode><span style='border: none'><span>tel</span></span></span><i><span style='line-height:115%;color:#111111'> as the preferred </span></i><span class=InlineCode><span><span>type</span></span></span><i><span style='line-height:115%;color:#111111'> when coding a numbers-only input.</span></i></p>
+      <p><span>·<span></span></span><span>Google Page Speed offers downloadable files upon audit. </span><a href="https://developers.google.com/speed/pagespeed/insights/"><span style='line-height:115%'>https://developers.google.com/speed/pagespeed/insights/</span></a></p>
 
-<p><span>Do not use the following types, as the implementation in some (or all) browsers may be confusing</span><br> <span style='line-height:115%;color:#111111'>(“number” input, for example) or plugins implement the feature:</span></p>
+      <p><span>There are also ways to integrate image compression and optimization in version control systems so that it happens automatically on any new image that is introduced to the repo.  Cloudflare also provides a solution for optimizing image delivery.</span></p> 
 
-<p><span class=InlineCode><span style='font-size:10.0pt;line-height:115%;font-family: Symbol;border:none'>·<span></span></span></span><span class=InlineCode><span><span>number</span></span></span></p>
+      <h2><a name="_Toc12614083">Modals</a></h2>
 
-<p><span class=InlineCode><span style='font-size:10.0pt;line-height:115%;font-family: Symbol;border:none'>·<span></span></span></span><span class=InlineCode><span><span>month</span></span></span></p>
+      <p><span>The main purpose of modals is to allow for the completion of a secondary or sub-task without abandoning the initial or primary task completion. For instance, when a user performs a keyword or phrase search, they may save the search for future use. In order to maintain the current list of results, the save process occurs within a modal. Sub and secondary tasks performed in modal should comprise a limited number of steps and options, so not as to divert from the primary task completion.</span></p>
 
-<p><span class=InlineCode><span style='font-size:10.0pt;line-height:115%;font-family: Symbol;border:none'>·<span></span></span></span><span class=InlineCode><span><span>color</span></span></span></p>
+      <p><span>You may also use modals to alert users where </span><span>JavaScript</span><span style='color:#111111'> or AJAX transactions have processed in the background.  For example, imagine a registration form where a number of fields may be completed. Several validations may occur asynchronously on the email input; when errors or potential problems occur, a modal can be used to catch the attention of the user who have moved away from the field. In this case, the modal alerts the user to important information, interrupting their current task without entirely removing them from it.</span></p>
 
-<p><span
-class=InlineCode><span style='font-size:10.0pt;line-height:115%;font-family:
-Symbol;border:none'>·<span>&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span></span><span class=InlineCode><span><span
-style='border:none'>date</span></span></span></p>
+      <p><span>Finally, a modal may serve as a dialog in circumstances described in the “Confirmation Dialog” section.</span></p>
 
-<p><span class=InlineCode><span style='font-size:10.0pt;line-height:115%;font-family: Symbol;border:none'>·<span></span></span></span><span class=InlineCode><span><span>datetime</span></span></span></p>
+      <h3>Accessibility</h3>
 
-<p><span class=InlineCode><span style='font-size:10.0pt;line-height:115%;font-family: Symbol;border:none'>·<span></span></span></span><span class=InlineCode><span><span>datetime-local</span></span></span></p>
+      <p><span>·<span></span></span>If possible, modals should be able to be used by the keyboard alone.</p>
 
-<p><span class=InlineCode><span style='font-size:10.0pt;line-height:115%;font-family: Symbol;border:none'>·<span></span></span></span><span class=InlineCode><span><span>time</span></span></span></p>
+      <h2><a name="_Toc12614084">Tables</a></h2>
 
-<p><span class=InlineCode><span style='font-size:10.0pt;line-height:115%;font-family: Symbol;border:none'>·<span></span></span></span><span class=InlineCode><span><span>week</span></span></span></p>
+      <p><span>Tables should be used to display easily scanned and/or comparable data.</span></p>
 
-<h3><a name="_Toc12614074">Buttons and Links (Again)</a></h3>
+      <h3><a name="_Toc12614085">Responsive Tables</a></h3>
 
-<p><span>Forms commonly require actions other than a simple submit. In some cases, these actions should be performed by buttons and sometimes by links.</span></p>
+      <p><span>Where tables are used in responsive design, ensure display in medium and small browser views by employing one or a combination of these methods:</span></p>
 
-<p><span>Note that although the rules below refer to buttons and links, the elements need not specifically be input, button or anchor tags; rather, we refer to the styling of the element (see “Anchors and Buttons” for more information on how to style these elements). For the vast majority of instances in the context of forms, however, links should be anchor tags and submit buttons input elements of type “submit” (see “Anchors and Buttons” for details on when to use each type of element).</span></p>
+      <p><span>·<span></span></span><span>Using data-labels attributes in table cell tags, combined with media query CSS to transform each cell into a stacked row. Many versions and tutorials on this method are available, including </span><a href="https://allthingssmitty.com/2016/10/03/responsive-table-layout/"><span>this one by Matt Smith</span></a><span style='line-height:115%;color:#111111'>. (See link for a visual example of this
+      method.)</span></p>
 
-<p><span>Use the general guideline of the necessity of a URL to differentiate between using an anchor or a button.</span></p>
+      <p><span>o</span><span>Pros: This method is widely supported and accommodates a lot of data legibly.</span></p>
 
-<h4><span style='background:aqua'>Buttons</span></h4>
+      <p><span>o</span><span>Cons: By stacking the data, comparing cells
+      becomes more difficult.</span></p>
 
-<p><span>·<span></span></span><span style='background:aqua'>Submit (Create/Update)</span></p>
+      <p><span>·<span></span></span><span>Suppress less important columns where possible, allowing the remaining cells to fit comfortably in portrait mode on common mobile devices.</span></p>
 
-<p><span>·<span></span></span><span style='background:aqua'>Delete</span></p>
+      <p><span>o</span><span>Pros: Supports the original goal of the table, keeping the contents scannable and comparable.</span></p>
 
-<p><span>·<span></span></span><span style='background:aqua'>Reset*</span></p>
+      <p><span>o</span><span>Cons: May eliminate useful information for the user. (In general, tables should not contain much information that is not necessary for the user. However, the circumstances under which the user uses a mobile device may change which pieces of information are more important.)</span></p>
 
-<p><span style='background:aqua'>·<span></span></span><span style='background:aqua'>Any action that initiates a data transaction</span></p>
+      <p><span>·<span></span></span><span>Add horizontal scrolling to the table’s parent object, while including some visual indicator that more content is available beyond the current view screen. Indicator might be a visible horizonal scrollbar or a gradient overlay.</span></p>
 
-<h4>Links</h4>
+      <p><span>o</span><span>Pros: Requires less coding and maintenance while displaying all the table data.</span></p>
 
-<p><span>·<span></span></span><span style='background:aqua'>Cancel*</span></p>
+      <p><span>o</span><span>Cons: Horizontal scrolling is not always touch-device friendly; users have a hard time maintaining a connection between identifying cells. Creating the visual indicator of “more” can also be unclear.</span></p>
 
-<p><span>·<span></span></span><span style='background:aqua'>Forgot Password</span></p>
+      <h3><a name="_Toc12614086">Sorting</a></h3>
 
-<p><span>·<span></span></span><span style='background:aqua'>Actions within tables </span><span>(e.g. “Remove” link in a list, which performs a form submit)* . <i>Note this represents a case where the element appears to the user to be a link but should actually be a button.</i></span></p>
+      <p><span>Prefer sorting by:</span></p>
 
-<p><span>·<span></span></span><span style='background:aqua'>Any other action that does not initiate a data transaction</span></p>
+      <p><span>·<span></span></span><span>select/dropdown element.</span></p>
 
-<p><span>*Note: “Reset” is a native action that resets the data in an HTML form to its state upon page load; once clicked, the user will stay on the current page. “Cancel” will abandon the form by sending the user to another page, removing the form element, et al. Where sensible, prefer Cancel to Reset, and both may be used. For example, a calculator form would require a reset, where a new item create form is better served by cancel.</span></p>
+      <p><span>·<span></span></span><span>table header ascending/descending.</span></p>
 
-<h3><a name="_Toc12614075">Submit Events</a></h3>
+      <p>When tables are responsive and your audience may access your application using multiple devices, prefer sorting via dropdown rather than using table headers to maintain a consistent experience. This allows for sorting separate from the table itself, making all responsive options viable.</p> 
 
-<p><span>As discussed above, although buttons and links do not necessarily need to correspond to their native HTML element tags, forms should generally be executed with input elements of type “submit.” Use a </span><span class=InlineCode><span><span>submit</span></span></span><span style='line-height:115%;color:#111111'> input instead of input of </span><span class=InlineCode><span><span>type</span></span></span><span class=InlineCode><span><span>=”</span></span></span><span class=InlineCode><span><span>button”</span></span></span><span style='line-height:115%;color:#111111'>. (See “Anchors and Buttons” for more information on when to use alternative element types.)</span></p>
+      <h3>Accessibility</h3>
 
-<p><b><span>Any JavaScript in need of execution upon form submission should be attached to the form’s submit event, rather than attached to a click event of a button or link</span></b><span style='color:#111111'>. Additionally, users will be able to submit forms by using the “Return/Enter” key, within a touch device keyboard, or by other methods (especially those used by accessibility browsers); attaching events to form submits circumvents all these issues.</span></p>
+      <p><span>·<span></span></span><span style='background:aqua'>Header cells should utilize the TH tag</span></p>
 
-<h3><a name="_Toc12614076">JavaScript Validations</a></h3>
+      <p><span>o</span>All header cells should contain text.  </p>
 
-<p><span>In most cases, JavaScript</span><span> validations are not necessary.  Some situations may make client-side validation more useful to the user, however. </span></p>
+      <p><span>·<span></span></span><span style='background:aqua'>Data cells should utilize the TD tag</span></p>
 
-<p><span style='line-height:115%;color:#333333'>Use client-side validations when:</span></p>
+      <p><span>&nbsp;</span></p>
 
-<p><span>·<span></span></span><span>the form is submitted via Ajax.  Generally, this will make action flow more fluidly for the user.</span></p>
- 
-<p><span>·<span></span></span><span>the form contains a file upload input.  Because of security issues, uploaded files are detached on page load, which makes round-trip validation poor UX (as the user is forced to reattach the file).</span><br>
+      <h2><a name="_Toc12614087">Tabs</a></h2>
 
-<span>(Note that some browsers expose more attributes of uploaded files than others, making specific validations relating to file size, type, etc., inconsistent across browsers.)</span></p>
+      <p><span>Use tabs to break up related information within the same context. However, using tabs can present multiple challenges in responsive situations, especially in mobile-sized views.  These problems include inadequate horizontal space to display tab labels (especially when translated into multiple languages, where text width will be unknown), fluctuating content element heights (affecting layout as the tab changes), difficulty with internal scrolling of content, etc. Avoid where possible.  </span></p>
 
-<p><span>·<span></span></span><span>the form contains typeahead inputs that might be lost upon reload. </span></p>
+      <p><span>If tabs are necessary and present problems in smaller responsive views, display all content.  If the content is exceptionally long, maintain tab links as a menu of jump links and include a “Return to top” link back to the submenu.</span></p>
 
-<p><i><span style='line-height:115%;color:#333333'>Best Practices</span></i></p>
+      <h2><a name="_Toc12614088">Tooltips &amp; Popovers</a></h2>
 
-<p><span>·<span></span></span><span>Implement the same error styling to the elements as the user would see from a server-side validation.</span></p>
+      <p><span>Meta information, such as help text and input examples, may be supplied to the user via tooltips and popovers. Due to responsive requirements, using popovers poses logistical difficulties, but may be used judiciously. Length of text is the primary consideration for usage, but function also plays a role.</span></p> 
 
-<p><span>·<span></span></span><span>Validate on form on submit rather than on input. However, a multistep input, such as typeahead field, may be validated on value select for better interaction flow.</span></p>
+      <p><span>·<span></span></span><span>Use tooltips for short textual information attached to specific inline elements, like help for field inputs.  Tooltips should contain no more than 75 characters.</span></p>
 
-<p><span style='font-size:10.0pt;line-height:115%;font-family:Symbol'>·<span></span></span><span>Clear errors on re-validation. Depending on the input type, as in the case of password field, clearing the error on field change may be more helpful to the user.</span></p>
+      <p><span>·<span></span></span><span>Use a popover when providing stand-alone information, such as explanatory text or extra information of indeterminate length. For example, help that applies to an entire form (as opposed to a single element) could be contained in a popover. Popovers may also be preferred to dialogs in certain circumstances, such as upsell messages for page features.</span></p>
 
-<h3><a name="_Toc12614077">Success &amp; Error Handling</a></h3>
+      <p><span>Generally, tooltips and popover elements should behave in the same way:</span></p>
 
-<p><span>As described in the “Alert” section, indicate success by including a visual alert in the resulting view. This alert should be dismissible (it is not necessary to programmatically close the alert after a set period of time)<i>.</i></span></p>
+      <p><span>·<span></span></span><span>The trigger element that opens the element should also close it. That means that all triggers toggle to open and close (per guideline specifications, elements that perform no function other than that of a toggle should always be buttons, though those buttons may be styled to appear as links).</span></p>
 
-<p><span>When a view includes a form with error fields, an alert should be visible at the top of the view with a generic error message, such as “Please correct the input errors.” Do not list individual field errors in this message. Specify these errors by styling each invalid input. </span></p>
+      <p><span>·<span></span></span><span>In most cases, prefer triggers that open the component explicitly, rather than supplementally. For instance, do not automatically open a tooltip when a user focuses on an input field; provide a separate link to open the element.</span></p>
 
-<h2><a name="_Toc12614078">Image</a>s</h2>
+      <p><span>·<span></span></span><span>Because of touch requirements, trigger both components with click events rather than hover or mouseover. This will also aid accessibility and usability concerns by avoiding unintended display of information (inadvertent mouseovers).</span></p>
 
-<h3><a name="_Toc12614079">Responsive Images</a></h3>
+      <p><span>·<span></span></span><span>Opening a new popover or tooltip does not necessarily require closing other open elements of the same type.  Generally, open tooltips should probably be closed, while open popovers should remain open.</span></p>
 
-<p><span>HTML5 provides </span><span class=InlineCode><span><span>srcset</span></span></span><span style='line-height:115%'>, an attribute designed to deliver the optimal file for the viewport size of each specific device requesting an image. When specified, the browser determines the smallest (file size) image to download based on its resolution and element’s dimensions. </span></p>
+      <p><span>·<span></span></span><span>Popovers may also include a separate close button in the title bar.</span></p>
 
-<table cellspacing=0 cellpadding=0 hspace=0 vspace=0 align=left>
- <tr>
-  <td valign=top align=left style='padding-top:0in;padding-right:0in;
-  padding-bottom:0in;padding-left:0in'>
-  <div style='border:solid #EFEEF1 6.0pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;
-  background:#EFEEF1'>
-  <p class=Code>&lt;img src=&quot;small.jpg&quot; srcset=&quot;medium.jpg
-  1000w, large.jpg 2000w&quot; alt=&quot;yah&quot;&gt;</p>
-  </div>
-  </td>
- </tr>
-</table>
+      <h3><a name="_Toc12614089">Accessibility</a></h3>
 
-<p><span>For details on how to use </span><span class=InlineCode><span><span>srcset</span></span></span><span style='line-height:115%'> to deliver responsive images, see </span><a href="https://css-tricks.com/responsive-images-youre-just-changing-resolutions-use-srcset/"><span style='line-height:115%'>this article</span></a><span style='line-height:115%'>.  Note that IE 11 does not support the </span><span class=InlineCode><span><span>srcset</span></span></span><span style='line-height:115%'> attribute, so you may wish to use the desktop size version of the image as the </span><span class=InlineCode><span><span>src</span></span></span><span style='line-height:115%;font-family:Consolas;color:#4472C4'> </span><span style='line-height:115%'>attribute value where your audience browser usage indicates.</span></p>
+      <p>Include ARIA attributes in the trigger and display elements.</p>
 
-<p><span>When displaying images, it’s important to remember the largest version should be formatted for viewing across all viewport sizes. To ensure proper display, give the image a</span><span style='color:#4472C4'> </span><span class=InlineCode><span><span>max-width</span></span></span><span style='color:#4472C4'> </span><span style='color:#111111'>property of 100%. However, in some instances, including the max-width may not be enough. While it is always important to test views in multiple browser sizes, images may require more specific adjustments to responsive layouts than any other page element. In many frameworks, layout becomes liquid at specific viewport sizes (i.e. at &lt; 768px all sizing is based on percentage rather than specific pixel sizes). With a broad variety of sizes for small touch devices, be sure to test images thoroughly.</span></p>
+      <p><span>·<span></span></span>The element that serves as the popover/tooltip container has <span class=InlineCode><span><span>role</span></span></span><span class=InlineCode><span><span>=</span></span></span><span class=InlineCode><span><span>tooltip</span></span></span>.</p>
 
-<h3><a name="_Toc12614080">Image Sizing and Resolution</a></h3>
+      <p><span>·<span></span></span>The element that triggers the popover/tooltip references the popover/tooltip element with&nbsp;<span class=InlineCode><span><span>aria-describedby</span></span></span>.</p>
 
-<p><span style='background:aqua'>Images should display at the correct resolution for all types of screen resolutions</span><span>. Historically, images delivered to screens have required resolution of no more than 72ppi. However, with the advent of Retina and other high-resolution screens, resolutions have increased to 144+ppi. Unfortunately, most web file formats can only be saved as 72ppi and do not display crisply on high resolution screens in their native size.</span></p>
+    </article>
+  </main>
 
-<p><span>To address this problem, you will need to <b>create at least one version of the image at twice the maximum size it will appear within the site, and then use CSS styling to adjust dimensions to half its native size</b>. For instance, if you have an image that needs to be displayed at 100×50, then you should save the image at 200×100 and use height and width properties in display. </span></p>
-
-<p><span>It is important to recognize that <b>the largest display of an image size may not correspond to the largest media screen size</b>. This means that an image may actually display larger in mobile or tablet view than in desktop, depending on the page layout at each responsive break. Again, responsive testing is vital in ensuring the image displays crisply and responsively in all formats.</span></p>
-
-<p><span>Using </span><span class=InlineCode><span><span>srcset</span></span></span><span style='line-height:115%;font-family:Consolas;color:#4472C4'> </span><span style='line-height:115%;color:#111111'>to deliver responsive images means you should determine the largest display size as outlined above, and then make smaller versions of this image as well. Use the devices your analytics indicate to determine your target sizes or use an online tool, such as the </span><a href="https://www.responsivebreakpoints.com/"><span>Responsive Image Breakpoints Generator</span></a><span style='line-height:115%;color:#111111'>, to create a subset of images.</span></p>
-
-<h3><a name="_Toc12614081">Image File Formats</a></h3>
-
-<p><span>Because of high resolution proliferation, PNG formats will best serve your web collateral.  Consider indexed or 8-bit PNG format for illustrative images, rather than the full 24-bit resolution. Much like indexed GIF images, this lower bit-per-pixel display will have a considerably smaller file size. Larger photographic images will be better saved as JPGs to reduce delivery size. As noted below, always use a tool to optimize these images for maximum compression, as client-side auditors will penalize even the most diligently saved file.</span></p>
-
-<p><span>Save vector graphics as native SVG files. For instance, your application logo, which may use a custom font and be displayed in a variety of sizes and colors, could be implemented as an SVG image. If you believe an image may be suited for this type of display, also consider the cons, including rendering time and processing. The object implementation of SVG files with external CSS is the optimal implementation. For more information, see </span><a href="https://css-tricks.com/using-svg/">css-tricks.com</a><span style='line-height:115%;color:#111111'>.</span></p>
-
-<h3><a name="_Toc12614082">Image Optimization</a></h3>
-
-<p><span>As noted above, non-optimized, uncompressed images can be quite large in terms of file size and this can have an outsize effect in high network latency situations like cellular networks for mobile devices or even just browsers that are a long way from your data center. I.e. in China.</span></p>
-
-<p><span>It is critical to use proper tools and techniques to <span style='background:aqua'>fully optimize image formats </span>to reduce file size and then at as high a rate of lossy compression as is tolerable while still maintaining required image quality.  While it is possible to accomplish a good file size optimization in your image editor, there are many freely available tools on the web that make this easy; again, even highly optimized images may trip a penalty from auditing tools.  Online image processors for optimization include:</span></p>
-
-<p><span>·<span></span></span><span>Optimizilla at </span><a href="https://imagecompressor.com"><span style='line-height:115%'>https://imagecompressor.com</span></a><span style='line-height:115%'> makes fine-tuning images exceptionally easy.</span></p>
-
-<p><span>·<span></span></span><span>Google Page Speed offers downloadable files upon audit. </span><a href="https://developers.google.com/speed/pagespeed/insights/"><span style='line-height:115%'>https://developers.google.com/speed/pagespeed/insights/</span></a></p>
-
-<p><span>There are also ways to integrate image compression and optimization in version control systems so that it happens automatically on any new image that is introduced to the repo.  Cloudflare also provides a solution for optimizing image delivery.</span></p> 
-
-<h2><a name="_Toc12614083">Modals</a></h2>
-
-<p><span>The main purpose of modals is to allow for the completion of a secondary or sub-task without abandoning the initial or primary task completion. For instance, when a user performs a keyword or phrase search, they may save the search for future use. In order to maintain the current list of results, the save process occurs within a modal. Sub and secondary tasks performed in modal should comprise a limited number of steps and options, so not as to divert from the primary task completion.</span></p>
-
-<p><span>You may also use modals to alert users where </span><span>JavaScript</span><span style='color:#111111'> or AJAX transactions have processed in the background.  For example, imagine a registration form where a number of fields may be completed. Several validations may occur asynchronously on the email input; when errors or potential problems occur, a modal can be used to catch the attention of the user who have moved away from the field. In this case, the modal alerts the user to important information, interrupting their current task without entirely removing them from it.</span></p>
-
-<p><span>Finally, a modal may serve as a dialog in circumstances described in the “Confirmation Dialog” section.</span></p>
-
-<h3>Accessibility</h3>
-
-<p><span>·<span></span></span>If possible, modals should be able to be used by the keyboard alone.</p>
-
-<h2><a name="_Toc12614084">Tables</a></h2>
-
-<p><span>Tables should be used to display easily scanned and/or comparable data.</span></p>
-
-<h3><a name="_Toc12614085">Responsive Tables</a></h3>
-
-<p><span>Where tables are used in responsive design, ensure display in medium and small browser views by employing one or a combination of these methods:</span></p>
-
-<p><span>·<span></span></span><span>Using data-labels attributes in table cell tags, combined with media query CSS to transform each cell into a stacked row. Many versions and tutorials on this method are available, including </span><a href="https://allthingssmitty.com/2016/10/03/responsive-table-layout/"><span>this one by Matt Smith</span></a><span style='line-height:115%;color:#111111'>. (See link for a visual example of this
-method.)</span></p>
-
-<p><span>o</span><span>Pros: This method is widely supported and accommodates a lot of data legibly.</span></p>
-
-<p><span>o</span><span>Cons: By stacking the data, comparing cells
-becomes more difficult.</span></p>
-
-<p><span>·<span></span></span><span>Suppress less important columns where possible, allowing the remaining cells to fit comfortably in portrait mode on common mobile devices.</span></p>
-
-<p><span>o</span><span>Pros: Supports the original goal of the table, keeping the contents scannable and comparable.</span></p>
-
-<p><span>o</span><span>Cons: May eliminate useful information for the user. (In general, tables should not contain much information that is not necessary for the user. However, the circumstances under which the user uses a mobile device may change which pieces of information are more important.)</span></p>
-
-<p><span>·<span></span></span><span>Add horizontal scrolling to the table’s parent object, while including some visual indicator that more content is available beyond the current view screen. Indicator might be a visible horizonal scrollbar or a gradient overlay.</span></p>
-
-<p><span>o</span><span>Pros: Requires less coding and maintenance while displaying all the table data.</span></p>
-
-<p><span>o</span><span>Cons: Horizontal scrolling is not always touch-device friendly; users have a hard time maintaining a connection between identifying cells. Creating the visual indicator of “more” can also be unclear.</span></p>
-
-<h3><a name="_Toc12614086">Sorting</a></h3>
-
-<p><span>Prefer sorting by:</span></p>
-
-<p><span>·<span></span></span><span>select/dropdown element.</span></p>
-
-<p><span>·<span></span></span><span>table header ascending/descending.</span></p>
-
-<p>When tables are responsive and your audience may access your application using multiple devices, prefer sorting via dropdown rather than using table headers to maintain a consistent experience. This allows for sorting separate from the table itself, making all responsive options viable.</p> 
-
-<h3>Accessibility</h3>
-
-<p><span>·<span></span></span><span style='background:aqua'>Header cells should utilize the TH tag</span></p>
-
-<p><span>o</span>All header cells should contain text.  </p>
-
-<p><span>·<span></span></span><span style='background:aqua'>Data cells should utilize the TD tag</span></p>
-
-<p><span>&nbsp;</span></p>
-
-<h2><a name="_Toc12614087">Tabs</a></h2>
-
-<p><span>Use tabs to break up related information within the same context. However, using tabs can present multiple challenges in responsive situations, especially in mobile-sized views.  These problems include inadequate horizontal space to display tab labels (especially when translated into multiple languages, where text width will be unknown), fluctuating content element heights (affecting layout as the tab changes), difficulty with internal scrolling of content, etc. Avoid where possible.  </span></p>
-
-<p><span>If tabs are necessary and present problems in smaller responsive views, display all content.  If the content is exceptionally long, maintain tab links as a menu of jump links and include a “Return to top” link back to the submenu.</span></p>
-
-<h2><a name="_Toc12614088">Tooltips &amp; Popovers</a></h2>
-
-<p><span>Meta information, such as help text and input examples, may be supplied to the user via tooltips and popovers. Due to responsive requirements, using popovers poses logistical difficulties, but may be used judiciously. Length of text is the primary consideration for usage, but function also plays a role.</span></p> 
-
-<p><span>·<span></span></span><span>Use tooltips for short textual information attached to specific inline elements, like help for field inputs.  Tooltips should contain no more than 75 characters.</span></p>
-
-<p><span>·<span></span></span><span>Use a popover when providing stand-alone information, such as explanatory text or extra information of indeterminate length. For example, help that applies to an entire form (as opposed to a single element) could be contained in a popover. Popovers may also be preferred to dialogs in certain circumstances, such as upsell messages for page features.</span></p>
-
-<p><span>Generally, tooltips and popover elements should behave in the same way:</span></p>
-
-<p><span>·<span></span></span><span>The trigger element that opens the element should also close it. That means that all triggers toggle to open and close (per guideline specifications, elements that perform no function other than that of a toggle should always be buttons, though those buttons may be styled to appear as links).</span></p>
-
-<p><span>·<span></span></span><span>In most cases, prefer triggers that open the component explicitly, rather than supplementally. For instance, do not automatically open a tooltip when a user focuses on an input field; provide a separate link to open the element.</span></p>
-
-<p><span>·<span></span></span><span>Because of touch requirements, trigger both components with click events rather than hover or mouseover. This will also aid accessibility and usability concerns by avoiding unintended display of information (inadvertent mouseovers).</span></p>
-
-<p><span>·<span></span></span><span>Opening a new popover or tooltip does not necessarily require closing other open elements of the same type.  Generally, open tooltips should probably be closed, while open popovers should remain open.</span></p>
-
-<p><span>·<span></span></span><span>Popovers may also include a separate close button in the title bar.</span></p>
-
-<h3><a name="_Toc12614089">Accessibility</a></h3>
-
-<p>Include ARIA attributes in the trigger and display elements.</p>
-
-<p><span>·<span></span></span>The element that serves as the popover/tooltip container has <span class=InlineCode><span><span>role</span></span></span><span class=InlineCode><span><span>=</span></span></span><span class=InlineCode><span><span>tooltip</span></span></span>.</p>
-
-<p><span>·<span></span></span>The element that triggers the popover/tooltip references the popover/tooltip element with&nbsp;<span class=InlineCode><span><span>aria-describedby</span></span></span>.</p>
-
+      
 </body>
 
 </html>

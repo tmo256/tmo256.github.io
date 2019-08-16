@@ -1,0 +1,57 @@
+html,body
+{
+  height: 100%;
+}
+
+body
+{
+  color: #333;
+  display: grid;
+  font-family: "Segoe UI","Helvetica Neue",sans-serif; font-weight: 400;
+  font-size: 100%;
+  height: 100%;
+  line-height: 1.45;
+  margin: 0;
+}
+
+* 
+{
+  box-sizing: border-box;
+}
+
+header
+{
+  padding-left: 300px;
+}
+
+main
+{
+  display: flex;
+  justify-content: stretch;
+  padding-left: 300px;
+  padding-right: 1rem;
+}
+
+nav
+{
+  background-color: #efefef;
+  left: 0;
+  height: 100%;
+  overflow-y: auto;
+  padding: 1rem;
+  position: fixed;
+  top: auto;
+  width: 275px;
+}
+
+nav>ul
+{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li
+{
+  padding: .325em 0;
+}
