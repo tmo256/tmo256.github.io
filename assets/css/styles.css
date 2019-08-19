@@ -116,3 +116,9 @@ a:visited.block:hover {
   background-color: red;
   color: white;
 }
+.ul-ui .divider {
+  margin: 2.441em 0;
+  height: 1px;
+  width: 100%;
+  background-color: #939598;
+}
