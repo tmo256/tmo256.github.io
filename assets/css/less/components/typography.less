@@ -1,10 +1,18 @@
-// out: ../../css/components/typography.css
+// out: ../../components/typography.css
 
 @import "../variables";
 
-/*******************************
-            Header
-*******************************/
+p:last-child {
+    margin-bottom: 0;
+}
+
+p:first-child {
+    margin-top: 0;
+}
+p {
+    margin: 0 0 1em;
+    line-height: 1.4285em;
+}
 
 
 /*--------------
@@ -61,7 +69,9 @@ h5.ul-ui.header {
 /* Content Sub Header */
 
 h1.ul-ui.header .sub.header {
-    font-size: @xsm;
+    font-size: @xxsm;
+    line-height: @lg;
+    margin-top: @sm;
 }
 
 h2.ul-ui.header .sub.header {
