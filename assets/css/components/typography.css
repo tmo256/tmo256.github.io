@@ -12,9 +12,16 @@
 /*---------------------*/
 /*---------------------*/
 /*---------------------*/
-/*******************************
-            Header
-*******************************/
+p:last-child {
+  margin-bottom: 0;
+}
+p:first-child {
+  margin-top: 0;
+}
+p {
+  margin: 0 0 1em;
+  line-height: 1.4285em;
+}
 /*--------------
      Page
 ---------------*/
@@ -37,6 +44,24 @@ h5 {
 /*--------------
      Content
 ---------------*/
+.ul-ui.header:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
+  font-size: 1.25em;
+}
+.ul-ui.header {
+  border: none;
+  margin: calc(1.85714286rem) 0 1rem;
+  padding: 0 0;
+  font-weight: 700;
+  line-height: 1.28571429em;
+  text-transform: none;
+  color: rgba(0, 0, 0, 0.87);
+}
+.ul-ui.header:first-child {
+  margin-top: -0.14285714em;
+}
+.ul-ui.header:last-child {
+  margin-bottom: 0;
+}
 h1.ul-ui.header {
   font-size: 2.441em;
 }
