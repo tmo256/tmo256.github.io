@@ -79,7 +79,9 @@ h5.ul-ui.header {
 }
 /* Content Sub Header */
 h1.ul-ui.header .sub.header {
-  font-size: 0.64em;
+  font-size: 0.512em;
+  line-height: 1.563em;
+  margin-top: 0.8em;
 }
 h2.ul-ui.header .sub.header {
   font-size: 0.8em;
