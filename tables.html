@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<!-- specify language: http://www.w3.org/TR/html401/struct/dirlang.html#h-8.1 -->
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>UL UI/UX Boilerplate</title>
+    <!-- meta tags for description and keywords if needed -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- specify viewport: https://developers.google.com/speed/docs/insights/ConfigureViewport -->
+    <!-- favicon.ico and apple-touch-icon(s) in the root directory -->
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,600,700" rel="stylesheet">
+
+    <!-- stylesheets here; concate/minified for production -->
+    <link href="assets/css/normalize.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/site-cssgrid.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/styles.css" rel="stylesheet" type="text/css">
+
+    <script src="https://kit.fontawesome.com/ff07333570.js"></script>
+</head>
+
+<body>
+    <main role="main" tabindex="-1">
+        <div class="ul-ui container example toc open">
+            <h1 class="ul-ui dividing header">Tables</h1>
+            <p>
+                Tables should be used to display easily scanned and/or comparable data.
+            </p>
+
+            
+            <!-- =================== SECTION =================== -->
+            <div class='divider'></div>
+            <h3 id="rt-a">Responsive Tables</h3>
+            <p>
+                Where tables are used in responsive design, ensure display in medium and small browser views by employing one or a combination of these methods:
+            </p>
+            <div class='ul-ui bulleted list'>
+            <div class='item'>
+                <p>
+                    Using data-labels attributes in table cell tags, combined with media query CSS to transform each
+                    cell into a stacked row. Many versions and tutorials on this method are available, including this
+                    one by Matt Smith. (See link for a visual example of this method.)
+                </p>
+            </div>
+            <div class='item'>
+                <p>
+                    Pros: This method is widely supported and accommodates a lot of data legibly.
+                </p>
+            </div>
+            <div class='item'>
+                <p>
+                    Cons: By stacking the data, comparing cells becomes more difficult.
+                </p>
+
+            </div>
+            <div class='item'>
+                <p>
+                    Suppress less important columns where possible, allowing the remaining cells to fit comfortably in
+                    portrait mode on common mobile devices.
+                </p>
+            </div>
+            <div class='item'>
+                <p>
+                    Pros: Supports the original goal of the table, keeping the contents scannable and comparable.
+                </p>
+
+            </div>
+            <div class='item'>
+                <p>
+                    Cons: May eliminate useful information for the user. (In general, tables should not contain much
+                    information that is not necessary for the user. However, the circumstances under which the user uses
+                    a mobile device may change which pieces of information are more important.)
+                </p>
+            </div>
+            <div class='item'>
+                <p>
+                    Add horizontal scrolling to the table’s parent object, while including some visual indicator that
+                    more content is available beyond the current view screen. Indicator might be a visible horizonal
+                    scrollbar or a gradient overlay.
+                </p>
+            </div>
+            <div class='item'>
+                <p>
+                    Pros: Requires less coding and maintenance while displaying all the table data.
+                </p>
+            </div>
+            <div class='item'>
+                <p>
+                    Cons: Horizontal scrolling is not always touch-device friendly; users have a hard time maintaining a
+                    connection between identifying cells. Creating the visual indicator of “more” can also be unclear.
+                </p>
+
+            </div>
+            </div>
+
+            
+            <!-- =================== SECTION =================== -->
+            <div class='divider'></div>
+            <h3 id="sort-a">Sorting</h3>
+            <p>
+                Prefer sorting by:
+            </p>
+            <div class='ul-ui bulleted list'>
+            <div class='item'>select/dropdown element.</div>
+            <div class='item'>table header ascending/descending.</div>
+            </div>
+
+            
+            <!-- =================== SECTION =================== -->
+            <div class='divider'></div>
+            <h3 id="tacc-a">Accessibility</h3>
+            <div class='ul-ui bulleted list'>
+            <div class='item'>Header cells should utilize the TH tag</div>
+            <div class='item'>All header cells should contain text. </div>
+            <div class='item'>Data cells should utilize the TD tag</div>
+            </div>
+
+<!-- =================== END =================== -->            
+        </div>
+
+        <article></article>
+    </main>
+
+    <footer role="contentinfo">
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+    <script src="assets/js/toc.js"></script>
+    <script>
+        // Fpr example only
+        setTimeout(function () {
+            $("#tables").addClass("active");
+        }, 300);
+    </script>
+</body>
+
+</html>

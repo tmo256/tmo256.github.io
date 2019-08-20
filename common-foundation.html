@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<!-- specify language: http://www.w3.org/TR/html401/struct/dirlang.html#h-8.1 -->
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>UL UI/UX Boilerplate</title>
+    <!-- meta tags for description and keywords if needed -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- specify viewport: https://developers.google.com/speed/docs/insights/ConfigureViewport -->
+    <!-- favicon.ico and apple-touch-icon(s) in the root directory -->
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,600,700" rel="stylesheet">
+
+    <!-- stylesheets here; concate/minified for production -->
+    <link href="assets/css/normalize.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/site-cssgrid.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/styles.css" rel="stylesheet" type="text/css">
+
+    <script src="https://kit.fontawesome.com/ff07333570.js"></script>
+</head>
+
+<body>
+    <main role="main" tabindex="-1">
+        <div class="ul-ui container example toc open">
+            <h1 class="ul-ui dividing header">Common Foundation</h1>
+            <p>
+                Implementing the common foundation in an application will accomplish 80% of a common look and should
+                (and is intended to) be able to be accomplished quickly.
+            </p>
+            <div class='ul-ui bulleted list'>
+                <div class='item'>
+                    <p>
+                        Header color and UL logo. UL red header is preferred but for historical / persona reasons other
+                        choices are acceptable- Good Guide, for example, serves an entirely different persona from what
+                        is more typical for other UL apps.
+                    </p>
+                </div>
+                <div class='item'>
+                    <p>
+                        Footer color. Dark grey, common link styles and elements (copyright, etc.) where possible.
+                    </p>
+                </div>
+                <div class='item'>
+                    <p>
+                        Font: Adopt Open Sans for headers at minimum.
+                    </p>
+                </div>
+                <div class='item'>
+                    <p>
+                        Icons: font awesome (there is some cost associated with this).
+                    </p>
+                </div>
+                <div class='item'>
+                    <p>
+                        Button styles: Padding / border radius, shape, border, shadow, mouseovers (transitions, relative
+                        lightness/brightness). Not necessary, color or typography.
+                    </p>
+                </div>
+            </div>
+        </div>
+    
+    <article></article>
+</main>
+
+<footer role="contentinfo">
+</footer>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+<script src="assets/js/toc.js"></script>
+    <script>
+    // Fpr example only
+setTimeout(function(){
+    $("#cf").addClass("active");
+},300);
+</script>
+</body>
+
+</html>

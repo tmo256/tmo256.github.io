@@ -1,4 +1,17 @@
-
+/*******************************
+            Spacing & Fonts
+*******************************/
+/*******************************
+            Colors
+*******************************/
+/*---------------------*/
+/*---------------------*/
+/*---------------------*/
+/*---------------------*/
+/*---------------------*/
+/*---------------------*/
+/*---------------------*/
+/*---------------------*/
 /*--------------
     Loading
 ---------------*/
@@ -315,7 +328,7 @@ i.icons .corner.icon {
   -webkit-transform: none;
   transform: none;
   font-size: 0.45em;
-  text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
+  text-shadow: -1px -1px 0 #FFFFFF, 1px -1px 0 #FFFFFF, -1px 1px 0 #FFFFFF, 1px 1px 0 #FFFFFF;
 }
 i.icons .top.right.corner.icon {
   top: 0;

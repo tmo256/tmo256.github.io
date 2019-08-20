@@ -1,4 +1,4 @@
-// out: ../../css/components/list.css
+// out: ../../components/list.css
 
 @import "../variables";
 
@@ -9,7 +9,7 @@
 .ul-ui.list {
   list-style-type: none;
   margin: @base 0em;
-  padding: 0em 0em;
+  padding: @xsm;
 }
 .ul-ui.list:first-child {
   margin-top: 0em;
@@ -355,6 +355,7 @@
 .ul-ui.bulleted.list .list > .item,
 .ul-ui.bulleted.list > .item {
   position: relative;
+  margin-bottom: 10px;
 }
 .ul-ui.bulleted.list .list > .item:before,
 .ul-ui.bulleted.list > .item:before {

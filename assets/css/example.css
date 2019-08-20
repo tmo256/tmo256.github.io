@@ -8,7 +8,9 @@
     overflow: auto;
 }
 .ul-ui.container.example.open {
-    padding-left: 240px;
+    padding-left: 280px;
+    padding-right: 30px;
+    padding-bottom: 40px;
 }
 .ul-ui.container.example.right.rail {
     padding-right: 280px;
@@ -17,13 +19,14 @@
 }
 
 .example.toc {
-    width: 200px;
+    width: 15em;
     background-color: #fff;
     position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
-    padding: 5px 20px 20px 20px;
+    overflow-x: scroll;
+    height: 100%;
 }
 .example.right.rail {
     position: fixed;
