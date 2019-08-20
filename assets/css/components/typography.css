@@ -25,6 +25,16 @@ p {
 /*--------------
      Page
 ---------------*/
+p:last-child {
+  margin-bottom: 0;
+}
+p:first-child {
+  margin-top: 0;
+}
+p {
+  margin: 0 0 1em;
+  line-height: 1.4285em;
+}
 h1 {
   min-height: 1em;
   font-size: 2.441em;
@@ -55,9 +65,9 @@ h5 {
   text-transform: none;
   color: rgba(0, 0, 0, 0.87);
 }
-.ul-ui.header:first-child {
+/* .ul-ui.header:first-child {
   margin-top: -0.14285714em;
-}
+} */
 .ul-ui.header:last-child {
   margin-bottom: 0;
 }

@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<!-- specify language: http://www.w3.org/TR/html401/struct/dirlang.html#h-8.1 -->
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>UL UI/UX Boilerplate</title>
+    <!-- meta tags for description and keywords if needed -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- specify viewport: https://developers.google.com/speed/docs/insights/ConfigureViewport -->
+    <!-- favicon.ico and apple-touch-icon(s) in the root directory -->
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,600,700" rel="stylesheet">
+
+    <!-- stylesheets here; concate/minified for production -->
+    <link href="assets/css/normalize.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/site-cssgrid.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/styles.css" rel="stylesheet" type="text/css">
+
+    <script src="https://kit.fontawesome.com/ff07333570.js"></script>
+</head>
+
+<body>
+    <main role="main" tabindex="-1">
+        <div class="ul-ui container example toc open">
+            <h1 class="ul-ui dividing header">Modals</h1>
+            <p>
+                The main purpose of modals is to allow for the completion of a secondary or sub-task without abandoning
+                the initial or primary task completion. For instance, when a user performs a keyword or phrase search,
+                they may save the search for future use. In order to maintain the current list of results, the save
+                process occurs within a modal. Sub and secondary tasks performed in modal should comprise a limited
+                number of steps and options, so not as to divert from the primary task completion.
+            </p>
+
+            <p>
+                You may also use modals to alert users where JavaScript or AJAX transactions have processed in the
+                background. For example, imagine a registration form where a number of fields may be completed. Several
+                validations may occur asynchronously on the email input; when errors or potential problems occur, a
+                modal can be used to catch the attention of the user who have moved away from the field. In this case,
+                the modal alerts the user to important information, interrupting their current task without entirely
+                removing them from it.
+            </p>
+
+            <p>
+                Finally, a modal may serve as a dialog in circumstances described in the “Confirmation Dialog” section.
+            </p>
+
+            
+            <!-- =================== SECTION =================== -->
+            <div class='divider'></div>
+            <h3 id="Accessibility"></h3>
+            <p>
+                If possible, modals should be able to be used by the keyboard alone.
+            </p>
+        </div>
+
+        <article></article>
+    </main>
+
+    <footer role="contentinfo">
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+    <script src="assets/js/toc.js"></script>
+    <script>
+        // Fpr example only
+        setTimeout(function () {
+            $("#modals").addClass("active");
+        }, 300);
+    </script>
+</body>
+
+</html>

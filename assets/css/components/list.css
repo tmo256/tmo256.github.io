@@ -18,7 +18,7 @@
 .ul-ui.list {
   list-style-type: none;
   margin: 1em 0em;
-  padding: 0em 0em;
+  padding: 0.64em;
 }
 .ul-ui.list:first-child {
   margin-top: 0em;
@@ -95,6 +95,7 @@
 .ul-ui.list > .item .header {
   display: block;
   margin: 0.512em 0;
+  margin: 0.2em 0;
   font-weight: 600;
   color: #444444;
 }
@@ -330,6 +331,7 @@
 .ul-ui.bulleted.list .list > .item,
 .ul-ui.bulleted.list > .item {
   position: relative;
+  margin-bottom: 10px;
 }
 .ul-ui.bulleted.list .list > .item:before,
 .ul-ui.bulleted.list > .item:before {

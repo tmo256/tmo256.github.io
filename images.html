@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<!-- specify language: http://www.w3.org/TR/html401/struct/dirlang.html#h-8.1 -->
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>UL UI/UX Boilerplate</title>
+    <!-- meta tags for description and keywords if needed -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- specify viewport: https://developers.google.com/speed/docs/insights/ConfigureViewport -->
+    <!-- favicon.ico and apple-touch-icon(s) in the root directory -->
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,600,700" rel="stylesheet">
+
+    <!-- stylesheets here; concate/minified for production -->
+    <link href="assets/css/normalize.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/site-cssgrid.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/styles.css" rel="stylesheet" type="text/css">
+
+    <script src="https://kit.fontawesome.com/ff07333570.js"></script>
+</head>
+
+<body>
+    <main role="main" tabindex="-1">
+        <div class="ul-ui container example toc open">
+            <h1 class="ul-ui dividing header">Images</h1>
+            <h3 id="resi-a">Responsive Images</h3>
+            <p>
+                HTML5 provides srcset, an attribute designed to deliver the optimal file for the viewport size of each
+                specific device requesting an image. When specified, the browser determines the smallest (file size)
+                image to download based on its resolution and element’s dimensions.
+            </p>
+            <table style="display:block; width:100%; margin-bottom: 10px;" cellspacing="0" cellpadding="0" hspace="0"
+                vspace="0" align="left">
+                <tbody>
+                    <tr>
+                        <td valign="top" align="left" style="padding-top:0in;padding-right:0in;
+                     padding-bottom:0in;padding-left:0in; display: block;">
+                            <div style="border:solid #fff 6.0pt;padding:20px;
+                     background:#fff">
+                                <p class="Code">&lt;img src="small.jpg" srcset="medium.jpg
+                                    1000w, large.jpg 2000w" alt="yah"&gt;</p>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p><span>For details on how to use </span><span
+                    class="InlineCode"><span><span>srcset</span></span></span><span style="line-height:115%"> to deliver
+                    responsive images, see </span><a
+                    href="https://css-tricks.com/responsive-images-youre-just-changing-resolutions-use-srcset/"><span
+                        style="line-height:115%">this article</span></a><span style="line-height:115%">. Note that IE 11
+                    does not support the </span><span class="InlineCode"><span><span>srcset</span></span></span><span
+                    style="line-height:115%"> attribute, so you may wish to use the desktop size version of the image as
+                    the </span><span class="InlineCode"><span><span>src</span></span></span><span
+                    style="line-height:115%;font-family:Consolas;color:#4472C4"> </span><span
+                    style="line-height:115%">attribute value where your audience browser usage indicates.</span></p>
+            <p>
+                When displaying images, it’s important to remember the largest version should be formatted for viewing
+                across all viewport sizes. To ensure proper display, give the image a max-width property of 100%.
+                However, in some instances, including the max-width may not be enough. While it is always important to
+                test views in multiple browser sizes, images may require more specific adjustments to responsive layouts
+                than any other page element. In many frameworks, layout becomes liquid at specific viewport sizes (i.e.
+                at 768px all sizing is based on percentage rather than specific pixel sizes). With a broad variety of
+                sizes for small touch devices, be sure to test images thoroughly. </p>
+
+
+
+            <!-- =================== SECTION =================== -->
+            <div class='divider'></div>
+            <h3 id="sr-a">Image Sizing and Resolution</h3>
+            <p>
+                Images should display at the correct resolution for all types of screen resolutions. Historically,
+                images delivered to screens have required resolution of no more than 72ppi. However, with the advent of
+                Retina and other high-resolution screens, resolutions have increased to 144+ppi. Unfortunately, most web
+                file formats can only be saved as 72ppi and do not display crisply on high resolution screens in their
+                native size.
+            </p>
+
+            <p>
+                To address this problem, you will need to create at least one version of the image at twice the maximum
+                size it will appear within the site, and then use CSS styling to adjust dimensions to half its native
+                size. For instance, if you have an image that needs to be displayed at 100×50, then you should save the
+                image at 200×100 and use height and width properties in display.
+            </p>
+
+            <p>
+                It is important to recognize that the largest display of an image size may not correspond to the largest
+                media screen size. This means that an image may actually display larger in mobile or tablet view than in
+                desktop, depending on the page layout at each responsive break. Again, responsive testing is vital in
+                ensuring the image displays crisply and responsively in all formats.
+            </p>
+            <p><span>Using </span><span class="InlineCode"><span><span>srcset</span></span></span><span
+                    style="line-height:115%;font-family:Consolas;color:#4472C4"> </span><span
+                    style="line-height:115%;color:#111111">to deliver responsive images means you should determine the
+                    largest display size as outlined above, and then make smaller versions of this image as well. Use
+                    the devices your analytics indicate to determine your target sizes or use an online tool, such as
+                    the </span><a href="https://www.responsivebreakpoints.com/"><span>Responsive Image Breakpoints
+                        Generator</span></a><span style="line-height:115%;color:#111111">, to create a subset of
+                    images.</span></p>
+
+
+            <!-- =================== SECTION =================== -->
+            <div class='divider'></div>
+            <h3 id="ff-a">Image File Formats</h3>
+            <p>
+                Because of high resolution proliferation, PNG formats will best serve your web collateral. Consider
+                indexed or 8-bit PNG format for illustrative images, rather than the full 24-bit resolution. Much like
+                indexed GIF images, this lower bit-per-pixel display will have a considerably smaller file size. Larger
+                photographic images will be better saved as JPGs to reduce delivery size. As noted below, always use a
+                tool to optimize these images for maximum compression, as client-side auditors will penalize even the
+                most diligently saved file.
+            </p>
+            <p><span>Save vector graphics as native SVG files. For instance, your application logo, which may use a
+                    custom font and be displayed in a variety of sizes and colors, could be implemented as an SVG image.
+                    If you believe an image may be suited for this type of display, also consider the cons, including
+                    rendering time and processing. The object implementation of SVG files with external CSS is the
+                    optimal implementation. For more information, see </span><a
+                    href="https://css-tricks.com/using-svg/">css-tricks.com</a><span
+                    style="line-height:115%;color:#111111">.</span></p>
+            
+            
+            <!-- =================== SECTION =================== -->
+            <div class='divider'></div>
+            <h3 id="opt-a">Image Optimization</h3>
+            <p>
+                As noted above, non-optimized, uncompressed images can be quite large in terms of file size and this can
+                have an outsize effect in high network latency situations like cellular networks for mobile devices or
+                even just browsers that are a long way from your data center. I.e. in China.
+            </p>
+
+            <p>
+                It is critical to use proper tools and techniques to fully optimize image formats to reduce file size
+                and then at as high a rate of lossy compression as is tolerable while still maintaining required image
+                quality. While it is possible to accomplish a good file size optimization in your image editor, there
+                are many freely available tools on the web that make this easy; again, even highly optimized images may
+                trip a penalty from auditing tools. Online image processors for optimization include:
+            </p>
+
+            <div class='ul-ui bulleted list'>
+            <div class='item'>
+                <p><span>·<span></span></span><span>Optimizilla at </span><a href="https://imagecompressor.com"><span
+                            style="line-height:115%">https://imagecompressor.com</span></a><span
+                        style="line-height:115%"> makes fine-tuning images exceptionally easy.</span></p>
+            </div>
+            <div class='item'>
+                <p><span>·<span></span></span><span>Google Page Speed offers downloadable files upon audit. </span><a
+                        href="https://developers.google.com/speed/pagespeed/insights/"><span
+                            style="line-height:115%">https://developers.google.com/speed/pagespeed/insights/</span></a>
+                </p>
+            </div>
+            </div>
+            <p>
+                There are also ways to integrate image compression and optimization in version control systems so that
+                it happens automatically on any new image that is introduced to the repo. Cloudflare also provides a
+                solution for optimizing image delivery.
+            </p>
+
+            <!-- =================== END =================== -->
+        </div>
+
+        <article> </article>
+    </main>
+
+    <footer role="contentinfo">
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+    <script src="assets/js/toc.js"></script>
+    <script>
+        // Fpr example only
+        setTimeout(function () {
+            $("#images").addClass("active");
+        }, 300);
+    </script>
+</body>
+
+</html>

@@ -25,13 +25,52 @@
 </head>
 <main role="main" tabindex="-1">
     <div class="ul-ui container example toc open">
-        <h1 class="ul-ui dividing header">Anchors &amp; Buttons
-            <div class="sub header">The guidelines below describe usage and styling of button and anchor elements. See
-                “Forms” for specific uses within the context of a form.
-            </div>
-        </h1>
+        <h1 class="ul-ui dividing header">Component Library</h1>
+        <p>
+            This section contains common components used by web applications with a rational for when and why they
+            should be used. It is not intended to be comprehensive.
+        </p>
 
-        <h3>Buttons: Coding</h3>
+
+        <!-- =================== SECTION =================== -->
+        <div class='divider'></div>
+        <h3 id="ale-a">Alerts</h3>
+        <p>
+            Use an alert to implement notices of success or failure for a persistence action (i.e. form submit). On a
+            full-page view, these notices should fall in a consistent position from page to page; for example, directly
+            beneath the main page title or the page lead text. If an alert message appears within a modal window, the
+            alert should be prepended as the first element the modal content, in general (though specific layouts may
+            require a modified implementation).
+        </p>
+
+        <p>
+            Where the alert is a direct result of an action by the user, the alert should have a dismissible option
+            (close button). In other circumstances, alerts may be used to provide help text or other notices, and these
+            elements should not include a close button.
+        </p>
+
+
+        <!-- =================== SECTION =================== -->
+        <div class='divider'></div>
+        <h3 id="acce-a">Accessibility</h3>
+
+        <div class='ul-ui bulleted list'>
+            <div class='item'><p>
+                For a time-sensitive alert, use ARIA role='alert'.
+            </p></div>
+            <div class='item'><p>For an alert that is not time-sensitive but that contains an important prompt or piece of
+            information for the user, use ARIA role='alertdialog'. (The definition of the ARIA role='dialog' is: “an
+            application window that is designed to interrupt the current processing of an application in order to
+            prompt the user to enter information or require a response”).</p></div>
+            <div class='item'><p>Alerts should not be visually hidden if they are not being used. If you do not want a
+            screen reader to pick up an alert, use the aria-hidden='true' HTML attribute and/or display: none in
+            your CSS.</p></div>
+        </div>
+
+
+        <!-- =================== SECTION =================== -->
+        <div class='divider'></div>
+        <h3 id="butc-a">Buttons: Coding</h3>
         <p>
             Use a button element to trigger any JavaScript function that does not use a URL. Basically, instead of using
             an a tag with an href="Javascript:void(0)", or href="#", use a button element. If the user can open a
@@ -52,9 +91,12 @@
                 submit. Safari, Chrome and other browsers treat button elements as submit tags when nested in forms.
             </p>
         </div>
-<div class="ul-ui divider"></div>
 
-        <h3>Buttons: Styling</h3>
+
+        <!-- =================== SECTION =================== -->
+        <div class="ul-ui divider"></div>
+        <h3 id="buts-a">Buttons: Styling</h3>
+
         <p>
             As noted, button elements may be styled to appear as either buttons or as links, depending on their
             conceptual use.
@@ -80,9 +122,11 @@
         <a href="#" class="ul-ui button">As an a tag</a>
         <a href="#">a text link</a>
 
-        <div class="ul-ui divider"></div>
 
-        <h3>Buttons: Responsiveness</h3>
+        <!-- =================== SECTION =================== -->
+        <div class="ul-ui divider"></div>
+        <h3 id="butr-a">Buttons: Responsiveness</h3>
+
         <p>In most circumstances, elements styled as buttons should become block elements in medium and smaller
             viewports in order to accommodate touch behavior; the exception to this rule might be for “Next” and
             “Previous” buttons. Be sure to create adequate spacing and padding to allow all users to use your
@@ -108,9 +152,11 @@
         </button>
         <button class="fluid ul-ui button">Fits container</button>
 
-        <div class="ul-ui divider"></div>
 
-        <h3>Buttons: Usability</h3>
+        <!-- =================== SECTION =================== -->
+        <div class="ul-ui divider"></div>
+        <h3 id="butu-a">Buttons: Usability</h3>
+
         <div class="ul-ui bulleted list">
             <div class="item">
                 <p>Use sentence case for button labels.</p>
@@ -149,9 +195,11 @@
             </div>
         </div>
 
-        <div class="ul-ui divider"></div>
 
-        <h3>Anchors: Coding</h3>
+        <!-- =================== SECTION =================== -->
+        <div class="ul-ui divider"></div>
+        <h3 id="anc-a">Anchors: Coding</h3>
+
         <p>Whenever an element uses a URL or in-page navigation, use an anchor tag. This includes:</p>
         <div class="ul-ui bulleted list">
             <div class="item">
@@ -188,9 +236,11 @@
             </p>
         </div>
 
-        <div class="ul-ui divider"></div>
 
-        <h3>Anchors: Styling</h3>
+        <!-- =================== SECTION =================== -->
+        <div class="ul-ui divider"></div>
+        <h3 id="ancs-a">Anchors: Styling</h3>
+        
         <p>
             Inline anchor style should use standard body font family and size, line height, etc,
             and, by default, an underline (text-decoration) to indicate a link to the user. This
@@ -214,51 +264,52 @@
         <p><a href="#">Here are a few</a> <a href="#">linked text items</a> <a href="#">in a row.</a>
         </p>
 
-        <div class="ul-ui divider"></div>
-
-        <h3>Input Submits</h3>
+        
+        <!-- =================== SECTION =================== -->
+        <div class='divider'></div>
+        <h3 id="is-a">Input / Submits</h3>
         <p>
             Use styling described in the “Buttons: Styling” and “Buttons: Usability” sections.
         </p>
-        <p>
-            Where possible, submit a form using input type="submit".
-        </p>
-        <p>
-            As noted in “Forms”, attach any validation or pre-processing to the submit event for
-            forms rather than click events on these elements. This will enable the use of the submit
-            button, as well as ensure that submission by using the “Return” key or by assistive
-            technology software will always execute the required JavaScript.
-        </p>
+        <div class='ul-ui bulleted list'>
+            <div class='item'>Where possible, submit a form using input type="submit".</div>
+            <div class='item'>As noted in “Forms”, attach any validation or pre-processing to the submit event for forms
+                rather than click events on these elements. This will enable the use of the submit button, as well as
+                ensure that submission by using the “Return” key or by assistive technology software will always execute
+                the required JavaScript.</div>
+        </div>
 
-        <div class="ul-ui divider"></div>
 
-        <h3>Other Cases</h3>
+        <!-- =================== SECTION =================== -->
+        <div class='divider'></div>
+        <h3 id="otc-a">Other Cases</h3>
         <p>
-            n addition to the cases noted above (primarily buttons that trigger JavaScript functions), buttons may be
+            In addition to the cases noted above (primarily buttons that trigger JavaScript functions), buttons may be
             styled as links or vice versa.
         </p>
-        <div class="ul-ui bulleted list">
-            <div class="item">
-                <p>
-                    All elements in an “Action” table cell should appear to the user to be links. The actions may be a
-                    mix of regular anchor tags, such as an anchor link to “Edit;” buttons, such as a confirmation modal
-                    triggered for a delete; or a submit button, as when submitting a form to make a saved search an
-                    alert.
-                </p>
-            </div>
-            <div class="item">
-                <p>
-                        Regular anchors may be styled as buttons for an extraordinary or analogous call to action, such as
-                        “Registration” links.
-                </p>>
-            </div>
-            <div class="item">
-                <p>
-                        Where a mix of form submit and anchor elements should be viewed as siblings of equal
-                        importance, be consistent in displaying each element as either buttons or links.
-                </p>
-            </div>
+        <div class='ul-ui bulleted list'>
+            <div class='item'>All elements in an “Action” table cell should appear to the user to be links. The actions
+                may be a mix of regular anchor tags, such as an anchor link to “Edit;” buttons, such as a confirmation
+                modal triggered for a delete; or a submit button, as when submitting a form to make a saved search an
+                alert.</div>
+            <div class='item'>Regular anchors may be styled as buttons for an extraordinary or analogous call to action,
+                such as “Registration” links.</div>
+            <div class='item'>Where a mix of form submit and anchor elements should be viewed as siblings of equal
+                importance, be consistent in displaying each element as either buttons or links.</div>
         </div>
+
+
+        <!-- =================== SECTION =================== -->
+        <div class='divider'></div>
+        <h3 id="cond-a">Confirmation Dialogs</h3>
+        <p>
+            Use a confirmation dialog to confirm a process or persistence that cannot be easily undone or recreated; or,
+            to confirm data persistence where the user may not be aware that persistence is about to occur (form inputs
+            are not visible, for example). Most commonly, use this type of dialog when deleting or removing items. The
+            dialog should interrupt the process to the point that the action cannot complete without explicit input
+            (e.g., button click) from the user.
+        </p>
+
 
     </div>
     <article></article>
@@ -272,7 +323,7 @@
 <script>
     // Fpr example only
     setTimeout(function () {
-        $("#buttons").addClass("active");
+        $("#components").addClass("active");
     }, 100);
 </script>
 </body>

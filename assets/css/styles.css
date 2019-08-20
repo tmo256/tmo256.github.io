@@ -19,8 +19,6 @@
 @import "components/list.css";
 @import "components/image.css";
 @import "components/menu.css";
-@import "components/tab.css";
-@import "components/card.css";
 @import "example.css";
 body {
   color: #444444;
