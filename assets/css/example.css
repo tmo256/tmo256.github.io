@@ -1,5 +1,7 @@
-.example .button {
-    margin-bottom: 10px;
+.ul-ui.container.example.open {
+    padding-left: 280px;
+    padding-right: 30px;
+    padding-bottom: 40px;
 }
 .ul-ui.container.example {
     padding-left: 0;
@@ -7,17 +9,6 @@
     background-color: transparent;
     overflow: auto;
 }
-.ul-ui.container.example.open {
-    padding-left: 280px;
-    padding-right: 30px;
-    padding-bottom: 40px;
-}
-.ul-ui.container.example.right.rail {
-    padding-right: 280px;
-    width: 100%;
-    background-color: transparent;
-}
-
 .example.toc {
     width: 15em;
     background-color: #fff;
@@ -27,75 +18,4 @@
     left: 0;
     overflow-x: scroll;
     height: 100%;
-}
-.example.right.rail {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    width: 250px;
-    background-color: #dedede;
-    padding: 20px;
-}
-.example.left.nav {
-    background-color: white;
-    width: 215px;
-}
-.example.left.nav .ul-ui.list .item {
-    padding: 17px 15px 17px 75px;
-}
-.example.left.nav .ul-ui.list .item:hover, .example.left.nav .ul-ui.list .item.active {
-    color: #c02032;
-    background-color: white;
-    border-right: 4px solid #c02032;
-}
-#dashboard {
-    background-image: url(../images/i01.jpg);
-    background-repeat: no-repeat;
-    background-size: 34px;
-    background-position: 15px 15px
-}
-#dashboard:hover {
-    background-image: url(../images/i01_r.jpg);
-}
-#quotes {
-    background-image: url(../images/i02.jpg);
-    background-repeat: no-repeat;
-    background-size: 34px;
-    background-position: 15px 15px
-}
-#quotes:hover {
-    background-image: url(../images/i02_r.jpg);
-}
-#orders {
-    background-image: url(../images/i03.jpg);
-    background-repeat: no-repeat;
-    background-size: 34px;
-    background-position: 15px 15px
-}
-#orders:hover, #orders.active {
-    background-image: url(../images/i03_r.jpg);
-}
-
-#documents {
-    background-image: url(../images/i04.jpg);
-    background-repeat: no-repeat;
-    background-size: 34px;
-    background-position: 15px 15px
-}
-#documents:hover {
-    background-image: url(../images/i04_r.jpg);
-}
-#payments {
-    background-image: url(../images/i05.jpg);
-    background-repeat: no-repeat;
-    background-size: 34px;
-    background-position: 15px 15px
-}
-#payments:hover {
-    background-image: url(../images/i05_r.jpg);
-}
-.example .circular.card {
-    width: 175px;
-    height: 175px;
 }
