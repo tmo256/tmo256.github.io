@@ -31,6 +31,87 @@
   background-color: #d4d5d5;
   color: #444444;
 }
+.ul-ui.button:active,
+.ul-ui.active.button:active {
+  background-color: #babcbc;
+  color: #000000;
+}
+.ul-ui.button:focus,
+.ul-ui.button.focused {
+  background-color: #c7c9c9;
+  color: #000000;
+}
+/* Outlined
+--------------*/
+.ul-ui.outlined.buttons .button,
+.ul-ui.outlined.button {
+  background: transparent none !important;
+  color: #444444 !important;
+  font-weight: normal;
+  border-radius: 0.25em;
+  text-transform: none;
+  text-shadow: none !important;
+  -webkit-box-shadow: 0px 0px 0px 1px #e1e2e2 inset;
+  box-shadow: 0px 0px 0px 1px #e1e2e2 inset;
+}
+.ul-ui.outlined.buttons {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: 1px solid #e1e2e2;
+  border-radius: 0.25em;
+}
+.ul-ui.outlined.buttons .button {
+  border-radius: 0em;
+}
+/* Hover */
+.ul-ui.outlined.buttons .button:hover,
+.ul-ui.outlined.button:hover {
+  background: #f5f5f5 !important;
+  color: #444444 !important;
+  -webkit-box-shadow: 0px 0px 0px 1px #e1e2e2 inset, 0px 0px 0px 0px #e1e2e2 inset;
+  box-shadow: 0px 0px 0px 1px #e1e2e2 inset, 0px 0px 0px 0px #e1e2e2 inset;
+}
+.ul-ui.outlined.buttons .button:hover {
+  -webkit-box-shadow: 0px 0px 0px 1px #f5f5f5 inset, 0px 0px 0px 0px #f5f5f5 inset inset;
+  box-shadow: 0px 0px 0px 1px #f5f5f5 inset, 0px 0px 0px 0px #f5f5f5 inset inset;
+}
+/* Focus */
+.ul-ui.outlined.buttons .button:focus,
+.ul-ui.outlined.button:focus {
+  background: #FFFFFF !important;
+  color: #444444 !important;
+  -webkit-box-shadow: 0px 0px 0px 1px #e1e2e2 inset, 0px 0px 0px 0px #e1e2e2 inset;
+  box-shadow: 0px 0px 0px 1px #e1e2e2 inset, 0px 0px 0px 0px #e1e2e2 inset;
+}
+/* Active */
+.ul-ui.outlined.buttons .button:active,
+.ul-ui.outlined.button:active {
+  background: #f5f5f5 !important;
+  color: rgba(0, 0, 0, 0.9) !important;
+  -webkit-box-shadow: 0px 0px 0px 1px #e1e2e2 inset, 0px 1px 4px 0px #e1e2e2 inset;
+  box-shadow: 0px 0px 0px 1px #e1e2e2 inset, 0px 1px 4px 0px #e1e2e2 inset;
+}
+.ul-ui.outlined.buttons .active.button,
+.ul-ui.outlined.active.button {
+  background: #f5f5f5 !important;
+  -webkit-box-shadow: '' !important;
+  box-shadow: '' !important;
+  color: #444444 !important;
+}
+.ul-ui.outlined.buttons .active.button:hover,
+.ul-ui.outlined.active.button:hover {
+  background-color: #f5f5f5;
+}
+.ul-ui.outlined.buttons .button:active {
+  -webkit-box-shadow: 0px 0px 0px 1px #e1e2e2 inset, 0px 1px 4px 0px #f5f5f5 inset inset;
+  box-shadow: 0px 0px 0px 1px #e1e2e2 inset, 0px 1px 4px 0px #f5f5f5 inset inset;
+}
+.ul-ui.outlined.buttons .active.button {
+  -webkit-box-shadow: '' !important;
+  box-shadow: '' !important;
+}
+/* Sizes
+-----------*/
 .ul-ui.xxsm.buttons .button,
 .ul-ui.xxsm.buttons .or,
 .ul-ui.xxsm.button {
@@ -64,6 +145,8 @@
 .ul-ui.large.button {
   font-size: 1.563em;
 }
+/* Fluid
+-----------*/
 .ul-ui.fluid.button {
   display: block;
 }
@@ -71,16 +154,8 @@
 .ul-ui.fluid.button {
   width: 100%;
 }
-.ul-ui.red.buttons .button,
-.ul-ui.red.button {
-  background-color: #c02032;
-  color: #FFFFFF;
-}
-.ul-ui.red.buttons .button:hover,
-.ul-ui.red.button:hover {
-  background-color: #892433;
-  color: #ffffff;
-}
+/* Icon
+---------*/
 .ul-ui.icon.buttons .button,
 .ul-ui.icon.button {
   padding: 0.78571429em 0.78571429em 0.78571429em;
@@ -100,43 +175,116 @@
   vertical-align: '';
   color: '';
 }
-.ul-ui.teal.buttons .button,
-.ul-ui.teal.button {
-  background-color: #007584;
+/* Red
+---------*/
+.ul-ui.red.buttons .button,
+.ul-ui.red.button {
+  background-color: #c02032;
   color: #FFFFFF;
 }
-.ul-ui.button:active,
-.ul-ui.active.button:active {
-  background-color: #babcbc;
-  color: #000000;
+/* Hover */
+.ul-ui.red.buttons .button:hover,
+.ul-ui.red.button:hover {
+  background-color: #892433;
 }
-.ul-ui.button:focus,
-.ul-ui.button.focused {
-  background-color: #c7c9c9;
-  color: #000000;
-}
-.ul-ui.red.buttons .button:active,
-.ul-ui.red.button:active {
-  background-color: #611924;
-}
+/* Focus */
 .ul-ui.red.buttons .button:focus,
 .ul-ui.red.button:focus {
   background-color: #751f2b;
 }
-.ul-ui.teal.buttons .button:active,
-.ul-ui.teal.button:active {
-  background-color: #004851;
+/* Active */
+.ul-ui.red.buttons .button:active,
+.ul-ui.red.button:active {
+  background-color: #611924;
 }
-.ul-ui.teal.buttons .button:focus,
-.ul-ui.teal.button:focus {
-  background-color: #005e6b;
+.ul-ui.red.buttons .active.button,
+.ul-ui.red.buttons .active.button:active,
+.ul-ui.red.active.button,
+.ul-ui.red.button .active.button:active {
+  background-color: #611924;
 }
-.ul-ui.teal.buttons .button:hover,
-.ul-ui.teal.button:hover {
-  background-color: #204b5a;
-}
+/* Teal
+----------*/
 .ul-ui.teal.buttons .button,
 .ul-ui.teal.button {
   background-color: #007584;
   color: #FFFFFF;
+}
+/* Hover */
+.ul-ui.teal.buttons .button:hover,
+.ul-ui.teal.button:hover {
+  background-color: #204b5a;
+}
+/* Focus */
+.ul-ui.teal.buttons .button:focus,
+.ul-ui.teal.button:focus {
+  background-color: #005e6b;
+}
+/* Active */
+.ul-ui.teal.buttons .button:active,
+.ul-ui.teal.button:active {
+  background-color: #004851;
+}
+.ul-ui.teal.buttons .active.button,
+.ul-ui.teal.buttons .active.button:active,
+.ul-ui.teal.active.button,
+.ul-ui.teal.button .active.button:active {
+  background-color: #004851;
+}
+/* Blue
+---------*/
+.ul-ui.blue.buttons .button,
+.ul-ui.blue.button {
+  background-color: #00518a;
+  color: #FFFFFF;
+}
+/* hover */
+.ul-ui.blue.buttons .button:hover,
+.ul-ui.blue.button:hover {
+  background-color: #0b3c61;
+}
+/* focus */
+.ul-ui.blue.buttons .button:focus,
+.ul-ui.blue.button:focus {
+  background-color: #0b3c61;
+}
+/* active */
+.ul-ui.blue.buttons .button:active,
+.ul-ui.blue.button:active {
+  background-color: #00243d;
+}
+.ul-ui.blue.buttons .active.button,
+.ul-ui.blue.buttons .active.button:active,
+.ul-ui.blue.active.button,
+.ul-ui.blue.button .active.button:active {
+  background-color: #00243d;
+}
+/* -------------------- Blue outlined */
+.ul-ui.outlined.blue.buttons .button,
+.ul-ui.outlined.blue.button {
+  -webkit-box-shadow: 0px 0px 0px 1px #00518a inset !important;
+  box-shadow: 0px 0px 0px 1px #00518a inset !important;
+  color: #0b3c61 !important;
+}
+/* hover */
+.ul-ui.outlined.blue.buttons .button:hover,
+.ul-ui.outlined.blue.button:hover {
+  background: #f5f5f5 !important;
+}
+/* focus */
+.ul-ui.outlined.blue.buttons .button:focus,
+.ul-ui.outlined.blue.button:focus {
+  background: #f5f5f5 !important;
+}
+/* active */
+.ul-ui.outlined.blue.buttons .active.button,
+.ul-ui.outlined.blue.active.button {
+  background: rgba(0, 81, 138, 0.15) !important;
+}
+.ul-ui.outlined.blue.buttons .button:active,
+.ul-ui.outlined.blue.button:active {
+  background: rgba(0, 81, 138, 0.15) !important;
+}
+.ul-ui.buttons:not(.vertical) > .outlined.blue.button:not(:first-child) {
+  margin-left: -1px;
 }

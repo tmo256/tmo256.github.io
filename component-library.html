@@ -41,11 +41,27 @@
             alert should be prepended as the first element the modal content, in general (though specific layouts may
             require a modified implementation).
         </p>
+        <div class="ul-ui red icon alert">
+            <div class="icon">
+                <i class="fas fa-info-circle icon" aria-hidden="true"></i>
+            </div>
+            <div class="content">
+                <div class="header">I am a Red Icon Alert</div>
+            </div>
+        </div>
 
         <p>
             Where the alert is a direct result of an action by the user, the alert should have a dismissible option
             (close button). In other circumstances, alerts may be used to provide help text or other notices, and these
             elements should not include a close button.
+
+            <div class="ul-ui light blue alert">
+                <i class="fas fa-times close icon" aria-hidden="true"></i>
+                <div class="header">
+                    Welcome back!
+                </div>
+                <p>This is a special notification which you can dismiss if you're bored with it.</p>
+            </div>
         </p>
 
 
@@ -274,10 +290,10 @@
         </p>
         <div class='ul-ui bulleted list'>
             <div class='item'>Where possible, submit a form using input type="submit".</div>
-            <div class='item'>As noted in “Forms”, attach any validation or pre-processing to the submit event for forms
-                rather than click events on these elements. This will enable the use of the submit button, as well as
-                ensure that submission by using the “Return” key or by assistive technology software will always execute
-                the required JavaScript.</div>
+            <div class='item'><p>As noted in “Forms”, attach any validation or pre-processing to the submit event for forms
+            rather than click events on these elements. This will enable the use of the submit button, as well as
+            ensure that submission by using the “Return” key or by assistive technology software will always execute
+            the required JavaScript.</p></div>
         </div>
 
 
@@ -289,14 +305,14 @@
             styled as links or vice versa.
         </p>
         <div class='ul-ui bulleted list'>
-            <div class='item'>All elements in an “Action” table cell should appear to the user to be links. The actions
-                may be a mix of regular anchor tags, such as an anchor link to “Edit;” buttons, such as a confirmation
-                modal triggered for a delete; or a submit button, as when submitting a form to make a saved search an
-                alert.</div>
-            <div class='item'>Regular anchors may be styled as buttons for an extraordinary or analogous call to action,
-                such as “Registration” links.</div>
-            <div class='item'>Where a mix of form submit and anchor elements should be viewed as siblings of equal
-                importance, be consistent in displaying each element as either buttons or links.</div>
+            <div class='item'><p>All elements in an “Action” table cell should appear to the user to be links. The actions
+            may be a mix of regular anchor tags, such as an anchor link to “Edit;” buttons, such as a confirmation
+            modal triggered for a delete; or a submit button, as when submitting a form to make a saved search an
+            alert.</p></div>
+            <div class='item'><p>Regular anchors may be styled as buttons for an extraordinary or analogous call to action,
+            such as “Registration” links.</p></div>
+            <div class='item'><p>Where a mix of form submit and anchor elements should be viewed as siblings of equal
+            importance, be consistent in displaying each element as either buttons or links.</p></div>
         </div>
 
 
@@ -310,7 +326,29 @@
             dialog should interrupt the process to the point that the action cannot complete without explicit input
             (e.g., button click) from the user.
         </p>
-
+        <!-- Example 0-->
+        <div class="ul-ui small modal" style="display: block !important; position: relative;">
+            <i class="fas fa-times close icon"></i>
+            <div class="header">
+              Delete Your Account
+            </div>
+            <div class="content">
+                <div class="ul-ui header">This is a header</div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod euismod diam, in facilisis dolor
+                  imperdiet et. Suspendisse sapien arcu, pharetra varius nisi vel, congue gravida dolor. Sed vitae mi
+                  est. Curabitur tempor magna ac quam ornare, nec tempor nisi tristique. Nullam commodo vitae ante eu
+                  aliquet. Etiam facilisis congue metus in vehicula. Proin feugiat felis eget dignissim interdum. Ut
+                  augue velit, egestas et auctor eget, efficitur eget arcu. Ut vitae turpis massa.</p>
+            </div>
+            <div class="actions">
+              <div class="ul-ui blue outlined button">
+                Action Button
+              </div>
+              <div class="ul-ui blue button">
+                Action Button
+              </div>
+            </div>
+          </div>
 
     </div>
     <article></article>

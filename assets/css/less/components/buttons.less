@@ -2,9 +2,15 @@
 
 @import "../variables";
 
-.ul-ui.buttons .button, .ul-ui.buttons .or, .ul-ui.button, .ul-ui.base.buttons .button, .ul-ui.base.buttons .or, .ul-ui.base.button {
+.ul-ui.buttons .button,
+.ul-ui.buttons .or,
+.ul-ui.button,
+.ul-ui.base.buttons .button,
+.ul-ui.base.buttons .or,
+.ul-ui.base.button {
     font-size: 1em;
 }
+
 .ul-ui.button {
     cursor: pointer;
     display: inline-block;
@@ -25,51 +31,175 @@
     border-radius: 0.25em;
     letter-spacing: 0.04em;
 }
-.ul-ui.button:hover, .ul-ui.button.hovered {
+
+.ul-ui.button:hover,
+.ul-ui.button.hovered {
     background-color: #d4d5d5;
     color: #444444;
 }
-.ul-ui.xxsm.buttons .button, .ul-ui.xxsm.buttons .or, .ul-ui.xxsm.button {
+
+.ul-ui.button:active,
+.ul-ui.active.button:active {
+    background-color: #babcbc;
+    color: #000000;
+}
+
+.ul-ui.button:focus,
+.ul-ui.button.focused {
+    background-color: #c7c9c9;
+    color: #000000;
+}
+
+/* Outlined
+--------------*/
+.ul-ui.outlined.buttons .button,
+.ul-ui.outlined.button {
+    background: transparent none !important;
+    color: @black-md  !important;
+    font-weight: normal;
+    border-radius: 0.25em;
+    text-transform: none;
+    text-shadow: none !important;
+    -webkit-box-shadow: 0px 0px 0px 1px @gray-md inset;
+    box-shadow: 0px 0px 0px 1px @gray-md inset;
+}
+
+.ul-ui.outlined.buttons {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: 1px solid @gray-md;
+    border-radius: 0.25em;
+}
+
+.ul-ui.outlined.buttons .button {
+    border-radius: 0em;
+}
+
+/* Hover */
+.ul-ui.outlined.buttons .button:hover,
+.ul-ui.outlined.button:hover {
+    background: @gray-lt  !important;
+    color: @black-md  !important;
+    -webkit-box-shadow: 0px 0px 0px 1px @gray-md inset, 0px 0px 0px 0px @gray-md inset;
+    box-shadow: 0px 0px 0px 1px @gray-md inset, 0px 0px 0px 0px @gray-md inset;
+}
+
+.ul-ui.outlined.buttons .button:hover {
+    -webkit-box-shadow: 0px 0px 0px 1px @gray-lt inset, 0px 0px 0px 0px @gray-lt inset inset;
+    box-shadow: 0px 0px 0px 1px @gray-lt inset, 0px 0px 0px 0px @gray-lt inset inset;
+}
+
+/* Focus */
+.ul-ui.outlined.buttons .button:focus,
+.ul-ui.outlined.button:focus {
+    background: #FFFFFF !important;
+    color: @black-md  !important;
+    -webkit-box-shadow: 0px 0px 0px 1px @gray-md inset, 0px 0px 0px 0px @gray-md inset;
+    box-shadow: 0px 0px 0px 1px @gray-md inset, 0px 0px 0px 0px @gray-md inset;
+}
+
+/* Active */
+.ul-ui.outlined.buttons .button:active,
+.ul-ui.outlined.button:active {
+    background: @gray-lt  !important;
+    color: rgba(0, 0, 0, 0.9) !important;
+    -webkit-box-shadow: 0px 0px 0px 1px @gray-md inset, 0px 1px 4px 0px @gray-md inset;
+    box-shadow: 0px 0px 0px 1px @gray-md inset, 0px 1px 4px 0px @gray-md inset;
+}
+
+.ul-ui.outlined.buttons .active.button,
+.ul-ui.outlined.active.button {
+    background: @gray-lt  !important;
+    -webkit-box-shadow: '' !important;
+    box-shadow: '' !important;
+    color: @black-md  !important;
+}
+
+.ul-ui.outlined.buttons .active.button:hover,
+.ul-ui.outlined.active.button:hover {
+    background-color: @gray-lt;
+}
+
+.ul-ui.outlined.buttons .button:active {
+    -webkit-box-shadow: 0px 0px 0px 1px @gray-md inset, 0px 1px 4px 0px @gray-lt inset inset;
+    box-shadow: 0px 0px 0px 1px @gray-md inset, 0px 1px 4px 0px @gray-lt inset inset;
+}
+
+.ul-ui.outlined.buttons .active.button {
+    -webkit-box-shadow: '' !important;
+    box-shadow: '' !important;
+}
+
+/* Sizes
+-----------*/
+
+.ul-ui.xxsm.buttons .button,
+.ul-ui.xxsm.buttons .or,
+.ul-ui.xxsm.button {
     font-size: 0.512em;
 }
-.ul-ui.xsm.buttons .button, .ul-ui.xsm.buttons .or, .ul-ui.xsm.button {
+
+.ul-ui.xsm.buttons .button,
+.ul-ui.xsm.buttons .or,
+.ul-ui.xsm.button {
     font-size: 0.64em;
 }
-.ul-ui.small.buttons .button, .ul-ui.small.buttons .or, .ul-ui.small.button {
+
+.ul-ui.small.buttons .button,
+.ul-ui.small.buttons .or,
+.ul-ui.small.button {
     font-size: 0.8em;
 }
-.ul-ui.buttons .button, .ul-ui.buttons .or, .ul-ui.button, .ul-ui.base.buttons .button, .ul-ui.base.buttons .or, .ul-ui.base.button {
+
+.ul-ui.buttons .button,
+.ul-ui.buttons .or,
+.ul-ui.button,
+.ul-ui.base.buttons .button,
+.ul-ui.base.buttons .or,
+.ul-ui.base.button {
     font-size: 1em;
 }
-.ul-ui.medium.buttons .button, .ul-ui.medium.buttons .or, .ul-ui.medium.button {
+
+.ul-ui.medium.buttons .button,
+.ul-ui.medium.buttons .or,
+.ul-ui.medium.button {
     font-size: 1.25em;
 }
-.ul-ui.large.buttons .button, .ul-ui.large.buttons .or, .ul-ui.large.button {
+
+.ul-ui.large.buttons .button,
+.ul-ui.large.buttons .or,
+.ul-ui.large.button {
     font-size: 1.563em;
 }
+
+/* Fluid
+-----------*/
+
 .ul-ui.fluid.button {
     display: block;
 }
-.ul-ui.fluid.buttons, .ul-ui.fluid.button {
+
+.ul-ui.fluid.buttons,
+.ul-ui.fluid.button {
     width: 100%;
 }
-.ul-ui.red.buttons .button, .ul-ui.red.button {
-    background-color: #c02032;
-    color: #FFFFFF;
-}
-.ul-ui.red.buttons .button:hover, .ul-ui.red.button:hover {
-    background-color: #892433;
-    color: #ffffff;
-}
-.ul-ui.icon.buttons .button, .ul-ui.icon.button {
+
+/* Icon
+---------*/
+
+.ul-ui.icon.buttons .button,
+.ul-ui.icon.button {
     padding: 0.78571429em 0.78571429em 0.78571429em;
 }
-.ul-ui.icon.buttons .button > .icon, .ul-ui.icon.button > .icon {
+
+.ul-ui.icon.buttons .button>.icon,
+.ul-ui.icon.button>.icon {
     opacity: 0.9;
     margin: 0em !important;
     vertical-align: top;
 }
-.ul-ui.button > .icon:not(.button) {
+
+.ul-ui.button>.icon:not(.button) {
     height: 0.85714286em;
     opacity: 0.8;
     margin: 0em 0.42857143em 0em -0.21428571em;
@@ -78,37 +208,144 @@
     vertical-align: '';
     color: '';
 }
-.ul-ui.teal.buttons .button, .ul-ui.teal.button {
-    background-color: #007584;
+
+/* Red
+---------*/
+
+.ul-ui.red.buttons .button,
+.ul-ui.red.button {
+    background-color: @red-lt;
     color: #FFFFFF;
 }
 
-.ul-ui.button:active, .ul-ui.active.button:active {
-    background-color: #babcbc;
-    color: #000000;
-}
-.ul-ui.button:focus, .ul-ui.button.focused {
-    background-color: #c7c9c9;
-    color: #000000;
-}
-.ul-ui.red.buttons .button:active, .ul-ui.red.button:active {
-    background-color: #611924;
-}
-.ul-ui.red.buttons .button:focus, .ul-ui.red.button:focus {
-    background-color: #751f2b;
+/* Hover */
+.ul-ui.red.buttons .button:hover,
+.ul-ui.red.button:hover {
+    background-color: @red-md;
 }
 
-.ul-ui.teal.buttons .button:active, .ul-ui.teal.button:active {
-    background-color: #004851;
-}
-.ul-ui.teal.buttons .button:focus, .ul-ui.teal.button:focus {
-    background-color: #005e6b;
+/* Focus */
+.ul-ui.red.buttons .button:focus,
+.ul-ui.red.button:focus {
+    background-color: darken(@red-md, 5%);
 }
 
-.ul-ui.teal.buttons .button:hover, .ul-ui.teal.button:hover {
-    background-color: #204b5a;
+/* Active */
+.ul-ui.red.buttons .button:active,
+.ul-ui.red.button:active {
+    background-color: darken(@red-md, 10%);
 }
-.ul-ui.teal.buttons .button, .ul-ui.teal.button {
-    background-color: #007584;
+
+.ul-ui.red.buttons .active.button,
+.ul-ui.red.buttons .active.button:active,
+.ul-ui.red.active.button,
+.ul-ui.red.button .active.button:active {
+    background-color: darken(@red-md, 10%);
+}
+
+/* Teal
+----------*/
+
+.ul-ui.teal.buttons .button,
+.ul-ui.teal.button {
+    background-color: @teal-md;
     color: #FFFFFF;
+}
+
+/* Hover */
+.ul-ui.teal.buttons .button:hover,
+.ul-ui.teal.button:hover {
+    background-color: @teal-dk;
+}
+
+/* Focus */
+.ul-ui.teal.buttons .button:focus,
+.ul-ui.teal.button:focus {
+    background-color: darken(@teal-md, 5%);
+}
+
+/* Active */
+.ul-ui.teal.buttons .button:active,
+.ul-ui.teal.button:active {
+    background-color: darken(@teal-md, 10%);
+}
+
+.ul-ui.teal.buttons .active.button,
+.ul-ui.teal.buttons .active.button:active,
+.ul-ui.teal.active.button,
+.ul-ui.teal.button .active.button:active {
+    background-color: darken(@teal-md, 10%);
+}
+
+/* Blue
+---------*/
+
+.ul-ui.blue.buttons .button,
+.ul-ui.blue.button {
+    background-color: @blue-md;
+    color: #FFFFFF;
+}
+
+/* hover */
+.ul-ui.blue.buttons .button:hover,
+.ul-ui.blue.button:hover {
+    background-color: @blue-dk;
+}
+
+/* focus */
+.ul-ui.blue.buttons .button:focus,
+.ul-ui.blue.button:focus {
+    background-color: @blue-dk;
+}
+
+/* active */
+.ul-ui.blue.buttons .button:active,
+.ul-ui.blue.button:active {
+    background-color: darken(@blue-md, 15%);
+}
+
+.ul-ui.blue.buttons .active.button,
+.ul-ui.blue.buttons .active.button:active,
+.ul-ui.blue.active.button,
+.ul-ui.blue.button .active.button:active {
+    background-color: darken(@blue-md, 15%);
+}
+
+/* -------------------- Blue outlined */
+
+.ul-ui.outlined.blue.buttons .button,
+.ul-ui.outlined.blue.button {
+    -webkit-box-shadow: 0px 0px 0px 1px @blue-md inset !important;
+    box-shadow: 0px 0px 0px 1px @blue-md inset !important;
+    color: @blue-dk  !important;
+}
+
+/* hover */
+
+.ul-ui.outlined.blue.buttons .button:hover,
+.ul-ui.outlined.blue.button:hover {
+    background: @gray-lt  !important;
+}
+
+/* focus */
+
+.ul-ui.outlined.blue.buttons .button:focus,
+.ul-ui.outlined.blue.button:focus {
+    background: @gray-lt  !important;
+}
+
+/* active */
+
+.ul-ui.outlined.blue.buttons .active.button,
+.ul-ui.outlined.blue.active.button {
+    background: fade(@blue-md, 15%) !important;
+}
+
+.ul-ui.outlined.blue.buttons .button:active,
+.ul-ui.outlined.blue.button:active {
+    background: fade(@blue-md, 15%) !important;
+}
+
+.ul-ui.buttons:not(.vertical)>.outlined.blue.button:not(:first-child) {
+    margin-left: -1px;
 }

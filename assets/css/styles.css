@@ -1,10 +1,10 @@
-
 @import "components/alerts.css";
-@import "components/buttons.css";
 @import "components/icon.css";
-@import "components/list.css";
-@import "components/menu.css";
+@import "components/buttons.css";
 @import "components/typography.css";
+@import "components/list.css";
+@import "components/image.css";
+@import "components/modal.css";
 @import "example.css";
 body {
   color: #444444;
@@ -78,8 +78,9 @@ a.block:hover,
 a:visited.block:hover {
   background: #f5f5f5;
 }
-
-/* ======================================== UTILITIES */
+/* ------------
+    Utilities  
+---------------*/
 .lg-shadow {
   -webkit-box-shadow: 10px 10px 40px -12px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 10px 10px 40px -12px rgba(0, 0, 0, 0.75);
@@ -103,5 +104,5 @@ a:visited.block:hover {
   margin: 2.441em 0;
   height: 1px;
   width: 100%;
-  background-color: #939598;
+  background-color: #d4d5d5;
 }

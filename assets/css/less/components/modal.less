@@ -1,0 +1,141 @@
+// out: ../../components/modal.css
+
+@import "../variables";
+
+.ul-ui.modal {
+    position: absolute;
+    display: none;
+    z-index: 1001;
+    text-align: left;
+    background: #fff;
+    border: none;
+    -webkit-box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.20);
+    -moz-box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.20);
+    box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.20);
+    -webkit-transform-origin: 50% 25%;
+    transform-origin: 50% 25%;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    border-radius: .28571429rem;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+    will-change: top, left, margin, transform, opacity;
+
+    @media only screen and (min-width: 1200px) {
+        width: 900px;
+        margin: 0;
+    }
+
+    @media only screen and (min-width: 992px) {
+        width: 850px;
+        margin: 0;
+    }
+
+    @media only screen and (min-width: 768px) {
+        width: 88%;
+        margin: 0;
+    }
+}
+
+.ul-ui.modal {
+    font-size: 1rem;
+}
+
+.ul-ui.modal>:last-child {
+    border-bottom-left-radius: .28571429rem;
+    border-bottom-right-radius: .28571429rem;
+}
+
+/* Close Icon
+----------------*/
+
+.ul-ui.modal>.close {
+    cursor: pointer;
+    position: absolute;
+    top: @xsm;
+    right: 0;
+    z-index: 1;
+    opacity: .8;
+    font-size: 1.25em;
+    color: @black-md;
+    width: 2.25rem;
+    height: 2.25rem;
+    padding: .625rem 0 0 0;
+}
+
+/* Header
+-------------*/
+
+.ul-ui.modal>.icon:first-child+*,
+.ul-ui.modal>:first-child:not(.icon) {
+    border-top-left-radius: .28571429rem;
+    border-top-right-radius: .28571429rem;
+}
+
+.ul-ui.modal>.header {
+    display: block;
+    background: #fff;
+    margin: 0;
+    padding: 1.25rem 1.5rem;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    color: rgba(0, 0, 0, .85);
+    border-bottom: 1px solid rgba(34, 36, 38, .15);
+}
+
+/* Content
+--------------*/
+
+.ul-ui.modal>.content {
+    display: block;
+    width: 100%;
+    font-size: 1em;
+    line-height: 1.4;
+    padding: @base 3.815em 3.815em;
+    background: #fff;
+}
+.ul-ui.modal .content .header {
+    font-weight: 700;
+}
+
+
+/* Actions
+--------------*/
+.ul-ui.modal>.actions {
+    background: #f9fafb;
+    padding: 1rem 1rem;
+    border-top: 1px solid rgba(34, 36, 38, .15);
+    text-align: right;
+}
+
+.ul-ui.modal .actions>.button {
+    margin-left: .75em;
+}
+
+/* Sizes 
+-----------*/
+
+/* Small */
+.ul-ui.small.modal {
+    @media only screen and (min-width: 1200px) {
+        width: 720px;
+        margin: 0;
+    }
+
+    @media only screen and (min-width: 992px) {
+        width: 680px;
+        margin: 0;
+    }
+
+    @media only screen and (min-width: 768px) {
+        width: 70.4%;
+        margin: 0;
+    }
+}
+
+.ul-ui.small.modal>.header:not(.ul-ui) {
+    font-size: @md;
+}
