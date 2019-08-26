@@ -50,8 +50,21 @@
     color: #000000;
 }
 
+/* Circular
+-------------*/
+
+.ul-ui.circular.button {
+    border-radius: 10em;
+}
+
+.ul-ui.circular.button > .icon {
+    width: 1em;
+    vertical-align: baseline;
+}
+
 /* Outlined
 --------------*/
+
 .ul-ui.outlined.buttons .button,
 .ul-ui.outlined.button {
     background: transparent none !important;
@@ -207,6 +220,37 @@
     transition: opacity 0.1s ease;
     vertical-align: '';
     color: '';
+}
+
+/* Black 
+------------*/
+
+.ul-ui.black.buttons .button,
+.ul-ui.black.button {
+    background-color: @black-dk;
+    color: #FFFFFF;
+}
+
+.ul-ui.black.buttons .button:hover,
+.ul-ui.black.button:hover {
+    background-color: @black-md;
+}
+
+.ul-ui.black.buttons .button:focus,
+.ul-ui.black.button:focus {
+    background-color: @black-md;
+}
+
+.ul-ui.black.buttons .button:active,
+.ul-ui.black.button:active {
+    background-color: @black-dk;
+}
+
+.ul-ui.black.buttons .active.button,
+.ul-ui.black.buttons .active.button:active,
+.ul-ui.black.active.button,
+.ul-ui.black.button .active.button:active {
+    background-color: @black-dk;
 }
 
 /* Red

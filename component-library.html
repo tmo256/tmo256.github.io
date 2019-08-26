@@ -32,7 +32,7 @@
         </p>
 
 
-        <!-- =================== SECTION =================== -->
+        <!--- =================== SECTION =================== -->
         <h3 id="ale-a">Alerts</h3>
         <p>
             Use an alert to implement notices of success or failure for a persistence action (i.e. form submit). On a
@@ -41,12 +41,31 @@
             alert should be prepended as the first element the modal content, in general (though specific layouts may
             require a modified implementation).
         </p>
-        <div class="ul-ui red icon alert">
-            <div class="icon">
-                <i class="fas fa-info-circle icon" aria-hidden="true"></i>
+
+        <!--- **** Example **** -->
+        <div class="example-cont clearfix">
+            <div class="view">
+                <div class="ul-ui circular black icon xsm button codeview">
+                    <i class="fas fa-code icon"></i>
+                </div>
+                <div class="ul-ui red icon alert">
+                    <div class="icon">
+                        <i class="fas fa-info-circle icon" aria-hidden="true"></i>
+                    </div>
+                    <div class="content">
+                        <div class="header">I am a Red Icon Alert</div>
+                    </div>
+                </div>
             </div>
-            <div class="content">
-                <div class="header">I am a Red Icon Alert</div>
+            <div class="code">
+                <pre> <script class="code-script"><div class="ul-ui red icon alert">
+                            <div class="icon">
+                                <i class="fas fa-info-circle icon" aria-hidden="true"></i>
+                            </div>
+                            <div class="content">
+                                <div class="header">I am a Red Icon Alert</div>
+                            </div>
+                        </div></script></pre>
             </div>
         </div>
 
@@ -54,14 +73,32 @@
             Where the alert is a direct result of an action by the user, the alert should have a dismissible option
             (close button). In other circumstances, alerts may be used to provide help text or other notices, and these
             elements should not include a close button.
-
+            
+            <!-- **** Example **** -->
+            <div class='example-cont clearfix'>
+            <div class='view'>
+            <div class='ul-ui circular black icon xsm button codeview'>
+            <i class='fas fa-code icon'></i>
+            </div>
             <div class="ul-ui light blue alert">
+                    <i class="fas fa-times close icon" aria-hidden="true"></i>
+                    <div class="header">
+                        Welcome back!
+                    </div>
+                    <p>This is a special notification which you can dismiss if you're bored with it.</p>
+                </div>
+            </div>
+            <div class='code'>
+            <pre> <script class='code-script'><div class="ul-ui light blue alert">
                 <i class="fas fa-times close icon" aria-hidden="true"></i>
                 <div class="header">
                     Welcome back!
                 </div>
-                <p>This is a special notification which you can dismiss if you're bored with it.</p>
+                <p>This is a special notification which you can dismiss if you're bored with it.</p></div>
+            </script></pre>
             </div>
+            </div>
+
         </p>
 
 
@@ -127,15 +164,34 @@
                 should strongly indicate to the user what their next action should be.</div>
         </div>
         <p>Unless noted elsewhere in this document, style the button as a link in most other situations.</p>
-        <br>
-        <button class="ul-ui button">
-            As button
-        </button>
-        <div class="ul-ui button" tabindex="0">
-            As Div
+
+        <!-- **** Example **** -->
+        <div class='example-cont clearfix'>
+        <div class='view'>
+        <div class='ul-ui circular black icon xsm button codeview'>
+        <i class='fas fa-code icon'></i>
         </div>
-        <a href="#" class="ul-ui button">As an a tag</a>
-        <a href="#">a text link</a>
+        <button class="ul-ui button">
+                As button
+            </button>
+            <div class="ul-ui button" tabindex="0">
+                As Div
+            </div>
+            <a href="#" class="ul-ui button">As an a tag</a>
+            <a href="#">a text link</a>
+        </div>
+        <div class='code'>
+        <pre> <script class='code-script'><button class="ul-ui button">
+                As button
+            </button>
+            <div class="ul-ui button" tabindex="0">
+                As Div
+            </div>
+            <a href="#" class="ul-ui button">As an a tag</a>
+            <a href="#">a text link</a>
+        </script></pre>
+        </div>
+        </div>
 
 
         <!-- =================== SECTION =================== -->
@@ -146,8 +202,35 @@
             viewports in order to accommodate touch behavior; the exception to this rule might be for “Next” and
             “Previous” buttons. Be sure to create adequate spacing and padding to allow all users to use your
             buttons on a touchscreen.</p>
-        <br>
+
+        <!--- **** Example **** -->
+        <div class='example-cont clearfix'>
+        <div class='view'>
+        <div class='ul-ui circular black icon xsm button codeview'>
+        <i class='fas fa-code icon'></i>
+        </div>
         <button class="xxsm ul-ui button">
+                XXSmall
+            </button>
+            <button class="xsm ul-ui button">
+                Xsmall
+            </button>
+            <button class="small ul-ui button">
+                Small
+            </button>
+            <button class="base ul-ui button">
+                    <i class="fas fa-exclamation-triangle icon" aria-hidden="true"></i>
+                Base
+            </button>
+            <button class="medium ul-ui button">
+                Medium
+            </button>
+            <button class="large ul-ui button">
+                Large
+            </button>
+        </div>
+        <div class='code'>
+        <pre> <script class='code-script'><button class="xxsm ul-ui button">
             XXSmall
         </button>
         <button class="xsm ul-ui button">
@@ -157,6 +240,7 @@
             Small
         </button>
         <button class="base ul-ui button">
+                <i class="fas fa-exclamation-triangle icon" aria-hidden="true"></i>
             Base
         </button>
         <button class="medium ul-ui button">
@@ -164,10 +248,25 @@
         </button>
         <button class="large ul-ui button">
             Large
-        </button>
+        </button></script></pre>
+        </div>
+        </div>
         <br>
-        <br>
+
+        <!--- **** Example **** -->
+        <div class='example-cont clearfix'>
+        <div class='view'>
+        <div class='ul-ui circular black icon xsm button codeview'>
+        <i class='fas fa-code icon'></i>
+        </div>
         <button class="fluid ul-ui button">Fits container</button>
+        </div>
+        <div class='code'>
+        <pre> <script class='code-script'>
+        <button class="fluid ul-ui button">Fits container</button>
+        </script></pre>
+        </div>
+        </div>
 
 
         <!-- =================== SECTION =================== -->
@@ -276,10 +375,25 @@
         <p>When designing for touch display, make sure to provide adequate space around every link,
             just as with buttons. Pay specific attention to lists and menus.
         </p>
+        
+        <!--- **** Example **** --->
+        <div class='example-cont clearfix'>
+        <div class='view'>
+        <div class='ul-ui circular black icon xsm button codeview'>
+        <i class='fas fa-code icon'></i>
+        </div>
         <p>This is just <a href="#">a random link</a> in the grand scheme of things.</p>
         <p><a class="block" href="#">This is some linked block of text.</a></p>
         <p><a href="#">Here are a few</a> <a href="#">linked text items</a> <a href="#">in a row.</a>
         </p>
+        </div>
+        <div class='code'>
+        <pre> <script class='code-script'><p>This is just <a href="#">a random link</a> in the grand scheme of things.</p>
+        <p><a class="block" href="#">This is some linked block of text.</a></p>
+        <p><a href="#">Here are a few</a> <a href="#">linked text items</a> <a href="#">in a row.</a></p>
+        </script></pre>
+        </div>
+        </div>
 
         
         <!-- =================== SECTION =================== -->
@@ -326,7 +440,38 @@
             dialog should interrupt the process to the point that the action cannot complete without explicit input
             (e.g., button click) from the user.
         </p>
-        <!-- Example 0-->
+
+        <!--- **** Example **** --->
+        <div class='example-cont clearfix'>
+        <div class='view'>
+        <div class='ul-ui circular black icon xsm button codeview'>
+        <i class='fas fa-code icon'></i>
+        </div>
+        <div class="ul-ui small modal" style="display: block !important; position: relative;">
+                <i class="fas fa-times close icon"></i>
+                <div class="header">
+                  Delete Your Account
+                </div>
+                <div class="content">
+                    <div class="ul-ui header">This is a header</div>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod euismod diam, in facilisis dolor
+                      imperdiet et. Suspendisse sapien arcu, pharetra varius nisi vel, congue gravida dolor. Sed vitae mi
+                      est. Curabitur tempor magna ac quam ornare, nec tempor nisi tristique. Nullam commodo vitae ante eu
+                      aliquet. Etiam facilisis congue metus in vehicula. Proin feugiat felis eget dignissim interdum. Ut
+                      augue velit, egestas et auctor eget, efficitur eget arcu. Ut vitae turpis massa.</p>
+                </div>
+                <div class="actions">
+                  <div class="ul-ui blue outlined button">
+                    Action Button
+                  </div>
+                  <div class="ul-ui blue button">
+                    Action Button
+                  </div>
+                </div>
+              </div>
+        </div>
+        <div class='code'>
+        <pre> <script class='code-script'>
         <div class="ul-ui small modal" style="display: block !important; position: relative;">
             <i class="fas fa-times close icon"></i>
             <div class="header">
@@ -349,6 +494,9 @@
               </div>
             </div>
           </div>
+        </script></pre>
+        </div>
+        </div>
 
     </div>
     <article></article>
@@ -356,8 +504,10 @@
 
 <footer role="contentinfo">
 </footer>
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-    integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
 <script src="assets/js/toc.js"></script>
 <script>
     // Fpr example only

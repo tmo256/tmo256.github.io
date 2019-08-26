@@ -107,4 +107,7 @@ $(document).ready(function () {
         "</nav>";
     $("article").prepend(ToC);
 
+    $(".codeview").click(function(){
+        $(this).parent().siblings(".code").slideToggle();
+    });
 });
