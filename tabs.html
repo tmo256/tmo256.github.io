@@ -59,7 +59,8 @@
     <script>
         // Fpr example only
         setTimeout(function () {
-            $("#xxx").addClass("active");
+            $("#tabs").addClass("active");
+            $('.toc-menu').scrollTop($('#tabs').offset().top, 100);
         }, 300);
     </script>
 </body>

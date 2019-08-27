@@ -34,46 +34,64 @@
                 judiciously. Length of text is the primary consideration for usage, but function also plays a role.
             </p>
             <div class='ul-ui bulleted list'>
-            <div class='item'>Use tooltips for short textual information attached to specific inline elements, like help
-                for field inputs. Tooltips should contain no more than 75 characters.</div>
-            <div class='item'>Use a popover when providing stand-alone information, such as explanatory text or extra
-                information of indeterminate length. For example, help that applies to an entire form (as opposed to a
-                single element) could be contained in a popover. Popovers may also be preferred to dialogs in certain
-                circumstances, such as upsell messages for page features.</div>
+            <div class='item'><p>
+                Use tooltips for short textual information attached to specific inline elements, like help
+                    for field inputs. Tooltips should contain no more than 75 characters.
+            </p></div>
+            <div class='item'><p>
+                Use a popover when providing stand-alone information, such as explanatory text or extra
+                    information of indeterminate length. For example, help that applies to an entire form (as opposed to a
+                    single element) could be contained in a popover. Popovers may also be preferred to dialogs in certain
+                    circumstances, such as upsell messages for page features.
+            </p></div>
             </div>
             <p>
                 Generally, tooltips and popover elements should behave in the same way:
             </p>
             <div class='ul-ui bulleted list'>
-            <div class='item'>The trigger element that opens the element should also close it. That means that all
-                triggers toggle to open and close (per guideline specifications, elements that perform no function other
-                than that of a toggle should always be buttons, though those buttons may be styled to appear as links).
+            <div class='item'><p>
+                The trigger element that opens the element should also close it. That means that all
+                    triggers toggle to open and close (per guideline specifications, elements that perform no function other
+                    than that of a toggle should always be buttons, though those buttons may be styled to appear as links).
+            </p>
             </div>
-            <div class='item'>In most cases, prefer triggers that open the component explicitly, rather than
-                supplementally. For instance, do not automatically open a tooltip when a user focuses on an input field;
-                provide a separate link to open the element.</div>
-            <div class='item'>Because of touch requirements, trigger both components with click events rather than hover
-                or mouseover. This will also aid accessibility and usability concerns by avoiding unintended display of
-                information (inadvertent mouseovers).</div>
-            <div class='item'>Opening a new popover or tooltip does not necessarily require closing other open elements
-                of the same type. Generally, open tooltips should probably be closed, while open popovers should remain
-                open.</div>
-            <div class='item'>Popovers may also include a separate close button in the title bar.</div>
+            <div class='item'><p>
+                In most cases, prefer triggers that open the component explicitly, rather than
+                    supplementally. For instance, do not automatically open a tooltip when a user focuses on an input field;
+                    provide a separate link to open the element.
+            </p></div>
+            <div class='item'><p>
+                Because of touch requirements, trigger both components with click events rather than hover
+                    or mouseover. This will also aid accessibility and usability concerns by avoiding unintended display of
+                    information (inadvertent mouseovers).
+            </p></div>
+            <div class='item'><p>
+                Opening a new popover or tooltip does not necessarily require closing other open elements
+                    of the same type. Generally, open tooltips should probably be closed, while open popovers should remain
+                    open.
+            </p></div>
+            <div class='item'><p>
+                Popovers may also include a separate close button in the title bar.
+            </p></div>
             </div>
 
             
             <!-- =================== SECTION =================== -->
             <div class='divider'></div>
-            <h3 id="tacc-a">Accessibility</h3>
+            <h3 class="target" id="toacc-a">Accessibility</h3>
             <p>
                 Include ARIA attributes in the trigger and display elements.
             </p>
             <div class='ul-ui bulleted list'>
-            <div class='item'>The element that serves as the popover/tooltip container has role=tooltip.</div>
-            <div class='item'>The element that triggers the popover/tooltip references the popover/tooltip element with aria-describedby.</div>
+            <div class='item'><p>
+                The element that serves as the popover/tooltip container has role=tooltip.
+            </p></div>
+            <div class='item'><p>
+                The element that triggers the popover/tooltip references the popover/tooltip element with aria-describedby.
+            </p></div>
             </div>
 
- 
+ <div class="toc-spacer"></div>
  <!-- =================== END =================== -->            
         </div>
 
@@ -91,6 +109,7 @@
         // Fpr example only
         setTimeout(function () {
             $("#tooltip").addClass("active");
+            $('.toc-menu').scrollTop($('#tooltip').offset().top, 100);
         }, 300);
     </script>
 </body>

@@ -33,7 +33,7 @@
 
 
         <!--- =================== SECTION =================== -->
-        <h3 id="ale-a">Alerts</h3>
+        <h3 class="target" id="ale-a">Alerts</h3>
         <p>
             Use an alert to implement notices of success or failure for a persistence action (i.e. form submit). On a
             full-page view, these notices should fall in a consistent position from page to page; for example, directly
@@ -73,30 +73,30 @@
             Where the alert is a direct result of an action by the user, the alert should have a dismissible option
             (close button). In other circumstances, alerts may be used to provide help text or other notices, and these
             elements should not include a close button.
-            
+
             <!-- **** Example **** -->
             <div class='example-cont clearfix'>
-            <div class='view'>
-            <div class='ul-ui circular black icon xsm button codeview'>
-            <i class='fas fa-code icon'></i>
-            </div>
-            <div class="ul-ui light blue alert">
-                    <i class="fas fa-times close icon" aria-hidden="true"></i>
-                    <div class="header">
-                        Welcome back!
+                <div class='view'>
+                    <div class='ul-ui circular black icon xsm button codeview'>
+                        <i class='fas fa-code icon'></i>
                     </div>
-                    <p>This is a special notification which you can dismiss if you're bored with it.</p>
+                    <div class="ul-ui light blue alert">
+                        <i class="fas fa-times close icon" aria-hidden="true"></i>
+                        <div class="header">
+                            Welcome back!
+                        </div>
+                        <p>This is a special notification which you can dismiss if you're bored with it.</p>
+                    </div>
                 </div>
-            </div>
-            <div class='code'>
-            <pre> <script type="text" class='code-script'><div class="ul-ui light blue alert">
+                <div class='code'>
+                    <pre> <script type="text" class='code-script'><div class="ul-ui light blue alert">
                 <i class="fas fa-times close icon" aria-hidden="true"></i>
                 <div class="header">
                     Welcome back!
                 </div>
                 <p>This is a special notification which you can dismiss if you're bored with it.</p></div>
             </script></pre>
-            </div>
+                </div>
             </div>
 
         </p>
@@ -104,25 +104,33 @@
 
         <!-- =================== SECTION =================== -->
         <div class='divider'></div>
-        <h3 id="acce-a">Accessibility</h3>
+        <h3 class="target" id="acce-a">Accessibility</h3>
 
         <div class='ul-ui bulleted list'>
-            <div class='item'><p>
-                For a time-sensitive alert, use ARIA role='alert'.
-            </p></div>
-            <div class='item'><p>For an alert that is not time-sensitive but that contains an important prompt or piece of
-            information for the user, use ARIA role='alertdialog'. (The definition of the ARIA role='dialog' is: “an
-            application window that is designed to interrupt the current processing of an application in order to
-            prompt the user to enter information or require a response”).</p></div>
-            <div class='item'><p>Alerts should not be visually hidden if they are not being used. If you do not want a
-            screen reader to pick up an alert, use the aria-hidden='true' HTML attribute and/or display: none in
-            your CSS.</p></div>
+            <div class='item'>
+                <p>
+                    For a time-sensitive alert, use ARIA role='alert'.
+                </p>
+            </div>
+            <div class='item'>
+                <p>For an alert that is not time-sensitive but that contains an important prompt or piece of
+                    information for the user, use ARIA role='alertdialog'. (The definition of the ARIA role='dialog' is:
+                    “an
+                    application window that is designed to interrupt the current processing of an application in order
+                    to
+                    prompt the user to enter information or require a response”).</p>
+            </div>
+            <div class='item'>
+                <p>Alerts should not be visually hidden if they are not being used. If you do not want a
+                    screen reader to pick up an alert, use the aria-hidden='true' HTML attribute and/or display: none in
+                    your CSS.</p>
+            </div>
         </div>
 
 
         <!-- =================== SECTION =================== -->
         <div class='divider'></div>
-        <h3 id="butc-a">Buttons: Coding</h3>
+        <h3 class="target" id="butc-a">Buttons: Coding</h3>
         <p>
             Use a button element to trigger any JavaScript function that does not use a URL. Basically, instead of using
             an a tag with an href="Javascript:void(0)", or href="#", use a button element. If the user can open a
@@ -147,7 +155,7 @@
 
         <!-- =================== SECTION =================== -->
         <div class="ul-ui divider"></div>
-        <h3 id="buts-a">Buttons: Styling</h3>
+        <h3 class="target" id="buts-a">Buttons: Styling</h3>
 
         <p>
             As noted, button elements may be styled to appear as either buttons or as links, depending on their
@@ -167,21 +175,21 @@
 
         <!-- **** Example **** -->
         <div class='example-cont clearfix'>
-        <div class='view'>
-        <div class='ul-ui circular black icon xsm button codeview'>
-        <i class='fas fa-code icon'></i>
-        </div>
-        <button class="ul-ui button">
-                As button
-            </button>
-            <div class="ul-ui button" tabindex="0">
-                As Div
+            <div class='view'>
+                <div class='ul-ui circular black icon xsm button codeview'>
+                    <i class='fas fa-code icon'></i>
+                </div>
+                <button class="ul-ui button">
+                    As button
+                </button>
+                <div class="ul-ui button" tabindex="0">
+                    As Div
+                </div>
+                <a href="#" class="ul-ui button">As an a tag</a>
+                <a href="#">a text link</a>
             </div>
-            <a href="#" class="ul-ui button">As an a tag</a>
-            <a href="#">a text link</a>
-        </div>
-        <div class='code'>
-        <pre> <script type="text" class='code-script'><button class="ul-ui button">
+            <div class='code'>
+                <pre> <script type="text" class='code-script'><button class="ul-ui button">
                 As button
             </button>
             <div class="ul-ui button" tabindex="0">
@@ -190,13 +198,13 @@
             <a href="#" class="ul-ui button">As an a tag</a>
             <a href="#">a text link</a>
         </script></pre>
-        </div>
+            </div>
         </div>
 
 
         <!-- =================== SECTION =================== -->
         <div class="ul-ui divider"></div>
-        <h3 id="butr-a">Buttons: Responsiveness</h3>
+        <h3 class="target" id="butr-a">Buttons: Responsiveness</h3>
 
         <p>In most circumstances, elements styled as buttons should become block elements in medium and smaller
             viewports in order to accommodate touch behavior; the exception to this rule might be for “Next” and
@@ -205,32 +213,32 @@
 
         <!--- **** Example **** -->
         <div class='example-cont clearfix'>
-        <div class='view'>
-        <div class='ul-ui circular black icon xsm button codeview'>
-        <i class='fas fa-code icon'></i>
-        </div>
-        <button class="xxsm ul-ui button">
-                XXSmall
-            </button>
-            <button class="xsm ul-ui button">
-                Xsmall
-            </button>
-            <button class="small ul-ui button">
-                Small
-            </button>
-            <button class="base ul-ui button">
+            <div class='view'>
+                <div class='ul-ui circular black icon xsm button codeview'>
+                    <i class='fas fa-code icon'></i>
+                </div>
+                <button class="xxsm ul-ui button">
+                    XXSmall
+                </button>
+                <button class="xsm ul-ui button">
+                    Xsmall
+                </button>
+                <button class="small ul-ui button">
+                    Small
+                </button>
+                <button class="base ul-ui button">
                     <i class="fas fa-exclamation-triangle icon" aria-hidden="true"></i>
-                Base
-            </button>
-            <button class="medium ul-ui button">
-                Medium
-            </button>
-            <button class="large ul-ui button">
-                Large
-            </button>
-        </div>
-        <div class='code'>
-        <pre> <script type="text" class='code-script'><button class="xxsm ul-ui button">
+                    Base
+                </button>
+                <button class="medium ul-ui button">
+                    Medium
+                </button>
+                <button class="large ul-ui button">
+                    Large
+                </button>
+            </div>
+            <div class='code'>
+                <pre> <script type="text" class='code-script'><button class="xxsm ul-ui button">
             XXSmall
         </button>
         <button class="xsm ul-ui button">
@@ -249,29 +257,29 @@
         <button class="large ul-ui button">
             Large
         </button></script></pre>
-        </div>
+            </div>
         </div>
         <br>
 
         <!--- **** Example **** -->
         <div class='example-cont clearfix'>
-        <div class='view'>
-        <div class='ul-ui circular black icon xsm button codeview'>
-        <i class='fas fa-code icon'></i>
-        </div>
-        <button class="fluid ul-ui button">Fits container</button>
-        </div>
-        <div class='code'>
-        <pre> <script type="text" class='code-script'>
+            <div class='view'>
+                <div class='ul-ui circular black icon xsm button codeview'>
+                    <i class='fas fa-code icon'></i>
+                </div>
+                <button class="fluid ul-ui button">Fits container</button>
+            </div>
+            <div class='code'>
+                <pre> <script type="text" class='code-script'>
         <button class="fluid ul-ui button">Fits container</button>
         </script></pre>
-        </div>
+            </div>
         </div>
 
 
         <!-- =================== SECTION =================== -->
         <div class="ul-ui divider"></div>
-        <h3 id="butu-a">Buttons: Usability</h3>
+        <h3 class="target" id="butu-a">Buttons: Usability</h3>
 
         <div class="ul-ui bulleted list">
             <div class="item">
@@ -314,7 +322,7 @@
 
         <!-- =================== SECTION =================== -->
         <div class="ul-ui divider"></div>
-        <h3 id="anc-a">Anchors: Coding</h3>
+        <h3 class="target" id="anc-a">Anchors: Coding</h3>
 
         <p>Whenever an element uses a URL or in-page navigation, use an anchor tag. This includes:</p>
         <div class="ul-ui bulleted list">
@@ -355,8 +363,8 @@
 
         <!-- =================== SECTION =================== -->
         <div class="ul-ui divider"></div>
-        <h3 id="ancs-a">Anchors: Styling</h3>
-        
+        <h3 class="target" id="ancs-a">Anchors: Styling</h3>
+
         <p>
             Inline anchor style should use standard body font family and size, line height, etc,
             and, by default, an underline (text-decoration) to indicate a link to the user. This
@@ -375,64 +383,76 @@
         <p>When designing for touch display, make sure to provide adequate space around every link,
             just as with buttons. Pay specific attention to lists and menus.
         </p>
-        
+
         <!--- **** Example **** --->
         <div class='example-cont clearfix'>
-        <div class='view'>
-        <div class='ul-ui circular black icon xsm button codeview'>
-        <i class='fas fa-code icon'></i>
-        </div>
-        <p>This is just <a href="#">a random link</a> in the grand scheme of things.</p>
-        <p><a class="block" href="#">This is some linked block of text.</a></p>
-        <p><a href="#">Here are a few</a> <a href="#">linked text items</a> <a href="#">in a row.</a>
-        </p>
-        </div>
-        <div class='code'>
-        <pre> <script type="text" class='code-script'><p>This is just <a href="#">a random link</a> in the grand scheme of things.</p>
+            <div class='view'>
+                <div class='ul-ui circular black icon xsm button codeview'>
+                    <i class='fas fa-code icon'></i>
+                </div>
+                <p>This is just <a href="#">a random link</a> in the grand scheme of things.</p>
+                <p><a class="block" href="#">This is some linked block of text.</a></p>
+                <p><a href="#">Here are a few</a> <a href="#">linked text items</a> <a href="#">in a row.</a>
+                </p>
+            </div>
+            <div class='code'>
+                <pre> <script type="text" class='code-script'><p>This is just <a href="#">a random link</a> in the grand scheme of things.</p>
         <p><a class="block" href="#">This is some linked block of text.</a></p>
         <p><a href="#">Here are a few</a> <a href="#">linked text items</a> <a href="#">in a row.</a></p>
         </script></pre>
-        </div>
+            </div>
         </div>
 
-        
+
         <!-- =================== SECTION =================== -->
         <div class='divider'></div>
-        <h3 id="is-a">Input / Submits</h3>
+        <h3 class="target" id="is-a">Input / Submits</h3>
         <p>
             Use styling described in the “Buttons: Styling” and “Buttons: Usability” sections.
         </p>
         <div class='ul-ui bulleted list'>
             <div class='item'>Where possible, submit a form using input type="submit".</div>
-            <div class='item'><p>As noted in “Forms”, attach any validation or pre-processing to the submit event for forms
-            rather than click events on these elements. This will enable the use of the submit button, as well as
-            ensure that submission by using the “Return” key or by assistive technology software will always execute
-            the required JavaScript.</p></div>
+            <div class='item'>
+                <p>As noted in “Forms”, attach any validation or pre-processing to the submit event for forms
+                    rather than click events on these elements. This will enable the use of the submit button, as well
+                    as
+                    ensure that submission by using the “Return” key or by assistive technology software will always
+                    execute
+                    the required JavaScript.</p>
+            </div>
         </div>
 
 
         <!-- =================== SECTION =================== -->
         <div class='divider'></div>
-        <h3 id="otc-a">Other Cases</h3>
+        <h3 class="target" id="otc-a">Other Cases</h3>
         <p>
             In addition to the cases noted above (primarily buttons that trigger JavaScript functions), buttons may be
             styled as links or vice versa.
         </p>
         <div class='ul-ui bulleted list'>
-            <div class='item'><p>All elements in an “Action” table cell should appear to the user to be links. The actions
-            may be a mix of regular anchor tags, such as an anchor link to “Edit;” buttons, such as a confirmation
-            modal triggered for a delete; or a submit button, as when submitting a form to make a saved search an
-            alert.</p></div>
-            <div class='item'><p>Regular anchors may be styled as buttons for an extraordinary or analogous call to action,
-            such as “Registration” links.</p></div>
-            <div class='item'><p>Where a mix of form submit and anchor elements should be viewed as siblings of equal
-            importance, be consistent in displaying each element as either buttons or links.</p></div>
+            <div class='item'>
+                <p>All elements in an “Action” table cell should appear to the user to be links. The actions
+                    may be a mix of regular anchor tags, such as an anchor link to “Edit;” buttons, such as a
+                    confirmation
+                    modal triggered for a delete; or a submit button, as when submitting a form to make a saved search
+                    an
+                    alert.</p>
+            </div>
+            <div class='item'>
+                <p>Regular anchors may be styled as buttons for an extraordinary or analogous call to action,
+                    such as “Registration” links.</p>
+            </div>
+            <div class='item'>
+                <p>Where a mix of form submit and anchor elements should be viewed as siblings of equal
+                    importance, be consistent in displaying each element as either buttons or links.</p>
+            </div>
         </div>
 
 
         <!-- =================== SECTION =================== -->
         <div class='divider'></div>
-        <h3 id="cond-a">Confirmation Dialogs</h3>
+        <h3 class="target" id="cond-a">Confirmation Dialogs</h3>
         <p>
             Use a confirmation dialog to confirm a process or persistence that cannot be easily undone or recreated; or,
             to confirm data persistence where the user may not be aware that persistence is about to occur (form inputs
@@ -443,35 +463,39 @@
 
         <!--- **** Example **** --->
         <div class='example-cont clearfix'>
-        <div class='view'>
-        <div class='ul-ui circular black icon xsm button codeview'>
-        <i class='fas fa-code icon'></i>
-        </div>
-        <div class="ul-ui small modal" style="display: block !important; position: relative;">
-                <i class="fas fa-times close icon"></i>
-                <div class="header">
-                  Delete Your Account
+            <div class='view'>
+                <div class='ul-ui circular black icon xsm button codeview'>
+                    <i class='fas fa-code icon'></i>
                 </div>
-                <div class="content">
-                    <div class="ul-ui header">This is a header</div>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod euismod diam, in facilisis dolor
-                      imperdiet et. Suspendisse sapien arcu, pharetra varius nisi vel, congue gravida dolor. Sed vitae mi
-                      est. Curabitur tempor magna ac quam ornare, nec tempor nisi tristique. Nullam commodo vitae ante eu
-                      aliquet. Etiam facilisis congue metus in vehicula. Proin feugiat felis eget dignissim interdum. Ut
-                      augue velit, egestas et auctor eget, efficitur eget arcu. Ut vitae turpis massa.</p>
+                <div class="ul-ui small modal" style="display: block !important; position: relative;">
+                    <i class="fas fa-times close icon"></i>
+                    <div class="header">
+                        Delete Your Account
+                    </div>
+                    <div class="content">
+                        <div class="ul-ui header">This is a header</div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod euismod diam, in
+                            facilisis dolor
+                            imperdiet et. Suspendisse sapien arcu, pharetra varius nisi vel, congue gravida dolor. Sed
+                            vitae mi
+                            est. Curabitur tempor magna ac quam ornare, nec tempor nisi tristique. Nullam commodo vitae
+                            ante eu
+                            aliquet. Etiam facilisis congue metus in vehicula. Proin feugiat felis eget dignissim
+                            interdum. Ut
+                            augue velit, egestas et auctor eget, efficitur eget arcu. Ut vitae turpis massa.</p>
+                    </div>
+                    <div class="actions">
+                        <div class="ul-ui blue outlined button">
+                            Action Button
+                        </div>
+                        <div class="ul-ui blue button">
+                            Action Button
+                        </div>
+                    </div>
                 </div>
-                <div class="actions">
-                  <div class="ul-ui blue outlined button">
-                    Action Button
-                  </div>
-                  <div class="ul-ui blue button">
-                    Action Button
-                  </div>
-                </div>
-              </div>
-        </div>
-        <div class='code'>
-        <pre> <script type="text" class='code-script'>
+            </div>
+            <div class='code'>
+                <pre> <script type="text" class='code-script'>
         <div class="ul-ui small modal" style="display: block !important; position: relative;">
             <i class="fas fa-times close icon"></i>
             <div class="header">
@@ -495,7 +519,7 @@
             </div>
           </div>
         </script></pre>
-        </div>
+            </div>
         </div>
 
     </div>
@@ -508,12 +532,17 @@
   src="https://code.jquery.com/jquery-3.4.1.min.js"
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
   crossorigin="anonymous"></script>
+
 <script src="assets/js/toc.js"></script>
-<script type="application/Javascript">
+<script>
     // Fpr example only
-    setTimeout(function () {
-        $("#components").addClass("active");
-    }, 300);
+    $(document).ready(function(){
+        setTimeout(function () {
+            $("#components").addClass("active");
+            $('.toc-menu').scrollTop($('#components').offset().top -50);
+            }, 300);
+    });
+
 </script>
 </body>
 

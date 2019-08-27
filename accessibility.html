@@ -54,8 +54,9 @@
                         APIs</span></a>&nbsp;implemented
                 in browsers.&nbsp;</p>
 
+<!-- =================== SECTION =================== -->
             <div class='divider'></div>
-            <h3 id="ac-a">Coding General HTML Elements</h3>
+            <h3 class="target" id="ac-a">Coding General HTML Elements</h3>
             <p>
                 Accessibility should be implemented by conforming to semantic HTML practices, as well as using ARIA
                 attributes/labels. See individual component and layout sections for suggested implementation of semantic
@@ -67,8 +68,9 @@
                         style="line-height:115%">WCAG documentation</span></a><span style="line-height:115%"> for use in
                     specific HTML elements and common components (such as tooltips).</span></p>
 
+<!-- =================== SECTION =================== -->
             <div class='divider'></div>
-            <h3 id="img-a">Images</h3>
+            <h3 class="target" id="img-a">Images</h3>
             <p>
                 Google’s Lighthouse and Page Speed tools take special interest in image accessibility. Be sure to
                 include alt text on all img tags, as its absence is detrimental to your audit results and SEO. The alt
@@ -76,6 +78,7 @@
                 Where at all possible, do not use images for buttons, navigation or significant text. Minimize text in
                 images in general; if text is present in images, use that text as the alt value.
             </p>
+            <div class="toc-spacer"></div>
         </div>
 
         <article></article>
@@ -92,6 +95,7 @@
         // Fpr example only
         setTimeout(function () {
             $("#accessibility").addClass("active");
+            $('.toc-menu').scrollTop($('#accessibility').offset().top -50);
         }, 300);
     </script>
 </body>

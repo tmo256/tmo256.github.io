@@ -28,7 +28,7 @@
     <main role="main" tabindex="-1">
         <div class="ul-ui container example toc open">
             <h1 class="ul-ui dividing header">Images</h1>
-            <h3 id="resi-a">Responsive Images</h3>
+            <h3 class="target" id="resi-a">Responsive Images</h3>
             <p>
                 HTML5 provides srcset, an attribute designed to deliver the optimal file for the viewport size of each
                 specific device requesting an image. When specified, the browser determines the smallest (file size)
@@ -72,7 +72,7 @@
 
             <!-- =================== SECTION =================== -->
             <div class='divider'></div>
-            <h3 id="sr-a">Image Sizing and Resolution</h3>
+            <h3 class="target" id="sr-a">Image Sizing and Resolution</h3>
             <p>
                 Images should display at the correct resolution for all types of screen resolutions. Historically,
                 images delivered to screens have required resolution of no more than 72ppi. However, with the advent of
@@ -106,7 +106,7 @@
 
             <!-- =================== SECTION =================== -->
             <div class='divider'></div>
-            <h3 id="ff-a">Image File Formats</h3>
+            <h3 class="target" id="ff-a">Image File Formats</h3>
             <p>
                 Because of high resolution proliferation, PNG formats will best serve your web collateral. Consider
                 indexed or 8-bit PNG format for illustrative images, rather than the full 24-bit resolution. Much like
@@ -126,7 +126,7 @@
             
             <!-- =================== SECTION =================== -->
             <div class='divider'></div>
-            <h3 id="opt-a">Image Optimization</h3>
+            <h3 class="target" id="opt-a">Image Optimization</h3>
             <p>
                 As noted above, non-optimized, uncompressed images can be quite large in terms of file size and this can
                 have an outsize effect in high network latency situations like cellular networks for mobile devices or
@@ -177,6 +177,7 @@
         // Fpr example only
         setTimeout(function () {
             $("#images").addClass("active");
+            $('.toc-menu').scrollTop($('#images').offset().top, 100);
         }, 300);
     </script>
 </body>

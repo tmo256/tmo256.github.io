@@ -28,7 +28,7 @@
     <main role="main" tabindex="-1">
         <div class="ul-ui container example toc open">
             <h1 class="ul-ui dividing header">Forms</h1>
-            <h3 id="int-a">Input types</h3>
+            <h3 class="target" id="int-a">Input types</h3>
             <p>
                 Where appropriate, use HTML5 input types to ensure ease of use on touch devices. This includes, but is
                 not limited to:
@@ -61,7 +61,7 @@
 
             <!-- =================== SECTION =================== -->
             <div class='divider'></div>
-            <h3 id="bl-a">Buttons and Links</h3>
+            <h3 class="target" id="bl-a">Buttons and Links</h3>
             <p>
                 Forms commonly require actions other than a simple submit. In some cases, these actions should be
                 performed by buttons and sometimes by links.
@@ -122,7 +122,7 @@
 
             <!-- =================== SECTION =================== -->
             <div class='divider'></div>
-            <h3 id="se-a"> Submit Events</h3>
+            <h3 class="target" id="se-a"> Submit Events</h3>
             <p>
                 As discussed above, although buttons and links do not necessarily need to correspond to their native
                 HTML element tags, forms should generally be executed with input elements of type “submit.” Use a submit
@@ -140,7 +140,7 @@
 
             <!-- =================== SECTION =================== -->
             <div class='divider'></div>
-            <h3 id="jv-a">JavaScript Validations</h3>
+            <h3 class="target" id="jv-a">JavaScript Validations</h3>
             <p>
                 In most cases, JavaScript validations are not necessary. Some situations may make client-side validation
                 more useful to the user, however.
@@ -181,7 +181,7 @@
 
             <!-- =================== SECTION =================== -->
             <div class='divider'></div>
-            <h3 id="seh-a">Success &amp; Error Handling</h3>
+            <h3 class="target" id="seh-a">Success &amp; Error Handling</h3>
             <p>
                 As described in the “Alert” section, indicate success by including a visual alert in the resulting view.
                 This alert should be dismissible (it is not necessary to programmatically close the alert after a set
@@ -193,6 +193,7 @@
                 generic error message, such as “Please correct the input errors.” Do not list individual field errors in
                 this message. Specify these errors by styling each invalid input.
             </p>
+            <div class="toc-spacer"></div>
             <!-- END -->
         </div>
 
@@ -210,6 +211,7 @@
         // Fpr example only
         setTimeout(function () {
             $("#forms").addClass("active");
+            $('.toc-menu').scrollTop($('#forms').offset().top -50);
         }, 300);
     </script>
 </body>

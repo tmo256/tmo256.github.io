@@ -35,7 +35,7 @@
             
             <!-- =================== SECTION =================== -->
             <div class='divider'></div>
-            <h3 id="rt-a">Responsive Tables</h3>
+            <h3 class="target" id="rt-a">Responsive Tables</h3>
             <p>
                 Where tables are used in responsive design, ensure display in medium and small browser views by employing one or a combination of these methods:
             </p>
@@ -101,7 +101,7 @@
             
             <!-- =================== SECTION =================== -->
             <div class='divider'></div>
-            <h3 id="sort-a">Sorting</h3>
+            <h3 class="target" id="sort-a">Sorting</h3>
             <p>
                 Prefer sorting by:
             </p>
@@ -113,13 +113,13 @@
             
             <!-- =================== SECTION =================== -->
             <div class='divider'></div>
-            <h3 id="tacc-a">Accessibility</h3>
+            <h3 class="target" id="tacc-a">Accessibility</h3>
             <div class='ul-ui bulleted list'>
             <div class='item'>Header cells should utilize the TH tag</div>
             <div class='item'>All header cells should contain text. </div>
             <div class='item'>Data cells should utilize the TD tag</div>
             </div>
-
+<div class="toc-spacer"></div>
 <!-- =================== END =================== -->            
         </div>
 
@@ -137,6 +137,7 @@
         // Fpr example only
         setTimeout(function () {
             $("#tables").addClass("active");
+            $('.toc-menu').scrollTop($('#tables').offset().top, 100);
         }, 300);
     </script>
 </body>

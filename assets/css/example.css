@@ -23,10 +23,9 @@ pre {
     background-color: #fff;
     position: fixed;
     top: 0;
-    bottom: 0;
     left: 0;
-    overflow-x: scroll;
-    height: 100%;
+    overflow-y:scroll;
+    max-height: 100%;
 }
 .example-cont {
   background-color: rgba(255, 255, 255, 0.35);
@@ -59,6 +58,9 @@ pre {
   margin: 0;
 }
 /*========================= TOC */
+.toc-spacer {
+  height: 500px;
+}
 .ul-ui.vertical.menu {
     width: 15rem;
   }
@@ -145,10 +147,16 @@ pre {
   .ul-ui.vertical.menu .active.item {
     background: rgba(0, 0, 0, 0.05);
     border-radius: 0;
-    -webkit-box-shadow: none;
     box-shadow: none;
-    border-right: 4px solid #c02032;
+    font-weight: bold;
+   border-right: 4px solid #c02032;
+   pointer-events: none;
   }
+  .ul-ui.vertical .item .menu .active.item {
+    font-weight: bold;
+    color: black;
+    border: none;
+}
   .ul-ui.vertical.menu .menu .item {
     background: 0 0;
     padding: 0.5em 1.25em;
