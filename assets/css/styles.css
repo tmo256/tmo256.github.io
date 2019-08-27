@@ -3,42 +3,8 @@
 @import "components/buttons.css";
 @import "components/typography.css";
 @import "components/list.css";
-@import "components/image.css";
 @import "components/modal.css";
 @import "example.css";
-body {
-  color: #444444;
-}
-h1,
-h2,
-h3,
-h4,
-h5 {
-  line-height: 1.28571429em;
-  margin: calc(0.85714286em) 0 1em;
-  padding: 0;
-}
-h1 {
-  min-height: 1em;
-  font-size: 2.441em;
-}
-h2 {
-  font-size: 1.953em;
-}
-h3 {
-  font-size: 1.563em;
-}
-h4 {
-  font-size: 1.25em;
-}
-h5 {
-  font-size: 1em;
-}
-/*.ul-ui {
-    &.container {
-        padding: @xlg;
-    }
-}*/
 /* ======================================== ANCHORS */
 a,
 a:visited {

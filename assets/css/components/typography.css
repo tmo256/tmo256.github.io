@@ -1,22 +1,62 @@
+html {
+  font-size: 100%;
+}
+body {
+  font-family: "Segoe UI", "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  line-height: 1.45;
+  color: #333;
+}
 p {
-  margin: 0 0 1em;
-  line-height: 1.4285em;
+  margin: 0 0 1.25em;
+  line-height: 1.563em;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  line-height: 1.25em;
+  margin: calc(0.85714286em) 0 1em;
+  padding: 0;
+  font-weight: 300;
+  font-family: 'Open Sans', sans-serif;
+}
+h1 {
+  min-height: 1em;
+  font-size: 3.052em;
+}
+h2 {
+  font-size: 2.441em;
+}
+h3 {
+  font-size: 1.953em;
+}
+h4 {
+  font-size: 1.563em;
+}
+h5 {
+  font-size: 1.25em;
+}
+small,
+.text-small {
+  font-size: 0.8em;
 }
 .ul-ui.dividing.header {
   padding-bottom: 0.2em;
   border-bottom: 1px solid #c7c9c9;
 }
 h1.ul-ui.header {
-  font-size: 2.441em;
+  font-size: 3.052em;
 }
 .ul-ui.header {
   border: none;
   margin: calc(1.85714286rem) 0 1rem;
   padding: 0 0;
-  line-height: 1.28571429em;
+  line-height: 1.25em;
   text-transform: none;
   color: rgba(0, 0, 0, 0.87);
 }
 .ul-ui.header:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
-  font-size: 1.28571429em;
+  font-size: 1.25em;
 }
