@@ -88,6 +88,23 @@ var COMMONUI = {
           title: "Footer",
           href: "layout.html",
           jump: "lf-a",
+        },
+        {
+          id: "templates",
+          title: "HTML Templates",
+          children:
+          [
+            {
+              id: "css-flex",
+              title: "Flexbox Layout",
+              href: "index-flexbox.html"
+            },
+            {
+              id: "css-grid",
+              title: "CSSGrid Layout",
+              href: "index-cssgrid.html"
+            }
+          ]
         }
       ]
     },
