@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="en">
+<!-- specify language: http://www.w3.org/TR/html401/struct/dirlang.html#h-8.1 -->
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>UL UI/UX Boilerplate</title>
+    <!-- meta tags for description and keywords if needed -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- specify viewport: https://developers.google.com/speed/docs/insights/ConfigureViewport -->
+    <!-- favicon.ico and apple-touch-icon(s) in the root directory -->
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,600,700" rel="stylesheet">
+
+    <!-- stylesheets here; concate/minified for production -->
+    <link href="assets/css/normalize.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/site-cssgrid.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/styles.css" rel="stylesheet" type="text/css">
+
+    <script src="https://kit.fontawesome.com/ff07333570.js"></script>
+</head>
+<main role="main" tabindex="-1">
+    <div class="ul-ui container example toc open">
+
+        <!-- =================== SECTION =================== -->
+        <div class='divider'></div>
+        <h3 class="target" id="butc-a">Buttons: Coding</h3>
+        <p>
+            Use a button element to trigger any JavaScript function that does not use a URL. Basically, instead of using
+            an a tag with an href="Javascript:void(0)", or href="#", use a button element. If the user can open a
+            reference via a right-click or 3D touch, use an anchor.
+        </p>
+        <p>This might include</p>
+        <div class="ul-ui bulleted list">
+            <div class="item">non-AJAX modal triggers.</div>
+            <div class="item">popover triggers.</div>
+            <div class="item">tooltip elements.</div>
+            <div class="item">dismissing buttons in modals and alerts.</div>
+            <div class="item">opening and closing/expanding hidden text.</div>
+        </div>
+        <p>In many of the cases (such as some listed above), the button may appear to the user to be an inline link. Use
+            CSS to modify the button to look like a link.</p>
+        <div class="ul-ui alert">
+            <p>Always use the type="button" attribute-value to ensure a button does not inadvertently act as a form
+                submit. Safari, Chrome and other browsers treat button elements as submit tags when nested in forms.
+            </p>
+        </div>
+
+
+        <!-- =================== SECTION =================== -->
+        <div class="ul-ui divider"></div>
+        <h3 class="target" id="buts-a">Buttons: Styling</h3>
+
+        <p>
+            As noted, button elements may be styled to appear as either buttons or as links, depending on their
+            conceptual use.
+        </p>
+        <p>
+            Style elements as a button when:
+        </p>
+        <div class="ul-ui bulleted list">
+            <div class="item">indicating persistence or as a step in a process leading to persistence. This includes
+                actions such as save, save and move forward or back (“next” and “previous” step), submit, delete,
+                update.</div>
+            <div class="item">creating call to action (CTA). The number of CTAs should be limited on a view and
+                should strongly indicate to the user what their next action should be.</div>
+        </div>
+        <p>Unless noted elsewhere in this document, style the button as a link in most other situations.</p>
+
+        <!-- **** Example **** -->
+        <div class='example-cont clearfix'>
+            <div class='view'>
+                <div class='ul-ui circular black icon xsm button codeview'>
+                    <i class='fas fa-code icon'></i>
+                </div>
+                <button class="ul-ui button">
+                    As button
+                </button>
+                <div class="ul-ui button" tabindex="0">
+                    As Div
+                </div>
+                <a href="#" class="ul-ui button">As an a tag</a>
+                <a href="#">a text link</a>
+            </div>
+            <div class='code'>
+                <pre> <script type="text" class='code-script'><button class="ul-ui button">
+                As button
+            </button>
+            <div class="ul-ui button" tabindex="0">
+                As Div
+            </div>
+            <a href="#" class="ul-ui button">As an a tag</a>
+            <a href="#">a text link</a>
+        </script></pre>
+            </div>
+        </div>
+
+
+        <!-- =================== SECTION =================== -->
+        <div class="ul-ui divider"></div>
+        <h3 class="target" id="butr-a">Buttons: Responsiveness</h3>
+
+        <p>In most circumstances, elements styled as buttons should become block elements in medium and smaller
+            viewports in order to accommodate touch behavior; the exception to this rule might be for “Next” and
+            “Previous” buttons. Be sure to create adequate spacing and padding to allow all users to use your
+            buttons on a touchscreen.</p>
+
+        <!--- **** Example **** -->
+        <div class='example-cont clearfix'>
+            <div class='view'>
+                <div class='ul-ui circular black icon xsm button codeview'>
+                    <i class='fas fa-code icon'></i>
+                </div>
+                <button class="xxsm ul-ui button">
+                    XXSmall
+                </button>
+                <button class="xsm ul-ui button">
+                    Xsmall
+                </button>
+                <button class="small ul-ui button">
+                    Small
+                </button>
+                <button class="base ul-ui button">
+                    <i class="fas fa-exclamation-triangle icon" aria-hidden="true"></i>
+                    Base
+                </button>
+                <button class="medium ul-ui button">
+                    Medium
+                </button>
+                <button class="large ul-ui button">
+                    Large
+                </button>
+            </div>
+            <div class='code'>
+                <pre> <script type="text" class='code-script'><button class="xxsm ul-ui button">
+            XXSmall
+        </button>
+        <button class="xsm ul-ui button">
+            Xsmall
+        </button>
+        <button class="small ul-ui button">
+            Small
+        </button>
+        <button class="base ul-ui button">
+                <i class="fas fa-exclamation-triangle icon" aria-hidden="true"></i>
+            Base
+        </button>
+        <button class="medium ul-ui button">
+            Medium
+        </button>
+        <button class="large ul-ui button">
+            Large
+        </button></script></pre>
+            </div>
+        </div>
+        <br>
+
+        <!--- **** Example **** -->
+        <div class='example-cont clearfix'>
+            <div class='view'>
+                <div class='ul-ui circular black icon xsm button codeview'>
+                    <i class='fas fa-code icon'></i>
+                </div>
+                <button class="fluid ul-ui button">Fits container</button>
+            </div>
+            <div class='code'>
+                <pre> <script type="text" class='code-script'>
+        <button class="fluid ul-ui button">Fits container</button>
+        </script></pre>
+            </div>
+        </div>
+
+
+        <!-- =================== SECTION =================== -->
+        <div class="ul-ui divider"></div>
+        <h3 class="target" id="butu-a">Buttons: Usability</h3>
+
+        <div class="ul-ui bulleted list">
+            <div class="item">
+                <p>Use sentence case for button labels.</p>
+                <button class="ul-ui button">This is a Button with Sentence Case</button>
+            </div>
+            <div class="item">
+                <p>Limit characters. Button text should be as short as possible with action words that
+                    clearly explain what the button does (Create Account, Save, Search).</p>
+                <button class="ul-ui button">Create Account</button>
+            </div>
+            <div class="item">
+                <p>
+                    Be consistent in this terminology across the application, such as “Save” vs
+                    “Submit”.
+                </p>
+            </div>
+            <div class="item">
+                <p>Lead with a verb where possible. For example, “Create Account” not “Account Creation”.</p>
+            </div>
+            <div class="item">
+                <p>Icons can also be helpful. At times, consider adding an icon to signal specific actions (Download,
+                    Open in a new window, etc.).</p>
+                <button class="ul-ui icon red button">
+                    <i class="fas fa-exclamation-triangle icon" aria-hidden="true"></i>
+                    Warning
+                </button>
+            </div>
+            <div class="item">
+                <p>
+                    Use consistent class variations to distinguish types and convey meaning. For
+                    example, “Previous” button steps should use a default or plain button
+                    class, while a submit or CTA button would implement a special primary.
+                </p>
+                <button class="ul-ui button">Previous</button>
+                <button class="ul-ui teal button">Next</button>
+            </div>
+        </div>
+
+
+        <!-- =================== SECTION =================== -->
+        <div class="ul-ui divider"></div>
+        <h3 class="target" id="anc-a">Anchors: Coding</h3>
+
+        <p>Whenever an element uses a URL or in-page navigation, use an anchor tag. This includes:</p>
+        <div class="ul-ui bulleted list">
+            <div class="item">
+                <p>standard inline links.</p>
+                <p>I am a <a href="#">standard inline link</a> in the grand scheme of things.</p>
+            </div>
+            <div class="item">
+                <p>
+                    jump nav links (href=#element-id).
+                </p>
+            </div>
+            <div class="item">
+                <p>
+                    AJAX modal triggers, where the user can also open content in a new tab (by right-click or 3D touch).
+                </p>
+            </div>
+            <div class="item">
+                <p>
+                    all cases described in “Forms”.
+                </p>
+            </div>
+            <div class="item">
+                when in doubt, prefer an anchor tag.
+            </div>
+        </div>
+        <p>
+            As noted above, a trigger for a modal may appear either as a link or a button, depending
+            on circumstances. If the request is made using the URL in the href attribute, use an
+            anchor.
+        </p>
+        <div class="ul-ui alert">
+            <p>
+                When using an anchor tag as a button, include the role="button" attribute.
+            </p>
+        </div>
+
+
+        <!-- =================== SECTION =================== -->
+        <div class="ul-ui divider"></div>
+        <h3 class="target" id="ancs-a">Anchors: Styling</h3>
+
+        <p>
+            Inline anchor style should use standard body font family and size, line height, etc,
+            and, by default, an underline (text-decoration) to indicate a link to the user. This
+            allows the designer to use colored text as a design element in headers or banners
+            without creating confusion for the user; users should be able to identify links by more
+            than color alone.</p>
+        <p>
+            In some cases, the context of the link will provide the user with the indication of
+            clickability; for instance, within a standard navigation in the header, or within a
+            drop-down submenu. In those cases, underlines or other indicators may not be required.</p>
+
+        <p>Where an interactive link reveals (expands or creates) text, include an indicator of
+            further content, such as an angle or caret icon. Ideally, this indicator would change
+            orientation (animated) to indicate open and closed.</p>
+
+        <p>When designing for touch display, make sure to provide adequate space around every link,
+            just as with buttons. Pay specific attention to lists and menus.
+        </p>
+
+        <!--- **** Example **** --->
+        <div class='example-cont clearfix'>
+            <div class='view'>
+                <div class='ul-ui circular black icon xsm button codeview'>
+                    <i class='fas fa-code icon'></i>
+                </div>
+                <p>This is just <a href="#">a random link</a> in the grand scheme of things.</p>
+                <p><a class="block" href="#">This is some linked block of text.</a></p>
+                <p><a href="#">Here are a few</a> <a href="#">linked text items</a> <a href="#">in a row.</a>
+                </p>
+            </div>
+            <div class='code'>
+                <pre> <script type="text" class='code-script'><p>This is just <a href="#">a random link</a> in the grand scheme of things.</p>
+        <p><a class="block" href="#">This is some linked block of text.</a></p>
+        <p><a href="#">Here are a few</a> <a href="#">linked text items</a> <a href="#">in a row.</a></p>
+        </script></pre>
+            </div>
+        </div>
+
+
+        <!-- =================== SECTION =================== -->
+        <div class='divider'></div>
+        <h3 class="target" id="is-a">Input / Submits</h3>
+        <p>
+            Use styling described in the “Buttons: Styling” and “Buttons: Usability” sections.
+        </p>
+        <div class='ul-ui bulleted list'>
+            <div class='item'>Where possible, submit a form using input type="submit".</div>
+            <div class='item'>
+                <p>As noted in “Forms”, attach any validation or pre-processing to the submit event for forms
+                    rather than click events on these elements. This will enable the use of the submit button, as well
+                    as
+                    ensure that submission by using the “Return” key or by assistive technology software will always
+                    execute
+                    the required JavaScript.</p>
+            </div>
+        </div>
+
+
+        <!-- =================== SECTION =================== -->
+        <div class='divider'></div>
+        <h3 class="target" id="otc-a">Other Cases</h3>
+        <p>
+            In addition to the cases noted above (primarily buttons that trigger JavaScript functions), buttons may be
+            styled as links or vice versa.
+        </p>
+        <div class='ul-ui bulleted list'>
+            <div class='item'>
+                <p>All elements in an “Action” table cell should appear to the user to be links. The actions
+                    may be a mix of regular anchor tags, such as an anchor link to “Edit;” buttons, such as a
+                    confirmation
+                    modal triggered for a delete; or a submit button, as when submitting a form to make a saved search
+                    an
+                    alert.</p>
+            </div>
+            <div class='item'>
+                <p>Regular anchors may be styled as buttons for an extraordinary or analogous call to action,
+                    such as “Registration” links.</p>
+            </div>
+            <div class='item'>
+                <p>Where a mix of form submit and anchor elements should be viewed as siblings of equal
+                    importance, be consistent in displaying each element as either buttons or links.</p>
+            </div>
+        </div>
+
+
+        <!-- =================== SECTION =================== -->
+        <div class='divider'></div>
+        <h3 class="target" id="cond-a">Confirmation Dialogs</h3>
+        <p>
+            Use a confirmation dialog to confirm a process or persistence that cannot be easily undone or recreated; or,
+            to confirm data persistence where the user may not be aware that persistence is about to occur (form inputs
+            are not visible, for example). Most commonly, use this type of dialog when deleting or removing items. The
+            dialog should interrupt the process to the point that the action cannot complete without explicit input
+            (e.g., button click) from the user.
+        </p>
+
+        <!--- **** Example **** --->
+        <div class='example-cont clearfix'>
+            <div class='view'>
+                <div class='ul-ui circular black icon xsm button codeview'>
+                    <i class='fas fa-code icon'></i>
+                </div>
+                <div class="ul-ui small modal" style="display: block !important; position: relative;">
+                    <i class="fas fa-times close icon"></i>
+                    <div class="header">
+                        Delete Your Account
+                    </div>
+                    <div class="content">
+                        <div class="ul-ui header">This is a header</div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod euismod diam, in
+                            facilisis dolor
+                            imperdiet et. Suspendisse sapien arcu, pharetra varius nisi vel, congue gravida dolor. Sed
+                            vitae mi
+                            est. Curabitur tempor magna ac quam ornare, nec tempor nisi tristique. Nullam commodo vitae
+                            ante eu
+                            aliquet. Etiam facilisis congue metus in vehicula. Proin feugiat felis eget dignissim
+                            interdum. Ut
+                            augue velit, egestas et auctor eget, efficitur eget arcu. Ut vitae turpis massa.</p>
+                    </div>
+                    <div class="actions">
+                        <div class="ul-ui blue outlined button">
+                            Action Button
+                        </div>
+                        <div class="ul-ui blue button">
+                            Action Button
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class='code'>
+                <pre> <script type="text" class='code-script'>
+        <div class="ul-ui small modal" style="display: block !important; position: relative;">
+            <i class="fas fa-times close icon"></i>
+            <div class="header">
+              Delete Your Account
+            </div>
+            <div class="content">
+                <div class="ul-ui header">This is a header</div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod euismod diam, in facilisis dolor
+                  imperdiet et. Suspendisse sapien arcu, pharetra varius nisi vel, congue gravida dolor. Sed vitae mi
+                  est. Curabitur tempor magna ac quam ornare, nec tempor nisi tristique. Nullam commodo vitae ante eu
+                  aliquet. Etiam facilisis congue metus in vehicula. Proin feugiat felis eget dignissim interdum. Ut
+                  augue velit, egestas et auctor eget, efficitur eget arcu. Ut vitae turpis massa.</p>
+            </div>
+            <div class="actions">
+              <div class="ul-ui blue outlined button">
+                Action Button
+              </div>
+              <div class="ul-ui blue button">
+                Action Button
+              </div>
+            </div>
+          </div>
+        </script></pre>
+            </div>
+        </div>
+
+    </div>
+    <article></article>
+</main>
+
+<footer role="contentinfo">
+</footer>
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+
+<script src="assets/js/toc.js"></script>
+<script>
+    // Fpr example only
+    $(document).ready(function(){
+        setTimeout(function () {
+            $("#anchors").addClass("active");
+            $('.toc-menu').scrollTop($('#anchors').offset().top -50);
+            }, 300);
+    });
+
+</script>
+</body>
+
+</html>
