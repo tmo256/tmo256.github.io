@@ -4,7 +4,7 @@ var COMMONUI = {
     {
       id: "intro",
       title: "Introduction",
-      href: "introduction.html"
+      href: "index.html"
     },
     {
       id: "cf",
