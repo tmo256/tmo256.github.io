@@ -1,49 +1,47 @@
 var COMMONUI = {
   structure: 
-  {
-    intro:
+  [
     {
       id: "intro",
       title: "Introduction",
       href: "poc-nav.html"
     },
-    found:
     {
       id: "cf",
       title: "Common Foundation",
       href: "poc-nav.html",
-      jump: true
+      jump: "#cf-b"
     },
-    guide:
     {
       id: "guide",
       title: "Style Guide",
       href: "sg.html",
-      children: [
+      children:
+      [
         {
           id: "webstandards",
           title: "Web Standards",
           href: "sg.html",
-          jump: true
+          jump: "webstandards-b",
         },
         {
           id: "wscolors",
           title: "Colors",
           klass: "special",
           href: "sg.html",
-          jump: true,
+          jump: "wscolors-b",
           children: [
             {
               id: "wscolorsacc",
               title: "Accessibility",
               href: "sg.html",
-              jump: true
+              jump: "wscolorsacc-b"
             }
           ]
         }
       ]
     }
-  },
+  ],
   highlight: function()
   {
     $('a.selected').removeClass("selected");
@@ -61,7 +59,8 @@ var COMMONUI = {
     {
       $item.addClass(node.klass);
     }
-    href = node.href + (node.jump ? "#" + node.id + "-b" : "");
+    var $j = node.jump;
+    href = node.href + ($j ? ($j.indexOf("#") == -1 ? "#" : "") + $j : "");
     $a.attr("href",href).text(node.title);
 
     $item.append($a);
@@ -81,13 +80,17 @@ var COMMONUI = {
   buildNav: function()
   {
     var $ulRoot = $("<ul></ul>"), $li = $("<li></li>");
-    $.each(COMMONUI.structure,function(k,v)
+    $.each(COMMONUI.structure,function(i,v)
     {
       $li = COMMONUI.parseItem(v);
       $ulRoot.append($li);
     });
 
     $("nav",$("body")).append($ulRoot);
+  },
+  initPage: function()
+  {
+    COMMONUI.buildNav();
 
     COMMONUI.highlight();
     
@@ -95,5 +98,6 @@ var COMMONUI = {
       COMMONUI.highlight();
     });
   }
+
 };
 
