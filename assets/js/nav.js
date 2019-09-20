@@ -40,6 +40,17 @@ var COMMONUI = {
           ]
         }
       ]
+    },
+    {
+      id: "imaginary",
+      title: "Pageless Title",
+      children: [
+        {
+          id: "blank",
+          title: "Intentionally Blank",
+          href: "blank.html"
+        }
+      ]
     }
   ],
   highlight: function()
@@ -59,11 +70,18 @@ var COMMONUI = {
     {
       $item.addClass(node.klass);
     }
-    var $j = node.jump;
-    href = node.href + ($j ? ($j.indexOf("#") == -1 ? "#" : "") + $j : "");
-    $a.attr("href",href).text(node.title);
 
-    $item.append($a);
+    if( node.href )
+    {
+      var $j = node.jump;
+      href = node.href + ($j ? ($j.indexOf("#") == -1 ? "#" : "") + $j : "");
+      $a.attr("href",href).text(node.title);
+      $item.append($a);
+    }
+    else
+    {
+      $item.text(node.title);
+    }
 
     if(node.children)
     {
