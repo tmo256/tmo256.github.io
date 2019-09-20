@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<!-- specify language: http://www.w3.org/TR/html401/struct/dirlang.html#h-8.1 -->
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>UL UI/UX Boilerplate</title>
+    <!-- meta tags for description and keywords if needed -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- specify viewport: https://developers.google.com/speed/docs/insights/ConfigureViewport -->
+    <!-- favicon.ico and apple-touch-icon(s) in the root directory -->
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,600,700" rel="stylesheet">
+
+    <!-- stylesheets here; concate/minified for production -->
+    <link href="assets/css/normalize.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/site-cssgrid.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/styles.css" rel="stylesheet" type="text/css">
+
+    <script src="https://kit.fontawesome.com/ff07333570.js"></script>
+</head>
+<main role="main" tabindex="-1">
+    <div class="ul-ui container example toc open">
+
+        <!--- =================== SECTION =================== -->
+        <h3 class="target" id="ale-a">Alerts</h3>
+        <p>
+            Use an alert to implement notices of success or failure for a persistence action (i.e. form submit). On a
+            full-page view, these notices should fall in a consistent position from page to page; for example, directly
+            beneath the main page title or the page lead text. If an alert message appears within a modal window, the
+            alert should be prepended as the first element the modal content, in general (though specific layouts may
+            require a modified implementation).
+        </p>
+
+        <!--- **** Example **** -->
+        <div class="example-cont clearfix">
+            <div class="view">
+                <div class="ul-ui circular black icon xsm button codeview">
+                    <i class="fas fa-code icon"></i>
+                </div>
+                <div class="ul-ui red icon alert">
+                    <div class="icon">
+                        <i class="fas fa-info-circle icon" aria-hidden="true"></i>
+                    </div>
+                    <div class="content">
+                        <div class="header">I am a Red Icon Alert</div>
+                    </div>
+                </div>
+            </div>
+            <div class="code">
+                <pre> <script type="text" class="code-script"><div class="ul-ui red icon alert">
+                            <div class="icon">
+                                <i class="fas fa-info-circle icon" aria-hidden="true"></i>
+                            </div>
+                            <div class="content">
+                                <div class="header">I am a Red Icon Alert</div>
+                            </div>
+                        </div></script></pre>
+            </div>
+        </div>
+
+        <p>
+            Where the alert is a direct result of an action by the user, the alert should have a dismissible option
+            (close button). In other circumstances, alerts may be used to provide help text or other notices, and these
+            elements should not include a close button.
+
+            <!-- **** Example **** -->
+            <div class='example-cont clearfix'>
+                <div class='view'>
+                    <div class='ul-ui circular black icon xsm button codeview'>
+                        <i class='fas fa-code icon'></i>
+                    </div>
+                    <div class="ul-ui light blue alert">
+                        <i class="fas fa-times close icon" aria-hidden="true"></i>
+                        <div class="header">
+                            Welcome back!
+                        </div>
+                        <p>This is a special notification which you can dismiss if you're bored with it.</p>
+                    </div>
+                </div>
+                <div class='code'>
+                    <pre> <script type="text" class='code-script'><div class="ul-ui light blue alert">
+                <i class="fas fa-times close icon" aria-hidden="true"></i>
+                <div class="header">
+                    Welcome back!
+                </div>
+                <p>This is a special notification which you can dismiss if you're bored with it.</p></div>
+            </script></pre>
+                </div>
+            </div>
+
+        </p>
+
+
+        <!-- =================== SECTION =================== -->
+        <div class='divider'></div>
+        <h3 class="target" id="acce-a">Accessibility</h3>
+
+        <div class='ul-ui bulleted list'>
+            <div class='item'>
+                <p>
+                    For a time-sensitive alert, use ARIA role='alert'.
+                </p>
+            </div>
+            <div class='item'>
+                <p>For an alert that is not time-sensitive but that contains an important prompt or piece of
+                    information for the user, use ARIA role='alertdialog'. (The definition of the ARIA role='dialog' is:
+                    “an
+                    application window that is designed to interrupt the current processing of an application in order
+                    to
+                    prompt the user to enter information or require a response”).</p>
+            </div>
+            <div class='item'>
+                <p>Alerts should not be visually hidden if they are not being used. If you do not want a
+                    screen reader to pick up an alert, use the aria-hidden='true' HTML attribute and/or display: none in
+                    your CSS.</p>
+            </div>
+        </div>
+
+
+    </div>
+    <article></article>
+</main>
+
+<footer role="contentinfo">
+</footer>
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+
+<script src="assets/js/toc.js"></script>
+<script>
+    // Fpr example only
+    $(document).ready(function(){
+        setTimeout(function () {
+            $("#alerts").addClass("active");
+            $('.toc-menu').scrollTop($('#alerts').offset().top -50);
+            }, 300);
+    });
+
+</script>
+</body>
+
+</html>
