@@ -1,0 +1,100 @@
+<html>
+  <head>
+    <title>POC for Object Nav</title>
+    <script src="/assets/js/nav.js"></script>
+    <style>
+
+      .selected {
+        font-weight: bold;
+      }
+
+      body {
+        margin: 0;
+        display: flex;
+      }
+
+      nav {
+        background-color: #efefef;
+        flex: 0 0 250px;
+        padding: 1rem;
+      }
+
+      main {
+        flex: 1 1 auto;
+        padding: 1rem;
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <nav></nav>
+    <main class="body">
+      <h1>Style Guide</h1>
+      <article id="webstandards-b">
+        <h2>Web Standards</h2>
+
+        <p>
+        The principles and code fragments below assume modern browsers, which includes the latest (desktop and 
+        mobile) versions of Chrome, Safari and Firefox, as well as IE 11+. Target MS Edge only 
+        where your user adoption makes it relevant, as Microsoft plans to phase out support for this browser. 
+        Support of other, older browser versions may be required where audience usage warrants, which may
+        lead to the need to disregard some style guidelines.</p>
+
+        <p>
+        Prefer graceful CSS fallbacks to polyfills where possible and employ tools such as Modernizr to help
+        detect and create these fallback styles. When writing JavaScript, use ECMA6 syntax with caution, as some 
+        features of the new script version have been adopted more widely than others.</p>
+
+        <p>
+        If in doubt, Can I Use in combination with your audience analytics can provide guidance on what 
+        browser features are reasonable to employ for your application. Post-processor tools like PostCSS
+        can be integrated into automated builds to support next gen CSS functions and prefixed styles 
+        (such as prefixed flex rules to support flex in IE 10) to stretch limitations.</p>
+      </article>
+
+      <article id="wscolors-b">
+        <h2>Colors</h2>
+
+        <p>
+        UL's primary brand colors are as follows:</p>
+
+        <ul>
+          <li>UL Red: #C02032</li>
+          <li>UL Black: #000000</li>
+          <li>UL White: #FFFFFF</li>
+        </ul>
+
+        <p>
+        These colors should be preferred as described in the Common Foundation section. Other approved UL
+        colors can be found on the brandhub site maintained by the corporate marketing team.</p>
+
+        <h3>Accessibility</h3>
+
+        <p>
+        Note, in certain circumstances UL’s red brand color can present challenges to users with color blindness. 
+        At a minimum,</p>
+
+        <ul>
+          <li>avoid combining red and green text/backgrounds/juxtapositions;</li>
+          <li>when using color to convey meaning (such as red text for error messages, green for success,
+            etc.), also use symbols and words to convey that meaning.</li>
+        </ul>
+
+        <p>
+        In general, all text should be readable by measuring a contrast ratio of at least 4.5 
+        (as low as 3.0 is acceptable in some circumstances) between text and background. A number 
+        of contrast checker online tools are available; Chrome developer tools also provides a tool to do this (tutorial).</p>
+      </article>
+    </main>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+
+  <script>
+    COMMONUI.buildNav();
+  </script>
+  
+  </body>
+</html>

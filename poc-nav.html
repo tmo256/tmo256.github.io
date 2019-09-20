@@ -1,0 +1,84 @@
+<html>
+  <head>
+    <title>POC for Object Nav</title>
+    <script src="/assets/js/nav.js"></script>
+    <style>
+
+      .selected {
+        font-weight: bold;
+      }
+
+      body {
+        margin: 0;
+        display: flex;
+      }
+
+      nav {
+        background-color: #efefef;
+        flex: 0 0 250px;
+        padding: 1rem;
+      }
+
+      main {
+        flex: 1 1 auto;
+        padding: 1rem;
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <nav></nav>
+    <main class="body">
+      <article>
+        <h2>Introduction</h2>
+
+        <p>
+        The goal of this document is to facilitate the creation of a common UI / UX experience 
+        for all UL external-facing web applications; it provides a set of common rules that can be 
+        applied to all existing and new applications and features. It is not intended to be comprehensive
+        or to answer every possible question that might arise in developing an application. Designers and devs 
+        are encouraged to apply common sense and good judgement!</p>
+
+        <p>
+        By providing goals, citation and context wherever possible, this document seeks to explain the 
+        reasoning behind each suggested rule, which by extension should help application producers understand when 
+        and why to disregard them. However, items that are highlighted in teal should generally be
+        adhered to unless there are very strong reasons to disregard.</p>
+
+        <p>
+        This document is intended to be technology agnostic and provide common guidelines whether the underlying 
+        implementation is SASS or LESS, Bootstrap or Semantic UI, React or Angular, etc.</p>
+      </article>
+
+      <article id="cf-b">
+        <h2>Common Foundation</h2>
+
+        <p>
+        Implementing the common foundation in an application will accomplish 80% of a common look and should
+        (and is intended to) be able to be accomplished quickly.
+        </p>
+
+        <ul>
+          <li>Header color and UL logo. UL red header is preferred but for historical /
+              persona reasons other choices are acceptable- Good Guide, for example, serves an entirely 
+              different persona from what is more typical for other UL apps.</li>
+          <li>Footer color. Dark grey, common link styles and elements (copyright, etc.) where possible.</li>
+          <li>Font: Adopt Open Sans for headers at minimum.</li>
+          <li>Icons: font awesome (there is some cost associated with this).</li>
+          <li>Button styles: Padding / border radius, shape, border, shadow, mouseovers (transitions, relative 
+              lightness/brightness). Not necessary, color or typography.</li>
+        </ul>
+      </article>
+    </main>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+
+  <script>
+    COMMONUI.buildNav();
+  </script>
+  
+  </body>
+</html>
