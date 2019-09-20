@@ -21,24 +21,54 @@ var COMMONUI = {
         {
           id: "webstandards",
           title: "Web Standards",
-          href: "sg.html",
-          jump: "webstandards-b",
+          href: "style-guide.html",
+          jump: "ws-a",
+        },
+        {
+          id: "i18n",
+          title: "Internationalization (i18n)",
+          href: "style-guide.html",
+          jump: "int-a",
+        },
+        {
+          id: "common",
+          title: "Common Terminology",
+          href: "style-guide.html",
+          jump: "ct-a",
+        },
+        {
+          id: "typeo",
+          title: "Typography",
+          href: "style-guide.html",
+          jump: "tp-a",
         },
         {
           id: "wscolors",
           title: "Colors",
           klass: "special",
-          href: "sg.html",
-          jump: "wscolors-b",
+          href: "style-guide.html",
+          jump: "co-a",
           children: [
             {
               id: "wscolorsacc",
               title: "Accessibility",
-              href: "sg.html",
-              jump: "wscolorsacc-b"
+              href: "style-guide.html",
+              jump: "ca-a"
             }
           ]
-        }
+        },
+        {
+          id: "icons",
+          title: "Icons",
+          href: "style-guide.html",
+          jump: "ic-a",
+        },
+        {
+          id: "style-resp",
+          title: "Responsiveness",
+          href: "style-guide.html",
+          jump: "res-a",
+        },
       ]
     },
     {

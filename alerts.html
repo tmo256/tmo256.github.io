@@ -123,7 +123,7 @@
 
 
     </div>
-    <article></article>
+    <article><nav></nav></article>
 </main>
 
 <footer role="contentinfo">
@@ -133,16 +133,9 @@
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
   crossorigin="anonymous"></script>
 
-<script src="assets/js/toc.js"></script>
+<script src="assets/js/nav.js"></script>
 <script>
-    // Fpr example only
-    $(document).ready(function(){
-        setTimeout(function () {
-            $("#alerts").addClass("active");
-            $('.toc-menu').scrollTop($('#alerts').offset().top -50);
-            }, 300);
-    });
-
+COMMONUI.initPage();
 </script>
 </body>
 
