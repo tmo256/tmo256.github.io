@@ -55,10 +55,19 @@ var COMMONUI = {
   ],
   highlight: function()
   {
+    /*
+     * Note: Currently, this method of highlighting only supports a
+     * flattened directory and unique html filenames. If subdirs need
+     * support, "highlight" could be prepended with a subdir by adding
+     * a subdir key-val pair to the nav element structure obj; adding
+     * a data-nested attribute to the anchor tag should allow
+     * duplication of top-level and nested filenames (eg "colors.html"
+     * and "accessibility/colors.html"). -- MTM 9/21/2019
+     */
     $('a.selected').removeClass("selected");
-    var frag      = window.location, path = frag.pathname.substr(1), hash = frag.hash,
+    var frag      = window.location, path = frag.pathname.substr(frag.pathname.lastIndexOf("/") + 1), hash = frag.hash,
         highlight = hash.length > 0 ? path +  hash : path;
-    $('a[href~="' + highlight + '"]').addClass("selected");
+    $('a[href$="' + highlight + '"]').addClass("selected");
   },
   parseItem: function(node)
   {
