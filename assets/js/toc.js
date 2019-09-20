@@ -14,7 +14,6 @@ $(document).ready(function () {
         "<a class='item ct-a' href='style-guide.html#ct-a' id='ct-i'>Common Terminology</a>" +
         "<a class='item tp-a' href='style-guide.html#tp-a' id='tp-i'>Typography</a>" +
         "<a class='item co-a' href='style-guide.html#co-a' id='co-i'>Colors</a>" +
-        "<a class='item ca-a' href='style-guide.html#ca-a' id='ca-i'>Accessibility</a>" +
         "<a class='item ic-a' href='style-guide.html#ic-a' id='ic-i'>Icons</a>" +
         "<a class='item res-a' href='style-guide.html#res-a' id='res-i'>Responsiveness</a>" +
         "</div>" +
@@ -42,18 +41,26 @@ $(document).ready(function () {
         "<div class='item'>" +
         "<div class='header' id='components'>Component Library</div>" +
         "<div class='menu'>" +
-        "<a class='item ale-a' href='component-library.html'>Alerts</a>" +
-        "<a class='item acce-a' href='component-library.html#acce-a'>Accessibility</a>" +
-        //"<a class='item' href='component-library.html'>Anchors &amp; Buttons</a>" +
-        "<a class='item butc-a' href='component-library.html#butc-a'>Buttons: Coding</a>" +
-        "<a class='item buts-a' href='component-library.html#buts-a'>Buttons: Styling</a>" +
-        "<a class='item butr-a' href='component-library.html#butr-a'>Buttons: Responsiveness</a>" +
-        "<a class='item butu-a' href='component-library.html#butu-a'>Buttons: Usability</a>" +
-        "<a class='item anc-a' href='component-library.html#anc-a'>Anchors: Coding</a>" +
-        "<a class='item ancs-a' href='component-library.html#ancs-a'>Anchors: Styling</a>" +
-        "<a class='item is-a' href='component-library.html#is-a'>Input/Submits</a>" +
-        "<a class='item otc-a' href='component-library.html#otc-a'>Other Cases</a>" +
-        "<a class='item cond-a' href='component-library.html#cond-a'>Confirmation Dialogs</a>" +
+        "<a class='item ac-a' href='component-library.html' id='comp-i'>Introduction</a>" +
+        "</div>" +
+        "</div>" +
+
+        "<a class='item' id='alerts' href='alerts.html'>Alerts</a>" +
+        "<div class='item'>" +
+        "</div>" +
+
+        "<div class='item'>" +
+        "<div class='header' id='anchors'>Anchors &amp; Buttons</div>" +
+        "<div class='menu'>" +
+        "<a class='item butc-a' href='anchors.html#butc-a'>Buttons: Coding</a>" +
+        "<a class='item buts-a' href='anchors.html#buts-a'>Buttons: Styling</a>" +
+        "<a class='item butr-a' href='anchors.html#butr-a'>Buttons: Responsiveness</a>" +
+        "<a class='item butu-a' href='anchors.html#butu-a'>Buttons: Usability</a>" +
+        "<a class='item anc-a' href='anchors.html#anc-a'>Anchors: Coding</a>" +
+        "<a class='item ancs-a' href='anchors.html#ancs-a'>Anchors: Styling</a>" +
+        "<a class='item is-a' href='anchors.html#is-a'>Input/Submits</a>" +
+        "<a class='item otc-a' href='anchors.html#otc-a'>Other Cases</a>" +
+        "<a class='item cond-a' href='anchors.html#cond-a'>Confirmation Dialogs</a>" +
         "</div>" +
         "</div>" +
 
