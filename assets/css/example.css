@@ -12,13 +12,14 @@ pre {
     padding-right: 50px;
     padding-bottom: 50px;
 }
-.ul-ui.container.example {
-    padding-left: 0;
-    width: 100%;
+main > article > nav  ul {
     background-color: transparent;
+    list-style-type: none;
     overflow: auto;
+    padding-left: 1rem;
+    width: 100%;
 }
-.example.toc {
+main > article > nav {
     width: 15em;
     background-color: #fff;
     position: fixed;
@@ -27,6 +28,10 @@ pre {
     overflow-y:scroll;
     max-height: 100%;
 }
+
+main > article > nav {
+}
+
 .example-cont {
   background-color: rgba(255, 255, 255, 0.35);
   padding: 10px 15px;
@@ -99,7 +104,8 @@ pre {
     border-right: none;
     padding: 1em;
   }
-  .ul-ui.menu .active.item {
+
+  main > article > nav .selected {
     background: rgba(0, 0, 0, 0.05);
     color: rgba(0, 0, 0, 0.95);
     font-weight: 400;

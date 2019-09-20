@@ -6,19 +6,20 @@
 @import "components/modal.css";
 @import "example.css";
 /* ======================================== ANCHORS */
-a,
-a:visited {
+
+nav a,
+nav a:visited {
   text-decoration: none;
   position: relative;
   color: #c02032;
   cursor: pointer;
 }
-a:hover,
-a:active {
+nav a:hover,
+nav a:active {
   color: #666666 !important;
 }
-a:after,
-a:visited:after {
+nav a:after,
+nav a:visited:after {
   content: '';
   height: 1px;
   position: absolute;
@@ -28,20 +29,20 @@ a:visited:after {
   background: #e56170;
   transition: 0.2s;
 }
-a:hover:after,
-a:visited:hover:after {
+nav a:hover:after,
+nav a:visited:hover:after {
   width: 100%;
 }
-a.block,
-a:visited.block {
+nav a.block,
+nav a:visited.block {
   padding: 0.5em;
   display: block;
 }
-a.block.active {
+nav a.block.active {
   background: #f5f5f5;
 }
-a.block:hover,
-a:visited.block:hover {
+nav a.block:hover,
+nav a:visited.block:hover {
   background: #f5f5f5;
 }
 /* ------------

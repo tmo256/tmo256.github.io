@@ -320,6 +320,8 @@ var COMMONUI = {
     var frag      = window.location, path = frag.pathname.substr(frag.pathname.lastIndexOf("/") + 1), hash = frag.hash,
         highlight = hash.length > 0 ? path +  hash : path;
     $('a[href$="' + highlight + '"]').addClass("selected");
+
+    $("nav").scrollTop($('a.selected').position().top);
   },
   parseItem: function(node)
   {
