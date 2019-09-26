@@ -64,8 +64,8 @@ header
   background-color: #C02032;
   box-shadow: 0 2px 4px -1px rgba(0,0,0,.4);
   display: grid;
-  grid-template-columns: [start] auto [b] 1fr [c] auto [end];
-  padding: 0 1.25rem;
+  grid-template-columns: [start] auto [b] 1fr [c] auto [d] auto [end];
+  padding: .5rem 1.25rem;
   position: fixed;
   top: 0;
   width: 100%;
@@ -90,18 +90,18 @@ header .main-logo > a > img
   vertical-align: middle;
 }
 
-
-header > div[role=search]
+header > #account-menu
 {
-  grid-column: b / c;
+  grid-column: c / d;
+  margin-right: 1.5rem;
 }
-
 
 header > #ul-section
 {
+  border-left: 1px solid rgba(0,0,0,.2);
   align-items: center;
   display: flex;
-  grid-column: c / end;
+  grid-column: d / end;
   padding-left: 1.5rem;
 }
 
@@ -119,7 +119,6 @@ header a.dashboard img
 header > nav 
 {
   align-self: stretch;
-  border-right: 1px solid rgba(0,0,0,.2);
   grid-column: b / c;
   margin-left: auto;
   padding-right: 1.5rem;
@@ -160,11 +159,6 @@ header a.account img
   height: 40px;
 }
 
-header a.account
-{
-  position: relative;
-}
-
 header a.account:before
 {
   background-color: #fff;
@@ -179,7 +173,7 @@ header a.account:before
   width: .5rem;
 }
 
-header > nav > ul > li a.menu-icon
+header > div a.menu-icon
 {
   align-items: center;
   display: flex;
@@ -351,6 +345,7 @@ footer .copyright, footer .copyright ul
 {
   align-items: center;
   display: flex;
+  flex-wrap: wrap;
 }
 
 footer .copyright nav
@@ -367,16 +362,17 @@ footer .copyright ul li
   header {
     height: 56px;
   }
-  header > nav {
+  header  nav {
     background-color: #fff;
     bottom: 0;
     color: #333;
+    display: flex;
     left: 0;
     padding: 0;
     position: fixed;
     top: 56px;
     width: 100%;
-    transform: translate3d(-100%,0,0);
+    transform: translate3d(100%,0,0);
     transition: transform ease .3s;
   }
 
@@ -384,39 +380,82 @@ footer .copyright ul li
     transform: translate3d(0,0,0);
   }
 
-  header > nav ul {
+  header  nav ul {
     align-items: stretch;
     flex-direction: column;
+    flex-basis: 100%;
     padding: 0; 
   }
 
-  header > nav ul li {
+  header nav ul li {
     border-bottom: 1px solid rgba(0,0,0,.075);
     padding: 1rem 3rem;
   }
 
-  header > nav ul a {
+  header nav ul a {
     color: #333!important;
     display; block;
     font-size: 1.25rem;
   }
 
-  header > nav ul a.account.menu-icon:before {
-    background: transparent;
-    border: none;
-    border-radius: 0;
-    content:'';
+  .submenu
+  {
+    height: calc(100% - 56px);
+    flex-direction: column;
+    padding: 0;
   }
 
-  .submenu {
-    display: none;
+  .submenu .sub-submenu
+  {
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .submenu > .col > ul > li
+  {
+    padding: .5rem 1rem;
+  }
+
+  .submenu .sub-label
+  {
+    background-color: #efefef;
+    border-top: 1px solid #ccc;
+    padding: .5rem 1rem;
+  }
+
+  .submenu .col
+  {
+    padding-bottom: 1rem;
+  }
+  .submenu .col + .col
+  {
+    margin-left: 0;
   }
 }
 
 @media screen and (max-width: 767px) {
+  header {
+    height: 46px;
+  }
+
+  header  nav {
+    top: 46px;
+  }
+  .submenu
+  {
+    height: calc(100% - 46px);
+    top: 46px;
+  }
+  
+
   header .main-logo > a > img
   {
     height: 20px;
+  }
+
+  header a.account img
+  {
+    height: 30px;
   }
 
   footer .copyright, footer .copyright ul
@@ -610,11 +649,24 @@ header + nav.submenu
 
 header + nav.submenu.open
 {
-  -webkit-transform: translate3d(0,0,0);
-          transform: translate3d(0,0,0);
+  -webkit-transform: translate3d(0,0,0)!important;
+          transform: translate3d(0,0,0)!important;
 
 	/*-webkit-animation: scale-up-ver-top 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 	        animation: scale-up-ver-top 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;*/
+}
+
+@media screen and (max-width: 991px)
+{
+  header + nav.submenu
+  {
+    -webkit-transform: translate3d(100%,0,0);
+            transform: translate3d(100%,0,0);
+  }
+  header + nav.submenu.open
+  {
+    overflow: auto;
+  }
 }
 
 body {
@@ -637,72 +689,6 @@ body {
   }
 }
 
-.fw-container
-{
-  display: flex;
-  flex-direction: column;
-  max-width: 100%;
-  width: 100%;
-}
-
-.fw-container > div
-{
-  flex: 1 1 auto;
-  position: relative;
-}
-
-.fw-container .diagram {
-}
-
-.fw-container .note-labels li {
-  align-items: center;
-  background-color: #000;
-  border-radius: 50%;
-  color: #fff;
-  font-weight: bold;
-  display: flex;
-  height: 20px;
-  justify-content: center;
-  position: absolute;
-  text-transform: uppercase;
-  width: 20px;
-}
-
-.fw-container .note-labels li.a {
-  left: 0;
-  top: -10px;
-}
-.fw-container .note-labels li.b {
-  left: 9%;
-  top: 10px;
-}
-.fw-container .note-labels li.c {
-  left: 50%;
-  margin: -10px 0 0 -15px;
-  top: 50%;
-}
-.fw-container .note-labels li.d {
-  margin-top: -15px;
-  right: 31%;
-  top: 50%;
-}
-.fw-container .note-labels li.e {
-  margin-top: -15px;
-  right: 6.25%;
-  top: 50%;
-}
-.fw-container .note-labels li.f {
-  margin-top: -15px;
-  right: 0;
-  top: 50%;
-}
-
-
-.fw-container .diagram img {
-  border: 1px solid black;
-  max-width: 100%;
-  width: 100%;
-}
 /*** END EXAMPLE ONLY CLASSES ***/
 
 /*** COMPONENT UTILITIES ***/

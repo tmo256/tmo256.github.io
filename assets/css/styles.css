@@ -76,3 +76,7 @@ nav a:visited.block:hover {
   width: 100%;
   background-color: #d4d5d5;
 }
+
+code {
+  color: purple;
+}

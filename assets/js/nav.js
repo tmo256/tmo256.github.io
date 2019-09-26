@@ -92,6 +92,7 @@ var COMMONUI = {
         {
           id: "templates",
           title: "HTML Templates",
+          href: "template.html",
           children:
           [
             {

@@ -20,6 +20,7 @@
     <link href="assets/css/normalize.css" rel="stylesheet" type="text/css">
     <link href="assets/css/site-cssgrid.css" rel="stylesheet" type="text/css">
     <link href="assets/css/styles.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/diagrams.css" rel="stylesheet" type="text/css">
 
     <script src="https://kit.fontawesome.com/ff07333570.js"></script>
 </head>
@@ -27,25 +28,143 @@
 <body>
     <main role="main" tabindex="-1">
         <div class="ul-ui container example toc open">
-            <h1 class="ul-ui dividing header">xxx</h1>
+            <h3 class="target" id="templates">HTML Templates</h3>
+
+            <p>
+            HTML templates coded with Flexbox and CSS Grid methods of layout are available in this repository 
+            (<a href="index-flex.html">Flexbox Layout</a> and <a href="index-cssgrid.html">CSS Grid Layout</a>).
+            Obviously, the technical environment of any specific application may prohibit the direct implementation
+            of that HTML; use the specifications provided here to begin a custom implementation of the UL layout.</p>
+
+            <p>
+            As described elsewhere in this documentation, the font family is <code>Open Sans</code>; the font weight is 
+            <code>400</code>. Also as specified in <a href="style-guide.html#tp-a">Typography</a>, our rem unit is 
+            assumed to be 16px when body font size is set to 100% (or explicitly set to 16).
+            Because moving smoothly between applications is the goal of a common header, pixels may be the 
+            preferred unit when coding your header element (both rems and pixels are provided here).</p>
+
+            <p>
+            A note on the submenus provided in templates: the style, content and animation of menus triggered
+            by the account and menu icons may vary from application to application. If possible, transition the 
+            appearance of the menus in a similar style and from the same direction as the template indicate; however, the
+            conventions and limitations of individual applications may supersede the method illustrated here.</p> 
+            
+
+            <div class="divider"></div>
+            <h5>Responsive Sizing: Desktop</h5>
+            <section class="diagram desktop">
+              <div class="example">
+                <img src="assets/images/desktop-min.png">
+                <ul class="unstyled note-labels">
+                  <li class="a">A</li>
+                  <li class="b">B</li>
+                  <li class="c">C</li>
+                  <li class="d">D</li>
+                  <li class="e">E</li>
+                  <li class="f">F</li>
+                  <li class="g">G</li>
+                  <li class="h">H</li>
+                </ul>
+              </div>
+              <div class="explanation">
+                <ol type="A" class="expo">
+                  <li><code>padding: .5rem(8px) 1.25rem(20px)</code></li>
+                  <li>All elements in the head vertically
+                    centered.<br>
+                    Logo: <code>max-height: 2.5rem(40px)</code></li>
+                  <li>Header should remain sticky to the top of the
+                    viewport.<br>
+                    <code>height: 3.5rem(56px)<br>
+                    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px -1px;</code><br>Background color in
+                    the example is UL red; color may vary by
+                    application.</li>
+                  <li>Maximum of 6 links in header.<br>
+                    <code>color: rgba(255,255,255,.9)<br>
+                      font-size: 1rem(16px)</code><br>
+                     On hover:<code>color: #fff</code><br>
+                    <code>1.5rem(24px)</code> between all elements</li>
+                  <li><code>height and width: 2.5rem(40px)</code><br>
+                    Opens "big menu" submenu. Content will vary by
+                    application, but should focus on user/account
+                    settings and content. See working example for animation
+                    effects.
+                  </li>
+                  <li>Separator: <code>rgba(0,0,0,.2)</code><br>
+                    UL logo: <code>height and width: 2.5rem(40px)</code>
+                  </li>
+                  <li>We suggest a stacked footer, with the first stratum dedicated to help and contact information, 
+                      and the second for any appropriate application-specific links.
+                  </li>
+                  <li>Bottom row includes UL logo, copyright information and legal notices.</li>
+                </ol>
+              </div>
+            </section>
+
+            <div class="divider"></div>
+
+            <h5>Responsive Sizing: Tablet</h5>
+            <section class="diagram tablet">
+              <div class="example">
+                <img src="assets/images/tablet-min.png">
+                <ul class="unstyled note-labels">
+                  <li class="a">A</li>
+                  <li class="b">B</li>
+                  <li class="c">C</li>
+                  <li class="d">D</li>
+                </ul>
+              </div>
+              <div class="explanation">
+                <ol type="A" class="expo">
+                  <li>Media query break to "tablet" (small) style at <code>991px max-width</code>.</li>
+                  <li>Same specifications as desktop.</li>
+                  <li>Animated menu icon: <code>width: 40px; height: 24px</code>. The icon transitions to a close button
+                      when the menu is opened.
+                  </li>
+                  <li>Account and main navigation menu should appear as big menu from right. Main navigation includes
+                    all links from Desktop "D" item.</li>
+                </ol>
+              </div>
+            </section>
+
+            <div class="divider"></div>
+
+            <h5>Responsive Sizing: Mobile</h5>
+            <section class="diagram mobile">
+              <div class="example">
+                <img src="assets/images/mobile-min.png">
+                <ul class="unstyled note-labels">
+                  <li class="a">A</li>
+                  <li class="b">B</li>
+                  <li class="c">C</li>
+                  <li class="d">D</li>
+                </ul>
+              </div>
+              <div class="explanation">
+                <ol type="A" class="expo">
+                  <li>Media query break to "mobile" (extra-small) at <code>767 max-width</code>.</li>
+                  <li>Logo: <code>max-height: 1.25rem(20px)</code></li>
+                  <li>Header: <code>height: 2.875rem(46px)</code></li>
+                  <li>Account Icon: <code>1.875rem x 1.875rem(30px)</code><br>
+                      Menu Icon: <code>1.5rem(24px) x 1.25rem(20px)</code>
+                  </li>
+                </ol>
+              </div>
+            </section>
         </div>
+    
+    <article><nav></nav></article>
+</main>
 
-        <article></article>
-    </main>
-
-    <footer role="contentinfo">
-    </footer>
-    <script
+<footer role="contentinfo">
+</footer>
+<script
   src="https://code.jquery.com/jquery-3.4.1.min.js"
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
   crossorigin="anonymous"></script>
-    <script src="assets/js/toc.js"></script>
+<script src="assets/js/nav.js"></script>
     <script>
-        // Fpr example only
-        setTimeout(function () {
-            $("#xxx").addClass("active");
-        }, 300);
-    </script>
+  COMMONUI.initPage();
+</script>
 </body>
 
 </html>
