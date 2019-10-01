@@ -72,6 +72,26 @@ var COMMONUI = {
       ]
     },
     {
+      id: "accessibility",
+      title: "Accessibility",
+      href: "accessibility.html",
+      children:
+      [
+       { 
+          id: "access-coding",
+          title: "Coding General HTML Elements",
+          href: "accessibility.html",
+          jump: "ac-a",
+        },
+       { 
+          id: "access-images",
+          title: "Images",
+          href: "accessibility.html",
+          jump: "img-a",
+        }
+      ]
+    },
+    {
       id: "layout",
       title: "Layout",
       href: "layout.html",
@@ -106,26 +126,6 @@ var COMMONUI = {
               href: "index-cssgrid.html"
             }
           ]
-        }
-      ]
-    },
-    {
-      id: "accessibility",
-      title: "Accessibility",
-      href: "accessibility.html",
-      children:
-      [
-       { 
-          id: "access-coding",
-          title: "Coding General HTML Elements",
-          href: "accessibility.html",
-          jump: "ac-a",
-        },
-       { 
-          id: "access-images",
-          title: "Images",
-          href: "accessibility.html",
-          jump: "img-a",
         }
       ]
     },

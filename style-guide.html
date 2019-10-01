@@ -31,219 +31,193 @@
 
 <!-- =================== SECTION =================== -->          
             <h3 class="target" id="ws-a">Web Standards</h3>
+
             <p>
-                The principles and code fragments below assume modern browsers, which includes the latest (desktop and
-                mobile) versions of Chrome, Safari and Firefox, as well as IE 11+. Target MS Edge only where your user
-                adoption makes it relevant, as Microsoft plans to phase out support for this browser. Support of other,
-                older browser versions may be required where audience usage warrants, which may lead to the need to
-                disregard some style guidelines.
-            </p>
+            The principles and code fragments within this document assume modern browsers, which includes the latest (desktop and
+            mobile) versions of Chrome, Safari and Firefox, as well as IE 11+. Target MS Edge only where your user
+            adoption makes it relevant, as Microsoft plans to phase out support for this browser (as of fall 2019, early 2020
+            is the estimated release date of MS Edge built on Chromium). Support of other,
+            older browser versions may be required where audience usage warrants, which may lead to the need to
+            disregard some style guidelines.</p>
+
             <p>
-                <p><span>Prefer graceful CSS fallbacks to polyfills where possible and employ tools such as </span><a
-                        href="https://modernizr.com/"><span style="line-height:107%">Modernizr</span></a><span
-                        style="line-height:107%"> to help detect and create these fallback styles. When writing
-                        JavaScript, use ECMA6 syntax with caution, as some features of the new script version have been
-                        adopted more widely than others.</span></p>
-            </p>
+            Prefer graceful CSS fallbacks to polyfills where possible and employ tools such as <a
+            href="https://modernizr.com/">Modernizr</a> to help detect and create these fallback styles. When writing
+            JavaScript, use ECMA6 syntax with caution, as some features of the new script version have been
+            adopted more widely than others.</p>
+
             <p>
-                <p><span>If in doubt, </span><a href="https://caniuse.com/"><span style="line-height:107%">Can I
-                            Use</span></a><span style="line-height:107%"> in combination</span><span
-                        style="line-height:107%"> with your audience analytics can provide guidance on what browser
-                        features are reasonable to employ for your application. Post-processor tools like </span><a
-                        href="https://postcss.org/"><span style="line-height:107%">PostCSS</span></a><span
-                        style="line-height:107%"> can be integrated into automated builds to support next gen CSS
-                        functions and prefixed styles (such as prefixed flex rules to support flex in IE 10) to stretch
-                        limitations.</span></p>
-            </p>
+            If in doubt, <a href="https://caniuse.com/">Can I Use</a> in combination with your audience analytics
+            can provide guidance on which front-end features and technologies are reasonable to employ in your application.
+            Post-processor tools like <a href="https://postcss.org/">PostCSS</a> can be integrated into automated 
+            builds to support next gen CSS functions and prefixed styles (such as prefixed flex rules to support flex in 
+            IE 10) to stretch limitations.</p>
+
             <p>
-                In general, prefer:
-            </p>
-            <div class='ul-ui bulleted list'>
-                <div class='item'>
-                    <p>
-                        HTML5
-                    </p>
-                </div>
-                <div class='item'>
-                    <p>
-                        CSS3 and new CSS modules with adequate browser adoption.
-                    </p>
-                </div>
-                <div class='item'>
-                    <p>
-                        ECMA5 and ECMA6 features with adequate adoption (or lightweight polyfills).
-                    </p>
-                </div>
-            </div>
+            In general, prefer:</p>
+
+            <ul class='ul-ui bulleted list'>
+              <li class='item'>
+                HTML5
+              </li>
+              <li class='item'>
+                CSS3 and new CSS modules with adequate browser adoption.
+              </li>
+              <li class='item'>
+                ECMA5 and ECMA6 features with adequate adoption (or lightweight polyfills).
+              </li>
+            </ul>
 
 <!-- =================== SECTION =================== -->
             <div class='divider'></div>
+
             <h3 class="target" id="int-a">Internationalization (i18n)</h3>
-            <p>
-                UL is a global company operating in many international markets. Consequently, designers and developers
-                should plan for localization, internationalization and translations. If your application has been
-                designed responsively, you will most likely be able to accommodate the variations of text length
-                resulting from these processes.
-            </p>
-            <p>
-                For proper text display:
-            </p>
-            <div class='ul-ui bulleted list'>
-                <div class='item'>
-                    <p>add the lang attribute to your root html tag. Prefer html to body to accommodate
-                        localized meta tags.</p>
-                </div>
-                <div class='item'>
-                    <p>include a meta tag with a charset of UTF-8 or UTF-16, depending on the language you’re
-                        displaying.</p>
-                </div>
-            </div>
-            <p>
-                Without preparation, i18n can affect any HTML element. Look to accommodate for text wrap and horizontal
-                overflow. Pay particular attention to:
-            </p>
-            <div class='ul-ui bulleted list'>
-                <div class='item'>
-                    <p>
-                        navigation and menus.
-                    </p>
-                </div>
-                <div class='item'>
-                    <p>
-                        tab labels.
-                    </p>
-                </div>
-                <div class='item'>
-                    <p>
-                        button text.
-                    </p>
-                </div>
-                <div class='item'>
-                    <p>
-                        table column headers.
-                    </p>
-                </div>
-                <div class='item'>
-                    <p>
-                        any element content with specified heights.
-                    </p>
-                </div>
-            </div>
-            <p>In general, assume that text will be longer in German, Spanish and French, and much shorter in Asiatic
-                languages.</p>
 
             <p>
-                Also consider ISO formatting in form input fields. Be sure to accommodate a variety of date, price,
-                zip/province code and telephone formats.
-            </p>
+            UL is a global company operating in many international markets. Consequently, designers and developers
+            should plan for localization, internationalization and translations. If your application has been
+            designed responsively, you will most likely be able to accommodate the variations of text length
+            resulting from these processes.</p>
+
+            <p>
+            For proper text display:</p>
+
+            <ul class='ul-ui bulleted list highlight'>
+              <li class='item'>
+                add the <code>lang</code> attribute to your root <code>html</code> tag. 
+                Prefer <code>html</code> to <code>body</code> to accommodate localized meta tags.
+              </li>
+              <li class='item'>
+                include a meta tag with a <code>charset</code> of UTF-8 or UTF-16, depending on the language you're displaying.
+              </li>
+            </ul>
+
+            <p>
+            Without preparation, i18n may affect the display of any HTML element. Look to accommodate for text wrap and horizontal
+            overflow. Pay particular attention to:</p>
+
+            <ul class='ul-ui bulleted list'>
+                <li class='item'>
+                  navigation and menus.
+                </li>
+                <li class='item'>
+                  tab labels.
+                </li>
+                <li class='item'>
+                  button text.
+                </li>
+                <li class='item'>
+                  table column headers.
+                </li>
+                <li class='item'>
+                  any element content with specified heights.
+                </li>
+            </ul>
+
+
+            <p>
+            In general, assume that text will be longer in German, Spanish and French, and much shorter in Asiatic
+            languages.</p>
+
+            <p>
+            Also consider ISO formatting in form input fields. Be sure to accommodate a variety of number, date, price,
+            zip/province code and telephone formats.</p>
 
 <!-- =================== SECTION =================== -->
             <div class='divider'></div>
+
             <h3 class="target" id="ct-a">Common Terminology</h3>
+
             <p>
-                Use common language for common features both within and between different applications.
-            </p>
-            <div class='ul-ui bulleted list'>
-                <div class='item'>
-                    <p>
-                        Sign in to refer to the process of authenticating to gain access to the application.
-                    </p>
-                </div>
-                <div class='item'>
-                    <p>
-                        Sign out to refer to removing the authenticated state and leaving the application.
-                    </p>
-                </div>
-                <div class='item'>
-                    <p>
-                        Account to refer to user profile settings.
-                    </p>
-                </div>
-            </div>
+            Use common language for common features both within and between different applications.</p>
+
+            <ul class='ul-ui bulleted list highlight'>
+                <li class='item'>
+                  "Sign in" to refer to the process of authenticating to gain access to the application.
+                  (This may necessitate changing existing labels or text from "Log in" and "Login".)
+                </li>
+                <li class='item'>
+                  "Sign out" to refer to removing the authenticated state and leaving the application.
+                  (As above, change "Log out," etc.)
+                </li>
+                <li class='item'>
+                  "Account" to refer to user profile settings.
+                </li>
+            </ul>
 
 <!-- =================== SECTION =================== -->
             <div class='divider'></div>
+
             <h3 class="target" id="tp-a">Typography</h3>
+
             <p>
-                UL has standardized on the Open Sans font family for web sites and applications. If Open Sans is
-                unavailable, use Arial as a substitute.
+            UL has standardized the Open Sans font family for web sites and applications. If Open Sans is
+            unavailable, use Arial as a substitute. To include Open Sans from the Google Font repository, add this 
+            link to your document header:</p>
+
+            <p>
+            <code>&lt;link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap" rel="stylesheet"&gt;</code>
             </p>
 
             <p>
-                In order to create a visual hierarchy and provide visual contrast and rest for the eyes, use Segoe and
-                Helvetica Neue as the base body copy; these fonts will be available on the vast majority of operating
-                systems and offer a variety of font weights and variants.
-            </p>
+            This example includes the font at 400 (normal) and 600 (semibold) weight. Find out more about this font and
+            how to use it at <a href="https://fonts.google.com/specimen/Open+Sans">Google Fonts</a>.</p>
 
             <p>
-                For accessibility, set body font size to 100%, which respects individual users’ text preferences.
-                Browsers typically default font size to 16px, so the majority of users will experience the site as
-                envisaged, while those with disabilities will have their preferences respected.
-            </p>
+            In order to create a visual hierarchy and provide visual contrast and rest for the eyes, use Segoe and
+            Helvetica Neue as the base body copy; these fonts will be available on the vast majority of operating
+            systems and offer a variety of font weights and variants.</p>
+
             <p>
-                <p><span>The typography specifics below are based on the concept of typographic modular ratios. The CSS
-                        included was created using the Major Third scale (which is similar to the UL marketing
-                        typography). NOTE: For more information on the concept of a typographic modular scale, see
-                    </span><a href="https://alistapart.com/article/more-meaningful-typography/"><span
-                            style="line-height:115%">More Meaningful Typography</span></a><span
-                        style="line-height:115%">. For the scale calculator, see </span><a
-                        href="https://type-scale.com"><span style="line-height:115%">type-scale.com</span></a><span
-                        style="line-height:115%">.</span></p>
-            </p>
-            <table>
-                <tbody>
-                    <tr>
-                        <td valign="top" align="left" style="padding-top:0in;padding-right:0in;
-                             padding-bottom:0in;padding-left:0in">
-                            <div style="border:solid #EFEEF1 6.0pt;padding:20px;
-                             background:#fff">
-                                <p class="Code"><code><span style="line-height:150%">html {font-size:
-                                            100%}</span></code></p>
-                                <p class="Code"><code><span style="line-height:150%">/* as a result of this
-                                            rule, in most browsers 1rem = 16px */</span></code></p>
-                                <p class="Code"><code><span style="line-height:150%">body {&nbsp; </span></code></p>
-                                <p class="Code"><code><span style="line-height:150%">&nbsp; font-family: "Segoe
-                                            UI","Helvetica Neue",sans-serif;</span></code></p>
-                                <p class="Code"><code><span style="line-height:150%">&nbsp; font-weight:
-                                            400;</span></code></p>
-                                <p class="Code"><code><span style="line-height:150%">&nbsp; line-height: 1.45;&nbsp;
-                                        </span></code></p>
-                                <p class="Code"><code><span style="line-height:150%">&nbsp; color: #333;</span></code>
-                                </p>
-                                <p class="Code"><code><span style="line-height:150%">}</span></code></p>
-                                <p class="Code"><code><span style="line-height:150%">p {margin-bottom:
-                                            1.25em;}</span></code></p>
-                                <p class="Code"><code><span style="line-height:150%">h1, h2, h3, h4, h5 {&nbsp;
-                                        </span></code></p>
-                                <p class="Code"><code><span style="line-height:150%">&nbsp; margin: 2.75rem 0
-                                            1rem;</span></code></p>
-                                <p class="Code"><code><span style="line-height:150%">&nbsp; font-family: 'Open
-                                            Sans', sans-serif;</span></code></p>
-                                <p class="Code"><code><span style="line-height:150%">&nbsp; font-weight: 300;
-                                            /*correlates to Open Sans Light*/&nbsp;&nbsp; </span></code></p>
-                                <p class="Code"><code><span style="line-height:150%">&nbsp; line-height:
-                                            1.15;</span></code></p>
-                                <p class="Code"><code><span style="line-height:150%">}</span></code></p>
-                                <p class="Code"><code><span style="line-height:150%">h1 {</span></code></p>
-                                <p class="Code"><code><span style="line-height:150%">&nbsp; margin-top: 0;</span></code>
-                                </p>
-                                <p class="Code"><code><span style="line-height:150%">&nbsp; font-size:
-                                            3.052rem;</span></code></p>
-                                <p class="Code"><code><span style="line-height:150%">}</span></code></p>
-                                <p class="Code"><code><span style="line-height:150%">h2 {font-size:
-                                            2.441rem;}</span></code></p>
-                                <p class="Code"><code><span style="line-height:150%">h3 {font-size:
-                                            1.953rem;}</span></code></p>
-                                <p class="Code"><code><span style="line-height:150%">h4 {font-size:
-                                            1.563rem;}</span></code></p>
-                                <p class="Code"><code><span style="line-height:150%">h5 {font-size:
-                                            1.25rem;}</span></code></p>
-                                <p class="Code">small, .text_small {font-size: 0.8em;}</p>
-                            </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+            <span class="highlight">For accessibility, set body font size to 100%, which respects individual users'
+              text preferences.</span> Browsers typically default font size to 16 pixels; when your body copy is set to 100%, 
+            <code>1rem = 16px</code>. If your design calls for 14px type as the base, you can specify individual elements 
+            (or "*") to <code>.875rem</code>. The majority of users will experience the site as envisaged. However, users
+            who have set their default browser font size to 20px will have their preferences respected; those users
+            will still see a larger font size, as .875 of 20 displays 17.5px.</p>
+
+            <p>
+            The typography specifics below are based on the concept of typographic modular ratios. The CSS
+            example was created using the Major Third scale (which is similar to the UL marketing typography).
+            NOTE: For more information on the concept of a typographic modular scale, see
+            <a href="https://alistapart.com/article/more-meaningful-typography/">More Meaningful Typography</a>.
+            For the scale calculator, see <a href="https://type-scale.com">type-scale.com</a>.</p>
+
+<pre class="example-cont">
+html {font-size: 100%}
+
+/* as a result of this rule, in most browsers 1rem = 16px */
+body { 
+  color: #333;
+  font-family: "Segoe UI","Helvetica Neue",sans-serif;
+  font-weight: 400;
+  line-height: 1.45; 
+}
+
+p {margin-bottom: 1.25em;}
+
+h1, h2, h3, h4, h5 { 
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300; /*correlates to Open Sans Light*/  
+  line-height: 1.15;
+  margin: 2.75rem 0 1rem;
+}
+
+h1 {
+  font-size: 3.052rem;
+  margin-top: 0;
+}
+
+h2 {font-size: 2.441rem;}
+
+h3 {font-size: 1.953rem;}
+
+h4 {font-size: 1.563rem;}
+
+h5 {font-size: 1.25rem;}
+
+small, .text_small {font-size: 0.8em;}
+</pre>
 
             <!--- **** Example **** --->
             <div class='example-cont clearfix'>
@@ -251,120 +225,130 @@
             <div class='ul-ui circular black icon xsm button codeview'>
             <i class='fas fa-code icon'></i>
             </div>
-            <h1>h1.Heading = 3.052em</h1>
-            <h2>h2.Heading = 2.441em</h2>
-            <h3>h3.Heading = 1.953em</h3>
-            <h4>h4.Heading = 1.563em</h4>
-            <h5>h5.Heading = 1.25em</h5>
+            <h1>h1.Heading = 3.052rem</h1>
+            <h2>h2.Heading = 2.441rem</h2>
+            <h3>h3.Heading = 1.953rem</h3>
+            <h4>h4.Heading = 1.563rem</h4>
+            <h5>h5.Heading = 1.25rem</h5>
             <small>Small Text</small>
             </div>
             <div class='code'>
             <pre> <script type="text" class='code-script'>
-            <h1>h1.Heading = 3.052em</h1>
-            <h2>h2.Heading = 2.441em</h2>
-            <h3>h3.Heading = 1.953em</h3>
-            <h4>h4.Heading = 1.563em</h4>
-            <h5>h5.Heading = 1.25em</h5>
+            <h1>h1.Heading = 3.052rem</h1>
+            <h2>h2.Heading = 2.441rem</h2>
+            <h3>h3.Heading = 1.953rem</h3>
+            <h4>h4.Heading = 1.563rem</h4>
+            <h5>h5.Heading = 1.25rem</h5>
             <small>Small Text</small>
             </script></pre>
             </div>
             </div>
 
+            <p>
+            Note: Header font sizes are listed in <code>rems</code> to avoid unintended outcomes in nested elements, 
+            while <code>.small</code> is defined in <code>ems</code> in order to display relative to the size of the parent
+            element. Carefully consider context and unintended consequences of nested elements when
+            defining styles in ems and rems.</p>
+
 <!-- =================== SECTION =================== -->
             <div class='divider'></div>
+
             <h3 class="target" id="co-a">Colors</h3>
+
             <p>
-                UL’s primary brand colors are as follows:
-            </p>
-            <div class='ul-ui bulleted list'>
-                <div class='item'>
-                    <p>
-                        UL Red: #C02032
-                    </p>
-                </div>
-                <div class='item'>
-                    <p>
-                        UL Black: #000000
-                    </p>
-                </div>
-                <div class='item'>
-                    <p>
-                        UL White: #FFFFFF
-                    </p>
-                </div>
-            </div>
+            UL's primary brand colors are as follows:</p>
+
+            <ul class='ul-ui bulleted list'>
+                <li class='item'>
+                  UL Red: #C02032
+                </li>
+                <li class='item'>
+                  UL Black: #000000
+                </li>
+                <li class='item'>
+                  UL White: #FFFFFF
+                </li>
+            </ul>
+
+            <p>
+            These colors should be preferred as described in the Common Foundation section. Other approved UL
+            colors can be found on the <a href="https://hub.ul.com">brandhub</a> site maintained by the corporate marketing team.</p>
 
 <!-- =================== SECTION =================== -->
             <div class='divider'></div>
+
             <h5 class="target" id="ca-a">Accessibility</h5>
+
             <p>
-                Note, in certain circumstances UL’s red brand color can present challenges to users with color
-                blindness. At
-                a minimum,
-            </p>
-            <div class='ul-ui bulleted list'>
-                <div class='item'><p>
+            In certain circumstances, UL's red brand color can present challenges to users with color blindness. At
+            a minimum,</p>
+
+            <ul class='ul-ui bulleted list'>
+                <li class='item'>
                     avoid combining red and green text/backgrounds/juxtapositions;
-                </p></div>
-                <div class='item'><p>when using color to convey meaning (such as red text for error messages, green for
-                success, etc.), also use symbols and words to convey that meaning.</p></div>
-            </div>
-            <p>In general, all text should be readable by measuring a contrast ratio of at least 4.5:1 (as low as 3.0 is
-                acceptable in some circumstances) between text and background. A number of contrast checker online tools
-                are
-                available; Chrome developer tools also provides a tool to do this (<a
-                    href="https://webdesign.tutsplus.com/articles/how-to-use-the-contrast-checker-in-chrome-devtools--cms-31504">tutorial</a>).&nbsp;
-                Best practice is to make sure that the information is conveyed other than just
-                by color.</p>
+                </li>
+                <li class='item'>
+                  when using color to convey meaning (such as red text for error messages, green for
+                  success, etc.), also use symbols and words to convey that meaning.
+                </li>
+            </ul>
+
+            <p>
+            In general, all text should be readable by measuring a contrast ratio of at least 4.5:1 (as low as 3.0 is
+            acceptable in some circumstances, where font weight or text size are sufficiently large)
+            between text and background. A number of online contrast checker tools are available; Chrome developer 
+            tools also provides a tool to do this (<a
+              href="https://webdesign.tutsplus.com/articles/how-to-use-the-contrast-checker-in-chrome-devtools--cms-31504">tutorial</a>).</p>
 
 <!-- =================== SECTION =================== -->
             <div class='divider'></div>
+
             <h3 class="target" id="ic-a">Icons</h3>
-            <p>
-                Icons should be used as accents to support the topic and ideas being presented. As noted above, a
-                combination of color, text and icons will convey the message best.
-            </p>
 
             <p>
-                Use Font Awesome wherever possible for icons. Use the Light version, available to Pro users, when
-                possible.
-            </p>
+            Icons should be used as accents to support the topic and ideas being presented. As noted above, a
+            combination of color, text and icons will convey the message best.</p>
 
             <p>
-                Font Awesome icons can be rendered as a vector image in any size of browser and don’t require any extra
-                downloads or server resources; the library includes a large number of icons covering a wide gamut of
-                objects.
-            </p>
+            <span class="highlight">Use Font Awesome wherever possible for icons. Use the Light version, available to 
+              Pro users, when possible.</span></p>
 
             <p>
-                On occasion, you may need to develop custom icons for special cases. Implement these icons in the code
-                as SVGs, which allows for smooth and responsive resizing.
-            </p>
+            Font Awesome icons can be rendered as vectors at any size and don’t require any extra
+            downloads or server resources; the library includes a large number of icons covering a wide gamut of
+            objects.</p>
+
+            <p>
+            On occasion, you may need to develop custom icons for special cases. Implement these icons in the code
+            as SVGs, which allows for smooth and responsive resizing.</p>
 
 <!-- =================== SECTION =================== -->            
             <div class='divider'></div>
+
             <h3 class="target" id="res-a">Responsiveness</h3>
-            <div class='ul-ui bulleted list'>
-                <div class='item'><p>
-                    Top fixed header navigation. See “Navigation” section for more details.
-                </p></div>
-                <div class='item'><p>
-                    Bottom “sticky” footer. See the “Footer” section for more details.
-                </p></div>
-                <div class='item'><p>
-                    Prefer the flex method of creating a sticky footer, assuming modern browser standards.
-                </p>
-                </div>
-                <div class='item'>
-                    <p>
-                        Main content should be semantically coded with a “main” tag and include the “role” and ARIA
-                        attributes. See “Accessibility” section for more guidelines on how to use these attributes.
-                    </p>
-                </div>
-            </div>
-            <div class="toc-spacer"></div>
+
+            <p>
+            Sites and web applications should support responsive layouts if at all possible. Using common break points 
+            will provide a consistent experience for those that switch between applications on desktop, tablet and mobile
+            devices.</p>
+      
+            <ul class='ul-ui bulleted list'>
+              <li class='item'><span class="highlight">576px max – Small</span></li>
+              <li class='item'><span class="highlight">768px max – Medium</span></li>
+              <li class='item'><span class="highlight">992px max – Large</span></li>
+              <li class='item'><span class="highlight">1200px max – Extra large</span></li>
+              <li class='item'><span class="highlight">1600px max – Double extra large</span></li>
+            </ul>
+
+
+            <p>
+            Prefer fluid layouts to fixed width if the content will support it. When displaying paragraphs 
+            of text in fluid layouts, you may need to limit (via media queries) container widths for 
+            readability. Conventionally, this will be 34 to 36ems, but use good judgement. See "Components"
+            section below for specific responsive-related guidelines.</p>
         </div>
-</div>
+        <div class="toc-spacer"></div>
+
     <article><nav></nav></article>
     </main>
     <script

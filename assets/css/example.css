@@ -4,7 +4,7 @@
 }
 pre {
   margin: 0;
-  white-space: initial;
+  white-space: pre-wrap;
 }
 
 .ul-ui.container.example.open {

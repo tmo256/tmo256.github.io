@@ -1,0 +1,176 @@
+.diagram {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  max-width: 100%;
+  width: 100%;
+}
+
+.diagram > .example
+{
+  flex: 1 1 600px;
+  margin-right: 2rem;
+  min-width: 600px;
+  position: relative;
+}
+.diagram > .explanation
+{
+  flex: 1 1 400px;
+  max-width: 400px;
+}
+
+.tablet.diagram > .example
+{
+  flex-basis: 400px;
+  min-width: 400px;
+}
+
+
+ .diagram {
+ text-align: center;
+  width: 100%;
+}
+
+.note-labels li {
+  align-items: center;
+  background-color: #000;
+  border-radius: 50%;
+  color: #fff;
+  font-weight: bold;
+  display: flex;
+  height: 20px;
+  justify-content: center;
+  position: absolute;
+  text-transform: uppercase;
+  width: 20px;
+}
+
+.desktop .note-labels li.a {
+  left: 0;
+  top: -10px;
+}
+.desktop .note-labels li.b {
+  left: 9%;
+  top: 10px;
+}
+.desktop .note-labels li.c {
+  left: 50%;
+  margin: 10px 0 0 -15px;
+  top: 0;
+}
+ .note-labels li.d {
+  right: 31.75%;
+  top: 10px;
+}
+.desktop .note-labels li.e {
+  margin-top: -15px;
+  right: 6.25%;
+  top: 0;
+}
+.desktop .note-labels li.f {
+  margin-top: -15px;
+  right: 0;
+  top: 10px;
+}
+.desktop .note-labels li.g {
+   bottom: 47.6%;
+   left: 10%;
+}
+.desktop .note-labels li.h {
+  bottom: 13.6%;
+  left: 10%;
+}
+
+.tablet .note-labels li.a {
+  left: 50%;
+  margin-left: -10px;
+  margin-top: -10px;
+  top: 50%;
+}
+.tablet .note-labels li.b {
+  left: 50%;
+  margin-left: -10px;
+  margin-top: -10px;
+  top: 15px;
+}
+.tablet .note-labels li.c {
+  left: 50%;
+  margin-left: 130px;
+  top: 15px;
+}
+.tablet .note-labels li.d {
+  left: 50%;
+  margin-left: 130px;
+  margin-top: -10px;
+  top: 25%;
+}
+
+
+.mobile .note-labels li.a {
+  left: 50%;
+  margin-left: -10px;
+  margin-top: -10px;
+  top: 30%;
+}
+.mobile .note-labels li.b {
+  left: 50%;
+  margin-left: -113px;
+  top: -5px;
+}
+.mobile .note-labels li.c {
+  left: 50%;
+  margin-left: -10px;
+  top: 5px;
+}
+
+
+.diagram img {
+  border: 1px solid black;
+  box-shadow: 0 1rem 2rem rgba(0,0,0,.25);
+  margin: auto;
+  max-width: 100%;
+  position: relative;
+}
+
+.tablet.diagram img {
+  max-width: 100%;
+  max-height: 480px;
+}
+
+.mobile.diagram img {
+  height: 400px;
+}
+
+.diagram .expo {
+  text-align: left;
+}
+
+.diagram ol.expo {
+  counter-reset: my-counter;
+  list-style: none;
+  padding-left: 40px;
+}
+.diagram ol.expo li {
+  margin: 0 0 1rem 0;
+  counter-increment: my-counter;
+  position: relative;
+}
+.diagram ol.expo li::before {
+  content: counter(my-counter, upper-alpha);
+  color: #fff;
+  font-size: 1.125rem;
+  font-weight: bold;
+  position: absolute;
+  --size: 26px;
+  left: calc(-1 * var(--size) - 10px);
+  line-height: var(--size);
+  width: var(--size);
+  height: var(--size);
+  top: 0;
+  background: black;
+  border-radius: 50%;
+  text-align: center;
+  box-shadow: 1px 1px 0 #999;
+}

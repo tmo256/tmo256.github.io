@@ -22,7 +22,6 @@
   list-style-type: none;
   list-style-position: outside;
   /*padding: 0.64em 0em;*/
-  line-height: 1em;
 }
 .ul-ui.bulleted.list .list > .item:before,
 .ul-ui.bulleted.list > .item:before {
