@@ -26,15 +26,28 @@
 <main role="main" tabindex="-1">
     <div class="ul-ui container example toc open">
 
+      <h3>Anchors &amp; Buttons</h3>
+
+      <p>
+      Please note the recurring theme throughout this section: when using the terms "button" or "anchor",
+      we are sometimes referring to the HTML <code>button</code> or <code>a</code> tags, and sometimes 
+      referring to a UI element that looks to the user to be something "pressable" or "clickable".
+      We have made every possible attempt to be clear when referring to an HTML node and when referring to a UI element.</p>
+      
+
         <!-- =================== SECTION =================== -->
         <div class='divider'></div>
+
         <h3 class="target" id="butc-a">Buttons: Coding</h3>
+
         <p>
-            Use a button element to trigger any JavaScript function that does not use a URL. Basically, instead of using
-            an a tag with an href="Javascript:void(0)", or href="#", use a button element. If the user can open a
-            reference via a right-click or 3D touch, use an anchor.
-        </p>
-        <p>This might include</p>
+        Use a <code>button</code> element to trigger any JavaScript function that does not use a URL. Basically, instead of using
+        an a tag with an href="Javascript:void(0)", or href="#", use a button element. If the user can open a
+        reference via a right-click or 3D touch, use an anchor.</p>
+
+        <p>
+        This might include:</p>
+
         <div class="ul-ui bulleted list">
             <div class="item">non-AJAX modal triggers.</div>
             <div class="item">popover triggers.</div>
@@ -42,14 +55,16 @@
             <div class="item">dismissing buttons in modals and alerts.</div>
             <div class="item">opening and closing/expanding hidden text.</div>
         </div>
-        <p>In many of the cases (such as some listed above), the button may appear to the user to be an inline link. Use
-            CSS to modify the button to look like a link.</p>
-        <div class="ul-ui alert">
+
+        <p>
+        In many of the cases (such as some listed above), the button may appear to the user to be an inline link. Use
+        CSS to modify the button to look like a link.</p>
+
+        <aside class="ul-ui alert">
             <p>Always use the type="button" attribute-value to ensure a button does not inadvertently act as a form
                 submit. Safari, Chrome and other browsers treat button elements as submit tags when nested in forms.
             </p>
-        </div>
-
+        </aside>
 
         <!-- =================== SECTION =================== -->
         <div class="ul-ui divider"></div>

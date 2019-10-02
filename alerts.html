@@ -28,21 +28,27 @@
 
         <!--- =================== SECTION =================== -->
         <h3 class="target" id="ale-a">Alerts</h3>
+
+        <!-- NOTE TO MATT: DO WHAT YOU WILL WITH THESE LINKS. They are included for every component.-->
+        <h5>
+          <a href="https://www.w3.org/TR/wai-aria-practices/#alert" target="_blank" rel="no-follow">Alert WAI-ARIA Authoring</a>
+        </h5>
+
         <p>
-            Use an alert to implement notices of success or failure for a persistence action (i.e. form submit). On a
-            full-page view, these notices should fall in a consistent position from page to page; for example, directly
-            beneath the main page title or the page lead text. If an alert message appears within a modal window, the
-            alert should be prepended as the first element the modal content, in general (though specific layouts may
-            require a modified implementation).
-        </p>
+        Use an alert to implement notices of success or failure for a persistence action (i.e. form submit). On a
+        full-page view, these notices should appear in a consistent position from page to page; for example, a styled 
+        box directly beneath the main page title or the page lead text. If an alert message appears within a modal window, the
+        alert should be prepended as the first element the modal content (body), in general (though specific layouts may
+        require a modified implementation).</p>
 
         <!--- **** Example **** -->
         <div class="example-cont clearfix">
             <div class="view">
-                <div class="ul-ui circular black icon xsm button codeview">
-                    <i class="fas fa-code icon"></i>
-                </div>
-                <div class="ul-ui red icon alert">
+              <button class='ul-ui circular black icon xsm button codeview' type="button" role="button" aria-pressed="false" 
+                aria-label="Toggle button for example HTML/CSS code">
+                  <i class="fas fa-code icon"></i>
+              </button>
+                <div class="ul-ui red icon alert" role="alert">
                     <div class="icon">
                         <i class="fas fa-info-circle icon" aria-hidden="true"></i>
                     </div>
@@ -52,7 +58,7 @@
                 </div>
             </div>
             <div class="code">
-                <pre> <script type="text" class="code-script"><div class="ul-ui red icon alert">
+                <pre> <script type="text" class="code-script"><div class="ul-ui red icon alert" role="alert">
                             <div class="icon">
                                 <i class="fas fa-info-circle icon" aria-hidden="true"></i>
                             </div>
@@ -64,62 +70,71 @@
         </div>
 
         <p>
-            Where the alert is a direct result of an action by the user, the alert should have a dismissible option
-            (close button). In other circumstances, alerts may be used to provide help text or other notices, and these
-            elements should not include a close button.
+        Where the alert is a direct result of an action by the user, the alert should have a dismissible option
+        (close button). In other circumstances, alerts may be used to provide help text or other notices, and these
+        elements should not include a close button.</p>
 
-            <!-- **** Example **** -->
-            <div class='example-cont clearfix'>
-                <div class='view'>
-                    <div class='ul-ui circular black icon xsm button codeview'>
-                        <i class='fas fa-code icon'></i>
-                    </div>
-                    <div class="ul-ui light blue alert">
-                        <i class="fas fa-times close icon" aria-hidden="true"></i>
-                        <div class="header">
-                            Welcome back!
-                        </div>
-                        <p>This is a special notification which you can dismiss if you're bored with it.</p>
-                    </div>
-                </div>
-                <div class='code'>
-                    <pre> <script type="text" class='code-script'><div class="ul-ui light blue alert">
-                <i class="fas fa-times close icon" aria-hidden="true"></i>
-                <div class="header">
-                    Welcome back!
-                </div>
-                <p>This is a special notification which you can dismiss if you're bored with it.</p></div>
-            </script></pre>
-                </div>
+        <p>
+        Note that the example below uses an <code>i</code> icon element to close the alert node. This demonstrates what
+        attributes should be included in a non-button tag to expose it as a button to a screen reader. 
+        In most cases, this code would be more like
+        <code>&lt;button class='close' type="button" role="button" aria-label="Close"&gt;&lt;i class='fa fa-close' 
+          aria-hidden="true"&gt;&lt;/i&gt;&lt;/button&gt;</code>. (In this fragment, the <code>i</code> tag
+        sets <code>aria-hidden</code> to "true"; the content of the button is explained by its
+        <code>aria-label="Close"</code> attribute and requires no further expository text [the icon can be
+        skipped with no loss of information].)</p>
+
+        <!-- **** Example **** -->
+        <div class='example-cont clearfix'>
+          <div class='view'>
+              <button class='ul-ui circular black icon xsm button codeview' type="button" role="button" aria-pressed="false" 
+                aria-label="Toggle button for example HTML/CSS code">
+                <i class='fas fa-code icon' aria-hidden="true"></i>
+              </button>
+              <div class="ul-ui light blue alert">
+                  <i class="fas fa-times close icon" role="button" aria-label="Close" tabindex="0"></i>
+                  <div class="header">
+                      Welcome back!
+                  </div>
+                  <p>This is a special notification which you can dismiss if you're bored with it.</p>
+              </div>
             </div>
+            <div class='code'>
+                <pre> <script type="text" class='code-script'><div class="ul-ui light blue alert">
+            <i class="fas fa-times close icon" role="button" aria-label="Close"></i>
+            <div class="header">
+                Welcome back!
+            </div>
+            <p>This is a special notification which you can dismiss if you're bored with it.</p></div>
+        </script></pre>
+            </div>
+        </div>
 
-        </p>
 
 
         <!-- =================== SECTION =================== -->
         <div class='divider'></div>
         <h3 class="target" id="acce-a">Accessibility</h3>
 
-        <div class='ul-ui bulleted list'>
-            <div class='item'>
-                <p>
-                    For a time-sensitive alert, use ARIA role='alert'.
-                </p>
-            </div>
-            <div class='item'>
-                <p>For an alert that is not time-sensitive but that contains an important prompt or piece of
-                    information for the user, use ARIA role='alertdialog'. (The definition of the ARIA role='dialog' is:
-                    “an
-                    application window that is designed to interrupt the current processing of an application in order
-                    to
-                    prompt the user to enter information or require a response”).</p>
-            </div>
-            <div class='item'>
-                <p>Alerts should not be visually hidden if they are not being used. If you do not want a
-                    screen reader to pick up an alert, use the aria-hidden='true' HTML attribute and/or display: none in
-                    your CSS.</p>
-            </div>
-        </div>
+        <ul class='ul-ui bulleted list'>
+          <li class='item'>
+            Use ARIA <code>role='alert'</code> to display a message
+            designed to breifly attact the user's attention. This
+            message should not interrupt the task at hand and should
+            therefor not affect keyboard focus.
+          </li>
+          <li class='item'>
+            For an alert that should interrupt the user's task and take keyboard focus, use ARIA role='alertdialog'. 
+            (The definition of the ARIA role='dialog' is:
+            "an application window that is designed to interrupt the current processing of an application in order
+            to prompt the user to enter information or require a response").</p>
+          </li>
+          <li class='item'>
+            Alerts do not need to be visually hidden if they are not being used. However, if you do not want a
+            screen reader to pick up an alert, use the <code>aria-hidden='true'</code> HTML attribute and/or 
+            <code>display: none</code> in your CSS.
+          </li>
+        </ul>
 
 
     </div>

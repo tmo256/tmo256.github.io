@@ -36,8 +36,9 @@
         </nav>
 
         <div id="account-menu" class="relative">
-          <!-- NOTE: small screen account link/menu not wired to work -->
-          <a href="#" role="menuitem" aria-expanded="false" class="account menu-icon relative;" 
+          <!-- NOTE: This element is coded as an anchor tag as a defacto member of the nav element. Use the tabindex attribute
+          because there is no HREF attribute. -->
+          <a tabindex="0" role="menuitem" aria-expanded="false" class="account menu-icon relative;" 
               data-class-toggle="true" data-target=".submenu" data-class="open"><img
               alt="Your Account" src="/assets/images/user-icon-sh.svg"></a>
         </div>

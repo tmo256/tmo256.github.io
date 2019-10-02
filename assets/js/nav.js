@@ -387,15 +387,25 @@ var COMMONUI = {
 
     $("nav",$("body")).append($ulRoot);
   },
+  setCodeToggle: function()
+  {
+    $(".codeview").click(function(ev){
+      $(this).parent().siblings(".code").slideToggle(function(e){
+        $(this).attr('aria-pressed', function(_, attr){ return !(/true/i).test(attr); })
+      }.bind(this,ev));
+    });
+  },
   initPage: function()
   {
     COMMONUI.buildNav();
 
     COMMONUI.highlight();
-    
+
     $( window ).on( 'hashchange', function( e ) {
       COMMONUI.highlight();
     });
+    
+    COMMONUI.setCodeToggle();
   }
 
 };
