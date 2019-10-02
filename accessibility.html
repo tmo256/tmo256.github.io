@@ -31,55 +31,49 @@
             <h1 class="ul-ui dividing header">Accessibility</h1>
 
             <p>
-            In addition to the accessibility guidelines specified throughout the document, employ general 
-            best practices when coding in order to accommodate ADA and general accessibility. Employing 
+            In addition to the accessibility guidelines specified throughout the document, <span class="highlight">employ
+            recommended best practices to accommodate ADA and general accessibility</span>. Employing 
             these elements will not only benefit the user, it will improve SEO on your apps. 
             The WCAG, a W3 working group, offers extensive <a href="https://www.w3.org/WAI/tutorials/">tutorials</a>
-            on accessibility.</p>
+            on coding to achieve accessibility.</p>
 
             <p>
-                ARIA attributes play a significant role in achieving accessibility.
-            </p>
-            <p>ARIA (<a href="http://www.w3.org/TR/wai-aria/">
-                    <span">WAI-ARIA</span>
-                </a>&nbsp;if you want to be formal) is
-                a set of attributes that you can add to&nbsp;<a
-                    href="http://www.w3.org/html/wg/drafts/html/master/dom.html#elements">
-                    <span">HTML elements</span>
-                </a>.</p>
-            <p>These attributes communicate role, state and property semantics to&nbsp;<a
-                    href="http://en.wikipedia.org/wiki/Assistive_technology">
-                    <span">assistive technologies</span>
-                </a>&nbsp;via
-                the&nbsp;<a
-                    href="http://www.w3.org/WAI/PF/aria-implementation/#def_accessibility_api"><span>accessibility
-                        APIs</span></a>&nbsp;implemented
-                in browsers.&nbsp;</p>
+            ARIA attributes play a significant role in achieving accessibility.  ARIA (formally,
+            <a href="http://www.w3.org/TR/wai-aria/">WAI-ARIA</a>) is a set of attributes added to
+            <a href="http://www.w3.org/html/wg/drafts/html/master/dom.html#elements">HTML elements</a> to communicate  the
+            role, state and property semantics to <a href="http://en.wikipedia.org/wiki/Assistive_technology">assistive
+              technologies</a>, via the <a href="http://www.w3.org/WAI/PF/aria-implementation/#def_accessibility_api">accessibility
+              APIs</a> implemented in browsers.</p>
 
 <!-- =================== SECTION =================== -->
             <div class='divider'></div>
+
             <h3 class="target" id="ac-a">Coding General HTML Elements</h3>
+
             <p>
-                Accessibility should be implemented by conforming to semantic HTML practices, as well as using ARIA
-                attributes/labels. See individual component and layout sections for suggested implementation of semantic
-                HTML.
-            </p>
-            <p><span>Using ARIA is particularly important in forms and inputs, while “role” attributes are particularly
-                    useful in elements (like buttons) that perform crucial functions but do not semantically indicate
-                    their uses. Refer to the </span><a href="https://www.w3.org/TR/wai-aria-practices"><span
-                        style="line-height:115%">WCAG documentation</span></a><span style="line-height:115%"> for use in
-                    specific HTML elements and common components (such as tooltips).</span></p>
+            Accessibility should be implemented by conforming to semantic HTML practices, as well as using ARIA
+            attributes/labels. See individual component and layout sections for suggested implementation of semantic
+            HTML.</p>
+
+            <p>
+            Using ARIA is particularly important in forms and inputs, while "role" attributes are particularly
+            useful in elements (like buttons) that perform crucial functions but do not semantically indicate
+            their uses. Refer to the <a href="https://www.w3.org/TR/wai-aria-practices">WCAG documentation</a> 
+            for use in specific HTML elements and common components (such as tooltips).</p>
 
 <!-- =================== SECTION =================== -->
             <div class='divider'></div>
+
             <h3 class="target" id="img-a">Images</h3>
+
             <p>
-                Google’s Lighthouse and Page Speed tools take special interest in image accessibility. Be sure to
-                include alt text on all img tags, as its absence is detrimental to your audit results and SEO. The alt
-                text should description should provide the same level of understanding that a visual user would have.
-                Where at all possible, do not use images for buttons, navigation or significant text. Minimize text in
-                images in general; if text is present in images, use that text as the alt value.
-            </p>
+            Google's Lighthouse and Page Speed tools take special interest in image accessibility. Be sure to
+            <span class="highlight">include <code>alt</code> text on all <code>img</code> tags</span>,
+            as its absence is detrimental to your audit results and SEO. This alt text should describe the image to provide
+            the same level of understanding that a visual user would have.  Where possible, <span class="highlight">do 
+              not use images for buttons, navigation or significant text</span>. Minimize text in
+            images in general; if text is present in images, use that text as the alt value.</p>
+
             <div class="toc-spacer"></div>
         </div>
 

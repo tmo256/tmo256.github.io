@@ -25,124 +25,130 @@
 </head>
 
 <body>
-    <main role="main" tabindex="-1">
-        <div class="ul-ui container example toc open">
-            <h1 class="ul-ui dividing header">Layout</h1>
-            <p>
-                    Where possible, use semantic html to describe your HTML structure. General layout includes:
-            </p>
-            <div class='ul-ui bulleted list'>
-            <div class='item'>Top fixed header navigation. See “Navigation” section for more details.</div>
-            <div class='item'>Bottom “sticky” footer. See the “Footer” section for more details.</div>
-            <div class='item'>Prefer the flex method of creating a sticky footer, assuming modern browser standards.</div>
-            </div>
+  <main role="main" tabindex="-1">
+    <div class="ul-ui container example toc open">
+      <h1 class="ul-ui dividing header">Layout</h1>
+
+      <p>
+      Where possible, use semantic html to describe your HTML structure. General layout includes:</p>
+
+      <ul class='ul-ui bulleted list'>
+        <li class='item'>
+          <span class="highlight">Top fixed header navigation. See "Navigation" section for more details.</span>
+        </li>
+        <li class='item'>
+          <span class="highlight">Bottom "sticky" footer. See the "Footer" section for more details.</span>
+          <ul>
+            <li class='item'>
+              <span class="highlight">Prefer the flex method of creating a sticky footer, assuming modern browser standards.</span>
+            </li>
+          </ul>
+        </li>
+        <li class="item">Main content should be semantically coded with a <code>main</code> tag and include the
+          <code>role</code> and ARIA attributes. See "Accessibility" section for more guidelines on how to use these attributes.
+        </li>
+      </ul>
 
 <!-- =================== SECTION =================== -->
-            <div class='divider'></div>
-            <h3 class="target" id="hn-a">Header Navigation</h3>
-            <p>
-                Prefer a top bar navigation with the product name on the left and the UL logo as the last element to the
-                right, along with whatever other minimal navigation elements are required between the logo and the
-                product name. An account icon should always be present to support at least sign out functionality, as
-                well as settings where available, and other app-specific user features.
-            </p>
+      <div class='divider'></div>
 
-            <p>
-                Applications participating in the UL platform will have an icon with a mechanism to switch to the other
-                applications on the platform; this should be in a common location on the right, next to the UL logo.
-                This will be similar in spirit to this functionality in Office 365 or Google and will be further defined
-                as the platform takes shape.
-            </p>
+      <h3 class="target" id="hn-a">Header Navigation</h3>
 
-            <p>
-                In responsive sites, suppress the UL logo and turn additional navigation elements into a “hamburger”
-                style icon as the right most element at medium (and below) breakpoints.
-            </p>
+      <p>
+      <span class="highlight">Prefer a top bar navigation with the product name on the left and the UL 
+        logo as the last element to the right</span>, along with whatever other minimal navigation 
+      elements are required between the logo and the
+      product name. An account icon should always be present to support at least sign out functionality, as
+      well as settings where available, and other app-specific user features.</p>
 
-            <p>
-                The code fragment below details a 60px high header with elements vertically centered. The HTML
-                semantically describes the elements included in the header by surrounding the navigation with nav tag.
-                (Further specifications of header navigation elements (font, case, sizing, spacing, etc.) to be added at
-                a later date.)
-            </p>
-            <table>
-                <tbody>
-                    <tr>
-                        <td valign="top" align="left" style="padding-top:0in;padding-right:0in;
-                     padding-bottom:0in;padding-left:0in">
-                            <div style="border:solid #fff 6.0pt;padding:20px;
-                     background:#fff">
-                                <p class="Code">&lt;header role="header"
-                                    aria-label="header"&gt;</p>
-                                <p class="Code">...</p>
-                                <p class="Code">&lt;nav role="navigation"
-                                    aria-label="navigation"&gt;</p>
-                                <p class="Code">&lt;ul&gt;</p>
-                                <p class="Code">&lt;li&gt;&lt;a&gt;...&lt;/a&gt;</p>
-                                <p class="Code">...</p>
-                                <p class="Code">&lt;/ul&gt;</p>
-                                <p class="Code">&lt;/nav&gt;</p>
-                                <p class="Code">&lt;/h<span>eader&gt;</span></p>
-                                <p class="Code">&nbsp;</p>
-                                <p class="Code">header </p>
-                                <p class="Code">&nbsp; align-items: center;</p>
-                                <p class="Code">&nbsp; display: flex;</p>
-                                <p class="Code">&nbsp; flex-direction: row;</p>
-                                <p class="Code">&nbsp; height: 60px;</p>
-                                <p class="Code">&nbsp; position: fixed;</p>
-                                <p class="Code">&nbsp; width: 100%;</p>
-                                <p class="Code">}</p>
-                            </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+      <p>
+      Applications participating in the UL platform will have an icon with a mechanism to switch to the other
+      applications on the platform; this should be in a common location on the right, next to the UL logo.
+      This will be similar in spirit to this functionality in Office 365 or Google and will be further defined
+      as the platform takes shape.</p>
+
+      <p>
+      <span class="highlight">In responsive sites, suppress the UL logo and turn additional navigation 
+        elements into a "hamburger" style icon as the right most element at medium (and smaller) breakpoints.</span></p>
+
+      <p>
+      The code fragment below details a header with elements vertically centered. The HTML
+      semantically describes the elements included in the header by surrounding the navigation with nav tag.
+      See the <a href="template.html">HTML Templates</a> section and the related HTML files for more complete code.</p>
+
+<pre class="example-cont">
+&lt;header role="banner"&gt;
+&lt;div class="main-logo"&gt;
+  &lt;a href="/" rel="home" title="to homepage"&gt;
+      &lt;!-- link to home: http://microformats.org/wiki/rel-home --&gt;
+      &lt;img alt="Logo Text/Product Name" src="/assets/images/logo.svg"&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+  &lt;!-- Quick menu (skipnav) to directly jump to specific sections: http://www.jimthatcher.com/skipnav.htm --&gt;
+  &lt;nav&gt;
+      &lt;ul role="menubar" aria-label="Application Menu"&gt;
+        &lt;li&gt;&lt;a href="#" role="menuitem"&gt;App Link&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#" role="menuitem"&gt;App Link&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#" role="menuitem"&gt;Contact Us&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+  &lt;/nav&gt;
+
+  &lt;div id="account-menu" class="relative"&gt;
+    &lt;!-- NOTE: small screen account link/menu not wired to work --&gt;
+    &lt;a href="#" role="menuitem" aria-expanded="false" class="account menu-icon relative;" data-class-toggle="true" data-target=".submenu" data-class="open"&gt;&lt;img alt="Your Account" src="/assets/images/user-icon-sh.svg"&gt;&lt;/a&gt;
+  &lt;/div&gt;
+
+  &lt;div id="ul-section"&gt;
+    &lt;img alt="UL" src="/assets/images/ul-white.svg" id="ul-header-logo" class="hide-sm hide-md"&gt;
+    &lt;a href="#" data-class-toggle="true" data-target="header" data-class="ham-is-active" class="hamburger hamburger--slider js-hamburger show-sm-flex show-md-flex"&gt;
+      &lt;div class="hamburger-box"&gt;
+        &lt;div class="hamburger-inner"&gt;&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+
+&lt;/header&gt; 
+</pre>
 
 <!-- =================== SECTION =================== -->
-            <div class='divider'></div>
-            <h3 class="target" id="lf-a">Footer</h3>
-            <p>
-                Use the semantic footer tag to designate a sticky footer (“sticky” refers to the concept of anchoring
-                the footer to the bottom of the view if the content of the page does not push the footer beyond the
-                bottom of the screen).>
-            </p>
+      <div class='divider'></div>
 
-            <p>
-                The coding example below specifies a dark gray with white text, which should also apply any links within
-                the section. More details on anchor and text styles may be forthcoming.
-            </p>
+      <h3 class="target" id="lf-a">Footer</h3>
 
-            <p>
-                In the footer, include common elements:
-            </p>
-            <div class='ul-ui bulleted list' id="here">
-                <div class='item'>the UL logo.</div>
-                <div class='item'>a copyright claim for the site content.</div>
-                <div class='item'>links to help, contact, about and other informational navigational elements not
-                    required for regular application usage.</div>
-            </div>
-            <table>
-                <tbody>
-                    <tr>
-                        <td valign="top" align="left" style="padding-top:0in;padding-right:0in;
-                     padding-bottom:0in;padding-left:0in">
-                            <div style="border:solid #fff 6.0pt;padding:20px;
-                     background:#fff">
-                                <p class="Code">&lt;footer role="header"
-                                    aria-label="header"&gt;...&lt;/footer&gt;</p>
-                                <p class="Code">&nbsp;</p>
-                                <p class="Code">footer {</p>
-                                <p class="Code">&nbsp; background-color: #3d3d3d;</p>
-                                <p class="Code">&nbsp; color: #ffffff;</p>
-                                <p class="Code">}</p>
-                            </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    
-    <article><nav></nav></article>
+      <p>
+      <span class="highlight">Use the semantic <code>footer</code> tag to designate a sticky footer
+        ("sticky" refers to the concept of anchoring
+      the footer to the bottom of the view if the content of the page does not push the footer beyond the
+      bottom of the screen).</span></p>
+
+      <p>
+      The coding example below specifies a dark gray with white text, which should also apply any links within
+      the section. More details on anchor and text styles may be forthcoming. Again, refer to the provided templates
+      for more detailed HTML and CSS.</p>
+
+      <p>
+      In the footer, include common elements:</p>
+
+      <ul class='ul-ui bulleted list' id="here">
+        <li class='item'><span class="highlight">the UL logo.</span></li>
+        <li class='item'><span class="highlight">a copyright claim for the site content.</span></li>
+        <li class='item'><span class="highlight">links to help, contact, about and other informational 
+            navigational elements not required for regular application usage.</span></li>
+      </ul>
+
+<pre class="example-cont">
+&lt;footer role="header" aria-label="header"&gt;...&lt;/footer&gt;
+
+footer {
+  background-color: #3d3d3d;
+  color: #ffffff;
+}
+</pre>
+            
+    </div>
+  
+  <article><nav></nav></article>
 </main>
 
 <footer role="contentinfo">
