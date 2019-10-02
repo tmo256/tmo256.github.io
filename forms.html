@@ -33,13 +33,13 @@
                 Where appropriate, use HTML5 input types to ensure ease of use on touch devices. This includes, but is
                 not limited to:
             </p>
-            <div class='ul-ui bulleted list'>
-                <div class='item'>email</div>
-                <div class='item'>range</div>
-                <div class='item'>search</div>
-                <div class='item'>tel*</div>
-                <div class='item'>url</div>
-            </div>
+            <ul class='ul-ui bulleted list'>
+                <li class='item'>email</li>
+                <li class='item'>range</li>
+                <li class='item'>search</li>
+                <li class='item'>tel*</li>
+                <li class='item'>url</li>
+            </ul>
             <div class='ul-ui alert'>*Note: On mobile devices, tel type puts the user into the number keypad rather than
                 the regular keyboard. Use tel as the preferred type when coding a numbers-only input.
             </div>
@@ -47,16 +47,16 @@
                 Do not use the following types, as the implementation in some (or all) browsers may be confusing
                 (“number” input, for example) or plugins implement the feature:
             </p>
-            <div class='ul-ui bulleted list'>
-                <div class='item'>number</div>
-                <div class='item'>month</div>
-                <div class='item'>color</div>
-                <div class='item'>date</div>
-                <div class='item'>datetime</div>
-                <div class='item'>datetime-local</div>
-                <div class='item'>time</div>
-                <div class='item'>week</div>
-            </div>
+            <ul class='ul-ui bulleted list'>
+                <li class='item'>number</li>
+                <li class='item'>month</li>
+                <li class='item'>color</li>
+                <li class='item'>date</li>
+                <li class='item'>datetime</li>
+                <li class='item'>datetime-local</li>
+                <li class='item'>time</li>
+                <li class='item'>week</li>
+            </ul>
 
 
             <!-- =================== SECTION =================== -->
@@ -81,36 +81,28 @@
             </p>
 
             <b>Buttons</b>
-            <div class='ul-ui bulleted list'>
-                <div class='item'><p>
-                    Submit (Create/Update)
-                </p></div>
-                <div class='item'><p>
-                    Delete
-                </p></div>
-                <div class='item'><p>
-                    Reset *
-                </p></div>
-                <div class='item'><p>
-                    Any action that initiates a data transaction
-                </p></div>
-            </div>
+            <ul class='ul-ui bulleted list'>
+                <li class='item'> Submit (Create/Update) </li>
+                <li class='item'> Delete </li>
+                <li class='item'> Reset * </li>
+                <li class='item'> Any action that initiates a data transaction </li>
+            </ul>
 
             <b>Links</b>
-            <div class='ul-ui bulleted list'>
-                <div class='item'><p>
+            <ul class='ul-ui bulleted list'>
+                <li class='item'><p>
                     Cancel *
-                </p></div>
-                <div class='item'><p>
+                </p></li>
+                <li class='item'><p>
                     Forgot Password
-                </p></div>
-                <div class='item'><p>
+                </p></li>
+                <li class='item'><p>
                     Actions within tables (e.g. “Remove” link in a list, which performs a form submit) * Note this represents a case where the element appears to the user to be a link but should actually be a button.
-                </p></div>
-                <div class='item'><p>
+                </p></li>
+                <li class='item'><p>
                     Any other action that does not initiate a data transaction
-                </p></div>
-            </div>
+                </p></li>
+            </ul>
 
             <div class='ul-ui alert'>
                 <p>
@@ -149,34 +141,34 @@
             <p>
                 Use client-side validations when:
             </p>
-            <div class='ul-ui bulleted list'>
-                <div class='item'><p>the form is submitted via Ajax. Generally, this will make action flow more fluidly for
-                the user.</p></div>
-                <div class='item'><p>the form contains a file upload input. Because of security issues, uploaded files are
+            <ul class='ul-ui bulleted list'>
+                <li class='item'><p>the form is submitted via Ajax. Generally, this will make action flow more fluidly for
+                the user.</p></li>
+                <li class='item'><p>the form contains a file upload input. Because of security issues, uploaded files are
                 detached on page load, which makes round-trip validation poor UX (as the user is forced to reattach
                 the file).
                 (Note that some browsers expose more attributes of uploaded files than others, making specific
-                validations relating to file size, type, etc., inconsistent across browsers.)</p></div>
-                <div class='item'><p>
+                validations relating to file size, type, etc., inconsistent across browsers.)</p></li>
+                <li class='item'><p>
                     the form contains typeahead inputs that might be lost upon reload.
-                </p></div>
-            </div>
+                </p></li>
+            </ul>
 
             <p>Best Practices</p>
-            <div class='ul-ui bulleted list'>
-                <div class='item'>
+            <ul class='ul-ui bulleted list'>
+                <li class='item'>
                     <p>Implement the same error styling to the elements as the user would see from a
                         server-side validation.</p>
-                </div>
-                <div class='item'>
+                </li>
+                <li class='item'>
                     <p>Validate on form on submit rather than on input. However, a multistep input, such as
                         typeahead field, may be validated on value select for better interaction flow.</p>
-                </div>
-                <div class='item'>
+                </li>
+                <li class='item'>
                     <p>Clear errors on re-validation. Depending on the input type, as in the case of password
                         field, clearing the error on field change may be more helpful to the user.</p>
-                </div>
-            </div>
+                </li>
+            </ul>
 
 
             <!-- =================== SECTION =================== -->
