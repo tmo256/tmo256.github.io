@@ -29,42 +29,55 @@
       <h3>Anchors &amp; Buttons</h3>
 
       <p>
-      Please note the recurring theme throughout this section: when using the terms "button" or "anchor",
+      <strong><i>The guidelines below describe usage and styling of button and anchor elements outside the
+          context of forms.</i></strong>
+      See “Forms” for specific uses within that context. This section also does not address buttons as elements of a toolbar,
+      for example (this and an expansion on the idea of interactivity in a more strictly "application" state will
+      be included in future versions of this documentation).</p>
+
+      <p>
+      Also, please note the recurring theme throughout this section: when using the terms "button" or "anchor,"
       we are sometimes referring to the HTML <code>button</code> or <code>a</code> tags, and sometimes 
       referring to a UI element that looks to the user to be something "pressable" or "clickable".
       We have made every possible attempt to be clear when referring to an HTML node and when referring to a UI element.</p>
       
 
-        <!-- =================== SECTION =================== -->
-        <div class='divider'></div>
+      <!-- =================== SECTION =================== -->
+      <div class='divider'></div>
 
-        <h3 class="target" id="butc-a">Buttons: Coding</h3>
+      <h3 class="target" id="butc-a">Buttons: Coding</h3>
 
+      <h5>
+        <a href="https://www.w3.org/TR/wai-aria-practices/#button" target="_blank" rel="no-follow">Button WAI-ARIA Authoring</a>
+      </h5>
+
+      <p>
+      Use a <code>button</code> element to trigger any JavaScript function that does not use a URL. Basically, instead of using
+      an <code>a</code> tag with an <code>href="Javascript:void(0)"</code>, or <code>href="#"</code>,
+      use a button element. If the user can open a reference via a right-click or 3D touch, use an anchor instead.</p>
+
+      <p>
+      Common button uses might include:</p>
+
+      <ul class="ul-ui bulleted list">
+        <li class="item">popover triggers.</li>
+        <li class="item">tooltip elements.</li>
+        <li class="item">modal triggers (that do not require a URL. Some modals that open with Ajax,
+          for example, may be better served by an anchor tag with a URL in the <code>href</code> attribute).</li>
+        <li class="item">dismissing buttons in modals and alerts.</li>
+        <li class="item">opening and closing/expanding hidden text.</li>
+      </ul>
+
+      <p>
+      In many of the cases (such as some listed above), the button may appear to the user to be an inline link. Use
+      CSS to modify the button to look like a link.</p>
+
+      <aside class="ul-ui alert">
         <p>
-        Use a <code>button</code> element to trigger any JavaScript function that does not use a URL. Basically, instead of using
-        an a tag with an href="Javascript:void(0)", or href="#", use a button element. If the user can open a
-        reference via a right-click or 3D touch, use an anchor.</p>
-
-        <p>
-        This might include:</p>
-
-        <div class="ul-ui bulleted list">
-            <div class="item">non-AJAX modal triggers.</div>
-            <div class="item">popover triggers.</div>
-            <div class="item">tooltip elements.</div>
-            <div class="item">dismissing buttons in modals and alerts.</div>
-            <div class="item">opening and closing/expanding hidden text.</div>
-        </div>
-
-        <p>
-        In many of the cases (such as some listed above), the button may appear to the user to be an inline link. Use
-        CSS to modify the button to look like a link.</p>
-
-        <aside class="ul-ui alert">
-            <p>Always use the type="button" attribute-value to ensure a button does not inadvertently act as a form
-                submit. Safari, Chrome and other browsers treat button elements as submit tags when nested in forms.
-            </p>
-        </aside>
+        Always use the type="button" attribute-value to ensure a button does not inadvertently act as a form
+            submit. Safari, Chrome and other browsers treat button elements as submit tags when nested in forms.
+        </p>
+      </aside>
 
         <!-- =================== SECTION =================== -->
         <div class="ul-ui divider"></div>
@@ -196,12 +209,12 @@
 
         <div class="ul-ui bulleted list">
             <div class="item">
-                <p>Use sentence case for button labels.</p>
-                <button class="ul-ui button">This is a Button with Sentence Case</button>
+                <span class="highlight">Use sentence case for button labels.</span>
+                <button class="ul-ui button">This is a button with sentence case</button>
             </div>
             <div class="item">
-                <p>Limit characters. Button text should be as short as possible with action words that
-                    clearly explain what the button does (Create Account, Save, Search).</p>
+                <span>Limit characters.</span> Button text should be as short as possible with action words that
+                    clearly explain what the button does (Create Account, Save, Search).
                 <button class="ul-ui button">Create Account</button>
             </div>
             <div class="item">
@@ -210,9 +223,9 @@
                     “Submit”.
                 </p>
             </div>
-            <div class="item">
-                <p>Lead with a verb where possible. For example, “Create Account” not “Account Creation”.</p>
-            </div>
+            <li class="item">
+              <span class="highlight">Lead with a verb where possible</span>. For example, “Create Account” not “Account Creation”.
+            </li>
             <div class="item">
                 <p>Icons can also be helpful. At times, consider adding an icon to signal specific actions (Download,
                     Open in a new window, etc.).</p>
