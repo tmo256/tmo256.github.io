@@ -32,8 +32,8 @@
       <strong><i>The guidelines below describe usage and styling of button and anchor elements outside the
           context of forms.</i></strong>
       See “Forms” for specific uses within that context. This section also does not address buttons as elements of a toolbar,
-      for example (this and an expansion on the idea of interactivity in a more strictly "application" state will
-      be included in future versions of this documentation).</p>
+      for example (buttons in this context, and an expansion on the idea of kinds of interactivity in a more strictly 
+      "application" state will be included in future versions of this documentation).</p>
 
       <p>
       Also, please note the recurring theme throughout this section: when using the terms "button" or "anchor,"
@@ -54,7 +54,7 @@
       <p>
       Use a <code>button</code> element to trigger any JavaScript function that does not use a URL. Basically, instead of using
       an <code>a</code> tag with an <code>href="Javascript:void(0)"</code>, or <code>href="#"</code>,
-      use a button element. If the user can open a reference via a right-click or 3D touch, use an anchor instead.</p>
+      use a button element. If the user can open a reference via a right-click or 3D touch, use an anchor tag instead.</p>
 
       <p>
       Common button uses might include:</p>
@@ -69,63 +69,63 @@
       </ul>
 
       <p>
-      In many of the cases (such as some listed above), the button may appear to the user to be an inline link. Use
-      CSS to modify the button to look like a link.</p>
+      In many cases (such as some listed above), the button may appear to the user to be an inline link. Use
+      CSS to modify the button to look like a link. (See "Styling" below for more information.)</p>
 
       <aside class="ul-ui alert">
         <p>
-        Always use the type="button" attribute-value to ensure a button does not inadvertently act as a form
-            submit. Safari, Chrome and other browsers treat button elements as submit tags when nested in forms.
-        </p>
+        Always use the <code>type="button"</code> attribute-value to ensure a button does not inadvertently act as a form
+        submit. Safari, Chrome and other browsers treat button elements as submit tags when nested in forms.</p>
       </aside>
 
-        <!-- =================== SECTION =================== -->
-        <div class="ul-ui divider"></div>
-        <h3 class="target" id="buts-a">Buttons: Styling</h3>
+      <!-- =================== SECTION =================== -->
+      <div class="ul-ui divider"></div>
 
-        <p>
-            As noted, button elements may be styled to appear as either buttons or as links, depending on their
-            conceptual use.
-        </p>
-        <p>
-            Style elements as a button when:
-        </p>
-        <div class="ul-ui bulleted list">
-            <div class="item">indicating persistence or as a step in a process leading to persistence. This includes
-                actions such as save, save and move forward or back (“next” and “previous” step), submit, delete,
-                update.</div>
-            <div class="item">creating call to action (CTA). The number of CTAs should be limited on a view and
-                should strongly indicate to the user what their next action should be.</div>
-        </div>
-        <p>Unless noted elsewhere in this document, style the button as a link in most other situations.</p>
+      <h3 class="target" id="buts-a">Buttons: Styling</h3>
 
-        <!-- **** Example **** -->
-        <div class='example-cont clearfix'>
-            <div class='view'>
-                <div class='ul-ui circular black icon xsm button codeview'>
-                    <i class='fas fa-code icon'></i>
-                </div>
-                <button class="ul-ui button">
-                    As button
-                </button>
-                <div class="ul-ui button" tabindex="0">
-                    As Div
-                </div>
-                <a href="#" class="ul-ui button">As an a tag</a>
-                <a href="#">a text link</a>
-            </div>
-            <div class='code'>
-                <pre> <script type="text" class='code-script'><button class="ul-ui button">
-                As button
-            </button>
-            <div class="ul-ui button" tabindex="0">
-                As Div
-            </div>
-            <a href="#" class="ul-ui button">As an a tag</a>
-            <a href="#">a text link</a>
-        </script></pre>
-            </div>
-        </div>
+      <p>
+      As noted, button elements may be styled to appear as either buttons or as links, depending on their
+      conceptual use.</p>
+
+      <p>
+      Style elements as a button when:</p>
+
+      <ul class="ul-ui bulleted list">
+        <li class="item">indicating persistence or as a step in a process leading to persistence. This includes
+            actions such as save, save and move forward or back ("next" and "previous" step), submit, delete,
+            update.</li>
+        <li class="item">creating call to action (CTA). The number of CTAs should be limited on a view and
+            should strongly indicate to the user what their next action should be.</li>
+      </ul>
+      <p>Unless noted elsewhere in this document, style the button as a link in most other situations.</p>
+
+      <!-- **** Example **** -->
+      <div class='example-cont clearfix'>
+          <div class='view'>
+              <div class='ul-ui circular black icon xsm button codeview'>
+                  <i class='fas fa-code icon'></i>
+              </div>
+              <button class="ul-ui button">
+                  As button
+              </button>
+              <div class="ul-ui button" tabindex="0">
+                  As Div
+              </div>
+              <a href="#" class="ul-ui button">As an a tag</a>
+              <a href="#">a text link</a>
+          </div>
+          <div class='code'>
+              <pre> <script type="text" class='code-script'><button class="ul-ui button">
+              As button
+          </button>
+          <div class="ul-ui button" tabindex="0">
+              As Div
+          </div>
+          <a href="#" class="ul-ui button">As an a tag</a>
+          <a href="#">a text link</a>
+      </script></pre>
+          </div>
+      </div>
 
 
         <!-- =================== SECTION =================== -->
