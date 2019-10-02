@@ -12,14 +12,14 @@ pre {
     padding-right: 50px;
     padding-bottom: 50px;
 }
-main > article > nav  ul {
+main > nav  ul {
     background-color: transparent;
     list-style-type: none;
     overflow: auto;
     padding-left: 1rem;
     width: 100%;
 }
-main > article > nav {
+main > nav {
     width: 15em;
     background-color: #fff;
     position: fixed;
@@ -29,7 +29,7 @@ main > article > nav {
     max-height: 100%;
 }
 
-main > article > nav {
+main > nav {
 }
 
 .example-cont {
@@ -105,7 +105,7 @@ main > article > nav {
     padding: 1em;
   }
 
-  main > article > nav .selected {
+  main > nav .selected {
     background: rgba(0, 0, 0, 0.05);
     color: rgba(0, 0, 0, 0.95);
     font-weight: 400;
