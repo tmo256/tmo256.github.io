@@ -29,10 +29,10 @@
       <h3>Anchors &amp; Buttons</h3>
 
       <p>
-      <strong><i>The guidelines below describe usage and styling of button and anchor elements outside the
-          context of forms.</i></strong>
-      See “Forms” for specific uses within that context. This section also does not address buttons as elements of a toolbar,
-      for example (buttons in this context, and an expansion on the idea of kinds of interactivity in a more strictly 
+      <strong>The guidelines below describe usage and styling of button and anchor elements outside the
+          context of forms.</strong>
+      See "Forms" for specific uses within that context. This section also does not address buttons as elements of an
+      interactive environment, such as gaming environment (an expansion on the idea of interactivity in a more strictly 
       "application" state will be included in future versions of this documentation).</p>
 
       <p>
@@ -82,47 +82,139 @@
       <div class="ul-ui divider"></div>
 
       <h3 class="target" id="buts-a">Buttons: Styling</h3>
-
+        
       <p>
       As noted, button elements may be styled to appear as either buttons or as links, depending on their
-      conceptual use.</p>
+      conceptual use. <strong>Buttons create an impact within their environment, links navigate to resources.</strong></p>
 
       <p>
       Style elements as a button when:</p>
 
       <ul class="ul-ui bulleted list">
         <li class="item">indicating persistence or as a step in a process leading to persistence. This includes
-            actions such as save, save and move forward or back ("next" and "previous" step), submit, delete,
+            actions such as save, save and move forward or back ("next" and "previous"), submit, delete,
             update.</li>
+        <li class="item">behaving as a component in an application; tools in a toolbar of a text editor, for example.</li>
         <li class="item">creating call to action (CTA). The number of CTAs should be limited on a view and
             should strongly indicate to the user what their next action should be.</li>
       </ul>
-      <p>Unless noted elsewhere in this document, style the button as a link in most other situations.</p>
+
+      <p>
+      When using icons to represent navigational elements, such as "hamburger" menu icons, the <code>button</code> node will
+      most commonly be unstyled (without background or other skeuomorphic attributes). In most other cases (or unless
+      specifically noted elsewhere in the document), style the <code>button</code> as a link in most other situations.</p>
+
+
+      <h5>Default (Unstyled) Button Examples</h5>
+
 
       <!-- **** Example **** -->
       <div class='example-cont clearfix'>
           <div class='view'>
-              <div class='ul-ui circular black icon xsm button codeview'>
-                  <i class='fas fa-code icon'></i>
-              </div>
-              <button class="ul-ui button">
+              <button class='ul-ui circular black icon xsm button codeview' type="button" role="button" aria-pressed="false" 
+                aria-label="Toggle button for example HTML/CSS code">
+                <i class='fas fa-code icon' aria-hidden="true"></i>
+              </button>
+              <button class="ul-ui button" type="button" role="button">
                   As button
               </button>
-              <div class="ul-ui button" tabindex="0">
-                  As Div
+              <div class="ul-ui button" role="button" tabindex="0">
+                  As div
               </div>
-              <a href="#" class="ul-ui button">As an a tag</a>
+              <a href="#" class="ul-ui button">As an anchor tag</a>
               <a href="#">a text link</a>
           </div>
           <div class='code'>
-              <pre> <script type="text" class='code-script'><button class="ul-ui button">
+              <pre><script type="text" class='code-script'><button class="ul-ui button" type="button" role="button">
               As button
           </button>
-          <div class="ul-ui button" tabindex="0">
-              As Div
+          <div class="ul-ui button" role="button" tabindex="0">
+              As div
           </div>
-          <a href="#" class="ul-ui button">As an a tag</a>
+          <a href="#" class="ul-ui button" role="button">As an a tag</a>
           <a href="#">a text link</a>
+      </script></pre>
+          </div>
+      </div>
+
+      
+        <!--- **** Example **** -->
+        <div class='example-cont clearfix'>
+            <div class='view'>
+              <button class='ul-ui circular black icon xsm button codeview' type="button" role="button" aria-pressed="false" 
+                aria-label="Toggle button for example HTML/CSS code">
+                <i class='fas fa-code icon' aria-hidden="true"></i>
+              </button>
+                <button class="xxsm ul-ui button" type="button" role="button">
+                    XXSmall
+                </button>
+                <button class="xsm ul-ui button" type="button" role="button">
+                    Xsmall
+                </button>
+                <button class="small ul-ui button" type="button" role="button">
+                    Small
+                </button>
+                <button class="base ul-ui button" type="button" role="button">
+                    <i class="fas fa-exclamation-triangle icon" aria-hidden="true"></i>
+                    Base
+                </button>
+                <button class="medium ul-ui button" type="button" role="button">
+                    Medium
+                </button>
+                <button class="large ul-ui button" type="button" role="button">
+                    Large
+                </button>
+            </div>
+            <div class='code'>
+                <pre> <script type="text" class='code-script'><button class="xxsm ul-ui button" type="button" role="button">
+            XXSmall
+        </button>
+        <button class="xsm ul-ui button" type="button" role="button">
+            Xsmall
+        </button>
+        <button class="small ul-ui button" type="button" role="button">
+            Small
+        </button>
+        <button class="base ul-ui button" type="button" role="button">
+                <i class="fas fa-exclamation-triangle icon" aria-hidden="true"></i>
+            Base
+        </button>
+        <button class="medium ul-ui button" type="button" role="button">
+            Medium
+        </button>
+        <button class="large ul-ui button" type="button" role="button">
+            Large
+        </button></script></pre>
+            </div>
+        </div>
+
+      <p>
+      Note the example code above does not include all possible accessibility markup, as some are relevant only to 
+      specific circumstances (eg. toggle buttons).</p>
+
+
+      <!-- =================== SECTION =================== -->
+      <div class="ul-ui divider"></div>
+
+      <h3 class="target" id="butr-a">Buttons: Responsiveness</h3>
+
+      <p>
+      In most circumstances, elements styled as buttons should become block elements in medium and smaller
+      (less than 768px wide) viewports in order to accommodate touch behavior; some exceptions to this rule
+      might include "Next" and "Previous" buttons. Be sure to create adequate spacing and padding to 
+      allow all users to use your buttons on a touchscreen.</p>
+
+      <!--- **** Example **** -->
+      <div class='example-cont clearfix'>
+          <div class='view'>
+            <button class='ul-ui circular black icon xsm button codeview' type="button" role="button" aria-pressed="false" 
+              aria-label="Toggle button for example HTML/CSS code">
+              <i class='fas fa-code icon' aria-hidden="true"></i>
+            </button>
+              <button class="fluid ul-ui button" type="button" role="button">Fits container</button>
+          </div>
+          <div class='code'>
+              <pre> <script type="text" class='code-script'><button class="fluid ul-ui button" type="button" role="button">Fits container</button>
       </script></pre>
           </div>
       </div>
@@ -130,120 +222,48 @@
 
         <!-- =================== SECTION =================== -->
         <div class="ul-ui divider"></div>
-        <h3 class="target" id="butr-a">Buttons: Responsiveness</h3>
-
-        <p>In most circumstances, elements styled as buttons should become block elements in medium and smaller
-            viewports in order to accommodate touch behavior; the exception to this rule might be for “Next” and
-            “Previous” buttons. Be sure to create adequate spacing and padding to allow all users to use your
-            buttons on a touchscreen.</p>
-
-        <!--- **** Example **** -->
-        <div class='example-cont clearfix'>
-            <div class='view'>
-                <div class='ul-ui circular black icon xsm button codeview'>
-                    <i class='fas fa-code icon'></i>
-                </div>
-                <button class="xxsm ul-ui button">
-                    XXSmall
-                </button>
-                <button class="xsm ul-ui button">
-                    Xsmall
-                </button>
-                <button class="small ul-ui button">
-                    Small
-                </button>
-                <button class="base ul-ui button">
-                    <i class="fas fa-exclamation-triangle icon" aria-hidden="true"></i>
-                    Base
-                </button>
-                <button class="medium ul-ui button">
-                    Medium
-                </button>
-                <button class="large ul-ui button">
-                    Large
-                </button>
-            </div>
-            <div class='code'>
-                <pre> <script type="text" class='code-script'><button class="xxsm ul-ui button">
-            XXSmall
-        </button>
-        <button class="xsm ul-ui button">
-            Xsmall
-        </button>
-        <button class="small ul-ui button">
-            Small
-        </button>
-        <button class="base ul-ui button">
-                <i class="fas fa-exclamation-triangle icon" aria-hidden="true"></i>
-            Base
-        </button>
-        <button class="medium ul-ui button">
-            Medium
-        </button>
-        <button class="large ul-ui button">
-            Large
-        </button></script></pre>
-            </div>
-        </div>
-        <br>
-
-        <!--- **** Example **** -->
-        <div class='example-cont clearfix'>
-            <div class='view'>
-                <div class='ul-ui circular black icon xsm button codeview'>
-                    <i class='fas fa-code icon'></i>
-                </div>
-                <button class="fluid ul-ui button">Fits container</button>
-            </div>
-            <div class='code'>
-                <pre> <script type="text" class='code-script'>
-        <button class="fluid ul-ui button">Fits container</button>
-        </script></pre>
-            </div>
-        </div>
-
-
-        <!-- =================== SECTION =================== -->
-        <div class="ul-ui divider"></div>
         <h3 class="target" id="butu-a">Buttons: Usability</h3>
 
-        <div class="ul-ui bulleted list">
-            <div class="item">
-                <span class="highlight">Use sentence case for button labels.</span>
-                <button class="ul-ui button">This is a button with sentence case</button>
-            </div>
-            <div class="item">
-                <span>Limit characters.</span> Button text should be as short as possible with action words that
-                    clearly explain what the button does (Create Account, Save, Search).
-                <button class="ul-ui button">Create Account</button>
-            </div>
-            <div class="item">
-                <p>
-                    Be consistent in this terminology across the application, such as “Save” vs
-                    “Submit”.
-                </p>
-            </div>
+        <ul class="ul-ui bulleted list">
             <li class="item">
-              <span class="highlight">Lead with a verb where possible</span>. For example, “Create Account” not “Account Creation”.
+
+              <p>
+              <span class="highlight">Use sentence case for button labels.</span></p>
+
+              <button class="ul-ui button" type="button" role="button">This is a button with sentence case</button>
             </li>
-            <div class="item">
+            <li class="item">
+
+              <p>
+                <span>Limit characters.</span> Button text should be as short as possible with action words that
+                clearly explain what the button does (Create Account, Save, Search).</p>
+
+                <button class="ul-ui button" type="button" role="button">Create Account</button>
+            </li>
+            <li class="item">
+                Be consistent in this terminology across the application, such as "Save" vs "Submit".
+            </li>
+            <li class="item">
+              <span class="highlight">Lead with a verb where possible</span>. For example, "Create Account" not "Account Creation".
+            </li>
+            <li class="item">
                 <p>Icons can also be helpful. At times, consider adding an icon to signal specific actions (Download,
                     Open in a new window, etc.).</p>
                 <button class="ul-ui icon red button">
                     <i class="fas fa-exclamation-triangle icon" aria-hidden="true"></i>
                     Warning
                 </button>
-            </div>
-            <div class="item">
+            </li>
+            <li class="item">
                 <p>
                     Use consistent class variations to distinguish types and convey meaning. For
-                    example, “Previous” button steps should use a default or plain button
+                    example, "Previous" button steps should use a default or plain button
                     class, while a submit or CTA button would implement a special primary.
                 </p>
                 <button class="ul-ui button">Previous</button>
                 <button class="ul-ui teal button">Next</button>
-            </div>
-        </div>
+            </li>
+        </ul>
 
 
         <!-- =================== SECTION =================== -->
@@ -268,7 +288,7 @@
             </div>
             <div class="item">
                 <p>
-                    all cases described in “Forms”.
+                    all cases described in "Forms".
                 </p>
             </div>
             <div class="item">
@@ -313,9 +333,10 @@
         <!--- **** Example **** --->
         <div class='example-cont clearfix'>
             <div class='view'>
-                <div class='ul-ui circular black icon xsm button codeview'>
-                    <i class='fas fa-code icon'></i>
-                </div>
+              <button class='ul-ui circular black icon xsm button codeview' type="button" role="button" aria-pressed="false" 
+                aria-label="Toggle button for example HTML/CSS code">
+                <i class='fas fa-code icon' aria-hidden="true"></i>
+              </button>
                 <p>This is just <a href="#">a random link</a> in the grand scheme of things.</p>
                 <p><a class="block" href="#">This is some linked block of text.</a></p>
                 <p><a href="#">Here are a few</a> <a href="#">linked text items</a> <a href="#">in a row.</a>
@@ -334,15 +355,15 @@
         <div class='divider'></div>
         <h3 class="target" id="is-a">Input / Submits</h3>
         <p>
-            Use styling described in the “Buttons: Styling” and “Buttons: Usability” sections.
+            Use styling described in the "Buttons: Styling" and "Buttons: Usability" sections.
         </p>
         <div class='ul-ui bulleted list'>
             <div class='item'>Where possible, submit a form using input type="submit".</div>
             <div class='item'>
-                <p>As noted in “Forms”, attach any validation or pre-processing to the submit event for forms
+                <p>As noted in "Forms", attach any validation or pre-processing to the submit event for forms
                     rather than click events on these elements. This will enable the use of the submit button, as well
                     as
-                    ensure that submission by using the “Return” key or by assistive technology software will always
+                    ensure that submission by using the "Return" key or by assistive technology software will always
                     execute
                     the required JavaScript.</p>
             </div>
@@ -358,8 +379,8 @@
         </p>
         <div class='ul-ui bulleted list'>
             <div class='item'>
-                <p>All elements in an “Action” table cell should appear to the user to be links. The actions
-                    may be a mix of regular anchor tags, such as an anchor link to “Edit;” buttons, such as a
+                <p>All elements in an "Action" table cell should appear to the user to be links. The actions
+                    may be a mix of regular anchor tags, such as an anchor link to "Edit;" buttons, such as a
                     confirmation
                     modal triggered for a delete; or a submit button, as when submitting a form to make a saved search
                     an
@@ -367,7 +388,7 @@
             </div>
             <div class='item'>
                 <p>Regular anchors may be styled as buttons for an extraordinary or analogous call to action,
-                    such as “Registration” links.</p>
+                    such as "Registration" links.</p>
             </div>
             <div class='item'>
                 <p>Where a mix of form submit and anchor elements should be viewed as siblings of equal
@@ -390,9 +411,10 @@
         <!--- **** Example **** --->
         <div class='example-cont clearfix'>
             <div class='view'>
-                <div class='ul-ui circular black icon xsm button codeview'>
-                    <i class='fas fa-code icon'></i>
-                </div>
+              <button class='ul-ui circular black icon xsm button codeview' type="button" role="button" aria-pressed="false" 
+                aria-label="Toggle button for example HTML/CSS code">
+                <i class='fas fa-code icon' aria-hidden="true"></i>
+              </button>
                 <div class="ul-ui small modal" style="display: block !important; position: relative;">
                     <i class="fas fa-times close icon"></i>
                     <div class="header">

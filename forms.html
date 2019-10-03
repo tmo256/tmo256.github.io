@@ -45,7 +45,7 @@
             </div>
             <p>
                 Do not use the following types, as the implementation in some (or all) browsers may be confusing
-                (“number” input, for example) or plugins implement the feature:
+                ("number" input, for example) or plugins implement the feature:
             </p>
             <ul class='ul-ui bulleted list'>
                 <li class='item'>number</li>
@@ -69,10 +69,10 @@
 
             <p>
                 Note that although the rules below refer to buttons and links, the elements need not specifically be
-                input, button or anchor tags; rather, we refer to the styling of the element (see “Anchors and Buttons”
+                input, button or anchor tags; rather, we refer to the styling of the element (see "Anchors and Buttons"
                 for more information on how to style these elements). For the vast majority of instances in the context
-                of forms, however, links should be anchor tags and submit buttons input elements of type “submit” (see
-                “Anchors and Buttons” for details on when to use each type of element).
+                of forms, however, links should be anchor tags and submit buttons input elements of type "submit" (see
+                "Anchors and Buttons" for details on when to use each type of element).
             </p>
 
             <p>
@@ -97,7 +97,7 @@
                     Forgot Password
                 </p></li>
                 <li class='item'><p>
-                    Actions within tables (e.g. “Remove” link in a list, which performs a form submit) * Note this represents a case where the element appears to the user to be a link but should actually be a button.
+                    Actions within tables (e.g. "Remove" link in a list, which performs a form submit) * Note this represents a case where the element appears to the user to be a link but should actually be a button.
                 </p></li>
                 <li class='item'><p>
                     Any other action that does not initiate a data transaction
@@ -106,7 +106,7 @@
 
             <div class='ul-ui alert'>
                 <p>
-                    Actions within tables (e.g. “Remove” link in a list, which performs a form submit)* . Note this
+                    Actions within tables (e.g. "Remove" link in a list, which performs a form submit)* . Note this
                     represents a case where the element appears to the user to be a link but should actually be a button.
                 </p>
             </div>
@@ -117,15 +117,15 @@
             <h3 class="target" id="se-a"> Submit Events</h3>
             <p>
                 As discussed above, although buttons and links do not necessarily need to correspond to their native
-                HTML element tags, forms should generally be executed with input elements of type “submit.” Use a submit
-                input instead of input of type=”button”. (See “Anchors and Buttons” for more information on when to use
+                HTML element tags, forms should generally be executed with input elements of type "submit." Use a submit
+                input instead of input of type="button". (See "Anchors and Buttons" for more information on when to use
                 alternative element types.)
             </p>
 
             <p>
                 Any JavaScript in need of execution upon form submission should be attached to the form’s submit event,
                 rather than attached to a click event of a button or link. Additionally, users will be able to submit
-                forms by using the “Return/Enter” key, within a touch device keyboard, or by other methods (especially
+                forms by using the "Return/Enter" key, within a touch device keyboard, or by other methods (especially
                 those used by accessibility browsers); attaching events to form submits circumvents all these issues.
             </p>
 
@@ -175,14 +175,14 @@
             <div class='divider'></div>
             <h3 class="target" id="seh-a">Success &amp; Error Handling</h3>
             <p>
-                As described in the “Alert” section, indicate success by including a visual alert in the resulting view.
+                As described in the "Alert" section, indicate success by including a visual alert in the resulting view.
                 This alert should be dismissible (it is not necessary to programmatically close the alert after a set
                 period of time).
             </p>
 
             <p>
                 When a view includes a form with error fields, an alert should be visible at the top of the view with a
-                generic error message, such as “Please correct the input errors.” Do not list individual field errors in
+                generic error message, such as "Please correct the input errors." Do not list individual field errors in
                 this message. Specify these errors by styling each invalid input.
             </p>
             <div class="toc-spacer"></div>

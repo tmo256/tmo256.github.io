@@ -319,21 +319,21 @@
 
       <p><span style='background:aqua'>Prefer fluid layouts to fixed width</span><span> if the content will support it. When displaying paragraphs of text in fluid layouts, you may need to limit (via media queries) container widths for readability.  Conventionally, this will be 34 to 36ems, but use good judgement. </span></p>
 
-      <p><span>See “Components” section below for specific responsive-related guidelines. </span></p>
+      <p><span>See "Components" section below for specific responsive-related guidelines. </span></p>
 
       <h2><a name="_Toc12614053">Layout</a></h2>
 
       <p><span>Where possible, use semantic html to describe your HTML structure. General layout includes:</span></p>
 
       <p><span style='background:aqua'>·<span></span></span><span style='background:aqua'>Top fixed header navigation. See
-      “Navigation” section for more details.</span></p>
+      "Navigation" section for more details.</span></p>
 
-      <p><span style='background:aqua'>·<span></span></span><span style='background:aqua'>Bottom “sticky” footer. See the
-      “Footer” section for more details.</span></p>
+      <p><span style='background:aqua'>·<span></span></span><span style='background:aqua'>Bottom "sticky" footer. See the
+      "Footer" section for more details.</span></p>
 
       <p><span style='line-height:115%;font-family:"Courier New";background:aqua'>o></span><span style='background:aqua'>Prefer the flex method of creating a sticky footer, assuming modern browser standards.</span></p>
 
-      <p><span>·<span></span></span><span> Main content should be semantically coded with a “main” tag and include the “role” and ARIA attributes. See “Accessibility” section for more guidelines on how to use these attributes.</span></p>
+      <p><span>·<span></span></span><span> Main content should be semantically coded with a "main" tag and include the "role" and ARIA attributes. See "Accessibility" section for more guidelines on how to use these attributes.</span></p>
 
       <h3><a name="_Toc12614054">Header/Navigation</a></h3>
 
@@ -341,7 +341,7 @@
 
       <p><span>Applications participating in the UL platform will have an icon with a mechanism to switch to the other applications on the platform; this should be in a common location on the right, next to the UL logo. This will be similar in spirit to this functionality in Office 365 or Google and will be further defined as the platform takes shape.</span></p>
 
-      <p><span style='background:aqua'>In responsive sites, suppress the UL logo and turn additional navigation elements into a “hamburger” style icon as the right most element at medium (and below) breakpoints</span><span>.</span></p>
+      <p><span style='background:aqua'>In responsive sites, suppress the UL logo and turn additional navigation elements into a "hamburger" style icon as the right most element at medium (and below) breakpoints</span><span>.</span></p>
 
       <p>The code fragment below details a 60px high header with elements vertically centered. The HTML semantically describes the elements included in the header by surrounding the navigation with <span class=InlineCode><span><span>nav</span></span></span> tag. (Further specifications of header navigation elements (font, case, sizing,
       spacing, etc.) to be added at a later date.)</p>
@@ -380,7 +380,7 @@
 
       <h3><a name="_Toc12614055">Footer</a></h3>
 
-      <p><span style='background:aqua'>Use the semantic </span><span class=InlineCode><span style='border:none;background: aqua'><span>footer</span></span></span><span style='background:aqua'> tag to designate a sticky footer (“sticky” refers to the concept of anchoring the footer to the bottom of the view if the content of the page does not push the footer beyond the bottom of the screen).</span>></p>
+      <p><span style='background:aqua'>Use the semantic </span><span class=InlineCode><span style='border:none;background: aqua'><span>footer</span></span></span><span style='background:aqua'> tag to designate a sticky footer ("sticky" refers to the concept of anchoring the footer to the bottom of the view if the content of the page does not push the footer beyond the bottom of the screen).</span>></p>
 
       <p><span>The coding example below specifies a dark gray with white text, which should also apply any links within the section. More details on anchor and text styles may be forthcoming. </span></p> <p><span style='line-height:115%'>In the footer, include common elements:</span></p>
 
@@ -425,7 +425,7 @@
 
       <p><span>Accessibility should be implemented by conforming to semantic HTML practices, as well as using ARIA attributes/labels. See individual component and layout sections for suggested implementation of semantic HTML. </span></p>
 
-      <p><span>Using ARIA is particularly important in forms and inputs, while “role” attributes are particularly useful in elements (like buttons) that perform crucial functions but do not semantically indicate their uses. Refer to the </span><a href="https://www.w3.org/TR/wai-aria-practices"><span style='line-height:115%'>WCAG documentation</span></a><span style='line-height:115%'> for use in specific HTML elements and common components (such as tooltips).</span></p>
+      <p><span>Using ARIA is particularly important in forms and inputs, while "role" attributes are particularly useful in elements (like buttons) that perform crucial functions but do not semantically indicate their uses. Refer to the </span><a href="https://www.w3.org/TR/wai-aria-practices"><span style='line-height:115%'>WCAG documentation</span></a><span style='line-height:115%'> for use in specific HTML elements and common components (such as tooltips).</span></p>
 
       <h3><a name="_Toc12614058">Images</a></h3>
 
@@ -445,13 +445,13 @@
 
       <p><span>·<span></span></span>For a time-sensitive alert, use ARIA <span class=InlineCode><span><span>role='alert'</span></span></span>.</p>
 
-      <p><span>·<span></span></span>For an alert that is not time-sensitive but that contains an important prompt or piece of information for the user, use ARIA <span class=InlineCode><span><span>role='alertdialog'</span></span></span>.  (The definition of the ARIA <span class=InlineCode><span><span>role='dialog'</span></span></span> is: “an application window that is designed to interrupt the current processing of an application in order to prompt the user to enter information or require a response”).</p>
+      <p><span>·<span></span></span>For an alert that is not time-sensitive but that contains an important prompt or piece of information for the user, use ARIA <span class=InlineCode><span><span>role='alertdialog'</span></span></span>.  (The definition of the ARIA <span class=InlineCode><span><span>role='dialog'</span></span></span> is: "an application window that is designed to interrupt the current processing of an application in order to prompt the user to enter information or require a response").</p>
 
       <p><span>·<span></span></span>Alerts should not be visually hidden if they are not being used.  If you do not want a screen reader to pick up an alert, use the <span class=InlineCode><span><span>aria-hidden='true'</span></span></span> HTML attribute and/or <span class=InlineCode><span><span>display: none</span></span></span> in your CSS.</p>
 
       <h2><a name="_Toc12614062">Anchors &amp; Buttons</a></h2>
 
-      <p><span>The guidelines below describe usage and styling of button and anchor elements. See “Forms” for specific uses within the context of a form.</span></p>
+      <p><span>The guidelines below describe usage and styling of button and anchor elements. See "Forms" for specific uses within the context of a form.</span></p>
 
       <h3><a name="_Toc12614063">Buttons: Coding</a></h3>
 
@@ -485,7 +485,7 @@
 
       <p><span>Style elements as a button when:</span></p>
 
-      <p><span>·<span></span></span><span>indicating persistence or as a step in a process leading to persistence. This includes actions such as save, save and move forward or back (“next” and “previous” step), submit, delete, update.</span></p>
+      <p><span>·<span></span></span><span>indicating persistence or as a step in a process leading to persistence. This includes actions such as save, save and move forward or back ("next" and "previous" step), submit, delete, update.</span></p>
 
       <p><span>·<span></span></span><span>creating call to action (CTA). The number of CTAs should be limited on a view and should strongly indicate to the user what their next action should be.</span></p>
 
@@ -493,7 +493,7 @@
 
       <h3><a name="_Toc12614065">Buttons: Responsiveness</a></h3>
 
-      <p><span style='line-height:115%;color:#1B1B1B'>In most circumstances, elements styled as buttons should become block elements in medium and smaller viewports in order to accommodate touch behavior; the exception to this rule might be for “Next” and “Previous” buttons. Be sure to create adequate spacing and padding to allow all users to use your buttons on a
+      <p><span style='line-height:115%;color:#1B1B1B'>In most circumstances, elements styled as buttons should become block elements in medium and smaller viewports in order to accommodate touch behavior; the exception to this rule might be for "Next" and "Previous" buttons. Be sure to create adequate spacing and padding to allow all users to use your buttons on a
       touchscreen.</span></p>
 
       <h3><a name="_Toc12614066">Buttons: Usability</a></h3>
@@ -502,13 +502,13 @@
 
       <p><span style='color:#1B1B1B'>·<span></span></span><span style='line-height:115%;color:#1B1B1B;background:aqua'>Limit characters.</span><span style='line-height:115%;color:#1B1B1B'> Button text should be as short as possible with action words that clearly explain what the button does (Create Account, Save, Search). </span></p>
 
-      <p><span style='color:#1B1B1B'>·<span></span></span><span style='line-height:115%;color:#1B1B1B'>Be consistent in this terminology across the application, such as “Save” vs “Submit”.</span></p>
+      <p><span style='color:#1B1B1B'>·<span></span></span><span style='line-height:115%;color:#1B1B1B'>Be consistent in this terminology across the application, such as "Save" vs "Submit".</span></p>
 
-      <p><span style='color:#1B1B1B'>·<span></span></span><span style='line-height:115%;color:#1B1B1B;background:aqua'>Lead with a verb where possible</span><span style='line-height:115%;color:#1B1B1B'>. For example, “Create Account” not “Account Creation”. </span></p>
+      <p><span style='color:#1B1B1B'>·<span></span></span><span style='line-height:115%;color:#1B1B1B;background:aqua'>Lead with a verb where possible</span><span style='line-height:115%;color:#1B1B1B'>. For example, "Create Account" not "Account Creation". </span></p>
 
       <p><span style='color:#1B1B1B'>·<span></span></span><span style='color:#1B1B1B'>Icons can also be helpful. At times, consider adding an icon to signal specific actions (Download, Open in a new window, etc.).</span></p>
 
-      <p><span style='color:#1B1B1B'>·<span></span></span><span style='line-height:115%;color:#1B1B1B'>Use consistent class variations to distinguish types and convey meaning. For example, “Next” and “Previous” button steps should use a default or plain button class, while a submit or CTA button would implement a special primary.</span></p>
+      <p><span style='color:#1B1B1B'>·<span></span></span><span style='line-height:115%;color:#1B1B1B'>Use consistent class variations to distinguish types and convey meaning. For example, "Next" and "Previous" button steps should use a default or plain button class, while a submit or CTA button would implement a special primary.</span></p>
 
       <h3><a name="_Toc12614067">Anchors: Coding</a></h3>
 
@@ -520,7 +520,7 @@
 
       <p><span>o</span><span>AJAX modal triggers, where the user can also open content in a new tab (by right-click or 3D touch).</span></p>
 
-      <p><span>o</span><span>all cases described in “Forms”.</span></p>
+      <p><span>o</span><span>all cases described in "Forms".</span></p>
 
       <p><span>o</span><span>when in doubt, prefer an anchor tag.</span></p>
 
@@ -541,19 +541,19 @@
 
       <h3><a name="_Toc12614069">Input/Submits</a></h3>
 
-      <p><span style='line-height:115%;color:#333333'>Use styling described in the “Buttons: Styling” and “Buttons: Usability” sections.</span></p>
+      <p><span style='line-height:115%;color:#333333'>Use styling described in the "Buttons: Styling" and "Buttons: Usability" sections.</span></p>
 
       <p><span>·<span></span></span><span style='background:aqua'>Where possible, submit a form using </span><span class=InlineCode><span style='border:none;background:aqua'><span>input type=&quot;submit&quot;</span></span></span><span style='line-height:115%; color:#111111;background:aqua'>.</span></p>
 
-      <p><span>·<span></span></span><span>As noted in “Forms”, attach any validation or pre-processing to the </span><span class=InlineCode><span><span>submit</span></span></span><span style='color:#111111'> event for forms rather than </span><span class=InlineCode><span><span>click</span></span></span><span style='color:#111111'> events on these elements. This will enable the use of the submit button, as well as ensure that submission by using the</span><span> “Return” key or by assistive technology software will always execute the required JavaScript</span><span style='color:#111111'>.</span></p>
+      <p><span>·<span></span></span><span>As noted in "Forms", attach any validation or pre-processing to the </span><span class=InlineCode><span><span>submit</span></span></span><span style='color:#111111'> event for forms rather than </span><span class=InlineCode><span><span>click</span></span></span><span style='color:#111111'> events on these elements. This will enable the use of the submit button, as well as ensure that submission by using the</span><span> "Return" key or by assistive technology software will always execute the required JavaScript</span><span style='color:#111111'>.</span></p>
 
       <h3><a name="_Toc12614070">Other Cases</a></h3>
 
       <p><span>In addition to the cases noted above (primarily buttons that trigger JavaScript</span><span> functions), buttons may be styled as links or vice versa.</span></p>
 
-      <p><span>·<span></span></span><span>All elements in an “Action” table cell should appear to the user to be links. The actions may be a mix of regular anchor tags, such as an anchor link to “Edit;” buttons, such as a confirmation modal triggered for a delete; or a submit button, as when submitting a form to make a saved search an alert.</span></p>
+      <p><span>·<span></span></span><span>All elements in an "Action" table cell should appear to the user to be links. The actions may be a mix of regular anchor tags, such as an anchor link to "Edit;" buttons, such as a confirmation modal triggered for a delete; or a submit button, as when submitting a form to make a saved search an alert.</span></p>
 
-      <p><span>·<span></span></span><span>Regular anchors may be styled as buttons for an extraordinary or analogous call to action, such as “Registration” links.</span></p>
+      <p><span>·<span></span></span><span>Regular anchors may be styled as buttons for an extraordinary or analogous call to action, such as "Registration" links.</span></p>
 
       <p><span>·<span></span></span><span>Where a mix of form submit and anchor elements should be viewed as siblings of equal importance, be consistent in displaying each element as either buttons or links.</span></p>
 
@@ -579,7 +579,7 @@
 
       <p><i><span>*Note: On mobile devices, </span></i><span class=InlineCode><span><span>tel</span></span></span><i><span style='line-height:115%; color:#111111'> type puts the user into the number keypad rather than the regular keyboard. Use </span></i><span class=InlineCode><span style='border: none'><span>tel</span></span></span><i><span style='line-height:115%;color:#111111'> as the preferred </span></i><span class=InlineCode><span><span>type</span></span></span><i><span style='line-height:115%;color:#111111'> when coding a numbers-only input.</span></i></p>
 
-      <p><span>Do not use the following types, as the implementation in some (or all) browsers may be confusing</span><br> <span style='line-height:115%;color:#111111'>(“number” input, for example) or plugins implement the feature:</span></p>
+      <p><span>Do not use the following types, as the implementation in some (or all) browsers may be confusing</span><br> <span style='line-height:115%;color:#111111'>("number" input, for example) or plugins implement the feature:</span></p>
 
       <p><span class=InlineCode><span style='font-size:10.0pt;line-height:115%;font-family: Symbol;border:none'>·<span></span></span></span><span class=InlineCode><span><span>number</span></span></span></p>
 
@@ -605,7 +605,7 @@
 
       <p><span>Forms commonly require actions other than a simple submit. In some cases, these actions should be performed by buttons and sometimes by links.</span></p>
 
-      <p><span>Note that although the rules below refer to buttons and links, the elements need not specifically be input, button or anchor tags; rather, we refer to the styling of the element (see “Anchors and Buttons” for more information on how to style these elements). For the vast majority of instances in the context of forms, however, links should be anchor tags and submit buttons input elements of type “submit” (see “Anchors and Buttons” for details on when to use each type of element).</span></p>
+      <p><span>Note that although the rules below refer to buttons and links, the elements need not specifically be input, button or anchor tags; rather, we refer to the styling of the element (see "Anchors and Buttons" for more information on how to style these elements). For the vast majority of instances in the context of forms, however, links should be anchor tags and submit buttons input elements of type "submit" (see "Anchors and Buttons" for details on when to use each type of element).</span></p>
 
       <p><span>Use the general guideline of the necessity of a URL to differentiate between using an anchor or a button.</span></p>
 
@@ -625,17 +625,17 @@
 
       <p><span>·<span></span></span><span style='background:aqua'>Forgot Password</span></p>
 
-      <p><span>·<span></span></span><span style='background:aqua'>Actions within tables </span><span>(e.g. “Remove” link in a list, which performs a form submit)* . <i>Note this represents a case where the element appears to the user to be a link but should actually be a button.</i></span></p>
+      <p><span>·<span></span></span><span style='background:aqua'>Actions within tables </span><span>(e.g. "Remove" link in a list, which performs a form submit)* . <i>Note this represents a case where the element appears to the user to be a link but should actually be a button.</i></span></p>
 
       <p><span>·<span></span></span><span style='background:aqua'>Any other action that does not initiate a data transaction</span></p>
 
-      <p><span>*Note: “Reset” is a native action that resets the data in an HTML form to its state upon page load; once clicked, the user will stay on the current page. “Cancel” will abandon the form by sending the user to another page, removing the form element, et al. Where sensible, prefer Cancel to Reset, and both may be used. For example, a calculator form would require a reset, where a new item create form is better served by cancel.</span></p>
+      <p><span>*Note: "Reset" is a native action that resets the data in an HTML form to its state upon page load; once clicked, the user will stay on the current page. "Cancel" will abandon the form by sending the user to another page, removing the form element, et al. Where sensible, prefer Cancel to Reset, and both may be used. For example, a calculator form would require a reset, where a new item create form is better served by cancel.</span></p>
 
       <h3><a name="_Toc12614075">Submit Events</a></h3>
 
-      <p><span>As discussed above, although buttons and links do not necessarily need to correspond to their native HTML element tags, forms should generally be executed with input elements of type “submit.” Use a </span><span class=InlineCode><span><span>submit</span></span></span><span style='line-height:115%;color:#111111'> input instead of input of </span><span class=InlineCode><span><span>type</span></span></span><span class=InlineCode><span><span>=”</span></span></span><span class=InlineCode><span><span>button”</span></span></span><span style='line-height:115%;color:#111111'>. (See “Anchors and Buttons” for more information on when to use alternative element types.)</span></p>
+      <p><span>As discussed above, although buttons and links do not necessarily need to correspond to their native HTML element tags, forms should generally be executed with input elements of type "submit." Use a </span><span class=InlineCode><span><span>submit</span></span></span><span style='line-height:115%;color:#111111'> input instead of input of </span><span class=InlineCode><span><span>type</span></span></span><span class=InlineCode><span><span>="</span></span></span><span class=InlineCode><span><span>button"</span></span></span><span style='line-height:115%;color:#111111'>. (See "Anchors and Buttons" for more information on when to use alternative element types.)</span></p>
 
-      <p><b><span>Any JavaScript in need of execution upon form submission should be attached to the form’s submit event, rather than attached to a click event of a button or link</span></b><span style='color:#111111'>. Additionally, users will be able to submit forms by using the “Return/Enter” key, within a touch device keyboard, or by other methods (especially those used by accessibility browsers); attaching events to form submits circumvents all these issues.</span></p>
+      <p><b><span>Any JavaScript in need of execution upon form submission should be attached to the form’s submit event, rather than attached to a click event of a button or link</span></b><span style='color:#111111'>. Additionally, users will be able to submit forms by using the "Return/Enter" key, within a touch device keyboard, or by other methods (especially those used by accessibility browsers); attaching events to form submits circumvents all these issues.</span></p>
 
       <h3><a name="_Toc12614076">JavaScript Validations</a></h3>
 
@@ -661,9 +661,9 @@
 
       <h3><a name="_Toc12614077">Success &amp; Error Handling</a></h3>
 
-      <p><span>As described in the “Alert” section, indicate success by including a visual alert in the resulting view. This alert should be dismissible (it is not necessary to programmatically close the alert after a set period of time)<i>.</i></span></p>
+      <p><span>As described in the "Alert" section, indicate success by including a visual alert in the resulting view. This alert should be dismissible (it is not necessary to programmatically close the alert after a set period of time)<i>.</i></span></p>
 
-      <p><span>When a view includes a form with error fields, an alert should be visible at the top of the view with a generic error message, such as “Please correct the input errors.” Do not list individual field errors in this message. Specify these errors by styling each invalid input. </span></p>
+      <p><span>When a view includes a form with error fields, an alert should be visible at the top of the view with a generic error message, such as "Please correct the input errors." Do not list individual field errors in this message. Specify these errors by styling each invalid input. </span></p>
 
       <h2><a name="_Toc12614078">Image</a>s</h2>
 
@@ -722,7 +722,7 @@
 
       <p><span>You may also use modals to alert users where </span><span>JavaScript</span><span style='color:#111111'> or AJAX transactions have processed in the background.  For example, imagine a registration form where a number of fields may be completed. Several validations may occur asynchronously on the email input; when errors or potential problems occur, a modal can be used to catch the attention of the user who have moved away from the field. In this case, the modal alerts the user to important information, interrupting their current task without entirely removing them from it.</span></p>
 
-      <p><span>Finally, a modal may serve as a dialog in circumstances described in the “Confirmation Dialog” section.</span></p>
+      <p><span>Finally, a modal may serve as a dialog in circumstances described in the "Confirmation Dialog" section.</span></p>
 
       <h3>Accessibility</h3>
 
@@ -754,7 +754,7 @@
 
       <p><span>o</span><span>Pros: Requires less coding and maintenance while displaying all the table data.</span></p>
 
-      <p><span>o</span><span>Cons: Horizontal scrolling is not always touch-device friendly; users have a hard time maintaining a connection between identifying cells. Creating the visual indicator of “more” can also be unclear.</span></p>
+      <p><span>o</span><span>Cons: Horizontal scrolling is not always touch-device friendly; users have a hard time maintaining a connection between identifying cells. Creating the visual indicator of "more" can also be unclear.</span></p>
 
       <h3><a name="_Toc12614086">Sorting</a></h3>
 
@@ -780,7 +780,7 @@
 
       <p><span>Use tabs to break up related information within the same context. However, using tabs can present multiple challenges in responsive situations, especially in mobile-sized views.  These problems include inadequate horizontal space to display tab labels (especially when translated into multiple languages, where text width will be unknown), fluctuating content element heights (affecting layout as the tab changes), difficulty with internal scrolling of content, etc. Avoid where possible.  </span></p>
 
-      <p><span>If tabs are necessary and present problems in smaller responsive views, display all content.  If the content is exceptionally long, maintain tab links as a menu of jump links and include a “Return to top” link back to the submenu.</span></p>
+      <p><span>If tabs are necessary and present problems in smaller responsive views, display all content.  If the content is exceptionally long, maintain tab links as a menu of jump links and include a "Return to top" link back to the submenu.</span></p>
 
       <h2><a name="_Toc12614088">Tooltips &amp; Popovers</a></h2>
 

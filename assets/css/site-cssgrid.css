@@ -26,13 +26,17 @@ body
   box-sizing: border-box;
 }
 
-a, a:visited
+a
 {
   color: #337ab7; 
 }
-a:hover, a:active 
+a:visited
 {
   color: #1c4263;
+}
+a:hover, a:active 
+{
+  color: #008aff;
 }
 
 p

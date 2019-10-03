@@ -7,16 +7,16 @@
   font-size: 1em;
 }
 .ul-ui.button {
+  border: none;
   cursor: pointer;
   display: inline-block;
   min-height: 1em;
-  border: none;
   vertical-align: baseline;
   background-color: #e1e2e2;
   color: #666666;
   font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   margin: 0em 0.25em 0em 0em;
-  padding: 0.8em 3.052em;
+  padding: 0.8em 1.5em;
   text-transform: none;
   text-shadow: none;
   line-height: 1em;
