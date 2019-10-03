@@ -27,37 +27,58 @@
 <body>
     <main role="main" tabindex="-1">
         <div class="ul-ui container example toc open">
-            <h1 class="ul-ui dividing header">Forms</h1>
-            <h3 class="target" id="int-a">Input types</h3>
-            <p>
-                Where appropriate, use HTML5 input types to ensure ease of use on touch devices. This includes, but is
-                not limited to:
-            </p>
-            <ul class='ul-ui bulleted list'>
-                <li class='item'>email</li>
-                <li class='item'>range</li>
-                <li class='item'>search</li>
-                <li class='item'>tel*</li>
-                <li class='item'>url</li>
-            </ul>
-            <div class='ul-ui alert'>*Note: On mobile devices, tel type puts the user into the number keypad rather than
-                the regular keyboard. Use tel as the preferred type when coding a numbers-only input.
-            </div>
-            <p>
-                Do not use the following types, as the implementation in some (or all) browsers may be confusing
-                ("number" input, for example) or plugins implement the feature:
-            </p>
-            <ul class='ul-ui bulleted list'>
-                <li class='item'>number</li>
-                <li class='item'>month</li>
-                <li class='item'>color</li>
-                <li class='item'>date</li>
-                <li class='item'>datetime</li>
-                <li class='item'>datetime-local</li>
-                <li class='item'>time</li>
-                <li class='item'>week</li>
-            </ul>
 
+          <h1 class="ul-ui dividing header">Forms</h1>
+          <h3 class="target" id="int-a">Input types</h3>
+          <p>
+              Where appropriate, use HTML5 input types to ensure ease of use on touch devices. This includes, but is
+              not limited to:
+          </p>
+          <ul class='ul-ui bulleted list'>
+              <li class='item'>email</li>
+              <li class='item'>range</li>
+              <li class='item'>search</li>
+              <li class='item'>tel*</li>
+              <li class='item'>url</li>
+          </ul>
+          <div class='ul-ui alert'>*Note: On mobile devices, tel type puts the user into the number keypad rather than
+              the regular keyboard. Use tel as the preferred type when coding a numbers-only input.
+          </div>
+          <p>
+              Do not use the following types, as the implementation in some (or all) browsers may be confusing
+              ("number" input, for example) or plugins implement the feature:
+          </p>
+          <ul class='ul-ui bulleted list'>
+              <li class='item'>number</li>
+              <li class='item'>month</li>
+              <li class='item'>color</li>
+              <li class='item'>date</li>
+              <li class='item'>datetime</li>
+              <li class='item'>datetime-local</li>
+              <li class='item'>time</li>
+              <li class='item'>week</li>
+          </ul>
+
+
+        <!-- =================== SECTION =================== -->
+        <div class='divider'></div>
+
+        <h3 class="target" id="is-a">Input / Submits</h3>
+
+        <p>
+        Use styling described in the "Buttons: Styling" and "Buttons: Usability" sections.</p>
+
+        <ul class='ul-ui bulleted list'>
+          <li class='item'>
+            <span class="highlight">Where possible, submit a form using input type="submit".</span>
+          </li>
+          <li class='item'>
+            As noted in "Javascript Validations", attach any validation or pre-processing to the
+            submit event for forms rather than click events on these elements. This will enable 
+            the use of the submit button, as well as ensure that submission by using the "Return" 
+            key or by assistive technology software will always execute the required JavaScript.
+          </li>
+        </ul>
 
             <!-- =================== SECTION =================== -->
             <div class='divider'></div>

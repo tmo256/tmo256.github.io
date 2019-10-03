@@ -181,12 +181,6 @@ var COMMONUI = {
               jump: "ancs-a",
             },
             {
-              id: "anchors-inputs",
-              title: "Inputs / Submits",
-              href: "anchors.html",
-              jump: "is-a",
-            },
-            {
               id: "anchors-other",
               title: "Other Cases",
               href: "anchors.html",
@@ -197,8 +191,7 @@ var COMMONUI = {
        { 
           id: "confirm",
           title: "Confirmation Dialogs",
-          href: "anchors.html",
-          jump: "cond-a",
+          href: "confdialogs.html"
         },
        { 
           id: "forms",
@@ -211,7 +204,13 @@ var COMMONUI = {
               title: "Input Types",
               href: "forms.html",
               jump: "int-a",
-             },
+            },
+            {
+              id: "anchors-inputs",
+              title: "Inputs / Submits",
+              href: "forms.html",
+              jump: "is-a",
+            },
             {
               id: "forms-buttons",
               title: "Buttons and Links",
