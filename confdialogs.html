@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>UL Web Application Styleguide: Anchors and Buttons</title>
+    <title>UL Web Application Styleguide: Confirmation Dialogs</title>
     <!-- meta tags for description and keywords if needed -->
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -28,12 +28,28 @@
 
       <h1 class="ul-ui dividing header">Confirmation Dialogs</h1>
 
+      <h5>
+        <a href="https://www.w3.org/TR/wai-aria-practices/#alertdialog" target="_blank">Alert Dialog WAI-ARIA Authoring</a>
+      </h5>
+
       <p>
       Use a confirmation dialog to confirm a process or persistence that cannot be easily undone or recreated; or,
       to confirm data persistence where the user may not be aware that persistence is about to occur (form inputs
       are not visible, for example). Most commonly, use this type of dialog when deleting or removing items. The
       dialog should interrupt the process to the point that the action cannot complete without explicit input
       (e.g., button click) from the user.</p>
+
+      <p>
+      Limit usage of this pattern; avoid where possible. Alternatively:</p>
+
+      <ul class='ul-ui bulleted list'>
+        <li class="item">When deleting an item, is it possible to include an "Undo" button?</li>
+        <li class="item">Instead of a confirmation dialog when navigating away from in-progress forms, is
+          it possible to autosave input as it's added?</li>
+        <li class="item">Instead of a full modal, is a popover or
+          similar component adequate?</li>
+      </ul>
+
 
       <!--- **** Example **** -->
       <div class='example-cont clearfix'>
@@ -42,9 +58,10 @@
               aria-label="Toggle button for example HTML/CSS code">
               <i class='fas fa-code icon' aria-hidden="true"></i>
             </button>
-              <div class="ul-ui small modal" style="display: block !important; position: relative;">
+              <div class="ul-ui small modal" style="display: block !important; position: relative;" role="alertdialog"
+                aria-labelledby="header" aria-modal="true">
                   <i class="fas fa-times close icon"></i>
-                  <div class="header">
+                  <div class="header" id="header">
                       Delete Your Account
                   </div>
                   <div class="content">
@@ -60,20 +77,21 @@
                           augue velit, egestas et auctor eget, efficitur eget arcu. Ut vitae turpis massa.</p>
                   </div>
                   <div class="actions">
-                      <div class="ul-ui blue outlined button">
+                      <button class="ul-ui blue outlined button" type="button" role="button">
                           Action Button
-                      </div>
-                      <div class="ul-ui blue button">
+                      </button>
+                      <button class="ul-ui blue button" type="button" role="button">
                           Action Button
-                      </div>
+                      </button>
                   </div>
               </div>
           </div>
           <div class='code'>
               <pre> <script type="text" class='code-script'>
-      <div class="ul-ui small modal" style="display: block !important; position: relative;">
+      <div class="ul-ui small modal" style="display: block !important; position: relative;" role="alertdialog"
+      aria-labelledby="header" aria-modal="true">
           <i class="fas fa-times close icon"></i>
-          <div class="header">
+          <div class="header" id="header">
             Delete Your Account
           </div>
           <div class="content">
@@ -85,12 +103,12 @@
                 augue velit, egestas et auctor eget, efficitur eget arcu. Ut vitae turpis massa.</p>
           </div>
           <div class="actions">
-            <div class="ul-ui blue outlined button">
+            <button class="ul-ui blue outlined button" type="button" role="button">
               Action Button
-            </div>
-            <div class="ul-ui blue button">
+            </button>
+            <button class="ul-ui blue button" type="button" role="button">
               Action Button
-            </div>
+            </button>
           </div>
         </div>
       </script></pre>
