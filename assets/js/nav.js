@@ -169,6 +169,18 @@ var COMMONUI = {
               jump: "buts-a",
             },
             {
+              id: "buttons-disabled",
+              title: "Buttons: Disabled",
+              href: "anchors.html",
+              jump: "butd-a",
+            },
+            {
+              id: "buttons-usability",
+              title: "Buttons: Usability",
+              href: "anchors.html",
+              jump: "butu-a"
+            },
+            {
               id: "anchors-coding",
               title: "Anchors: Coding",
               href: "anchors.html",
@@ -179,6 +191,12 @@ var COMMONUI = {
               title: "Anchors: Styling",
               href: "anchors.html",
               jump: "ancs-a",
+            },
+            {
+              id: "anchors-disabled",
+              title: "Anchors: Disabled",
+              href: "anchors.html",
+              jump: "ancd-a",
             },
             {
               id: "anchors-other",
