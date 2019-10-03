@@ -130,6 +130,112 @@
 
         <!-- =================== SECTION =================== -->
         <div class="ul-ui divider"></div>
+        <h3 class="target" id="butd-a">Buttons: Disabled</h3>
+
+        <p>
+	  Some buttons are not always available for use at all times. If
+	  the button is permanently unavailable then it should be
+	  removed from the interface, but if the button is only
+	  unavailable temporarily then disabling the button is
+	  appropriate.
+	</p>
+
+        <p>
+	  Reasons for a button not being available could include (but are not limited to)
+	</p>
+
+	<ul>
+	  <li>
+	    the button acts on a selection, but there is no selection
+	    at the moment <em>[temporarily disabled]</em>.
+	  </li>
+
+	  <li>
+	    the function the button offers needs to be enabled
+	    elsewhere in the interface. For example, if the interface
+	    offers various options, some functions might only be
+	    available if certain options are selected. <em>[if the
+	    required options are nearby in the interface,
+	    temporary. If they are somewhere else in the application,
+	    might be considered permanent]</em>.
+	  </li>
+
+	  <li>
+	    the user does not have permission to use the button’s
+	    function <em>[probably permanent]</em>.
+	  </li>
+	</ul>
+
+      <p>
+	One other reason to favour disabling a button rather than
+	removing it would be when the availability of the feature is a
+	potential opportunity to upsell the user to a higher level of
+	service.
+	</p>
+
+      <p>
+	Disabled buttons should be the same size and font (including
+	weight) as the enabled version. This is to prevent unpleasant
+	movement in either the button label, the button itself, or the
+	layout of neighbouring controls.
+      </p>
+
+      <p>
+	Being “grayed out” has traditionally been a common indicator
+	of a button being disabled. If you’re using gray buttons
+	consider whether they might be mistaken for disabled buttons.
+      </p>
+
+      <p>
+	The user should be able to tell that a button is disabled
+	without having an enabled button to compare with. This
+	generally means making the disabled form visually weaker than
+	the enabled form. Some ways of achieving that are:
+      </p>
+
+      <ul>
+	<li>
+	  Making the colour of the button closer to the background
+	  color of the page. (A simple way to do this is to reduce its
+	  opacity).
+	</li>
+	
+	<li>
+	  Reduce the color saturation of the button.
+	</li>
+	
+	<li>
+	  Reduce the contrast of the button label against its
+	  background. (But not so much that it becomes hard to read).
+	</li>
+	
+	<li>
+	  Reduce or remove 3d effects, such as drop shadows and 3d
+	  relief.
+	</li>
+	
+	<li>
+	  Remove any rollover behaviours
+	</li>
+      </ul>
+
+      <p>
+	On desktop systems it can be useful to provide a tooltip-like
+	popup to explain why the button is not currently available,
+	especially if the reason for the button being disabled is not
+	obvious. These tooltips should be as brief as possible while
+	providing an adequate explanation. Providing a link to the
+	place where the button can be enabled might be useful in some
+	cases.
+      </p>
+
+      <p>
+	On touch capable devices tapping a disabled button could
+	display a similar popup explaining why the button is disabled.
+      </p>
+
+        <!-- =================== SECTION =================== -->
+        <div class="ul-ui divider"></div>
         <h3 class="target" id="butr-a">Buttons: Responsiveness</h3>
 
         <p>In most circumstances, elements styled as buttons should become block elements in medium and smaller
@@ -331,6 +437,24 @@
 
 
         <!-- =================== SECTION =================== -->
+        <div class="ul-ui divider"></div>
+        <h3 class="target" id="ancd-a">Anchors: Disabled</h3>
+
+        <p>
+	  A disabled link is generally to be avoided. If a link is
+	  likely to need to be disabled, it might be worth considering
+	  if it would be better shown as a button, since otherwise
+	  disabled links degenerate into simple underlined text. If a
+	  link must be disabled then changing the colouring to be more
+	  muted is a reasonable approach.
+	</p>
+
+        <p>
+	  If a link that is inline in text is disabled it should
+	  probably be removed leaving the text undecorated.
+	</p>
+
+	<!-- =================== SECTION =================== -->
         <div class='divider'></div>
         <h3 class="target" id="is-a">Input / Submits</h3>
         <p>

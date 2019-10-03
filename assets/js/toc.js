@@ -54,10 +54,12 @@ $(document).ready(function () {
         "<div class='menu'>" +
         "<a class='item butc-a' href='anchors.html#butc-a'>Buttons: Coding</a>" +
         "<a class='item buts-a' href='anchors.html#buts-a'>Buttons: Styling</a>" +
+        "<a class='item buts-a' href='anchors.html#butd-a'>Buttons: Disabled</a>" +
         "<a class='item butr-a' href='anchors.html#butr-a'>Buttons: Responsiveness</a>" +
         "<a class='item butu-a' href='anchors.html#butu-a'>Buttons: Usability</a>" +
         "<a class='item anc-a' href='anchors.html#anc-a'>Anchors: Coding</a>" +
         "<a class='item ancs-a' href='anchors.html#ancs-a'>Anchors: Styling</a>" +
+        "<a class='item ancd-a' href='anchors.html#ancd-a'>Anchors: Disabled</a>" +
         "<a class='item is-a' href='anchors.html#is-a'>Input/Submits</a>" +
         "<a class='item otc-a' href='anchors.html#otc-a'>Other Cases</a>" +
         "<a class='item cond-a' href='anchors.html#cond-a'>Confirmation Dialogs</a>" +
