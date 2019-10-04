@@ -50,7 +50,57 @@
           similar component adequate?</li>
       </ul>
 
+      <p>
+      When creating a confirmation dialog, text should be clear and consistent.</p>
 
+      <ul class='ul-ui bulleted list'>
+        <li class='item'>
+          The dialog header and body text should clearly convey the action and the consequences of taking said action. Emaphsize
+          data specific to this action, such as the user name and id of an account to be removed.
+        </li>
+        <li class='item'>
+          As described in "Anchors and Buttons," label your button with a verb; ie. "Delete account" as opposed to "Account
+          deletion."
+        </li>
+        <li class='item'>
+          Choose a verb that cannot be confused for another action. "Cancel" is a commonly used word within sites and
+          applications, so "Cancel account" may be confusing.
+        </li>
+        <li class='item'>
+          The modal should offer two buttons to the end user, one that confirms the action and one that interrupts it. 
+          Again, this text should be clear, so avoid buttons labeled "OK" or "Cancel."
+          Instead, use "Keep account" (stopping the initial action) and "Remove account" (confirming the action).
+        </li>
+        <li class='item'>
+          If possible, the label on the completion button should match the label on the button (or link) that 
+          prompted the dialog initially. At a minimum, use the same verb on both; if a delete confirmation is prompted by a 
+          "Delete" link from within a table listing, for instance, your completion button may include a specific such as "Delete
+          bookmark."
+        </li>
+        <li class="item">
+          In some (high-stakes) situations, consider putting the emphasis on the button that cancels the action rather than
+          on the button that completes it.
+        </li>
+        <li class="item">
+          The action's stop button should always be on the left; the complete button should always be on the right. 
+        </li>
+        <li class="item">
+          In most cases, either action should close the dialog box.
+        </li>
+        <li class="item">
+          If the action has been completed, display a clear success message reiterating some of the specific data from the
+          dialog.
+        </li>
+        <li class='item'>
+          <p>
+          On the trigger link or button, consider including some kind of indication that another step
+          is forthcoming, such as an ellipsis.</p>
+
+          <button class="ul-ui button" type="button" role="button">Delete account...</button>
+        </li>
+      </ul>
+      
+      <div class="divider"></div>
       <!--- **** Example **** -->
       <div class='example-cont clearfix'>
           <div class='view'>

@@ -30,34 +30,48 @@
 
           <h1 class="ul-ui dividing header">Forms</h1>
           <h3 class="target" id="int-a">Input types</h3>
+
           <p>
-              Where appropriate, use HTML5 input types to ensure ease of use on touch devices. This includes, but is
-              not limited to:
-          </p>
+          Where appropriate, use HTML5 input types to ensure ease of use on touch devices. This includes, but is
+          not limited to:</p>
+
           <ul class='ul-ui bulleted list'>
-              <li class='item'>email</li>
-              <li class='item'>range</li>
-              <li class='item'>search</li>
-              <li class='item'>tel*</li>
-              <li class='item'>url</li>
+            <li class='item'><code>email</code></li>
+            <li class='item'><code>range</code></li>
+            <li class='item'><code>search</code></li>
+            <li class='item'><code>tel*</code></li>
+            <li class='item'><code>url</code></li>
           </ul>
-          <div class='ul-ui alert'>*Note: On mobile devices, tel type puts the user into the number keypad rather than
+
+          <aside class='ul-ui alert'>*Note: On mobile devices, tel type puts the user into the number keypad rather than
               the regular keyboard. Use tel as the preferred type when coding a numbers-only input.
-          </div>
+          </aside>
+
           <p>
-              Do not use the following types, as the implementation in some (or all) browsers may be confusing
-              ("number" input, for example) or plugins implement the feature:
-          </p>
+          Use the following types with caution, as the implementation in some (or all) browsers may be confusing
+          and vary dramatically in presentation:</p>
+
           <ul class='ul-ui bulleted list'>
-              <li class='item'>number</li>
-              <li class='item'>month</li>
-              <li class='item'>color</li>
-              <li class='item'>date</li>
-              <li class='item'>datetime</li>
-              <li class='item'>datetime-local</li>
-              <li class='item'>time</li>
-              <li class='item'>week</li>
+            <li class='item'><code>month</code></li>
+            <li class='item'><code>color</code></li>
+            <li class='item'><code>date</code></li>
+            <li class='item'><code>datetime</code></li>
+            <li class='item'><code>datetime-local</code></li>
+            <li class='item'><code>time</code></li>
+            <li class='item'><code>week</code></li>
           </ul>
+
+          <aside>
+            All major browsers support the <code>number</code> input,
+            but display may vary. Because several browsers
+            include some kind of spinner UI (up/down arrows to
+            increment the input), some users may be confused by the type of field, 
+              while others are familiar with it. To mitigate this
+                problem, you can <a
+              href="https://css-tricks.com/numeric-inputs-a-comparison-of-browser-defaults/">use
+              input attributes and browser-specific styling</a> in your implementation, or
+            consider an alternate input, such as <code>tel</code>.
+          </aside>
 
 
         <!-- =================== SECTION =================== -->
