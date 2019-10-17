@@ -18,114 +18,117 @@
 
     <!-- stylesheets here; concate/minified for production -->
     <link href="assets/css/normalize.css" rel="stylesheet" type="text/css">
-    <link href="assets/css/site-cssgrid.css" rel="stylesheet" type="text/css">
     <link href="assets/css/styles.css" rel="stylesheet" type="text/css">
 
     <script src="https://kit.fontawesome.com/ff07333570.js"></script>
 </head>
 
 <body>
-    <main role="main" tabindex="-1">
-        <div class="ul-ui container example toc open">
+  <header></header>
+  <main role="main" tabindex="-1">
 
-          <h1 class="ul-ui dividing header">Forms</h1>
+    <h1 class="ul-ui dividing header">Forms</h1>
+  
+    <article class="ul-ui container example toc open">
 
-          <h3 class="target" id="int-a">Input types</h3>
+      <section>
+        <h3 class="target" id="int-a">Input types</h3>
 
-          <h5>
-            <a href="https://www.w3.org/TR/wai-aria-practices/#aria_lh_form">Form WAI-ARIA Authoring</a><br>
-            <a href="https://www.w3.org/TR/wai-aria-practices/#checkbox">Checkbox WAI-ARIA Authoring</a><br>
-            <a href="https://www.w3.org/TR/wai-aria-practices/#radiobutton">Radio WAI-ARIA Authoring</a><br>
-            <a href="https://www.w3.org/TR/wai-aria-practices/#slider">Range Slider WAI-ARIA Authoring</a><br>
-            <a href="https://www.w3.org/TR/wai-aria-practices/#spinbutton">Number Spinner WAI-ARIA Authoring</a>
-          </h5>
+        <h5>
+          <a href="https://www.w3.org/TR/wai-aria-practices/#aria_lh_form">Form WAI-ARIA Authoring</a><br>
+          <a href="https://www.w3.org/TR/wai-aria-practices/#checkbox">Checkbox WAI-ARIA Authoring</a><br>
+          <a href="https://www.w3.org/TR/wai-aria-practices/#radiobutton">Radio WAI-ARIA Authoring</a><br>
+          <a href="https://www.w3.org/TR/wai-aria-practices/#slider">Range Slider WAI-ARIA Authoring</a><br>
+          <a href="https://www.w3.org/TR/wai-aria-practices/#spinbutton">Number Spinner WAI-ARIA Authoring</a>
+        </h5>
 
-          <p>
-          In general, consider the following when creating forms:</p>
-
-          <ul class='ul-ui bulleted list'>
-            <li class="item">
-              As with all elements, practice accessible coding techniques with form fields, fieldsets and buttons. 
-            </li>
-            <li class="item">
-              Touch device behavior and display of inputs will impact your form, so consider your audience usage when
-              designing. Mobile browsers may default to capitals, zoom unexpectedly, implement special field types
-              differently and employ different fonts, among other considerations. Think about including attributes like
-              <code>autocapitalize</code>, which only impacts virtual keyboards and voice-to-text input.
-            </li>
-            <li class="item">
-              In some browsers, autocompletion of information, whether from past input or saved personal data, may
-              affect field completion and validation. Consider field names and input attributes for each form field.
-              For instance, you will likely suppress capitalization, spellcheck and autocomplete on search and 
-              typeahead search fields, but may wish to encourage <a
-                href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete">autocompletion</a> 
-              for contact information of the user's name and address.
-            </li>
-          </ul>
-          
-
-          <p>
-          Where appropriate, use HTML5 input types to ensure ease of use, particularly on touch devices. The <code>email</code>
-          input type is especially useful in mobile browsers, but all types to consider include:</p>
-
-          <ul class='ul-ui bulleted list'>
-            <li class='item'><code>email</code></li>
-            <li class='item'><code>range</code></li>
-            <li class='item'><code>search</code></li>
-            <li class='item'><code>tel*</code></li>
-            <li class='item'><code>url</code></li>
-          </ul>
-
-          <aside class='ul-ui alert'>*Note: On mobile devices, tel type puts the user into the number keypad rather than
-              the regular keyboard. Use tel as the preferred type when coding a numbers-only input.
-          </aside>
-
-          <p>
-          Use the following types with caution, as the implementation in some (or all) browsers may be confusing
-          and vary dramatically in presentation:</p>
-
-          <ul class='ul-ui bulleted list'>
-            <li class='item'><code>month</code></li>
-            <li class='item'><code>color</code></li>
-            <li class='item'><code>date</code></li>
-            <li class='item'><code>datetime</code></li>
-            <li class='item'><code>datetime-local</code></li>
-            <li class='item'><code>time</code></li>
-            <li class='item'><code>week</code></li>
-          </ul>
-
-          <aside>
-            All major browsers support the <code>number</code> input,
-            but display may vary. Because several browsers
-            include some kind of spinner UI (up/down arrows to
-            increment the input), some users may be confused by the type of field, 
-              while others are familiar with it. To mitigate this
-                problem, you can <a
-              href="https://css-tricks.com/numeric-inputs-a-comparison-of-browser-defaults/">use
-              input attributes and browser-specific styling</a> in your implementation, or
-            consider an alternate input, such as <code>tel</code>.
-          </aside>
-
-
-        <!-- =================== SECTION =================== -->
-        <!--<div class='divider'></div>
-
-        <h3 class="target" id="is-a">Input / Submits</h3>
+        <p>
+        In general, consider the following when creating forms:</p>
 
         <ul class='ul-ui bulleted list'>
-          <li class='item'>
-            <span class="highlight">Where possible, submit a form using input type="submit".</span>
+          <li class="item">
+            As with all elements, practice accessible coding techniques with form fields, fieldsets and buttons. 
           </li>
-          <li class='item'>
-            As noted in "Javascript Validations", attach any validation or pre-processing to the
-            submit event for forms rather than click events on these elements. This will enable 
-            the use of the submit button, as well as ensure that submission by using the "Return" 
-            key or by assistive technology software will always execute the required JavaScript.
+          <li class="item">
+            Touch device behavior and display of inputs will impact your form, so consider your audience usage when
+            designing. Mobile browsers may default to capitals, zoom unexpectedly, implement special field types
+            differently and employ different fonts, among other considerations. Think about including attributes like
+            <code>autocapitalize</code>, which only impacts virtual keyboards and voice-to-text input.
           </li>
-        </ul>-->
+          <li class="item">
+            In some browsers, autocompletion of information, whether from past input or saved personal data, may
+            affect field completion and validation. Consider field names and input attributes for each form field.
+            For instance, you will likely suppress capitalization, spellcheck and autocomplete on search and 
+            typeahead search fields, but may wish to encourage <a
+              href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete">autocompletion</a> 
+            for contact information of the user's name and address.
+          </li>
+        </ul>
+        
 
-        <!-- =================== SECTION =================== -->
-        <div class='divider'></div>
+        <p>
+        Where appropriate, use HTML5 input types to ensure ease of use, particularly on touch devices. The <code>email</code>
+        input type is especially useful in mobile browsers, but all types to consider include:</p>
+
+        <ul class='ul-ui bulleted list'>
+          <li class='item'><code>email</code></li>
+          <li class='item'><code>range</code></li>
+          <li class='item'><code>search</code></li>
+          <li class='item'><code>tel*</code></li>
+          <li class='item'><code>url</code></li>
+        </ul>
+
+        <aside class='ul-ui alert'>*Note: On mobile devices, tel type puts the user into the number keypad rather than
+            the regular keyboard. Use tel as the preferred type when coding a numbers-only input.
+        </aside>
+
+        <p>
+        Use the following types with caution, as the implementation in some (or all) browsers may be confusing
+        and vary dramatically in presentation:</p>
+
+        <ul class='ul-ui bulleted list'>
+          <li class='item'><code>month</code></li>
+          <li class='item'><code>color</code></li>
+          <li class='item'><code>date</code></li>
+          <li class='item'><code>datetime</code></li>
+          <li class='item'><code>datetime-local</code></li>
+          <li class='item'><code>time</code></li>
+          <li class='item'><code>week</code></li>
+        </ul>
+
+        <aside>
+          All major browsers support the <code>number</code> input,
+          but display may vary. Because several browsers
+          include some kind of spinner UI (up/down arrows to
+          increment the input), some users may be confused by the type of field, 
+            while others are familiar with it. To mitigate this
+              problem, you can <a
+            href="https://css-tricks.com/numeric-inputs-a-comparison-of-browser-defaults/">use
+            input attributes and browser-specific styling</a> in your implementation, or
+          consider an alternate input, such as <code>tel</code>.
+        </aside>
+
+      </section>
+
+      <!-- =================== SECTION =================== -->
+      <!--<div class='divider'></div>
+
+      <h3 class="target" id="is-a">Input / Submits</h3>
+
+      <ul class='ul-ui bulleted list'>
+        <li class='item'>
+          <span class="highlight">Where possible, submit a form using input type="submit".</span>
+        </li>
+        <li class='item'>
+          As noted in "Javascript Validations", attach any validation or pre-processing to the
+          submit event for forms rather than click events on these elements. This will enable 
+          the use of the submit button, as well as ensure that submission by using the "Return" 
+          key or by assistive technology software will always execute the required JavaScript.
+        </li>
+      </ul>-->
+
+      <!-- =================== SECTION =================== -->
+      <section class='divider'>
         <h3 class="target" id="bl-a">Buttons and Anchors, Part II</h3>
 
         <p>
@@ -155,9 +158,10 @@
             </li>
         </ul>
 
+      </section>
 
-        <!-- =================== SECTION =================== -->
-        <div class='divider'></div>
+      <!-- =================== SECTION =================== -->
+      <section class='divider'>
 
         <h3 class="target" id="se-a"> Submit Events</h3>
 
@@ -172,9 +176,10 @@
         or by other methods (especially those used by accessibility browsers); attaching events to form submits 
         circumvents problems that may arise from any alternate input scenario.</p>
 
+      </section>
 
-        <!-- =================== SECTION =================== -->
-        <div class='divider'></div>
+      <!-- =================== SECTION =================== -->
+      <section class='divider'>
 
         <h3 class="target" id="jv-a">JavaScript Validations</h3>
 
@@ -264,9 +269,10 @@
           </li>
         </ul>
 
+      </section>
 
-        <!-- =================== SECTION =================== -->
-        <div class='divider'></div>
+      <!-- =================== SECTION =================== -->
+      <section class='divider'>
 
         <h3 class="target" id="seh-a">Success &amp; Error Handling</h3>
 
@@ -284,13 +290,14 @@
         As always, consistent with the placement and styling of these
         types of messages. Use a combination of text, color and
         iconography to convey the message to the user.</p>
+      </section>
 
-        <div class="toc-spacer"></div>
-        <!-- END -->
-        </div>
+      <div class="toc-spacer"></div>
+      <!-- END -->
+    </article>
 
-        <nav></nav>
-  </main>
+    <nav></nav>
+</main>
 
 <footer role="contentinfo"></footer>
 

@@ -67,10 +67,12 @@ a:hover, a:active
 
 nav a,
 nav a:visited {
+  display: block;
   text-decoration: none;
-  position: relative;
   color: #333;
   cursor: pointer;
+  line-height: 1.2;
+  padding: .25rem 0;
 }
 nav a:hover,
 nav a:active {
@@ -85,6 +87,46 @@ nav a:visited.block {
 nav a.block.active {
   background: #f5f5f5;
 }
+
+nav a.selected {
+  background: #f5f5f5;
+  margin: 0 -1rem;
+  padding: .5rem 1rem;
+  position: relative;
+}
+nav a.selected:before {
+  background-color: #c02032;
+  content: '';
+  height: 100%;
+  left: 0;
+  margin-top: -.5rem;
+  position: absolute;
+  width: .5rem;
+}
+
+nav ul ul a.selected {
+  margin: 0 -2rem;
+  padding: .5rem 2rem;
+}
+nav ul ul ul a.selected {
+  margin: 0 -3rem;
+  padding: .5rem 3rem;
+}
+
+/*nav a.selected:after {
+  background-color: rgba(0,0,0,.05);
+  border-left: 10px solid #c02032;
+  content: '';
+  height: 2.5rem;
+  left: 0;
+  margin-top: -.5rem;
+  position: absolute;
+  right: 0;
+  z-index: 0;
+}
+
+nav ul ul a.selected:after {
+}*/
 
 .highlight p, .highlight li, .highlight span, .highlight:not(ul) {
   /*background-color: hsla(199.47, 70.23%, 67.72%, 0.35);*/
@@ -139,7 +181,6 @@ main > article > section {
 main > nav  ul {
     background-color: transparent;
     list-style-type: none;
-    overflow: auto;
     padding-left: 1rem;
     padding-right: 1rem;
 }
@@ -149,6 +190,7 @@ main > nav {
     font-size: 1.125rem;
     height: calc(100% - 6rem);
     left: 0;
+    overflow-x: hidden;
     overflow-y:scroll;
     padding-top: 1rem;
     position: fixed;
