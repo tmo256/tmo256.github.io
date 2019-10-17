@@ -18,48 +18,62 @@
 
     <!-- stylesheets here; concate/minified for production -->
     <link href="assets/css/normalize.css" rel="stylesheet" type="text/css">
-    <link href="assets/css/site-cssgrid.css" rel="stylesheet" type="text/css">
     <link href="assets/css/styles.css" rel="stylesheet" type="text/css">
 
     <script src="https://kit.fontawesome.com/ff07333570.js"></script>
 </head>
 
 <body>
-    <main role="main" tabindex="-1">
-        <div class="ul-ui container example toc open">
-            <h1 class="ul-ui dividing header">Modals</h1>
-            <p>
-                The main purpose of modals is to allow for the completion of a secondary or sub-task without abandoning
-                the initial or primary task completion. For instance, when a user performs a keyword or phrase search,
-                they may save the search for future use. In order to maintain the current list of results, the save
-                process occurs within a modal. Sub and secondary tasks performed in modal should comprise a limited
-                number of steps and options, so not as to divert from the primary task completion.
-            </p>
+  <header></header>
+  <main role="main" tabindex="-1">
 
-            <p>
-                You may also use modals to alert users where JavaScript or AJAX transactions have processed in the
-                background. For example, imagine a registration form where a number of fields may be completed. Several
-                validations may occur asynchronously on the email input; when errors or potential problems occur, a
-                modal can be used to catch the attention of the user who have moved away from the field. In this case,
-                the modal alerts the user to important information, interrupting their current task without entirely
-                removing them from it.
-            </p>
+    <h1 class="ul-ui dividing header">Modals</h1>
 
-            <p>
-                Finally, a modal may serve as a dialog in circumstances described in the "Confirmation Dialog" section.
-            </p>
+    <article class="ul-ui container example toc open">
+      <section>
+        <p>
+        Define a modal any element that can be opened, actively interacted with, then closed. Detail panels,
+        popovers or tooltips, for example, are opened and closed, but do not require interaction 
+        or interfere with other page tasks. However, once the opened element requires the user's interaction in order
+        to continue, then you may consider it a modal.</p>
 
-            
-            <!-- =================== SECTION =================== -->
-            <div class='divider'></div>
-            <h3 id="Accessibility"></h3>
-            <p>
-                If possible, modals should be able to be used by the keyboard alone.
-            </p>
-        </div>
+        <p>
+            The main purpose of modals is to allow for the completion of a secondary or sub-task without abandoning
+            the initial or primary task completion. For instance, when a user performs a keyword or phrase search,
+            they may save the search for future use. In order to maintain the current list of results, the save
+            process occurs within a modal. Sub and secondary tasks performed in modal should comprise a limited
+            number of steps and options, so not as to divert from the primary task completion.
+        </p>
 
-        <nav></nav>
-    </main>
+        <p>
+            You may also use modals to alert users where JavaScript or AJAX transactions have processed in the
+            background. For example, imagine a registration form where a number of fields may be completed. Several
+            validations may occur asynchronously on the email input; when errors or potential problems occur, a
+            modal can be used to catch the attention of the user who have moved away from the field. In this case,
+            the modal alerts the user to important information, interrupting their current task without entirely
+            removing them from it.
+        </p>
+
+        <p>
+            Finally, a modal may serve as a dialog in circumstances described in the "Confirmation Dialog" section.
+        </p>
+
+      </section>
+        
+      <!-- =================== SECTION =================== -->
+      <section class='divider'>
+
+        <h3 id="Accessibility">Accessibility</h3>
+
+        <p>
+        WAI-ARIA authoring emphasizes keyboard usage for opening and
+        interacting with modals. Generally, code the modal similarly to alerts and confirmations.</p>
+
+      </section>
+    </article>
+
+    <nav></nav>
+  </main>
 
     <footer role="contentinfo">
     </footer>
