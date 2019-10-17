@@ -42,21 +42,4 @@ small,
 .text-small {
   font-size: 0.8em;
 }
-.ul-ui.dividing.header {
-  padding-bottom: 0.2em;
-  border-bottom: 1px solid #c7c9c9;
-}
-h1.ul-ui.header {
-  font-size: 3.052em;
-}
-.ul-ui.header {
-  border: none;
-  margin: calc(1.85714286rem) 0 1rem;
-  padding: 0 0;
-  line-height: 1.25em;
-  text-transform: none;
-  color: rgba(0, 0, 0, 0.87);
-}
-.ul-ui.header:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
-  font-size: 1.25em;
-}
+

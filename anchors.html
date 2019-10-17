@@ -18,143 +18,210 @@
 
     <!-- stylesheets here; concate/minified for production -->
     <link href="assets/css/normalize.css" rel="stylesheet" type="text/css">
-    <link href="assets/css/site-cssgrid.css" rel="stylesheet" type="text/css">
     <link href="assets/css/styles.css" rel="stylesheet" type="text/css">
 
     <script src="https://kit.fontawesome.com/ff07333570.js"></script>
 </head>
-<main role="main" tabindex="-1">
-    <div class="ul-ui container example toc open">
+<body>
+  <header></header>
+  <main role="main" tabindex="-1">
 
-      <h1 class="ul-ui dividing header">Anchors &amp; Buttons</h1>
+    <h1 class="ul-ui dividing header">Anchors &amp; Buttons</h1>
 
-      <p>
-      In broad terms: <strong>Buttons create an impact within their environment, links navigate to resources.</strong></p>
+    <article class="ul-ui container example toc open">
 
-      <p>
-      Please note the recurring theme throughout this section: when using the terms "button" or "anchor,"
-      we are sometimes referring to the HTML <code>button</code> or <code>a</code> tags, and sometimes 
-      referring to a UI element that looks to the user to be something "pressable" or "clickable".
-      We have made every possible attempt to be clear when referring to an HTML node and when referring to a UI element.</p>
-
-      <p>
-      In some cases, it may be expedient to use neither anchor nor button tags as clickable navigation. Using <code>div</code>,
-      <code>img</code> or <code>span</code> nodes as links should closely consider accesibility issues, taking all
-      possible steps to accomodate assistive technology. Primarily, include <code>role="button"</code> or 
-      <code>role="link"</code> and ensure keyboard interaction works as expected (as they would with anchor and button tags).
-      See the W3G authoring practices and examples for <a 
-        href="https://www.w3.org/TR/wai-aria-practices/#link" target="_blank">links</a> and 
-      <a href="https://www.w3.org/TR/wai-aria-practices/#button" target="_blank">buttons</a> for more details on supporting
-      this type of code.
-
-      <p>
-      <strong>The guidelines below describe usage and styling of button and anchor elements outside the
-          context of forms.</strong>
-      See "Forms" for specific uses within that context. This section also does not address buttons as elements of an
-      interactive environment, such as gaming environment (an expansion on the idea of interactivity in a more strictly 
-      "application" state will be included in future versions of this documentation).</p>
-
-
-      
-
-      <!-- =================== SECTION =================== -->
-      <div class='divider'></div>
-
-      <h3 class="target" id="butc-a">Buttons: Coding</h3>
-
-      <h5>
-        <a href="https://www.w3.org/TR/wai-aria-practices/#button" target="_blank" rel="no-follow">Button WAI-ARIA Authoring</a>
-      </h5>
-
-      <p>
-      Use a <code>button</code> element to trigger any JavaScript function that does not use a URL. Basically, instead of using
-      an <code>a</code> tag with an <code>href="Javascript:void(0)"</code>, or <code>href="#"</code>,
-      use a button element. If the user can open a reference via a right-click or 3D touch, use an anchor tag instead.</p>
-
-      <p>
-      Common button uses might include:</p>
-
-      <ul class="ul-ui bulleted list">
-        <li class="item">popover triggers.</li>
-        <li class="item">tooltip elements.</li>
-        <li class="item">navigation in a carousel.</li>
-        <li class="item">modal triggers (that do not require a URL. Some modals that open with AJAX,
-          for example, may be better served by an anchor tag with a URL in the <code>href</code> attribute).</li>
-        <li class="item">dismissing buttons in modals and alerts.</li>
-        <li class="item">opening and closing/expanding hidden text.</li>
-      </ul>
-
-      <p>
-      In many cases (such as some listed above), the button may appear to the user to be an inline link. Use
-      CSS to modify the button to look like a link. (See "Styling" below for more information.)</p>
-
-      <aside class="ul-ui alert">
+      <section>
         <p>
-        Always use the <code>type="button"</code> attribute-value to ensure a button does not inadvertently act as a form
-        submit. Safari, Chrome and other browsers treat button elements as submit tags when nested in forms.</p>
-      </aside>
+        In broad terms: <strong>Buttons create an impact within their environment, links navigate to resources.</strong></p>
+
+        <p>
+        Please note the recurring theme throughout this section: when using the terms "button" or "anchor,"
+        we are sometimes referring to the HTML <code>button</code> or <code>a</code> tags, and sometimes 
+        referring to a UI element that looks to the user to be something "pressable" or "clickable".
+        We have made every possible attempt to be clear when referring to an HTML node and when referring to a UI element.</p>
+
+        <p>
+        In some cases, it may be expedient to use neither anchor nor button tags as clickable navigation. Using <code>div</code>,
+        <code>img</code> or <code>span</code> nodes as links should closely consider accesibility issues, taking all
+        possible steps to accomodate assistive technology. Primarily, include <code>role="button"</code> or 
+        <code>role="link"</code> and ensure keyboard interaction works as expected (as they would with anchor and button tags).
+        See the W3G authoring practices and examples for <a 
+          href="https://www.w3.org/TR/wai-aria-practices/#link" target="_blank">links</a> and 
+        <a href="https://www.w3.org/TR/wai-aria-practices/#button" target="_blank">buttons</a> for more details on supporting
+        this type of code.
+
+        <p>
+        <strong>The guidelines below describe usage and styling of button and anchor elements outside the
+            context of forms.</strong>
+        See "Forms" for specific uses within that context. This section also does not address buttons as elements of an
+        interactive environment, such as gaming environment (an expansion on the idea of interactivity in a more strictly 
+        "application" state will be included in future versions of this documentation).</p>
+
+      </section>
 
       <!-- =================== SECTION =================== -->
-      <div class="ul-ui divider"></div>
+      <section class='divider'>
 
-      <h3 class="target" id="buts-a">Buttons: Styling</h3>
+        <h3 class="target" id="butc-a">Buttons: Coding</h3>
+
+        <h5>
+          <a href="https://www.w3.org/TR/wai-aria-practices/#button" target="_blank" rel="no-follow">Button WAI-ARIA Authoring</a>
+        </h5>
+
+        <p>
+        Use a <code>button</code> element to trigger any JavaScript function that does not use a URL. Basically, instead of using
+        an <code>a</code> tag with an <code>href="Javascript:void(0)"</code>, or <code>href="#"</code>,
+        use a button element. If the user can open a reference via a right-click or 3D touch, use an anchor tag instead.</p>
+
+        <p>
+        Common button uses might include:</p>
+
+        <ul class="ul-ui bulleted list">
+          <li class="item">popover triggers.</li>
+          <li class="item">tooltip elements.</li>
+          <li class="item">navigation in a carousel.</li>
+          <li class="item">modal triggers (that do not require a URL. Some modals that open with AJAX,
+            for example, may be better served by an anchor tag with a URL in the <code>href</code> attribute).</li>
+          <li class="item">dismissing buttons in modals and alerts.</li>
+          <li class="item">opening and closing/expanding hidden text.</li>
+        </ul>
+
+        <p>
+        In many cases (such as some listed above), the button may appear to the user to be an inline link. Use
+        CSS to modify the button to look like a link. (See "Styling" below for more information.)</p>
+
+        <aside class="ul-ui alert">
+          <p>
+          Always use the <code>type="button"</code> attribute-value to ensure a button does not inadvertently act as a form
+          submit. Safari, Chrome and other browsers treat button elements as submit tags when nested in forms.</p>
+        </aside>
+
+      </section>
+
+      <!-- =================== SECTION =================== -->
+      <section class="ul-ui divider">
+
+        <h3 class="target" id="buts-a">Buttons: Styling</h3>
+          
+        <p>
+        As noted, button elements may be styled to appear as either buttons or as links, depending on their
+        conceptual use; this section refers to any element styled as a button.
+        </p>
+
+        <p>
+        Style elements as a button when:</p>
+
+        <ul class="ul-ui bulleted list">
+          <li class="item">indicating persistence or as a step in a process leading to persistence. This includes
+              actions such as save, save and move forward or back ("next" and "previous"), submit, delete,
+              update.</li>
+          <li class="item">behaving as a component in an application; tools in a toolbar of a text editor, for example.</li>
+          <li class="item">creating call to action (CTA). The number of CTAs should be limited on a view and
+              should strongly indicate to the user what their next action should be.</li>
+        </ul>
+
+        <p>
+        When using icons to represent navigational elements, such as "hamburger" menu icons, the <code>button</code> node will
+        most commonly be unstyled (without background or other skeuomorphic attributes). In most other cases (or unless
+        specifically noted elsewhere in the document), style the <code>button</code> as a link in most other situations.</p>
+
+
+        <h5>Default Button Examples</h5>
+
+
+        <!-- **** Example **** -->
+        <div class='example-cont clearfix'>
+            <div class='view'>
+                <button class='ul-ui circular black icon xsm button codeview' type="button" role="button" aria-pressed="false" 
+                  aria-label="Toggle button for example HTML/CSS code">
+                  <i class='fas fa-code icon' aria-hidden="true"></i>
+                </button>
+                <button class="ul-ui button" type="button" role="button">
+                    As button
+                </button>
+                <div class="ul-ui button" role="button" tabindex="0">
+                    As div
+                </div>
+                <a href="#" class="ul-ui button">As an anchor tag</a>
+                <a href="#">a text link</a>
+            </div>
+            <div class='code'>
+                <pre><script type="text" class='code-script'><button class="ul-ui button" type="button" role="button">
+                As button
+            </button>
+            <div class="ul-ui button" role="button" tabindex="0">
+                As div
+            </div>
+            <a href="#" class="ul-ui button" role="button">As an a tag</a>
+            <a href="#">a text link</a>
+        </script></pre>
+            </div>
+        </div>
+
         
-      <p>
-      As noted, button elements may be styled to appear as either buttons or as links, depending on their
-      conceptual use; this section refers to any element styled as a button.
-      </p>
-
-      <p>
-      Style elements as a button when:</p>
-
-      <ul class="ul-ui bulleted list">
-        <li class="item">indicating persistence or as a step in a process leading to persistence. This includes
-            actions such as save, save and move forward or back ("next" and "previous"), submit, delete,
-            update.</li>
-        <li class="item">behaving as a component in an application; tools in a toolbar of a text editor, for example.</li>
-        <li class="item">creating call to action (CTA). The number of CTAs should be limited on a view and
-            should strongly indicate to the user what their next action should be.</li>
-      </ul>
-
-      <p>
-      When using icons to represent navigational elements, such as "hamburger" menu icons, the <code>button</code> node will
-      most commonly be unstyled (without background or other skeuomorphic attributes). In most other cases (or unless
-      specifically noted elsewhere in the document), style the <code>button</code> as a link in most other situations.</p>
-
-
-      <h5>Default Button Examples</h5>
-
-
-      <!-- **** Example **** -->
-      <div class='example-cont clearfix'>
-          <div class='view'>
-              <button class='ul-ui circular black icon xsm button codeview' type="button" role="button" aria-pressed="false" 
-                aria-label="Toggle button for example HTML/CSS code">
-                <i class='fas fa-code icon' aria-hidden="true"></i>
-              </button>
-              <button class="ul-ui button" type="button" role="button">
-                  As button
-              </button>
-              <div class="ul-ui button" role="button" tabindex="0">
-                  As div
+          <!--- **** Example **** -->
+          <div class='example-cont clearfix'>
+              <div class='view'>
+                <button class='ul-ui circular black icon xsm button codeview' type="button" role="button" aria-pressed="false" 
+                  aria-label="Toggle button for example HTML/CSS code">
+                  <i class='fas fa-code icon' aria-hidden="true"></i>
+                </button>
+                  <button class="xxsm ul-ui button" type="button" role="button">
+                      XXSmall
+                  </button>
+                  <button class="xsm ul-ui button" type="button" role="button">
+                      Xsmall
+                  </button>
+                  <button class="small ul-ui button" type="button" role="button">
+                      Small
+                  </button>
+                  <button class="base ul-ui button" type="button" role="button">
+                      <i class="fas fa-exclamation-triangle icon" aria-hidden="true"></i>
+                      Base
+                  </button>
+                  <button class="medium ul-ui button" type="button" role="button">
+                      Medium
+                  </button>
+                  <button class="large ul-ui button" type="button" role="button">
+                      Large
+                  </button>
               </div>
-              <a href="#" class="ul-ui button">As an anchor tag</a>
-              <a href="#">a text link</a>
-          </div>
-          <div class='code'>
-              <pre><script type="text" class='code-script'><button class="ul-ui button" type="button" role="button">
-              As button
+              <div class='code'>
+                  <pre> <script type="text" class='code-script'><button class="xxsm ul-ui button" type="button" role="button">
+              XXSmall
           </button>
-          <div class="ul-ui button" role="button" tabindex="0">
-              As div
+          <button class="xsm ul-ui button" type="button" role="button">
+              Xsmall
+          </button>
+          <button class="small ul-ui button" type="button" role="button">
+              Small
+          </button>
+          <button class="base ul-ui button" type="button" role="button">
+                  <i class="fas fa-exclamation-triangle icon" aria-hidden="true"></i>
+              Base
+          </button>
+          <button class="medium ul-ui button" type="button" role="button">
+              Medium
+          </button>
+          <button class="large ul-ui button" type="button" role="button">
+              Large
+          </button></script></pre>
+              </div>
           </div>
-          <a href="#" class="ul-ui button" role="button">As an a tag</a>
-          <a href="#">a text link</a>
-      </script></pre>
-          </div>
-      </div>
 
-      
+        <p>
+        Note the example code above does not include all possible accessibility markup, as some are relevant only to 
+        specific circumstances (eg. toggle buttons).</p>
+
+
+        <h5 class="target" id="butr-a">Buttons: Responsiveness</h5>
+
+        <p>
+        In most circumstances, elements styled as buttons should become block elements in medium and smaller
+        (less than 768px wide) viewports in order to accommodate touch behavior; some exceptions to this rule
+        might include "Next" and "Previous" buttons. Be sure to create adequate spacing and padding to 
+        allow all users to use your buttons on a touchscreen.</p>
+
         <!--- **** Example **** -->
         <div class='example-cont clearfix'>
             <div class='view'>
@@ -162,191 +229,130 @@
                 aria-label="Toggle button for example HTML/CSS code">
                 <i class='fas fa-code icon' aria-hidden="true"></i>
               </button>
-                <button class="xxsm ul-ui button" type="button" role="button">
-                    XXSmall
-                </button>
-                <button class="xsm ul-ui button" type="button" role="button">
-                    Xsmall
-                </button>
-                <button class="small ul-ui button" type="button" role="button">
-                    Small
-                </button>
-                <button class="base ul-ui button" type="button" role="button">
-                    <i class="fas fa-exclamation-triangle icon" aria-hidden="true"></i>
-                    Base
-                </button>
-                <button class="medium ul-ui button" type="button" role="button">
-                    Medium
-                </button>
-                <button class="large ul-ui button" type="button" role="button">
-                    Large
-                </button>
+                <button class="fluid ul-ui button" type="button" role="button">Fits container</button>
             </div>
             <div class='code'>
-                <pre> <script type="text" class='code-script'><button class="xxsm ul-ui button" type="button" role="button">
-            XXSmall
-        </button>
-        <button class="xsm ul-ui button" type="button" role="button">
-            Xsmall
-        </button>
-        <button class="small ul-ui button" type="button" role="button">
-            Small
-        </button>
-        <button class="base ul-ui button" type="button" role="button">
-                <i class="fas fa-exclamation-triangle icon" aria-hidden="true"></i>
-            Base
-        </button>
-        <button class="medium ul-ui button" type="button" role="button">
-            Medium
-        </button>
-        <button class="large ul-ui button" type="button" role="button">
-            Large
-        </button></script></pre>
+                <pre> <script type="text" class='code-script'><button class="fluid ul-ui button" type="button" role="button">Fits container</button>
+        </script></pre>
             </div>
         </div>
-
-      <p>
-      Note the example code above does not include all possible accessibility markup, as some are relevant only to 
-      specific circumstances (eg. toggle buttons).</p>
-
-
-      <h5 class="target" id="butr-a">Buttons: Responsiveness</h5>
-
-      <p>
-      In most circumstances, elements styled as buttons should become block elements in medium and smaller
-      (less than 768px wide) viewports in order to accommodate touch behavior; some exceptions to this rule
-      might include "Next" and "Previous" buttons. Be sure to create adequate spacing and padding to 
-      allow all users to use your buttons on a touchscreen.</p>
-
-      <!--- **** Example **** -->
-      <div class='example-cont clearfix'>
-          <div class='view'>
-            <button class='ul-ui circular black icon xsm button codeview' type="button" role="button" aria-pressed="false" 
-              aria-label="Toggle button for example HTML/CSS code">
-              <i class='fas fa-code icon' aria-hidden="true"></i>
-            </button>
-              <button class="fluid ul-ui button" type="button" role="button">Fits container</button>
-          </div>
-          <div class='code'>
-              <pre> <script type="text" class='code-script'><button class="fluid ul-ui button" type="button" role="button">Fits container</button>
-      </script></pre>
-          </div>
-      </div>
+      </section>
 
       <!-- =================== SECTION =================== -->
-      <div class="ul-ui divider"></div>
-      <h3 class="target" id="butd-a">Buttons: Disabled</h3>
+      <section class="ul-ui divider">
+        <h3 class="target" id="butd-a">Buttons: Disabled</h3>
 
-      <p>
-      Some buttons are not always available for use at all times. If
-      the button is permanently unavailable then it should be
-      removed from the interface, but if the button is only
-      unavailable temporarily then disabling the button is
-      appropriate.
-      </p>
-
-      <p>
-      Reasons for a button not being available could include (but are not limited to)
-      </p>
-
-      <ul>
-          <li>
-              the button acts on a selection, but there is no selection
-              at the moment <em>[temporarily disabled]</em>.
-          </li>
-          
-          <li>
-              the function the button offers needs to be enabled
-              elsewhere in the interface. For example, if the interface
-              offers various options, some functions might only be
-              available if certain options are selected. <em>[if the
-                  required options are nearby in the interface,
-                  temporary. If they are somewhere else in the application,
-                  might be considered permanent]</em>.
-          </li>
-          
-          <li>
-              the user does not have permission to use the button’s
-              function <em>[probably permanent]</em>.
-          </li>
-      </ul>
-
-      <p>
-      One other reason to favour disabling a button rather than
-      removing it would be when the availability of the feature is a
-      potential opportunity to upsell the user to a higher level of
-      service.
-      </p>
-
-      <p>
-      Disabled buttons should be the same size and font (including
-      weight) as the enabled version. This is to prevent unpleasant
-      movement in either the button label, the button itself, or the
-      layout of neighbouring controls.
-      </p>
-
-      <p>
-      Being “grayed out” has traditionally been a common indicator
-      of a button being disabled. If you’re using gray buttons
-      consider whether they might be mistaken for disabled buttons.
-      </p>
-
-      <p>
-      The user should be able to tell that a button is disabled
-      without having an enabled button to compare with. This
-      generally means making the disabled form visually weaker than
-      the enabled form. Some ways of achieving that are:
-      </p>
-
-      <ul>
-          <li>
-              Making the colour of the button closer to the background
-              color of the page. (A simple way to do this is to reduce its
-              opacity).
-          </li>
-          
-          <li>
-              Reduce the color saturation of the button.
-          </li>
-          
-          <li>
-              Reduce the contrast of the button label against its
-              background. (But not so much that it becomes hard to read).
-          </li>
-          
-          <li>
-              Reduce or remove 3d effects, such as drop shadows and 3d
-              relief.
-          </li>
-          
-          <li>
-              Remove any rollover behaviours
-          </li>
-      </ul>
-
-      <p>
-      On desktop systems it can be useful to provide a tooltip-like
-      popup to explain why the button is not currently available,
-      especially if the reason for the button being disabled is not
-      obvious. These tooltips should be as brief as possible while
-      providing an adequate explanation. Providing a link to the
-      place where the button can be enabled might be useful in some
-      cases.</p>
-
-      <aside>
         <p>
-        When the action associated with a button is unavailable, the button has <code>aria-disabled</code>
-        set to true. If the button is being used as a tooltip, follow
-        accessibility best practices associated with tooltops and
-        popovers.</p>
-      </aside>
+        Some buttons are not always available for use at all times. If
+        the button is permanently unavailable then it should be
+        removed from the interface, but if the button is only
+        unavailable temporarily then disabling the button is
+        appropriate.
+        </p>
 
-      <p>
-      On touch capable devices tapping a disabled button could
-      display a similar popup explaining why the button is disabled.</p>
+        <p>
+        Reasons for a button not being available could include (but are not limited to)
+        </p>
 
-        <!-- =================== SECTION =================== -->
-        <div class="ul-ui divider"></div>
+        <ul>
+            <li>
+                the button acts on a selection, but there is no selection
+                at the moment <em>[temporarily disabled]</em>.
+            </li>
+            
+            <li>
+                the function the button offers needs to be enabled
+                elsewhere in the interface. For example, if the interface
+                offers various options, some functions might only be
+                available if certain options are selected. <em>[if the
+                    required options are nearby in the interface,
+                    temporary. If they are somewhere else in the application,
+                    might be considered permanent]</em>.
+            </li>
+            
+            <li>
+                the user does not have permission to use the button’s
+                function <em>[probably permanent]</em>.
+            </li>
+        </ul>
+
+        <p>
+        One other reason to favour disabling a button rather than
+        removing it would be when the availability of the feature is a
+        potential opportunity to upsell the user to a higher level of
+        service.
+        </p>
+
+        <p>
+        Disabled buttons should be the same size and font (including
+        weight) as the enabled version. This is to prevent unpleasant
+        movement in either the button label, the button itself, or the
+        layout of neighbouring controls.
+        </p>
+
+        <p>
+        Being “grayed out” has traditionally been a common indicator
+        of a button being disabled. If you’re using gray buttons
+        consider whether they might be mistaken for disabled buttons.
+        </p>
+
+        <p>
+        The user should be able to tell that a button is disabled
+        without having an enabled button to compare with. This
+        generally means making the disabled form visually weaker than
+        the enabled form. Some ways of achieving that are:
+        </p>
+
+        <ul>
+            <li>
+                Making the colour of the button closer to the background
+                color of the page. (A simple way to do this is to reduce its
+                opacity).
+            </li>
+            
+            <li>
+                Reduce the color saturation of the button.
+            </li>
+            
+            <li>
+                Reduce the contrast of the button label against its
+                background. (But not so much that it becomes hard to read).
+            </li>
+            
+            <li>
+                Reduce or remove 3d effects, such as drop shadows and 3d
+                relief.
+            </li>
+            
+            <li>
+                Remove any rollover behaviours
+            </li>
+        </ul>
+
+        <p>
+        On desktop systems it can be useful to provide a tooltip-like
+        popup to explain why the button is not currently available,
+        especially if the reason for the button being disabled is not
+        obvious. These tooltips should be as brief as possible while
+        providing an adequate explanation. Providing a link to the
+        place where the button can be enabled might be useful in some
+        cases.</p>
+
+        <aside>
+          <p>
+          When the action associated with a button is unavailable, the button has <code>aria-disabled</code>
+          set to true. If the button is being used as a tooltip, follow
+          accessibility best practices associated with tooltops and
+          popovers.</p>
+        </aside>
+
+        <p>
+        On touch capable devices tapping a disabled button could
+        display a similar popup explaining why the button is disabled.</p>
+      </section>
+
+      <!-- =================== SECTION =================== -->
+      <section class="ul-ui divider">
 
         <h3 class="target" id="butu-a">Buttons: Usability</h3>
 
@@ -391,9 +397,10 @@
             </li>
         </ul>
 
+      </section>
 
-        <!-- =================== SECTION =================== -->
-        <div class="ul-ui divider"></div>
+      <!-- =================== SECTION =================== -->
+      <section class="ul-ui divider">
 
         <h3 class="target" id="anc-a">Anchors: Coding</h3>
 
@@ -434,12 +441,13 @@
         anchor.</p>
 
         <aside class="ul-ui alert">
-              When using an anchor tag as a button, include the role="button" attribute.
+          When using an anchor tag as a button, include the <code>role="button"</code> attribute.
         </aside>
 
+      </section>
 
-        <!-- =================== SECTION =================== -->
-        <div class="ul-ui divider"></div>
+      <!-- =================== SECTION =================== -->
+      <section class="ul-ui divider">
 
         <h3 class="target" id="ancs-a">Anchors: Styling</h3>
 
@@ -491,9 +499,9 @@
             </div>
         </div>
 
-
-        <!-- =================== SECTION =================== -->
-        <div class="ul-ui divider"></div>
+      </section>
+      <!-- =================== SECTION =================== -->
+      <section class="divider">
 
         <h3 class="target" id="ancd-a">Anchors: Disabled</h3>
 
@@ -509,10 +517,12 @@
         If a link that is inline in text is disabled it should
         probably be removed leaving the text undecorated.</p>
 
+      </section>
 
-        <!-- =================== SECTION =================== -->
-        <div class='divider'></div>
+      <!-- =================== SECTION =================== -->
+      <section class='divider'>
         <h3 class="target" id="otc-a">Other Cases</h3>
+
         <p>
             In addition to the cases noted above (primarily buttons that trigger JavaScript functions), buttons may be
             styled as links or vice versa.
@@ -534,10 +544,11 @@
                 <p>Where a mix of form submit and anchor elements should be viewed as siblings of equal
                     importance, be consistent in displaying each element as either buttons or links.</p>
             </div>
-        </div>
-    </div>
+      </section>
 
-    <div class="toc-spacer"></div>
+      <div class="toc-spacer"></div>
+    </article>
+
   <nav></nav>
 </main>
 

@@ -29,11 +29,44 @@
         <div class="ul-ui container example toc open">
 
           <h1 class="ul-ui dividing header">Forms</h1>
+
           <h3 class="target" id="int-a">Input types</h3>
 
+          <h5>
+            <a href="https://www.w3.org/TR/wai-aria-practices/#aria_lh_form">Form WAI-ARIA Authoring</a><br>
+            <a href="https://www.w3.org/TR/wai-aria-practices/#checkbox">Checkbox WAI-ARIA Authoring</a><br>
+            <a href="https://www.w3.org/TR/wai-aria-practices/#radiobutton">Radio WAI-ARIA Authoring</a><br>
+            <a href="https://www.w3.org/TR/wai-aria-practices/#slider">Range Slider WAI-ARIA Authoring</a><br>
+            <a href="https://www.w3.org/TR/wai-aria-practices/#spinbutton">Number Spinner WAI-ARIA Authoring</a>
+          </h5>
+
           <p>
-          Where appropriate, use HTML5 input types to ensure ease of use on touch devices. This includes, but is
-          not limited to:</p>
+          In general, consider the following when creating forms:</p>
+
+          <ul class='ul-ui bulleted list'>
+            <li class="item">
+              As with all elements, practice accessible coding techniques with form fields, fieldsets and buttons. 
+            </li>
+            <li class="item">
+              Touch device behavior and display of inputs will impact your form, so consider your audience usage when
+              designing. Mobile browsers may default to capitals, zoom unexpectedly, implement special field types
+              differently and employ different fonts, among other considerations. Think about including attributes like
+              <code>autocapitalize</code>, which only impacts virtual keyboards and voice-to-text input.
+            </li>
+            <li class="item">
+              In some browsers, autocompletion of information, whether from past input or saved personal data, may
+              affect field completion and validation. Consider field names and input attributes for each form field.
+              For instance, you will likely suppress capitalization, spellcheck and autocomplete on search and 
+              typeahead search fields, but may wish to encourage <a
+                href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete">autocompletion</a> 
+              for contact information of the user's name and address.
+            </li>
+          </ul>
+          
+
+          <p>
+          Where appropriate, use HTML5 input types to ensure ease of use, particularly on touch devices. The <code>email</code>
+          input type is especially useful in mobile browsers, but all types to consider include:</p>
 
           <ul class='ul-ui bulleted list'>
             <li class='item'><code>email</code></li>
@@ -75,12 +108,9 @@
 
 
         <!-- =================== SECTION =================== -->
-        <div class='divider'></div>
+        <!--<div class='divider'></div>
 
         <h3 class="target" id="is-a">Input / Submits</h3>
-
-        <p>
-        Use styling described in the "Buttons: Styling" and "Buttons: Usability" sections.</p>
 
         <ul class='ul-ui bulleted list'>
           <li class='item'>
@@ -92,144 +122,179 @@
             the use of the submit button, as well as ensure that submission by using the "Return" 
             key or by assistive technology software will always execute the required JavaScript.
           </li>
+        </ul>-->
+
+        <!-- =================== SECTION =================== -->
+        <div class='divider'></div>
+        <h3 class="target" id="bl-a">Buttons and Anchors, Part II</h3>
+
+        <p>
+        Forms commonly require actions other than a simple submit. In some cases, these actions should be
+        performed by buttons and in others, by links. Again, note that when we refer to buttons and links,
+        the elements need not specifically be <code>input</code>, <code>button</code> or <code>a</code> tags; 
+        rather, we refer to the styling of the element (see "Anchors and Buttons"
+        for more information on how to style). (Use the general guideline of the necessity of a URL to 
+        differentiate between using an anchor or a button. Can the user right-click or 3d touch on the link and open in a new
+        window?)</p>
+
+        <b>Buttons</b>
+        <ul class='ul-ui bulleted list'>
+            <li class='item'> Submit (Create/Update) </li>
+            <li class='item'> Delete </li>
+            <li class='item'> Reset </li>
+            <li class='item'> Any action that initiates a data transaction </li>
         </ul>
 
-            <!-- =================== SECTION =================== -->
-            <div class='divider'></div>
-            <h3 class="target" id="bl-a">Buttons and Links</h3>
-            <p>
-                Forms commonly require actions other than a simple submit. In some cases, these actions should be
-                performed by buttons and sometimes by links.
-            </p>
-
-            <p>
-                Note that although the rules below refer to buttons and links, the elements need not specifically be
-                input, button or anchor tags; rather, we refer to the styling of the element (see "Anchors and Buttons"
-                for more information on how to style these elements). For the vast majority of instances in the context
-                of forms, however, links should be anchor tags and submit buttons input elements of type "submit" (see
-                "Anchors and Buttons" for details on when to use each type of element).
-            </p>
-
-            <p>
-                Use the general guideline of the necessity of a URL to differentiate between using an anchor or a
-                button.
-            </p>
-
-            <b>Buttons</b>
-            <ul class='ul-ui bulleted list'>
-                <li class='item'> Submit (Create/Update) </li>
-                <li class='item'> Delete </li>
-                <li class='item'> Reset * </li>
-                <li class='item'> Any action that initiates a data transaction </li>
-            </ul>
-
-            <b>Links</b>
-            <ul class='ul-ui bulleted list'>
-                <li class='item'><p>
-                    Cancel *
-                </p></li>
-                <li class='item'><p>
-                    Forgot Password
-                </p></li>
-                <li class='item'><p>
-                    Actions within tables (e.g. "Remove" link in a list, which performs a form submit) * Note this represents a case where the element appears to the user to be a link but should actually be a button.
-                </p></li>
-                <li class='item'><p>
-                    Any other action that does not initiate a data transaction
-                </p></li>
-            </ul>
-
-            <div class='ul-ui alert'>
-                <p>
-                    Actions within tables (e.g. "Remove" link in a list, which performs a form submit)* . Note this
-                    represents a case where the element appears to the user to be a link but should actually be a button.
-                </p>
-            </div>
+        <b>Links</b>
+        <ul class='ul-ui bulleted list'>
+            <li class='item'> Cancel </li>
+            <li class='item'> Forgot Password </li>
+            <li class='item'> Actions within tables (e.g. "Remove" link in a list, which performs a form submit)</li>
+            <li class='item'>
+                Any other action that does not initiate a data transaction (but rather navigates to a different resource).
+            </li>
+        </ul>
 
 
-            <!-- =================== SECTION =================== -->
-            <div class='divider'></div>
-            <h3 class="target" id="se-a"> Submit Events</h3>
-            <p>
-                As discussed above, although buttons and links do not necessarily need to correspond to their native
-                HTML element tags, forms should generally be executed with input elements of type "submit." Use a submit
-                input instead of input of type="button". (See "Anchors and Buttons" for more information on when to use
-                alternative element types.)
-            </p>
+        <!-- =================== SECTION =================== -->
+        <div class='divider'></div>
 
-            <p>
-                Any JavaScript in need of execution upon form submission should be attached to the form’s submit event,
-                rather than attached to a click event of a button or link. Additionally, users will be able to submit
-                forms by using the "Return/Enter" key, within a touch device keyboard, or by other methods (especially
-                those used by accessibility browsers); attaching events to form submits circumvents all these issues.
-            </p>
+        <h3 class="target" id="se-a"> Submit Events</h3>
 
+        <p>
+        As discussed above, although buttons and links do not necessarily need to correspond to their native
+        HTML element tags, forms should generally be executed with input elements of <code>type="submit"</code>. Use this
+        tag rather than <code>&lt;input type="button"&gt;</code>.</p>
 
-            <!-- =================== SECTION =================== -->
-            <div class='divider'></div>
-            <h3 class="target" id="jv-a">JavaScript Validations</h3>
-            <p>
-                In most cases, JavaScript validations are not necessary. Some situations may make client-side validation
-                more useful to the user, however.
-            </p>
-
-            <p>
-                Use client-side validations when:
-            </p>
-            <ul class='ul-ui bulleted list'>
-                <li class='item'><p>the form is submitted via AJAX. Generally, this will make action flow more fluidly for
-                the user.</p></li>
-                <li class='item'><p>the form contains a file upload input. Because of security issues, uploaded files are
-                detached on page load, which makes round-trip validation poor UX (as the user is forced to reattach
-                the file).
-                (Note that some browsers expose more attributes of uploaded files than others, making specific
-                validations relating to file size, type, etc., inconsistent across browsers.)</p></li>
-                <li class='item'><p>
-                    the form contains typeahead inputs that might be lost upon reload.
-                </p></li>
-            </ul>
-
-            <p>Best Practices</p>
-            <ul class='ul-ui bulleted list'>
-                <li class='item'>
-                    <p>Implement the same error styling to the elements as the user would see from a
-                        server-side validation.</p>
-                </li>
-                <li class='item'>
-                    <p>Validate on form on submit rather than on input. However, a multistep input, such as
-                        typeahead field, may be validated on value select for better interaction flow.</p>
-                </li>
-                <li class='item'>
-                    <p>Clear errors on re-validation. Depending on the input type, as in the case of password
-                        field, clearing the error on field change may be more helpful to the user.</p>
-                </li>
-            </ul>
+        <p>
+        Attach all JavaScript triggers to form and field events, however, rather than click events of a button or link.
+        The allows users to submit forms or tab through form fields with keys, within a touch device keyboard,
+        or by other methods (especially those used by accessibility browsers); attaching events to form submits 
+        circumvents problems that may arise from any alternate input scenario.</p>
 
 
-            <!-- =================== SECTION =================== -->
-            <div class='divider'></div>
-            <h3 class="target" id="seh-a">Success &amp; Error Handling</h3>
-            <p>
-                As described in the "Alert" section, indicate success by including a visual alert in the resulting view.
-                This alert should be dismissible (it is not necessary to programmatically close the alert after a set
-                period of time).
-            </p>
+        <!-- =================== SECTION =================== -->
+        <div class='divider'></div>
 
-            <p>
-                When a view includes a form with error fields, an alert should be visible at the top of the view with a
-                generic error message, such as "Please correct the input errors." Do not list individual field errors in
-                this message. Specify these errors by styling each invalid input.
-            </p>
-            <div class="toc-spacer"></div>
-            <!-- END -->
+        <h3 class="target" id="jv-a">JavaScript Validations</h3>
+
+        <p>
+        In most cases, JavaScript validations are not necessary. Some situations may make client-side validation
+        more useful to the user, however.</p>
+
+        <p>
+        You may potentially want to use client-side validations when:</p>
+
+        <ul class='ul-ui bulleted list'>
+            <li class='item'>
+              the form is submitted via AJAX. Generally, this will make action flow more fluidly for
+              the user.
+            </li>
+            <li class='item'>
+              the form contains a file upload input. Because of security issues, uploaded files are
+              detached on page load, which makes round-trip validation poor UX (as the user is forced to reattach
+              the file).
+              (Note that some browsers expose more attributes of uploaded files than others, making specific
+              validations relating to file size, type, etc., inconsistent across browsers.)</li>
+            <li class='item'>
+              the form contains typeahead inputs that might be lost upon reload.
+            </li>
+            <li class='item'>
+              moving from page to page in some kind of creation
+              Wizard. Whether this pattern applies may depend on how
+              the Wizard is implemented and dependencies between input
+              fields from page to page.
+            </li>
+            <li class="item">
+              looking for specific patterns on fields such passwords,
+              where the text is obscured from view.
+            </li>
+        </ul>
+
+        <p>
+        While client-side validation is often an expedient and helpful pattern, consider certain drawbacks:</p>
+
+        <ul class="ul-ui bulleted list">
+          <li class="item">
+            Because resources may be much slower to load in mobile
+            devices, users may begin filling out forms before
+            JavaScript is applied to the form, leading to uncertain
+            execution.
+          </li>
+          <li class="item">
+            Is the validation executed on submit or on field change?
+            Users commonly skip or half-complete fields for many
+            reasons while filling out a form, and pre-emptive errors
+            can lead to frustration for the user.
+          </li>
+          <li class="item">
+            Browser autocomplete may act in unexpected ways, resulting
+            in a false test outcomes.
+          </li>
+          <li class="item">
+            If a form is long (or a viewport too small), inputs may be
+            out of view on form submit, requiring a scripting
+            solution.
+          </li>
+          <li class="item">
+            As always, consider how JavaScript will interact with assistive technology
+            devices and software; ensure the user gets a clear idea of
+            what is happening by employing alert dialogs as described
+            by WAI-ARIA best practices.
+          </li>
+        </ul>
+
+        <h5>Best Practices</h5>
+
+        <ul class='ul-ui bulleted list'>
+          <li class="item">
+            Do not put the user in "double-jeopardy" if at all avoidable. This means the user should rarely see
+            a second set of errors after satisfying errors shown before form submit.
+          </li>
+          <li class='item'>
+            To avoid the above scenario, validate on form on submit rather than on input. However, a multistep input, such as
+            typeahead field or password confirmation, may be validated on change for better interaction flow.
+          </li>
+          <li class='item'>
+            Implement the same error styling to the elements as the user would see from a server-side validation.
+          </li>
+          <li class='item'>
+            Clear errors on re-validation. Depending on the input type, as in the case of password
+            field, it may be possible that clearing the error on field change may be more helpful to the user.
+          </li>
+        </ul>
+
+
+        <!-- =================== SECTION =================== -->
+        <div class='divider'></div>
+
+        <h3 class="target" id="seh-a">Success &amp; Error Handling</h3>
+
+        <p>
+        As described in the "Alerts" section, indicate success by including a visual alert in the resulting view.
+        This alert can be dismissible, though it is not necessary to programmatically close the alert after a set
+        period of time.</p>
+
+        <p>
+        When a view does include a form with error fields, an alert should be visible at the top of the view with a
+        generic error message, such as "Please correct the input errors." Do not list individual field errors in
+        this message. Specify these errors by styling each invalid input.</p>
+
+        <p>
+        As always, consistent with the placement and styling of these
+        types of messages. Use a combination of text, color and
+        iconography to convey the message to the user.</p>
+
+        <div class="toc-spacer"></div>
+        <!-- END -->
         </div>
 
         <nav></nav>
-    </main>
+  </main>
 
-    <footer role="contentinfo">
-    </footer>
-    <script
+<footer role="contentinfo"></footer>
+
+  <script
   src="https://code.jquery.com/jquery-3.4.1.min.js"
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
   crossorigin="anonymous"></script>
