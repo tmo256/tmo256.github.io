@@ -18,116 +18,103 @@
 
     <!-- stylesheets here; concate/minified for production -->
     <link href="assets/css/normalize.css" rel="stylesheet" type="text/css">
-    <link href="assets/css/site-cssgrid.css" rel="stylesheet" type="text/css">
     <link href="assets/css/styles.css" rel="stylesheet" type="text/css">
 
     <script src="https://kit.fontawesome.com/ff07333570.js"></script>
 </head>
 
 <body>
-    <main role="main" tabindex="-1">
-        <div class="ul-ui container example toc open">
-            <h1 class="ul-ui dividing header">Tables</h1>
-            <p>
-                Tables should be used to display easily scanned and/or comparable data.
-            </p>
+  <header></header>
+  <main role="main" tabindex="-1">
+    <h1 class="ul-ui dividing header">Tables</h1>
+    <article class="ul-ui container example toc open">
+      <section>
 
-            
-            <!-- =================== SECTION =================== -->
-            <div class='divider'></div>
-            <h3 class="target" id="rt-a">Responsive Tables</h3>
-            <p>
-                Where tables are used in responsive design, ensure display in medium and small browser views by employing one or a combination of these methods:
-            </p>
+        <p>
+            Tables should be used to display easily scanned and/or comparable data.
+        </p>
+      </section>
+        
+      <!-- =================== SECTION =================== -->
+      <section class='divider'>
+
+        <h3 class="target" id="rt-a">Responsive Tables</h3>
+
+        <p>
+        Where tables are used in responsive design, ensure display in medium and small browser views by employing one or 
+        a combination of these methods:</p>
+
+        <ul class='ul-ui bulleted list'>
+          <li class='item'>
+            Using data-labels attributes in table cell tags, combined with media query CSS to transform each
+            cell into a stacked row. Many versions and tutorials on this method are available, including this
+            one by Matt Smith. (See link for a visual example of this method.)
+
             <ul class='ul-ui bulleted list'>
-            <li class='item'>
-                <p>
-                    Using data-labels attributes in table cell tags, combined with media query CSS to transform each
-                    cell into a stacked row. Many versions and tutorials on this method are available, including this
-                    one by Matt Smith. (See link for a visual example of this method.)
-                </p>
-            </li>
-              <ul class='ul-ui bulleted list'>
-                <li class='item'>
-                    <p>
-                        Pros: This method is widely supported and accommodates a lot of data legibly.
-                    </p>
-                </li>
-                <li class='item'>
-                  <p>
-                    Cons: By stacking the data, comparing cells becomes more difficult.
-                  </p>
-
-                </li>
-              </ul>
-            <li class='item'>
-                <p>
-                    Suppress less important columns where possible, allowing the remaining cells to fit comfortably in
-                    portrait mode on common mobile devices.
-                </p>
-            </li>
-              <ul class='ul-ui bulleted list'>
-                <li class='item'>
-                    <p>
-                        Pros: Supports the original goal of the table, keeping the contents scannable and comparable.
-                    </p>
-
-                </li>
-                <li class='item'>
-                    <p>
-                        Cons: May eliminate useful information for the user. (In general, tables should not contain much
-                        information that is not necessary for the user. However, the circumstances under which the user uses
-                        a mobile device may change which pieces of information are more important.)
-                    </p>
-                </li>
-              </ul>
-            <li class='item'>
-                <p>
-                    Add horizontal scrolling to the table’s parent object, while including some visual indicator that
-                    more content is available beyond the current view screen. Indicator might be a visible horizonal
-                    scrollbar or a gradient overlay.
-                </p>
-            </li>
-              <ul class='ul-ui bulleted list'>
-                <li class='item'>
-                    <p>
-                        Pros: Requires less coding and maintenance while displaying all the table data.
-                    </p>
-                </li>
-                <li class='item'>
-                    <p>
-                        Cons: Horizontal scrolling is not always touch-device friendly; users have a hard time maintaining a
-                        connection between identifying cells. Creating the visual indicator of "more" can also be unclear.
-                    </p>
-
-                </li>
-              </ul>
+              <li class='item'>
+                Pros: This method is widely supported and accommodates a lot of data legibly.
+              </li>
+              <li class='item'>
+                Cons: By stacking the data, comparing cells becomes more difficult.
+              </li>
             </ul>
-
-            
-            <!-- =================== SECTION =================== -->
-            <div class='divider'></div>
-            <h3 class="target" id="sort-a">Sorting</h3>
-            <p>
-                Prefer sorting by:
-            </p>
+          </li>
+          <li class='item'>
+            Suppress less important columns where possible, allowing the remaining cells to fit comfortably in
+            portrait mode on common mobile devices.
             <ul class='ul-ui bulleted list'>
-            <li class='item'>select/dropdown element.</li>
-            <li class='item'>table header ascending/descending.</li>
+              <li class='item'>
+                Pros: Supports the original goal of the table, keeping the contents scannable and comparable.
+              </li>
+              <li class='item'>
+                Cons: May eliminate useful information for the user. (In general, tables should not contain much
+                information that is not necessary for the user. However, the circumstances under which the user uses
+                a mobile device may change which pieces of information are more important.)
+              </li>
             </ul>
-
-            
-            <!-- =================== SECTION =================== -->
-            <div class='divider'></div>
-            <h3 class="target" id="tacc-a">Accessibility</h3>
+          </li>
+          <li class='item'>
+            Add horizontal scrolling to the table’s parent object, while including some visual indicator that
+            more content is available beyond the current view screen. Indicator might be a visible horizonal
+            scrollbar or a gradient overlay.
             <ul class='ul-ui bulleted list'>
-            <li class='item'>Header cells should utilize the TH tag</li>
-            <li class='item'>All header cells should contain text. </li>
-            <li class='item'>Data cells should utilize the TD tag</li>
+              <li class='item'>
+                Pros: Requires less coding and maintenance while displaying all the table data.
+              </li>
+              <li class='item'>
+                Cons: Horizontal scrolling is not always touch-device friendly; users have a hard time maintaining a
+                connection between identifying cells. Creating the visual indicator of "more" can also be unclear.
+              </li>
             </ul>
-<div class="toc-spacer"></div>
+          </li>
+        </ul>
+      </section>
+        
+      <!-- =================== SECTION =================== -->
+      <section class='divider'>
+        <h3 class="target" id="sort-a">Sorting</h3>
+        <p>
+            Prefer sorting by:
+        </p>
+        <ul class='ul-ui bulleted list'>
+        <li class='item'>select/dropdown element.</li>
+        <li class='item'>table header ascending/descending.</li>
+        </ul>
+
+        
+        <!-- =================== SECTION =================== -->
+        <div class='divider'></div>
+        <h3 class="target" id="tacc-a">Accessibility</h3>
+        <ul class='ul-ui bulleted list'>
+        <li class='item'>Header cells should utilize the TH tag</li>
+        <li class='item'>All header cells should contain text. </li>
+        <li class='item'>Data cells should utilize the TD tag</li>
+        </ul>
+      </section>
 <!-- =================== END =================== -->            
-        </div>
+
+      <div class="toc-spacer"></div>
+    </article>
 
         <nav></nav>
     </main>
